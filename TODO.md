@@ -1,25 +1,15 @@
-# TODO Listesi
+# TODO List - Portfolio
 
-## Tasarım ve UI
-- Navigation (menü) responsive ve tekil görünmeli, üst üste binme sorunu çözülmeli
-- Navigation ve LanguageSwitcher butonları hizalanmalı
-- Ana başlık ve içerik arası boşluklar optimize edilmeli
-- Mobil menü açıldığında arka planı karart veya menüyü öne çıkar
-- **Tüm ikonlar için Phosphor Icons kütüphanesi kullanılacak**
+## Yapıldı
+- [x] 404 ve Contact sayfası için modern, mavi çerçeveli bubble/card yapısı
+- [x] Bubble altı ok (tail) animasyonu ve çerçevesi
+- [x] Tüm başlıklar için Phosphor Icons ile ikonlar ve hizalama
+- [x] Telefon numarasının gizlenmesi ve sadece "Call" butonunda dinamik olarak arama başlatılması
+- [x] WhatsApp linki ile doğrudan mesaj başlatma
+- [x] Tüm başlıkların ve açıklamaların i18n ile çevirilebilir olması
+- [x] Contact sayfası için özel CSS modülü ile stillerin ayrılması
+- [x] Responsive ve modern görünüm
+- [x] Tüm sosyal medya ve iletişim linklerinin güncellenmesi
 
-## Fonksiyonellik
-- Sayfa geçişlerinde aktif menü vurgusu
-- LanguageSwitcher için daha iyi bir konumlandırma
-- Tema (açık/koyu) geçişi ekle
-
-## İçerik
-- Her sayfa için örnek içerikler ve görseller ekle
-- İletişim sayfasına form ekle
-- Prompt Gallery için kopyalama bildirimi ekle
-
-## Diğer
-- Kodun tamamında i18n anahtarları gözden geçirilecek
-- README dosyası güncellenecek
-
----
-Bu dosya, proje geliştikçe güncellenecektir. 
+## Yapılacaklar
+- [ ] Yeni özellikler ve iyileştirmeler için buraya ekleme yapabilirsiniz. 

@@ -70,4 +70,4 @@ Thumbs.db
 /jest.setup.js
 
 # Ignore old portfolio backup if exists
-old-portfolio/
+old-portfolio/ 

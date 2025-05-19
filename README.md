@@ -35,4 +35,4 @@ Bu proje, Halil İbrahim Koçak'ın kişisel portfolyo web sitesidir. Modern, g�
 Bu proje MIT lisansı ile lisanslanmıştır.
 
 ---
-Daha fazla bilgi veya katkı için iletişime geçebilirsiniz.
+Daha fazla bilgi veya katkı için iletişime geçebilirsiniz. 
