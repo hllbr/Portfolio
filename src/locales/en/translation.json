@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Home",
+    "contact": "Contact",
+    "technologies": "Technologies",
+    "aiApproach": "AI Approach",
+    "patents": "Patents",
+    "promptGallery": "Prompt Gallery",
+    "logo": "Portfolio"
+  },
+  "home": {
+    "name": "Hi, I'm Halil İbrahim Koçak.",
+    "intro": "To me, software development is more than just writing code — it's about building systems, solving real problems, and shaping what's next.",
+    "techApproach": "I combine modern technologies, original ideas, and user-centered design across every project I work on.",
+    "aiApproach": "I don't just use AI tools — I design structured, creative workflows around them to unlock real productivity.",
+    "patents": "I hold several patents (and pending ones), because innovation means thinking beyond code.",
+    "techStack": "As a full-stack developer, I build robust, scalable applications using TypeScript, React, Tailwind, and Spring Boot.",
+    "hobbies": "In my free time, I enjoy building games with Unity, designing interactive experiences, and exploring narrative mechanics.",
+    "philosophy": "Every line of code should serve a greater system.",
+    "passion": "I love building those systems — and making them meaningful."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Get in touch for collaborations and opportunities",
+    "phone": "Phone",
+    "call": "Call",
+    "email": "Email",
+    "availability": "Availability",
+    "availabilityText": "I am currently available for freelance projects and full-time opportunities."
+  },
+  "technologies": {
+    "title": "Technologies",
+    "projects": "Projects"
+  },
+  "aiApproach": {
+    "title": "My AI Approach",
+    "methodology": "My Methodology",
+    "methodologyText": "I leverage AI tools to enhance productivity and creativity while maintaining human oversight and critical thinking.",
+    "tools": "AI Tools I Use",
+    "usage": "Usage"
+  },
+  "patents": {
+    "title": "My Patents",
+    "importance": "Why Patents Matter",
+    "importanceText": "Patents are crucial for protecting intellectual property and fostering innovation. They represent the intersection of creativity and technical expertise.",
+    "list": "Patent Portfolio",
+    "number": "Patent No.",
+    "view": "View Patent"
+  },
+  "promptGallery": {
+    "title": "AI Prompt Gallery",
+    "about": "About My Prompts",
+    "aboutText": "These prompts are carefully crafted to achieve specific outcomes in various domains. Feel free to use and adapt them for your needs.",
+    "copy": "Copy",
+    "copied": "Copied!"
+  },
+  "language": "Language",
+  "noPage": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+    "backToHome": "Back to Home"
+  }
+} 

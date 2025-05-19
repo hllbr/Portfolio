@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "contact": "İletişim",
+    "technologies": "Teknolojiler",
+    "aiApproach": "AI Yaklaşımım",
+    "patents": "Patentlerim",
+    "promptGallery": "Prompt Galerisi",
+    "logo": "Portfolyo"
+  },
+  "home": {
+    "name": "Merhaba, ben Halil İbrahim Koçak.",
+    "intro": "Yazılım geliştirmek benim için sadece bir meslek değil; fikir üretmek, sistem kurmak ve geleceği inşa etmektir.",
+    "techApproach": "Geliştirdiğim projelerde sıklıkla yeni teknolojileri, özgün fikirleri ve kullanıcı odaklı tasarımı bir araya getiriyorum.",
+    "aiApproach": "Yapay zekâ araçlarını yalnızca kullanan değil, onları verimli senaryolarla işleyen bir üretkenlik sistemi olarak gören bir geliştiriciyim.",
+    "patents": "Tescillenmiş ve başvuru sürecinde olan birden fazla patentim var; buluş yapmak, kodlamanın ötesinde düşünmek demektir.",
+    "techStack": "Full-stack uygulamalarda özellikle TypeScript, React, Tailwind, Spring Boot gibi teknolojilerle sürdürülebilir mimariler geliştiriyorum.",
+    "hobbies": "Ayrıca boş zamanlarımda Unity ile oyunlar geliştiriyor, hikâye odaklı sistemler tasarlıyor ve interaktif deneyimler üzerine çalışıyorum.",
+    "philosophy": "Her yeni satır kod, daha büyük bir sistemin parçası olmalı.",
+    "passion": "Ben bu sistemleri kurmayı ve insanlara değer katan çözümler üretmeyi seviyorum."
+  },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "İş birlikleri ve fırsatlar için iletişime geçin",
+    "phone": "Telefon",
+    "call": "Ara",
+    "email": "E-posta",
+    "availability": "Müsaitlik Durumu",
+    "availabilityText": "Şu anda freelance projeler ve tam zamanlı fırsatlar için müsaitim."
+  },
+  "technologies": {
+    "title": "Teknolojiler",
+    "projects": "Projeler"
+  },
+  "aiApproach": {
+    "title": "AI Yaklaşımım",
+    "methodology": "Metodolojim",
+    "methodologyText": "İnsan denetimi ve eleştirel düşünmeyi koruyarak üretkenliği ve yaratıcılığı artırmak için AI araçlarını kullanıyorum.",
+    "tools": "Kullandığım AI Araçları",
+    "usage": "Kullanım"
+  },
+  "patents": {
+    "title": "Patentlerim",
+    "importance": "Patentler Neden Önemli?",
+    "importanceText": "Patentler, fikri mülkiyeti korumak ve yeniliği teşvik etmek için çok önemlidir. Yaratıcılık ve teknik uzmanlığın kesişimini temsil ederler.",
+    "list": "Patent Portföyü",
+    "number": "Patent No.",
+    "view": "Patenti Görüntüle"
+  },
+  "promptGallery": {
+    "title": "AI Prompt Galerisi",
+    "about": "Promptlarım Hakkında",
+    "aboutText": "Bu promptlar, çeşitli alanlarda belirli sonuçlar elde etmek için özenle hazırlanmıştır. İhtiyaçlarınıza göre kullanmaktan ve uyarlamaktan çekinmeyin.",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı!"
+  },
+  "language": "Dil",
+  "noPage": {
+    "title": "Sayfa Bulunamadı",
+    "description": "Aradığınız sayfa kaldırılmış, adı değiştirilmiş veya geçici olarak kullanılamıyor olabilir.",
+    "backToHome": "Ana Sayfaya Dön"
+  }
+} 
