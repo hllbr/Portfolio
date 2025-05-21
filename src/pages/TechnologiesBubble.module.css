@@ -1,0 +1,132 @@
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  25% {
+    transform: translateX(-45%) translateY(0);
+  }
+  75% {
+    transform: translateX(-55%) translateY(0);
+  }
+}
+
+.container {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.bubble {
+  position: relative;
+  background: #F5F5F5;
+  border-radius: 1.5rem;
+  color: #213547;
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #1976d2;
+}
+
+.bubbleTail {
+  content: '';
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border: 16px solid transparent;
+  border-top-color: #1976d2;
+  border-bottom: 0;
+  z-index: 1;
+  animation: bounceArrow 1.2s infinite ease-in-out;
+}
+
+.bubbleTailInner {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border: 14px solid transparent;
+  border-top-color: #F5F5F5;
+  border-bottom: 0;
+  z-index: 2;
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .techGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .techGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .techGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.techCard {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.techCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.techCategory {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+
+.techList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.techItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #213547;
+}
+
+.techItem::before {
+  content: '•';
+  color: #1976d2;
+  font-weight: bold;
+} 

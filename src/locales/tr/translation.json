@@ -6,6 +6,7 @@
     "aiApproach": "AI Yaklaşımım",
     "patents": "Patentlerim",
     "promptGallery": "Prompt Galerisi",
+    "experience": "Deneyimlerim",
     "logo": "Portfolyo"
   },
   "home": {
@@ -59,5 +60,8 @@
     "title": "Sayfa Bulunamadı",
     "description": "Aradığınız sayfa kaldırılmış, adı değiştirilmiş veya geçici olarak kullanılamıyor olabilir.",
     "backToHome": "Ana Sayfaya Dön"
+  },
+  "experience": {
+    "seeDetails": "Detayları Gör"
   }
 } 

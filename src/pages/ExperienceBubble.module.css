@@ -1,0 +1,193 @@
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  25% {
+    transform: translateX(-45%) translateY(0);
+  }
+  75% {
+    transform: translateX(-55%) translateY(0);
+  }
+}
+
+.container {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.bubble {
+  position: relative;
+  background: #F5F5F5;
+  border-radius: 1.5rem;
+  color: #213547;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #1976d2;
+}
+
+.bubbleTail {
+  content: '';
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border: 16px solid transparent;
+  border-top-color: #1976d2;
+  border-bottom: 0;
+  z-index: 1;
+  animation: bounceArrow 1.2s infinite ease-in-out;
+}
+
+.bubbleTailInner {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border: 14px solid transparent;
+  border-top-color: #F5F5F5;
+  border-bottom: 0;
+  z-index: 2;
+}
+
+.expGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .expGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.expCard {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+}
+
+.expCard:hover {
+  transform: translate(8px, -8px);
+  box-shadow: 0 12px 32px 0 rgba(31, 38, 135, 0.18);
+  border: 2px solid #1976d2;
+}
+
+.expHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.expLogo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 4px;
+}
+
+.expTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.expPosition {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #213547;
+}
+
+.expDate {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.expDesc {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.techBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.techBadge {
+  background: #e3eafe;
+  color: #1976d2;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.customTooltip {
+  position: absolute;
+  top: -44px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  background: #fff;
+  color: #1976d2;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0.5rem 1.1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px 0 rgba(31,38,135,0.13);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.18s cubic-bezier(.4,0,.2,1), transform 0.18s cubic-bezier(.4,0,.2,1);
+  white-space: nowrap;
+}
+
+.customTooltipVisible {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  pointer-events: auto;
+}
+
+.customTooltipArrow {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 10px;
+  overflow: visible;
+  z-index: 11;
+}
+
+.customTooltipArrow svg {
+  display: block;
+} 

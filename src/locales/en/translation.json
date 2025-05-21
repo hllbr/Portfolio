@@ -6,6 +6,7 @@
     "aiApproach": "AI Approach",
     "patents": "Patents",
     "promptGallery": "Prompt Gallery",
+    "experience": "Experience",
     "logo": "Portfolio"
   },
   "home": {
@@ -59,5 +60,8 @@
     "title": "Page Not Found",
     "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
     "backToHome": "Back to Home"
+  },
+  "experience": {
+    "seeDetails": "See Details"
   }
 } 
