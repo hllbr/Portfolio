@@ -1,9 +1,7 @@
-import styles from './ExperienceBubble.module.css';
-import tooltipStyles from './ExperienceTooltip.module.css';
-import { Dialog, DialogTitle, DialogContent, DialogActions, IconButton, Button, Divider, Tooltip } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import './AboutMeSpeechBubble.css';
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Dialog, DialogTitle, DialogContent, DialogActions, IconButton, Button, Divider } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import netasLogo from '../BrandImage/netastr_logo.jpeg';
 import halkbankLogo from '../BrandImage/halkbank_logo.jpeg';
 import eleksLogo from '../BrandImage/eleks_yangn_ve_gvenlik_sistemleri_logo.jpeg';
@@ -75,78 +73,62 @@ const experiences: ExperienceType[] = [
 const getCurrentPosition = (positions: Position[]) => positions.find((p) => p.isCurrent);
 
 const Experience = () => {
+  const [hovered, setHovered] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<ExperienceType | null>(null);
-  const [hovered, setHovered] = useState<string | null>(null);
-  const { t } = useTranslation();
 
   return (
-    <div className={styles.container}>
-      <div className={styles.bubble}>
-        <section className="text-center space-y-4">
-          <h1 className="text-4xl font-bold">Deneyimlerim</h1>
-          <p className="text-xl text-muted-foreground">Profesyonel iş tecrübelerim ve kullandığım teknolojiler</p>
-        </section>
-        <div className={styles.expGrid}>
-          {experiences.map((exp) => {
-            const current = getCurrentPosition(exp.positions);
-            const isNetas = exp.company === 'NETAŞ' && current;
-            return (
-              <Tooltip title={t('experience.seeDetails', 'Detayları Gör')} arrow placement="top" key={exp.company} classes={{ tooltip: tooltipStyles.customMuiTooltip }}>
-                <div
-                  className={styles.expCard}
-                  style={{
-                    cursor: 'pointer',
-                    border: hovered === exp.company ? '2px solid #1976d2' : '2px solid transparent',
-                    transition: 'border 0.2s, transform 0.2s, box-shadow 0.2s',
-                    transform: hovered === exp.company ? 'translate(8px, -8px)' : 'none',
-                    boxShadow: hovered === exp.company ? '0 8px 32px 0 rgba(31, 38, 135, 0.15)' : '0 4px 12px 0 rgba(31,38,135,0.07)',
-                    position: 'relative',
-                  }}
-                  onClick={() => {
-                    setSelected(exp);
-                    setOpen(true);
-                  }}
-                  onMouseEnter={() => setHovered(exp.company)}
-                  onMouseLeave={() => setHovered(null)}
-                >
-                  <div className={styles.expHeader}>
-                    <img src={exp.logo} alt={exp.company} className={styles.expLogo} />
-                    <div>
-                      <div className={styles.expTitle}>
-                        {isNetas
-                          ? <>
-                              {exp.company}
-                              <span style={{
-                                marginLeft: 8,
-                                fontSize: 13,
-                                color: '#16a34a',
-                                fontWeight: 500,
-                                fontFamily: 'inherit',
-                                letterSpacing: 0.1,
-                              }}>
-                                - Currently Employed
-                              </span>
-                            </>
-                          : exp.company}
-                      </div>
-                    </div>
-                  </div>
+    <div className="speech-bubble">
+      <section className="text-center space-y-4">
+        <h1 className="text-4xl font-bold">Deneyimlerim</h1>
+        <p className="text-xl text-muted-foreground">Profesyonel iş tecrübelerim ve kullandığım teknolojiler</p>
+      </section>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem', width: '100%', marginTop: '2rem' }}>
+        {experiences.map((exp) => {
+          const current = getCurrentPosition(exp.positions);
+          const isNetas = exp.company === 'NETAŞ' && current;
+          const isHovered = hovered === exp.company;
+          return (
+            <div
+              key={exp.company}
+              style={{
+                background: 'white',
+                borderRadius: '1rem',
+                padding: '1.5rem',
+                boxShadow: isHovered
+                  ? '0 12px 32px 0 rgba(31, 38, 135, 0.18)'
+                  : '0 4px 6px rgba(0, 0, 0, 0.1)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                width: '100%',
+                maxWidth: 520,
+                transition: 'border 0.2s, transform 0.2s, box-shadow 0.2s',
+                border: isHovered ? '2px solid #1976d2' : '2px solid #e5e7eb',
+                transform: isHovered ? 'translate(8px, -8px)' : 'none',
+                cursor: 'pointer',
+                position: 'relative',
+              }}
+              onMouseEnter={() => setHovered(exp.company)}
+              onMouseLeave={() => setHovered(null)}
+              onClick={() => {
+                setSelected(exp);
+                setOpen(true);
+              }}
+            >
+              <img src={exp.logo} alt={exp.company} style={{ width: 48, height: 48, objectFit: 'contain', borderRadius: 8, background: '#fff', border: '1px solid #e5e7eb', padding: 4 }} />
+              <div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 600, color: '#1976d2' }}>
+                  {isNetas ? <>{exp.company}<span style={{ marginLeft: 8, fontSize: 13, color: '#16a34a', fontWeight: 500, fontFamily: 'inherit', letterSpacing: 0.1 }}> - Currently Employed</span></> : exp.company}
                 </div>
-              </Tooltip>
-            );
-          })}
-        </div>
-        <div className={styles.bubbleTail} />
-        <div className={styles.bubbleTailInner} />
+              </div>
+            </div>
+          );
+        })}
       </div>
       <Dialog open={open} onClose={() => { setOpen(false); setSelected(null); }} maxWidth="sm" fullWidth
-        PaperProps={{
-          sx: { borderRadius: 4 }
-        }}
-        BackdropProps={{
-          sx: { backdropFilter: 'blur(6px)' }
-        }}
+        PaperProps={{ sx: { borderRadius: 4 } }}
+        BackdropProps={{ sx: { backdropFilter: 'blur(6px)' } }}
       >
         <DialogTitle sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           {selected && (
@@ -168,9 +150,9 @@ const Experience = () => {
                   <div style={{ color: '#374151', fontSize: 16, margin: '6px 0 0 0' }}>{pos.desc}</div>
                 </div>
               ))}
-              <div className={styles.techBadges} style={{ marginTop: 12 }}>
+              <div style={{ marginTop: 12, display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                 {selected.techs.map((tech: string) => (
-                  <span className={styles.techBadge} key={tech}>{tech}</span>
+                  <span key={tech} style={{ background: '#e3eafe', color: '#1976d2', borderRadius: '0.5rem', padding: '0.25rem 0.75rem', fontSize: '0.95rem', fontWeight: 500, marginTop: '0.25rem' }}>{tech}</span>
                 ))}
               </div>
             </div>
@@ -178,9 +160,10 @@ const Experience = () => {
         </DialogContent>
         <Divider sx={{ my: 0.5 }} />
         <DialogActions sx={{ pl: 3 }}>
-          <Button onClick={() => { setOpen(false); setSelected(null); }} variant="outlined" sx={{ borderColor: '#ef4444', color: '#ef4444', borderRadius: 2, '&:hover': { borderColor: '#b91c1c', background: '#fee2e2' } }}>Cancel</Button>
+          <Button onClick={() => { setOpen(false); setSelected(null); }} variant="outlined" sx={{ borderColor: '#ef4444', color: '#ef4444', borderRadius: 2, '&:hover': { borderColor: '#b91c1c', background: '#fee2e2' } }}>Kapat</Button>
         </DialogActions>
       </Dialog>
+      <div className="speech-bubble-tail" />
     </div>
   );
 };
