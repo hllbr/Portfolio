@@ -10,6 +10,11 @@
 	}
 }
 
+@keyframes arrowMove {
+	0%, 100% { transform: translateX(0); }
+	50% { transform: translateX(8px); }
+}
+
 .speech-bubble {
 	position: relative;
 	background: #F5F5F5;
@@ -53,5 +58,14 @@
 	border-top-color: #F5F5F5;
 	border-bottom: 0;
 	z-index: 2;
+}
+
+.experience-arrow {
+	margin-left: auto;
+	font-size: 28px;
+	color: #1976d2;
+	display: flex;
+	align-items: center;
+	animation: arrowMove 1.2s infinite ease-in-out;
 }
 
