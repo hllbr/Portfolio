@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import styles from './ContactBubble.module.css';
+import styles from '../styles/ContactBubble.module.css';
 import { EnvelopeSimple, Phone, WhatsappLogo, GithubLogo, LinkedinLogo, YoutubeLogo } from 'phosphor-react';
 
 // Telefon numarasını base64 ile encode ettik (905522972185)

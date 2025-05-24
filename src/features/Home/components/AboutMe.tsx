@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import './AboutMeSpeechBubble.css';
+import '../styles/AboutMeSpeechBubble.css';
 
 const AboutMe = () => {
   const { t } = useTranslation();

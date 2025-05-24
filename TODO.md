@@ -1,6 +1,68 @@
 # TODO List - Portfolio
 
+---
+
+# English
+
+## Done
+- [x] Project file and folder structure refactored to a modern, modular, and maintainable architecture
+- [x] Each page (Home, Contact, Technologies, AIApproach, NoPage, PromptGallery, Patents) now has its own components and styles folders
+- [x] Each page exports its main component via its own Routes/index.ts
+- [x] All import/export paths updated to new structure
+- [x] Removed unused old routes/pages and unnecessary files
+- [x] Logo and asset import paths fixed
+- [x] All commits checked for SOLID principles and code quality
+- [x] Project structure now follows academic and professional standards
+- [x] All import/export structures tested and verified
+- [x] Modern, blue-bordered bubble/card structure for 404 and Contact pages
+- [x] Bubble tail animation and border
+- [x] Phosphor Icons for all headings and alignment
+- [x] Phone number hidden, only revealed dynamically on "Call" button
+- [x] WhatsApp link for direct messaging
+- [x] All headings and descriptions translatable with i18n
+- [x] Contact page styles separated with custom CSS module
+- [x] Responsive and modern appearance
+- [x] All social media and contact links updated
+- [x] Experience page added with logo and card structure
+- [x] Modal for detailed experience info
+- [x] Cancel button, divider, and rounded corners in modal
+- [x] Card hover animation, shadow, and blue border effect
+- [x] Vertical sorting with most recent job at the top
+- [x] MUI Tooltip with theme and i18n support
+- [x] Tooltip arrow color and appearance fixed
+- [x] Background blur effect when modal opens
+- [x] .gitignore prepared professionally and securely
+- [x] AI Tools section added (Cursor AI, ChatGPT, Claude, Grok, Muse)
+- [x] MageUI-style animated cards for AI Tools
+- [x] Hover effects and color coding for AI Tools cards
+- [x] Modal detail view for AI Tools
+- [x] Responsive grid for AI Tools section
+- [x] Custom CSS module and animations for AI Tools
+- [x] Emoji and color coding in AI Tools cards
+- [x] Dark mode compatibility for AI Tools section
+
+## Todo
+- [ ] Integrate real SVG logos for AI Tools (currently using emoji)
+- [ ] Add more detailed info and usage examples to AI Tools cards
+- [ ] Custom animated background design for AI Tools section
+- [ ] Update i18n support and translation files for AI Tools
+- [ ] Neon Cursor (MageUI-style neon cursor and canvas trail): To be reconsidered for specific pages or as a special effect, ensuring user comfort. Will be integrated if a suitable use case is found.
+- [ ] Add new features and improvements here.
+
+---
+
+# Türkçe
+
 ## Yapıldı
+- [x] Proje dosya ve klasör yapısı modern, modüler ve sürdürülebilir şekilde yeniden düzenlendi
+- [x] Her sayfa için (Home, Contact, Technologies, AIApproach, NoPage, PromptGallery, Patents) kendi altında components ve styles klasörleri oluşturuldu
+- [x] Her sayfa için kendi altında Routes/index.ts dosyası ile dışa açma yapısı kuruldu
+- [x] Tüm import ve export yolları yeni yapıya göre güncellendi
+- [x] Kullanılmayan eski routes, pages ve gereksiz dosya/klasörler temizlendi
+- [x] Logo ve asset import yolları düzeltildi
+- [x] Tüm commitlerde SOLID prensiplerine uygunluk ve kod kalitesi kontrol edildi
+- [x] Proje yapısı akademik ve profesyonel standartlara uygun hale getirildi
+- [x] Tüm import ve export yapılarının çalıştığı test edildi
 - [x] 404 ve Contact sayfası için modern, mavi çerçeveli bubble/card yapısı
 - [x] Bubble altı ok (tail) animasyonu ve çerçevesi
 - [x] Tüm başlıklar için Phosphor Icons ile ikonlar ve hizalama

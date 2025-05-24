@@ -1,11 +1,11 @@
-import './AboutMeSpeechBubble.css';
-import './ExperienceLiveIcon.css';
+import '../styles/AboutMeSpeechBubble.css';
+import '../styles/ExperienceLiveIcon.css';
 import React, { useState } from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogActions, IconButton, Button, Divider } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import netasLogo from '../BrandImage/netastr_logo.jpeg';
-import halkbankLogo from '../BrandImage/halkbank_logo.jpeg';
-import eleksLogo from '../BrandImage/eleks_yangn_ve_gvenlik_sistemleri_logo.jpeg';
+import netasLogo from '../../../BrandImage/netastr_logo.jpeg';
+import halkbankLogo from '../../../BrandImage/halkbank_logo.jpeg';
+import eleksLogo from '../../../BrandImage/eleks_yangn_ve_gvenlik_sistemleri_logo.jpeg';
 
 interface Position {
   title: string;

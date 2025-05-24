@@ -1,5 +1,6 @@
-import AboutMe from './AboutMe';
-import Experience from './Experience';
+import { Experience } from "./Routes";
+import { AboutMe } from "./Routes";
+
 
 const Home = () => {
   return (
