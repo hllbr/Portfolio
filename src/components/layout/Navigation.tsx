@@ -1,7 +1,7 @@
 import { AppBar, Toolbar, Button, Switch, Box, Stack, Tooltip, IconButton, Drawer, List, ListItem, ListItemText, Divider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, useLocation } from 'react-router-dom';
-import { House, EnvelopeSimple, Cpu, Robot, IdentificationBadge, ImageSquare, Briefcase } from 'phosphor-react';
+import { House, EnvelopeSimple, Cpu, Robot, IdentificationBadge, ImageSquare } from 'phosphor-react';
 import { useTranslation } from 'react-i18next';
 import React from 'react';
 
@@ -12,7 +12,6 @@ const navItems = [
   { path: '/ai-approach', label: 'aiApproach', icon: <Robot size={18} /> },
   { path: '/patents', label: 'patents', icon: <IdentificationBadge size={18} /> },
   { path: '/prompt-gallery', label: 'promptGallery', icon: <ImageSquare size={18} /> },
-  { path: '/experience', label: 'experience', icon: <Briefcase size={18} /> },
 ];
 
 const Navigation = () => {

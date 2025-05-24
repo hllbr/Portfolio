@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { House } from 'phosphor-react';
-import styles from './NoPage.module.css';
+import styles from '../styles/NoPage.module.css';
 
 const NoPage = () => {
   const { t } = useTranslation();

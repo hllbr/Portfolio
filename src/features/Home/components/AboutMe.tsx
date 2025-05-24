@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import './HomeSpeechBubble.css';
+import '../styles/AboutMeSpeechBubble.css';
 
-const Home = () => {
+const AboutMe = () => {
   const { t } = useTranslation();
 
   return (
@@ -47,4 +47,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default AboutMe; 

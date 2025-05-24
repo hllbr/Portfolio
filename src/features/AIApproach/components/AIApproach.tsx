@@ -1,6 +1,6 @@
 import React from 'react';
 // import { NeonCursor } from '../components/NeonCursor';
-import styles from './AIApproach.module.css';
+import styles from '../styles/AIApproach.module.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 const aiCards = [

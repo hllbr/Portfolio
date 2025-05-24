@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import styles from './TechnologiesBubble.module.css';
+import styles from '../styles/TechnologiesBubble.module.css';
 
 const Technologies = () => {
   const { t } = useTranslation();

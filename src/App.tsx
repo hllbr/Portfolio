@@ -1,13 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
-import Technologies from './pages/Technologies';
-import AIApproach from './pages/AIApproach';
-import Patents from './pages/Patents';
-import PromptGallery from './pages/PromptGallery';
-import NoPage from './pages/NoPage';
-import Experience from './pages/Experience';
+import { Home } from './features/Home/Routes';
+import { Contact } from './features/Contact/Routes';
+import { Technologies } from './features/Technologies/Routes';
+import { AIApproach } from './features/AIApproach/Routes';
+import { Patents } from './features/Patents/Routes';
+import { PromptGallery } from './features/PromptGallery/Routes';
+import { NoPage } from './features/NoPage/Routes';
 import './styles/globals.css';
 import './locales/i18n';
 
@@ -22,7 +21,6 @@ function App() {
           <Route path="/ai-approach" element={<AIApproach />} />
           <Route path="/patents" element={<Patents />} />
           <Route path="/prompt-gallery" element={<PromptGallery />} />
-          <Route path="/experience" element={<Experience />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Layout>
