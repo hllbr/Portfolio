@@ -40,6 +40,15 @@
 - [x] Custom CSS module and animations for AI Tools
 - [x] Emoji and color coding in AI Tools cards
 - [x] Dark mode compatibility for AI Tools section
+- [x] Social media bubble component created and styled to match AboutMe section
+- [x] Speech bubble tail removed for footer use
+- [x] Social media/contact icons added: Phone, WhatsApp, LinkedIn, Email, GitHub, YouTube, WakaTime
+- [x] Icons reordered by communication priority (Phone, WhatsApp, LinkedIn, ...)
+- [x] Timer icon used for WakaTime (as Pulse/Speedometer not available in current version)
+- [x] Modern, animated, and accessible icon design (wave + rainbow effect)
+- [x] Animations modularized into a separate CSS file
+- [x] Responsive and visually balanced spacing
+- [x] Turkish and English support for all labels and accessibility
 
 ## Todo
 - [ ] Integrate real SVG logos for AI Tools (currently using emoji)
@@ -48,6 +57,13 @@
 - [ ] Update i18n support and translation files for AI Tools
 - [ ] Neon Cursor (MageUI-style neon cursor and canvas trail): To be reconsidered for specific pages or as a special effect, ensuring user comfort. Will be integrated if a suitable use case is found.
 - [ ] Add new features and improvements here.
+- [ ] Update phosphor-react to v2.1+ and use Speedometer icon for WakaTime if desired
+- [ ] Add tooltips for each icon (with i18n support)
+- [ ] Allow user to customize icon order from settings
+- [ ] Add animation toggle (enable/disable wave/rainbow)
+- [ ] Add more social platforms if needed (e.g. X, Instagram)
+- [ ] Improve accessibility (keyboard navigation, focus states)
+- [ ] Add tests for SocialMedia component
 
 ---
 
@@ -89,6 +105,15 @@
 - [x] AI Tools için özel CSS modülü ve animasyonlar
 - [x] AI Tools kartlarında emoji ve renk kodlaması
 - [x] AI Tools bölümünde dark mode uyumluluğu
+- [x] Social media bubble componenti oluşturuldu ve AboutMe ile uyumlu tasarlandı
+- [x] Footer için konuşma balonu çentiği kaldırıldı
+- [x] Sosyal medya/iletişim ikonları eklendi: Telefon, WhatsApp, LinkedIn, Email, GitHub, YouTube, WakaTime
+- [x] İletişim önceliğine göre ikonlar sıralandı (Telefon, WhatsApp, LinkedIn, ...)
+- [x] WakaTime için Timer ikonu kullanıldı (Pulse/Speedometer mevcut sürümde yok)
+- [x] Modern, animasyonlu ve erişilebilir ikon tasarımı (dalga + gökkuşağı efekti)
+- [x] Animasyonlar ayrı CSS dosyasına taşındı
+- [x] Responsive ve dengeli boşluklar sağlandı
+- [x] Tüm label ve erişilebilirlik için Türkçe ve İngilizce destek
 
 ## Yapılacaklar
 - [ ] AI Tools için gerçek SVG logoların entegrasyonu (şu an emoji kullanılıyor)
@@ -96,4 +121,11 @@
 - [ ] AI Tools bölümü için özel animasyonlu arka plan tasarımı
 - [ ] AI Tools için i18n desteği ve çeviri dosyalarının güncellenmesi
 - [ ] Neon Cursor (MageUI tarzı neon imleç ve canvas trail): Göz yormayacak şekilde, belirli sayfalarda veya özel bir efekt olarak ileride tekrar değerlendirilecek. Kullanım alanı ve kullanıcı deneyimi açısından uygun bir yer bulunursa entegre edilecek.
-- [ ] Yeni özellikler ve iyileştirmeler için buraya ekleme yapabilirsiniz. 
+- [ ] Yeni özellikler ve iyileştirmeler için buraya ekleme yapabilirsiniz.
+- [ ] phosphor-react v2.1+ sürümüne güncellenip Speedometer ikonu kullanılabilir
+- [ ] Her ikon için tooltip eklenmesi (i18n destekli)
+- [ ] Kullanıcının ikon sırasını ayarlayabilmesi için ayar eklenmesi
+- [ ] Animasyon aç/kapat seçeneği eklenmesi (dalga/gökkuşağı)
+- [ ] Gerekirse yeni sosyal platformlar eklenmesi (örn. X, Instagram)
+- [ ] Erişilebilirlik iyileştirmeleri (klavye ile gezinme, odak durumları)
+- [ ] SocialMedia componenti için testler eklenmesi 
