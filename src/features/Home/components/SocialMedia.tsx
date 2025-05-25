@@ -7,16 +7,29 @@ import { GithubLogo, LinkedinLogo, YoutubeLogo, EnvelopeSimple, WhatsappLogo, Ti
 const SocialMedia = () => {
   const { t } = useTranslation();
 
+  const encodedPhone = 'OTA1NTIyOTcyMTg1';
+  const decodedPhone = () => atob(encodedPhone);
+
+  const handlePhoneClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    window.location.href = `tel:${decodedPhone()}`;
+  };
+
+  const handleWhatsAppClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    window.open(`https://wa.me/${decodedPhone()}`, '_blank', 'noopener,noreferrer');
+  };
+
   const socialLinks = [
     {
-      icon: <PhoneCall  size={36} />,
-      url: 'tel:905522972185',
-      ariaLabel: 'Call'
+      icon: <PhoneCall size={36} />,
+      onClick: handlePhoneClick,
+      ariaLabel: 'Call',
     },
     {
       icon: <WhatsappLogo size={36} />,
-      url: 'https://wa.me/905522972185',
-      ariaLabel: 'WhatsApp'
+      onClick: handleWhatsAppClick,
+      ariaLabel: 'WhatsApp',
     },
     {
       icon: <LinkedinLogo size={36} />,
@@ -54,11 +67,12 @@ const SocialMedia = () => {
             {socialLinks.map((link, index) => (
               <a
                 key={index}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={link.url || "#"}
+                onClick={link.onClick}
                 className="social-link hover:scale-110 transition-transform"
                 aria-label={link.ariaLabel}
+                target={link.url ? "_blank" : undefined}
+                rel={link.url ? "noopener noreferrer" : undefined}
               >
                 {link.icon}
               </a>
