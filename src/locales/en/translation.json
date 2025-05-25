@@ -27,7 +27,14 @@
     "call": "Call",
     "email": "Email",
     "availability": "Availability",
-    "availabilityText": "I am currently available for freelance projects and full-time opportunities."
+    "availabilityText": "I am currently available for freelance projects and full-time opportunities.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "mustBeFilled": "must be filled out."
+    }
   },
   "technologies": {
     "title": "Technologies",

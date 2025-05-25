@@ -27,7 +27,14 @@
     "call": "Ara",
     "email": "E-posta",
     "availability": "Müsaitlik Durumu",
-    "availabilityText": "Şu anda freelance projeler ve tam zamanlı fırsatlar için müsaitim."
+    "availabilityText": "Şu anda freelance projeler ve tam zamanlı fırsatlar için müsaitim.",
+    "form": {
+      "name": "Ad",
+      "email": "E-posta",
+      "subject": "Konu",
+      "message": "Mesaj",
+      "mustBeFilled": "doldurulmalıdır."
+    }
   },
   "technologies": {
     "title": "Teknolojiler",
