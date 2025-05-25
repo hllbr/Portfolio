@@ -71,6 +71,11 @@
     "backToHome": "Ana Sayfaya Dön"
   },
   "experience": {
+    "title": "Deneyim",
+    "subtitle": "Profesyonel iş tecrübelerim ve kullandığım teknolojiler",
+    "currentlyEmployed": "Şu an çalışıyorum",
+    "close": "Kapat",
+    "clickableCard": "Tıklanabilir kart",
     "seeDetails": "Detayları Gör"
   }
 } 

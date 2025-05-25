@@ -71,6 +71,11 @@
     "backToHome": "Back to Home"
   },
   "experience": {
+    "title": "Experience",
+    "subtitle": "Professional work experience and technologies I use",
+    "currentlyEmployed": "Currently Employed",
+    "close": "Close",
+    "clickableCard": "Clickable card",
     "seeDetails": "See Details"
   }
 } 

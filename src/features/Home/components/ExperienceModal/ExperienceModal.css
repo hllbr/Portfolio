@@ -1,0 +1,52 @@
+.experience-modal-content {
+  padding: 0.5rem 0;
+}
+
+.experience-modal-position {
+  margin-bottom: 16px;
+}
+
+.experience-modal-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #1976d2;
+}
+
+.experience-modal-date {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.experience-modal-description {
+  color: #374151;
+  font-size: 16px;
+  margin: 6px 0 0 0;
+}
+
+.experience-modal-tech-stack {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience-modal-tech-item {
+  background: #e3eafe;
+  color: #1976d2;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.experience-modal-close-button {
+  border-color: #ef4444 !important;
+  color: #ef4444 !important;
+  border-radius: 2px !important;
+}
+
+.experience-modal-close-button:hover {
+  border-color: #b91c1c !important;
+  background: #fee2e2 !important;
+} 
