@@ -33,7 +33,9 @@
       "email": "E-posta",
       "subject": "Konu",
       "message": "Mesaj",
-      "mustBeFilled": "doldurulmalıdır."
+      "mustBeFilled": "doldurulmalıdır.",
+      "send": "Mesajı Gönder",
+      "sending": "Gönderiliyor..."
     }
   },
   "technologies": {

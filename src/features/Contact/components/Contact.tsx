@@ -181,7 +181,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              disabled={status === 'loading'}
+              disabled={status === 'loading' || !formData.name || !formData.email || !formData.subject || !formData.message}
               className={formStyles.button}
             >
               {status === 'loading' ? t('contact.form.sending', 'Sending...') : t('contact.form.send', 'Send Message')}

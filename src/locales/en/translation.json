@@ -33,7 +33,9 @@
       "email": "Email",
       "subject": "Subject",
       "message": "Message",
-      "mustBeFilled": "must be filled out."
+      "mustBeFilled": "must be filled out.",
+      "send": "Send Message",
+      "sending": "Sending..."
     }
   },
   "technologies": {
