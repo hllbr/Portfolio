@@ -31,6 +31,47 @@
   }
 }
 
+@keyframes sweep {
+  0% {
+    left: -60%;
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  100% {
+    left: 120%;
+    opacity: 0.2;
+  }
+}
+
+@keyframes mainTitleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px) scale(0.96);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0) scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes mainTitleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .container {
   position: relative;
   min-height: 100vh;
@@ -191,6 +232,13 @@
   font-family: inherit;
   transition: transform 0.25s cubic-bezier(.4,0,.2,1), box-shadow 0.25s cubic-bezier(.4,0,.2,1), border-color 0.25s cubic-bezier(.4,0,.2,1), filter 0.25s cubic-bezier(.4,0,.2,1);
   cursor: pointer;
+  width: 100%;
+  max-width: 350px;
+  min-width: 250px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 }
 
 .aiCard:hover {
@@ -219,4 +267,109 @@
   mix-blend-mode: lighten;
   transition: background 0.2s, box-shadow 0.2s;
   transform: translate(-50%, -50%);
+}
+
+/* Add a grid container for AI cards that centers content */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: stretch;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@media (max-width: 900px) {
+  .cardGrid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    gap: 1.5rem;
+  }
+  .aiCard {
+    max-width: 340px;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 1.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .aiCard {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .cardGrid {
+    max-width: 98vw;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+}
+
+.infoSection {
+  background: rgba(60, 70, 100, 0.7);
+  border: 1.5px solid #60a5fa;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  margin: 0 auto 2.5rem auto;
+  max-width: 900px;
+  color: #e5e7eb;
+  box-shadow: 0 2px 12px 0 rgba(96,165,250,0.08);
+  text-align: center;
+}
+
+.visionHero {
+  background: rgba(60, 70, 100, 0.7);
+  border: 1.5px solid #60a5fa;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  margin: 0 auto 2.5rem auto;
+  max-width: 900px;
+  color: #e5e7eb;
+  box-shadow: 0 2px 12px 0 rgba(96,165,250,0.08);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.visionHero h1 {
+  font-size: 2xl;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #e5e7eb;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+}
+.visionHero p {
+  font-size: 1.125rem;
+  color: #e5e7eb;
+  margin: 0 auto;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #60a5fa 30%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: mainTitleFadeIn 1.2s cubic-bezier(.4,0,.2,1), mainTitleFloat 4s ease-in-out infinite;
+}
+.mainTitleSubtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #b6c6e3;
+  margin-bottom: 2rem;
+  animation: mainTitleFadeIn 1.4s cubic-bezier(.4,0,.2,1);
 } 

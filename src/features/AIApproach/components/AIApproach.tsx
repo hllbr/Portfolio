@@ -64,80 +64,63 @@ const aiCards = [
     ],
     color: '#4ade80',
   },
-];
-
-const infoCards = [
   {
-    logo: null,
-    title: 'Beyond Tools: How I Engineer With AI',
-    description: `I don't use AI just to generate outputs — I integrate it into my systems to enhance thinking, automate structure, and scale innovation.`,
-    details: null,
-    color: '#60a5fa',
-  },
-];
-
-const methodologies = [
-  {
-    title: 'Problem Analysis',
-    description: 'Deep understanding of the problem space and requirements',
+    name: 'Fooocus Colab',
+    logo: '🖼️',
+    title: 'Fooocus Colab',
+    description: 'Stable Diffusion ile resim eklemek için kullandığım Colab tabanlı araç.',
+    details: [
+      'Stable Diffusion ile yüksek kaliteli görseller üret',
+      'Prompt yazarak özgün resimler oluştur',
+      'Colab üzerinde hızlı ve ücretsiz kullanım',
+      'Projelerime özel görsel ekleme',
+    ],
+    color: '#fbbf24',
   },
   {
-    title: 'Data Strategy',
-    description: 'Comprehensive data collection and preprocessing approach',
+    logo: '🧑‍💻',
+    title: 'Copilot',
+    description: 'AI-powered code completion and suggestion assistant',
+    details: [
+      'Auto-complete code',
+      'Suggest code snippets',
+      'Accelerate development',
+      'Reduce repetitive tasks'
+    ],
+    color: '#06b6d4',
   },
-  {
-    title: 'Model Selection',
-    description: 'Careful selection of appropriate AI/ML models',
-  },
-  {
-    title: 'Implementation',
-    description: 'Robust implementation with best practices',
-  },
-];
-
-const expertiseAreas = [
-  { icon: '🧠', name: 'Natural Language Processing' },
-  { icon: '👁️', name: 'Computer Vision' },
-  { icon: '⚡', name: 'Machine Learning' },
-  { icon: '🔬', name: 'Deep Learning' },
 ];
 
 const AIApproach = () => {
   return (
     <div className={`${styles.container} font-sans`}>
+      {/* Ana Başlık */}
+      <div className="mb-8">
+        <h1 className={styles.mainTitle}>My AI Approach</h1>
+        <p className={styles.mainTitleSubtitle}>My methodology for AI projects</p>
+      </div>
+
+      {/* Genel Bilgilendirme Alanı */}
+      <section className={styles.infoSection}>
+        <h2 className="text-2xl font-bold mb-2">How I Use AI & Prompts</h2>
+        <p className="text-lg text-gray-200">I leverage AI tools and carefully crafted prompts to enhance productivity, creativity, and code quality. Each tool serves a unique purpose in my workflow, from code review to visual generation. Explore the cards below to see tips and ready-to-use prompts for each technology.</p>
+      </section>
+
+      {/* Vizyon/Hero Alanı */}
+      <section className={styles.infoSection}>
+        <h2 className="text-2xl font-bold mb-2">Beyond Tools: How I Engineer With AI</h2>
+        <p className="text-lg text-gray-200">I don't use AI just to generate outputs — I integrate it into my systems to enhance thinking, automate structure, and scale innovation.</p>
+      </section>
+
       {/* <NeonCursor /> */}
       {/* Sparkles */}
       {Array.from({ length: 30 }).map((_, i) => (
         <div key={i} className={styles.sparkle}></div>
       ))}
 
-      <section className={styles.header}>
-        <h1 className={styles.title}>My AI Approach</h1>
-        <p className={styles.subtitle}>My methodology for AI projects</p>
-      </section>
-
-      {/* Info, AI Cards & Methodologies */}
+      {/* Info & AI Cards Only */}
       <section style={{marginTop: '2rem', marginBottom: '2rem'}}>
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem'}}>
-          {infoCards.map(card => (
-            <div
-              key={card.title}
-              className={styles.aiCard}
-              style={{
-                borderColor: card.color,
-                ['--ai-card-color' as string]: card.color,
-              }}
-            >
-              {card.logo && <div style={{marginBottom:'0.5rem'}}>{card.logo}</div>}
-              <h2 style={{fontWeight:700, fontSize:'1.4rem', color:card.color, marginBottom:'0.5rem'}}>{card.title}</h2>
-              <div style={{marginBottom:'0.5rem'}}>{card.description}</div>
-              {Array.isArray(card.details) && (
-                <ul style={{marginTop:'0.5rem', paddingLeft:'1rem', color:'#cbd5e1', fontSize:'1rem'}}>
-                  {(card.details as string[]).map((d, i) => <li key={i}>→ {d}</li>)}
-                </ul>
-              )}
-            </div>
-          ))}
+        <div className={styles.cardGrid}>
           {aiCards.map(card => (
             <div
               key={card.title}
@@ -157,26 +140,10 @@ const AIApproach = () => {
               )}
             </div>
           ))}
-          {methodologies.map(method => (
-            <div key={method.title} className={styles.aiCard} style={{fontFamily:'inherit', borderColor:'#60a5fa', ['--ai-card-color' as string]:'#60a5fa'}}>
-              <h2 style={{fontWeight:700, fontSize:'1.2rem', color:'#60a5fa', marginBottom:'0.5rem'}}>{method.title}</h2>
-              <p style={{color:'#f3f4f6'}}>{method.description}</p>
-            </div>
-          ))}
         </div>
       </section>
 
-      <section className={styles.expertiseSection}>
-        <h2 className="text-2xl font-semibold mb-4">Areas of Expertise</h2>
-        <div className={styles.expertiseList}>
-          {expertiseAreas.map((area) => (
-            <div key={area.name} className={styles.expertiseItem}>
-              <div className={styles.expertiseIcon}>{area.icon}</div>
-              <span>{area.name}</span>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Areas of Expertise and Methodologies sections removed as requested */}
     </div>
   );
 };
