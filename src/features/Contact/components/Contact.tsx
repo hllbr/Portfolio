@@ -1,23 +1,100 @@
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/ContactBubble.module.css';
-import { EnvelopeSimple, Phone, WhatsappLogo, GithubLogo, LinkedinLogo, YoutubeLogo } from 'phosphor-react';
-
-// Telefon numarasını base64 ile encode ettik (905522972185)
-const encodedPhone = 'OTA1NTIyOTcyMTg1';
+import formStyles from '../styles/FormElements.module.css';
+import { useState, useEffect } from 'react';
+import '../styles/Animation/ContactIconAnimation.css';
+import Tooltip from './Tooltip';
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
 
-  // Telefon arama fonksiyonu
-  const handleCall = (e: React.MouseEvent) => {
+  useEffect(() => {
+    setErrors(prev => {
+      const updated = { ...prev };
+      if (prev.name) updated.name = t('contact.form.mustBeFilled', 'must be filled out.');
+      if (prev.email) updated.email = t('contact.form.mustBeFilled', 'must be filled out.');
+      if (prev.subject) updated.subject = t('contact.form.mustBeFilled', 'must be filled out.');
+      if (prev.message) updated.message = t('contact.form.mustBeFilled', 'must be filled out.');
+      return updated;
+    });
+  }, [i18n.language, t]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const decoded = atob(encodedPhone);
-    window.location.href = `tel:${decoded}`;
+    setStatus('loading');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleInvalid = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name } = e.currentTarget;
+    let label = '';
+    switch (name) {
+      case 'name':
+        label = t('contact.form.name', 'Name');
+        break;
+      case 'email':
+        label = t('contact.form.email', 'Email');
+        break;
+      case 'subject':
+        label = t('contact.form.subject', 'Subject');
+        break;
+      case 'message':
+        label = t('contact.form.message', 'Message');
+        break;
+      default:
+        label = '';
+    }
+    setErrors(prev => ({
+      ...prev,
+      [name]: t('contact.form.requiredField', { field: label, defaultValue: '{{field}} must be filled out.' })
+    }));
+    e.preventDefault();
+  };
+
+  const handleInput = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name } = e.currentTarget;
+    setErrors(prev => ({ ...prev, [name]: '' }));
   };
 
   return (
     <div className={styles.container}>
-      <div className={styles.bubble}>
+      <div className={styles['speech-bubble']}>
         <section className="text-center space-y-4">
           <h1 className="text-4xl font-bold">{t('contact.title', 'Contact Me')}</h1>
           <p className="text-xl text-muted-foreground">
@@ -26,93 +103,98 @@ const Contact = () => {
         </section>
 
         <section className="space-y-6 mt-8">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <h3 className={`${styles.row} text-lg font-semibold`}>
-                <Phone size={22} weight="duotone" />
-                {t('contact.phone', 'Phone')}
-              </h3>
-              <div className={styles.row}>
-                <button
-                  onClick={handleCall}
-                  className={styles.link}
-                  title="Call"
-                  style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
-                >
-                  <Phone size={20} /> {t('contact.call', 'Call')}
-                </button>
-                <a
-                  href="https://wa.me/905522972185"
-                  className={styles.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="WhatsApp"
-                >
-                  <WhatsappLogo size={20} /> WhatsApp
-                </a>
-              </div>
-            </div>
-            <div className="space-y-2">
-              <h3 className={`${styles.row} text-lg font-semibold`}>
-                <EnvelopeSimple size={22} weight="duotone" />
-                {t('contact.email', 'Email')}
-              </h3>
-              <a
-                href="mailto:halibrahim.kocak@gmail.com"
-                className={styles.link}
-              >
-                halibrahim.kocak@gmail.com
-              </a>
-            </div>
-          </div>
+        
+          {/* <ContactSocialButtons /> */}
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="space-y-2">
-              <h3 className={`${styles.row} text-lg font-semibold`}>
-                <GithubLogo size={22} weight="duotone" />
-                {t('contact.github', 'GitHub')}
-              </h3>
-              <a
-                href="https://github.com/hllbr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
-              >
-                github.com/hllbr
-              </a>
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <div style={{ position: 'relative' }}>
+              <label htmlFor="name" className="block text-sm font-medium mb-1">
+          {t('contact.form.name', 'Name')}
+              </label>
+              <input
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          onInvalid={handleInvalid}
+          onInput={handleInput}
+          required
+          className={formStyles.input}
+              />
+              {errors.name && <Tooltip label={t('contact.form.name', 'Name')} t={t} />}
             </div>
-            <div className="space-y-2">
-              <h3 className={`${styles.row} text-lg font-semibold`}>
-                <LinkedinLogo size={22} weight="duotone" />
-                {t('contact.linkedin', 'LinkedIn')}
-              </h3>
-              <a
-                href="https://www.linkedin.com/in/hllbr/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
-              >
-                linkedin.com/in/hllbr
-              </a>
+
+            <div style={{ position: 'relative' }}>
+              <label htmlFor="email" className="block text-sm font-medium mb-1">
+          {t('contact.form.email', 'Email')}
+              </label>
+              <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          onInvalid={handleInvalid}
+          onInput={handleInput}
+          required
+          className={formStyles.input}
+              />
+              {errors.email && <Tooltip label={t('contact.form.email', 'Email')} t={t} />}
             </div>
-            <div className="space-y-2">
-              <h3 className={`${styles.row} text-lg font-semibold`}>
-                <YoutubeLogo size={22} weight="duotone" />
-                {t('contact.youtube', 'YouTube')}
-              </h3>
-              <a
-                href="https://www.youtube.com/@platonfarkndapaylasmlar637"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
-              >
-                youtube.com/@platonfarkndapaylasmlar637
-              </a>
+
+            <div style={{ position: 'relative' }}>
+              <label htmlFor="subject" className="block text-sm font-medium mb-1">
+          {t('contact.form.subject', 'Subject')}
+              </label>
+              <input
+          type="text"
+          id="subject"
+          name="subject"
+          value={formData.subject}
+          onChange={handleChange}
+          onInvalid={handleInvalid}
+          onInput={handleInput}
+          required
+          className={formStyles.input}
+              />
+              {errors.subject && <Tooltip label={t('contact.form.subject', 'Subject')} t={t} />}
             </div>
-          </div>
+
+            <div style={{ position: 'relative' }}>
+              <label htmlFor="message" className="block text-sm font-medium mb-1">
+          {t('contact.form.message', 'Message')}
+              </label>
+              <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          onInvalid={handleInvalid}
+          onInput={handleInput}
+          required
+          rows={4}
+          className={formStyles.textarea}
+              />
+              {errors.message && <Tooltip label={t('contact.form.message', 'Message')} t={t} />}
+            </div>
+
+            <button
+              type="submit"
+              disabled={status === 'loading' || !formData.name || !formData.email || !formData.subject || !formData.message}
+              className={formStyles.button}
+            >
+              {status === 'loading' ? t('contact.form.sending', 'Sending...') : t('contact.form.send', 'Send Message')}
+            </button>
+
+            {status === 'success' && (
+              <p className={formStyles.success}>{t('contact.form.success', 'Message sent successfully!')}</p>
+            )}
+            {status === 'error' && (
+              <p className={formStyles.error}>{t('contact.form.error', 'Failed to send message. Please try again.')}</p>
+            )}
+          </form>
         </section>
-        <div className={styles.bubbleTail} />
-        <div className={styles.bubbleTailInner} />
       </div>
     </div>
   );

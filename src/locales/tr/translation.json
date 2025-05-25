@@ -27,7 +27,16 @@
     "call": "Ara",
     "email": "E-posta",
     "availability": "Müsaitlik Durumu",
-    "availabilityText": "Şu anda freelance projeler ve tam zamanlı fırsatlar için müsaitim."
+    "availabilityText": "Şu anda freelance projeler ve tam zamanlı fırsatlar için müsaitim.",
+    "form": {
+      "name": "Ad",
+      "email": "E-posta",
+      "subject": "Konu",
+      "message": "Mesaj",
+      "mustBeFilled": "doldurulmalıdır.",
+      "send": "Mesajı Gönder",
+      "sending": "Gönderiliyor..."
+    }
   },
   "technologies": {
     "title": "Teknolojiler",
@@ -62,6 +71,11 @@
     "backToHome": "Ana Sayfaya Dön"
   },
   "experience": {
+    "title": "Deneyim",
+    "subtitle": "Profesyonel iş tecrübelerim ve kullandığım teknolojiler",
+    "currentlyEmployed": "Şu an çalışıyorum",
+    "close": "Kapat",
+    "clickableCard": "Tıklanabilir kart",
     "seeDetails": "Detayları Gör"
   }
 } 
