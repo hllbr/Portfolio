@@ -56,8 +56,26 @@
       "Kullandığım her AI aracı, belirli bir amaca hizmet eden özelleştirilmiş bir iş ortağı gibi çalışıyor. Kod geliştirme, component tasarımı, görsel üretim, proje planlama, oyun prototipleme, patent analizi ve daha fazlası için farklı AI çözümlerini süreçlerime entegre ettim.",
       "Aşağıdaki kartlarda her bir aracı nasıl kullandığımı, hangi alanlarda verim aldığımı ve geliştirdiğim özel prompt yapılarını görebilirsiniz."
     ],
-    "infoSectionTitle2": "Araçların Ötesinde: AI ile Nasıl Mühendislik Yapıyorum",
-    "infoSectionDesc2": "AI'ı sadece çıktı üretmek için değil, düşünmeyi geliştirmek, yapıyı otomatikleştirmek ve inovasyonu ölçeklendirmek için sistemlerime entegre ediyorum.",
+    "infoSectionTitle2": "AI ile Kodun Ötesine Geçmek: Bir Mühendisin Yeni Nesil Düşünce Sistemi",
+    "infoSectionDesc2": [
+      "Yapay zekâyı sadece bir araç olarak değil, mühendislik bakış açımı genişleten bir düşünce ortağı olarak konumlandırıyorum. Kullandığım her AI çözümünü, kendi görev alanına özel bir stratejiyle entegre ediyor, onu sadece çıktılar üreten bir sistem değil; birlikte düşünebildiğim, yapı kurabildiğim bir \"ortak akıl\" haline getiriyorum.",
+      "🧠 Kod Yazmak Değil, Sistem İnşa Etmek",
+      "Cursor AI ile yaptığım çalışmalar buna iyi bir örnek. Sadece component yaratmıyorum — component mimarisini oluşturuyor, tekrar kullanılabilirlik, performans ve test edilebilirlik gibi prensipleri GPT destekli olarak kurguluyorum. Örneğin, büyük bir Form kütüphanesi geliştirirken Cursor AI'dan UI davranış kalıplarını taramasını istiyor, ardından kod önerilerini kendi prensiplerime göre revize ediyorum. Bu sayede AI, sadece \"kodlayan\" değil, \"düşünen\" bir yardımcı oluyor.",
+      "🧬 Patent Fikri Üreten GPT mi? Evet.",
+      "ChatGPT'yi, sıradan bir sohbet robotu olmaktan çıkararak özel amaçlara odaklı GPT'lere dönüştürdüm. Import Editor: Kod içindeki import gruplamalarını ekibimizin belirlediği düzene göre denetliyor. Data-Test-ID Validator: UI test süreçleri için eksik veya hatalı test ID'lerini analiz ediyor. Patent Investigator: Fikri mülkiyet süreçlerinde, sunduğum patent fikirlerinin ulusal ve uluslararası benzerliklerini tarayan bir özel GPT oluşturduk. Bu, fikirleri teknik dökümanlara dönüştürürken işimi büyük ölçüde kolaylaştırıyor.",
+      "🪄 Claude: Planlayıcı ve Stratejist",
+      "Bir işi alt task'lara bölmek kolay gibi görünür ama ölçeklenebilir hale getirmek ayrı bir meziyet ister. Claude'la, özellikle component kütüphanesi geliştirirken; Edge-case'leri planlamak, Refactor stratejisi oluşturmak, UI states için varyant senaryolar çıkarmak gibi işlerde çalışıyorum. Bu sayede, daha kod yazmaya başlamadan önce zihinsel bir mimari oluşturabiliyorum.",
+      "⚡ Grok: Kararsızlığın İçinden Netliği Çekip Alır",
+      "Bazı anlar vardır: performans mı öncelikli, okunabilirlik mi? İşte Grok burada devreye giriyor. Örneğin, karmaşık bir useEffect zinciri yerine custom hook'a geçip geçmeme kararı verirken Grok'a iki versiyonu anlattım — bana sadece alternatif sunmakla kalmadı, aralarındaki trade-off'ları analiz edip önerdi.",
+      "🎨 Muse: Görsel Düşünmenin Kodla Buluşması",
+      "Unity ile geliştirdiğim hikâye odaklı mini oyunlarda Muse'u bir sanatçı gibi değil, bir \"tasarım ortağı\" olarak kullanıyorum. Low-poly objeler, İzometrik sahne planları, Oyuncunun dikkatini yönlendiren çevresel detaylar gibi unsurları Muse ile üretiyor, ardından sahne içinde düzenliyorum. Bu süreç sadece görsel tasarımı değil, sahne içi etkileşimi de etkiliyor.",
+      "🧪 Fooocus Colab ile Sanatsal Prototipleme",
+      "2D oyun fikirlerimde sahne çizimi, sprite üretimi ve gölgelendirme varyantları gibi konuları Fooocus ile hızlıca test edebiliyorum. Sanat tarzı denemelerinde, oyun dünyası ile grafik dilinin tutarlı olması gerektiğine inanıyorum ve bu süreci hızlandırmak için AI'dan yoğun destek alıyorum.",
+      "🤖 Copilot: Sessiz Takipçi, Güçlü Tamamlayıcı",
+      "Basit hataları bulmak, otomatik tamamlama yapmak Copilot'un bilinen becerileri. Ama ben onu daha çok detaylandırılmış iş planlarına sadık kalan bir \"asistan\" gibi kullanıyorum. Birden fazla modül içeren dosya yapılarında, daha önce Claude ile planladığım işleri sırayla geliştirirken, Copilot zaman kazandıran mikro müdahaleler yapıyor.",
+      "🚀 AI ile Mühendislik, Yalnızca Kullanmak Değil Tasarlamaktır",
+      "Benim için yapay zekâ, sadece bir araç değil — bir mühendislik prensibi. Doğru araç + doğru kullanım senaryosu = düşünce sistemini dönüştüren etki. Her AI aracıyla sadece zamandan kazanmıyorum; aynı zamanda düşünme biçimimi yeniden tasarlıyorum."
+    ],
     "cards": [
       {
         "logo": "💻",
@@ -175,8 +193,8 @@
     "seeDetails": "Detayları Gör"
   },
   "aiTools": {
-    "title": "Araçların Ötesinde: AI ile Nasıl Mühendislik Yapıyorum",
-    "subtitle": "AI'ı sadece çıktı üretmek için değil, düşünmeyi geliştirmek, yapıyı otomatikleştirmek ve inovasyonu ölçeklendirmek için sistemlerime entegre ediyorum.",
+    "title": "AI ile Kodun Ötesine Geçmek: Bir Mühendisin Yeni Nesil Düşünce Sistemi",
+    "subtitle": "Yapay zekâyı sadece bir araç olarak değil, mühendislik bakış açımı genişleten bir düşünce ortağı olarak konumlandırıyorum. Kullandığım her AI çözümünü, kendi görev alanına özel bir stratejiyle entegre ediyor, onu sadece çıktılar üreten bir sistem değil; birlikte düşünebildiğim, yapı kurabildiğim bir \"ortak akıl\" haline getiriyorum.",
     "tools": {
       "cursor": {
         "name": "Cursor AI",
@@ -187,7 +205,7 @@
           "Mimari kuralları uygula",
           "SOLID prensiplerini doğrula"
         ],
-        "detailedDescription": "Cursor AI'ı TypeScript tabanlı UI kütüphaneleri tasarlamak, mantık hatalarını düzeltmek, mimari kuralları uygulamak ve SOLID prensiplerini doğrulamak için kullanıyorum — sadece otomatik olarak değil, düşünerek. Bileşenleri incelememe ve AI destekli rehberlikle sıfırdan oluşturmama yardımcı oluyor.",
+        "detailedDescription": "Cursor AI ile yaptığım çalışmalar buna iyi bir örnek. Sadece component yaratmıyorum — component mimarisini oluşturuyor, tekrar kullanılabilirlik, performans ve test edilebilirlik gibi prensipleri GPT destekli olarak kurguluyorum. Örneğin, büyük bir Form kütüphanesi geliştirirken Cursor AI'dan UI davranış kalıplarını taramasını istiyor, ardından kod önerilerini kendi prensiplerime göre revize ediyorum. Bu sayede AI, sadece \"kodlayan\" değil, \"düşünen\" bir yardımcı oluyor.",
         "modal": {
           "description": "Cursor AI, AI destekli önerilerle TypeScript tabanlı UI kütüphanelerini tasarlamanıza ve incelemenize yardımcı olur.",
           "tips": [
@@ -209,7 +227,7 @@
           "Teknik yazıma rehberlik et",
           "Kod inceleme desteği"
         ],
-        "detailedDescription": "Ekibim için \"Import Editor\" adında özel bir GPT geliştirdim. Bu GPT, patent fikirlerini doğrulamamıza, iddiaları formatlamamıza ve teknik yazıma rehberlik etmemize yardımcı oluyor. Artık GPT'yi geriye dönük kod incelemelerinde kullanarak, karar vermeyi iyileştiriyor ve SOLID veya proje özel kurallarıyla çakışan alanları vurguluyoruz.",
+        "detailedDescription": "ChatGPT'yi, sıradan bir sohbet robotu olmaktan çıkararak özel amaçlara odaklı GPT'lere dönüştürdüm. Import Editor: Kod içindeki import gruplamalarını ekibimizin belirlediği düzene göre denetliyor. Data-Test-ID Validator: UI test süreçleri için eksik veya hatalı test ID'lerini analiz ediyor. Patent Investigator: Fikri mülkiyet süreçlerinde, sunduğum patent fikirlerinin ulusal ve uluslararası benzerliklerini tarayan bir özel GPT oluşturduk. Bu, fikirleri teknik dökümanlara dönüştürürken işimi büyük ölçüde kolaylaştırıyor.",
         "modal": {
           "description": "ChatGPT, patent doğrulama, teknik yazım ve kod inceleme desteği için kullanılır.",
           "tips": [
@@ -229,7 +247,7 @@
           "Sınır durumu dokümantasyonu",
           "Bileşen kütüphanesi geliştirme"
         ],
-        "detailedDescription": "Claude'u proje planlayıcı olarak kullanıyorum. Karmaşık hedefleri izlenebilir alt görevlere bölmeme ve sınır durumlarını belgelememe yardımcı oluyor, özellikle bileşen kütüphaneleri ve prompt tasarımı gibi bireysel çalışmalarda faydalı.",
+        "detailedDescription": "Bir işi alt task'lara bölmek kolay gibi görünür ama ölçeklenebilir hale getirmek ayrı bir meziyet ister. Claude'la, özellikle component kütüphanesi geliştirirken; Edge-case'leri planlamak, Refactor stratejisi oluşturmak, UI states için varyant senaryolar çıkarmak gibi işlerde çalışıyorum. Bu sayede, daha kod yazmaya başlamadan önce zihinsel bir mimari oluşturabiliyorum.",
         "modal": {
           "description": "Claude, proje planlama, görev bölme ve sınır durumlarını belgeleme konusunda yardımcı olur.",
           "tips": [
@@ -249,7 +267,7 @@
           "Performans optimizasyonu",
           "Kod okunabilirlik analizi"
         ],
-        "detailedDescription": "Grok'u hızlı mantık doğrulama ve okunabilirlik, performans ve soyutlama derinliği arasındaki ödünleşimleri değerlendirirken alternatif uygulamalar üretmek için kullanıyorum.",
+        "detailedDescription": "Bazı anlar vardır: performans mı öncelikli, okunabilirlik mi? İşte Grok burada devreye giriyor. Örneğin, karmaşık bir useEffect zinciri yerine custom hook'a geçip geçmeme kararı verirken Grok'a iki versiyonu anlattım — bana sadece alternatif sunmakla kalmadı, aralarındaki trade-off'ları analiz edip önerdi.",
         "modal": {
           "description": "Grok, mantık doğrulama ve alternatif uygulamaları karşılaştırma için kullanılır.",
           "tips": [
@@ -269,7 +287,7 @@
           "Oyun prototipleme",
           "Görsel tutarlılık"
         ],
-        "detailedDescription": "Unity'de küçük oyunlar veya anlatı deneyimleri geliştirirken, Muse'u piksel sanatı tarzında görsel varlıklar üretmek için kullanıyorum. Bu, fikir üretimini hızlandırıyor ve benzersiz görsel tutarlılıkla daha hızlı prototiplemeyi destekliyor.",
+        "detailedDescription": "Unity ile geliştirdiğim hikâye odaklı mini oyunlarda Muse'u bir sanatçı gibi değil, bir \"tasarım ortağı\" olarak kullanıyorum. Low-poly objeler, İzometrik sahne planları, Oyuncunun dikkatini yönlendiren çevresel detaylar gibi unsurları Muse ile üretiyor, ardından sahne içinde düzenliyorum. Bu süreç sadece görsel tasarımı değil, sahne içi etkileşimi de etkiliyor.",
         "modal": {
           "description": "Muse, Unity oyunları için görsel varlıklar ve piksel sanatı üretmek için kullanılır.",
           "tips": [
@@ -289,7 +307,7 @@
           "Colab üzerinde hızlı ve ücretsiz kullanım",
           "Projelerime özel görsel ekleme"
         ],
-        "detailedDescription": "Projelerim için yüksek kaliteli ve özgün görseller üretmek üzere Stable Diffusion tabanlı bir araç olan Fooocus Colab'ı kullanıyorum.",
+        "detailedDescription": "2D oyun fikirlerimde sahne çizimi, sprite üretimi ve gölgelendirme varyantları gibi konuları Fooocus ile hızlıca test edebiliyorum. Sanat tarzı denemelerinde, oyun dünyası ile grafik dilinin tutarlı olması gerektiğine inanıyorum ve bu süreci hızlandırmak için AI'dan yoğun destek alıyorum.",
         "modal": {
           "description": "Fooocus Colab, Stable Diffusion kullanarak yüksek kaliteli ve özgün görseller üretmek için kullanılır.",
           "tips": [
@@ -309,7 +327,7 @@
           "Geliştirmeyi hızlandır",
           "Tekrarlayan görevleri azalt"
         ],
-        "detailedDescription": "Copilot, akıllı kod tamamlamaları, öneriler ve şablon oluşturma sağlayarak kodu daha hızlı yazmaya yardımcı olur. Tekrarlayan işleri azaltır ve geliştiricilerin üretkenliğini artırır.",
+        "detailedDescription": "Basit hataları bulmak, otomatik tamamlama yapmak Copilot'un bilinen becerileri. Ama ben onu daha çok detaylandırılmış iş planlarına sadık kalan bir \"asistan\" gibi kullanıyorum. Birden fazla modül içeren dosya yapılarında, daha önce Claude ile planladığım işleri sırayla geliştirirken, Copilot zaman kazandıran mikro müdahaleler yapıyor.",
         "modal": {
           "description": "Copilot, yazarken gerçek zamanlı kod önerileri ve tamamlamaları sunan AI eş programcınızdır.",
           "tips": [

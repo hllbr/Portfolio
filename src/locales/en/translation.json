@@ -56,8 +56,26 @@
       "Each AI tool I use acts as a customized partner serving a specific purpose. I have integrated different AI solutions into my workflow for code development, component design, visual generation, project planning, game prototyping, patent analysis, and more.",
       "In the cards below, you can see how I use each tool, the areas where I gain efficiency, and the custom prompt structures I have developed."
     ],
-    "infoSectionTitle2": "Beyond Tools: How I Engineer With AI",
-    "infoSectionDesc2": "I don't use AI just to generate outputs — I integrate it into my systems to enhance thinking, automate structure, and scale innovation.",
+    "infoSectionTitle2": "Beyond Code: A New Generation Engineering Thought System with AI",
+    "infoSectionDesc2": [
+      "I position artificial intelligence not just as a tool, but as a thought partner that expands my engineering perspective. I integrate each AI solution I use with a strategy specific to its task domain, transforming it from a mere output-generating system into a \"collective mind\" with which I can think and build structures.",
+      "🧠 Not Just Coding, But Building Systems",
+      "My work with Cursor AI is a good example. I'm not just creating components — I'm building component architecture, setting up principles like reusability, performance, and testability with GPT assistance. For instance, when developing a large Form library, I ask Cursor AI to scan UI behavior patterns, then revise code suggestions according to my principles. This way, AI becomes not just a \"coder\" but a \"thinking\" assistant.",
+      "🧬 A GPT that Generates Patent Ideas? Yes.",
+      "I've transformed ChatGPT from a simple chatbot into purpose-specific GPTs. Import Editor: Monitors import groupings according to our team's established order. Data-Test-ID Validator: Analyzes missing or incorrect test IDs for UI testing processes. Patent Investigator: We've created a special GPT that scans national and international similarities of patent ideas I present in intellectual property processes. This greatly facilitates my work when converting ideas into technical documents.",
+      "🪄 Claude: Planner and Strategist",
+      "Breaking down a task into subtasks might seem easy, but making it scalable is a different skill. With Claude, especially when developing component libraries, I work on planning edge cases, creating refactor strategies, and developing variant scenarios for UI states. This allows me to create a mental architecture before even starting to write code.",
+      "⚡ Grok: Finding Clarity in Uncertainty",
+      "There are moments when you have to choose: performance or readability? This is where Grok comes in. For example, when deciding whether to switch from a complex useEffect chain to a custom hook, I explained both versions to Grok — it not only offered alternatives but also analyzed the trade-offs and made recommendations.",
+      "🎨 Muse: Where Visual Thinking Meets Code",
+      "In story-focused mini-games I develop with Unity, I use Muse not as an artist but as a \"design partner.\" I generate elements like low-poly objects, isometric scene layouts, and environmental details that guide player attention, then arrange them within the scene. This process affects not just visual design but also in-scene interaction.",
+      "🧪 Artistic Prototyping with Fooocus Colab",
+      "I can quickly test scene drawings, sprite generation, and shading variants for my 2D game ideas with Fooocus. In art style experiments, I believe the game world and graphic language should be consistent, and I get intensive AI support to speed up this process.",
+      "🤖 Copilot: Silent Follower, Powerful Completer",
+      "Finding simple errors and auto-completing code are Copilot's known capabilities. But I use it more as an \"assistant\" that stays true to detailed work plans. In file structures with multiple modules, while developing tasks I previously planned with Claude, Copilot makes time-saving micro-interventions.",
+      "🚀 Engineering with AI Means Not Just Using, But Designing",
+      "For me, artificial intelligence is not just a tool — it's an engineering principle. The right tool + the right use case = a transformative effect on the way I think. With every AI tool, I not only save time; I also redesign my way of thinking."
+    ],
     "cards": [
       {
         "logo": "💻",
@@ -175,8 +193,8 @@
     "seeDetails": "See Details"
   },
   "aiTools": {
-    "title": "Beyond Tools: How I Engineer With AI",
-    "subtitle": "I don't use AI just to generate outputs — I integrate it into my systems to enhance thinking, automate structure, and scale innovation.",
+    "title": "Beyond Code: A New Generation Engineering Thought System with AI",
+    "subtitle": "I position artificial intelligence not just as a tool, but as a thought partner that expands my engineering perspective. I integrate each AI solution I use with a strategy specific to its task domain, transforming it from a mere output-generating system into a \"collective mind\" with which I can think and build structures.",
     "tools": {
       "cursor": {
         "name": "Cursor AI",
@@ -187,7 +205,7 @@
           "Enforce architectural conventions",
           "Validate SOLID principles"
         ],
-        "detailedDescription": "I use Cursor AI to design TypeScript-based UI libraries, fix logic bugs, enforce architectural conventions, and validate SOLID principles — not just automatically, but reflectively. It helps me review components and build them from scratch with AI-assisted guidance.",
+        "detailedDescription": "🧠 Building Systems, Not Just Writing Code\nMy work with Cursor AI is a good example. I'm not just creating components — I'm building component architecture, setting up principles like reusability, performance, and testability with GPT assistance. For instance, when developing a large Form library, I ask Cursor AI to scan UI behavior patterns, then revise code suggestions according to my principles. This way, AI becomes not just a \"coder\" but a \"thinking\" assistant.",
         "modal": {
           "description": "Cursor AI helps you design and review TypeScript-based UI libraries with AI-powered suggestions.",
           "tips": [
@@ -209,7 +227,7 @@
           "Guide technical writing",
           "Code review assistance"
         ],
-        "detailedDescription": "I developed a private Custom GPT called \"Import Editor\" for my team, which helps us validate patent ideas, format claims, and guide technical writing. We now apply GPT during retrospective code reviews, improving decision-making and highlighting areas that conflict with SOLID or project-specific rules.",
+        "detailedDescription": "🧬 A GPT that Generates Patent Ideas? Yes.\nI've transformed ChatGPT from a simple chatbot into purpose-specific GPTs.\n\nImport Editor: Monitors import groupings according to our team's established order.\n\nData-Test-ID Validator: Analyzes missing or incorrect test IDs for UI testing processes.\n\nPatent Investigator: We've created a special GPT that scans national and international similarities of patent ideas I present in intellectual property processes. This greatly facilitates my work when converting ideas into technical documents.",
         "modal": {
           "description": "ChatGPT is used for patent validation, technical writing, and code review assistance.",
           "tips": [
@@ -229,7 +247,7 @@
           "Edge case documentation",
           "Component library development"
         ],
-        "detailedDescription": "I use Claude as a project planner. It helps me break complex goals into trackable sub-tasks and document edge cases, particularly useful in individual work like component libraries and prompt design.",
+        "detailedDescription": "🪄 Claude: Planner and Strategist\nBreaking down a task into subtasks might seem easy, but making it scalable is a different skill. With Claude, especially when developing component libraries, I work on:\n\nPlanning edge cases,\n\nCreating refactor strategies,\n\nDeveloping variant scenarios for UI states.\n\nThis allows me to create a mental architecture before even starting to write code.",
         "modal": {
           "description": "Claude helps with project planning, task breakdown, and documenting edge cases.",
           "tips": [
@@ -249,7 +267,7 @@
           "Performance optimization",
           "Code readability analysis"
         ],
-        "detailedDescription": "I use Grok for rapid logic validation and to generate alternative implementations when I'm considering trade-offs between readability, performance, and abstraction depth.",
+        "detailedDescription": "⚡ Grok: Finding Clarity in Uncertainty\nThere are moments when you have to choose: performance or readability?\nThis is where Grok comes in.\nFor example, when deciding whether to switch from a complex useEffect chain to a custom hook, I explained both versions to Grok — it not only offered alternatives but also analyzed the trade-offs and made recommendations.",
         "modal": {
           "description": "Grok is used for logic validation and comparing alternative implementations.",
           "tips": [
@@ -269,7 +287,7 @@
           "Game prototyping",
           "Visual consistency"
         ],
-        "detailedDescription": "When developing small games or narrative experiences in Unity, I use Muse to generate visual assets in pixel-art style. This streamlines ideation and supports faster prototyping with unique visual consistency.",
+        "detailedDescription": "🎨 Muse: Where Visual Thinking Meets Code\nIn story-focused mini-games I develop with Unity, I use Muse not as an artist but as a \"design partner.\" I generate elements like:\n\nLow-poly objects,\n\nIsometric scene layouts,\n\nEnvironmental details that guide player attention,\n\nThen arrange them within the scene. This process affects not just visual design but also in-scene interaction.",
         "modal": {
           "description": "Muse is used for generating visual assets and pixel art for Unity games.",
           "tips": [
@@ -289,7 +307,7 @@
           "Fast and free usage on Colab",
           "Add custom visuals to projects"
         ],
-        "detailedDescription": "I use Fooocus Colab, a Stable Diffusion-based tool, to generate high-quality and unique images for my projects.",
+        "detailedDescription": "🧪 Artistic Prototyping with Fooocus Colab\nI can quickly test scene drawings, sprite generation, and shading variants for my 2D game ideas with Fooocus. In art style experiments, I believe the game world and graphic language should be consistent, and I get intensive AI support to speed up this process.",
         "modal": {
           "description": "Fooocus Colab is used for generating high-quality and unique images using Stable Diffusion.",
           "tips": [
@@ -309,7 +327,7 @@
           "Accelerate development",
           "Reduce repetitive tasks"
         ],
-        "detailedDescription": "Copilot assists in writing code faster by providing intelligent code completions, suggestions, and boilerplate generation. It helps reduce repetitive work and increases productivity for developers.",
+        "detailedDescription": "🤖 Copilot: Silent Follower, Powerful Completer\nFinding simple errors and auto-completing code are Copilot's known capabilities. But I use it more as an \"assistant\" that stays true to detailed work plans. In file structures with multiple modules, while developing tasks I previously planned with Claude, Copilot makes time-saving micro-interventions.",
         "modal": {
           "description": "Copilot is your AI pair programmer, offering real-time code suggestions and completions as you type.",
           "tips": [
