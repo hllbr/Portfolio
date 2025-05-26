@@ -47,7 +47,103 @@
     "methodology": "My Methodology",
     "methodologyText": "I leverage AI tools to enhance productivity and creativity while maintaining human oversight and critical thinking.",
     "tools": "AI Tools I Use",
-    "usage": "Usage"
+    "usage": "Usage",
+    "mainTitle": "My AI Approach",
+    "mainTitleSubtitle": "My methodology for AI projects",
+    "infoSectionTitle1": "How Do I Use AI and Prompts?",
+    "infoSectionDesc1": [
+      "I use artificial intelligence not just to generate outputs, but to systematically boost my productivity, improve code quality, and empower creative processes.",
+      "Each AI tool I use acts as a customized partner serving a specific purpose. I have integrated different AI solutions into my workflow for code development, component design, visual generation, project planning, game prototyping, patent analysis, and more.",
+      "In the cards below, you can see how I use each tool, the areas where I gain efficiency, and the custom prompt structures I have developed."
+    ],
+    "infoSectionTitle2": "Beyond Tools: How I Engineer With AI",
+    "infoSectionDesc2": "I don't use AI just to generate outputs — I integrate it into my systems to enhance thinking, automate structure, and scale innovation.",
+    "cards": [
+      {
+        "logo": "💻",
+        "title": "Cursor AI",
+        "description": "TypeScript-based UI libraries design and code review assistant",
+        "details": [
+          "Design TypeScript-based UI libraries",
+          "Fix logic bugs",
+          "Enforce architectural conventions",
+          "Validate SOLID principles"
+        ],
+        "color": "#fb923c"
+      },
+      {
+        "logo": "🤖",
+        "title": "ChatGPT",
+        "description": "Custom GPT for patent validation and technical writing",
+        "details": [
+          "Validate patent ideas",
+          "Format claims",
+          "Guide technical writing",
+          "Code review assistance"
+        ],
+        "color": "#60a5fa"
+      },
+      {
+        "logo": "🧠",
+        "title": "Claude",
+        "description": "Project planning and task breakdown assistant",
+        "details": [
+          "Project planning",
+          "Task breakdown",
+          "Edge case documentation",
+          "Component library development"
+        ],
+        "color": "#a78bfa"
+      },
+      {
+        "logo": "⚡",
+        "title": "Grok",
+        "description": "Rapid logic validation and implementation comparison",
+        "details": [
+          "Logic validation",
+          "Alternative implementations",
+          "Performance optimization",
+          "Code readability analysis"
+        ],
+        "color": "#f87171"
+      },
+      {
+        "logo": "🎨",
+        "title": "Muse",
+        "description": "Unity game development and pixel art generation",
+        "details": [
+          "Generate visual assets",
+          "Pixel art creation",
+          "Game prototyping",
+          "Visual consistency"
+        ],
+        "color": "#4ade80"
+      },
+      {
+        "logo": "🖼️",
+        "title": "Fooocus Colab",
+        "description": "Colab-based tool I use to add images with Stable Diffusion.",
+        "details": [
+          "Generate high-quality images with Stable Diffusion",
+          "Create unique images through prompts",
+          "Fast and free usage on Colab",
+          "Add custom visuals to projects"
+        ],
+        "color": "#fbbf24"
+      },
+      {
+        "logo": "🧑‍💻",
+        "title": "Copilot",
+        "description": "AI-powered code completion and suggestion assistant",
+        "details": [
+          "Auto-complete code",
+          "Suggest code snippets",
+          "Accelerate development",
+          "Reduce repetitive tasks"
+        ],
+        "color": "#06b6d4"
+      }
+    ]
   },
   "patents": {
     "title": "My Patents",
@@ -77,5 +173,155 @@
     "close": "Close",
     "clickableCard": "Clickable card",
     "seeDetails": "See Details"
+  },
+  "aiTools": {
+    "title": "Beyond Tools: How I Engineer With AI",
+    "subtitle": "I don't use AI just to generate outputs — I integrate it into my systems to enhance thinking, automate structure, and scale innovation.",
+    "tools": {
+      "cursor": {
+        "name": "Cursor AI",
+        "description": "TypeScript-based UI libraries design and code review assistant",
+        "useCases": [
+          "Design TypeScript-based UI libraries",
+          "Fix logic bugs",
+          "Enforce architectural conventions",
+          "Validate SOLID principles"
+        ],
+        "detailedDescription": "I use Cursor AI to design TypeScript-based UI libraries, fix logic bugs, enforce architectural conventions, and validate SOLID principles — not just automatically, but reflectively. It helps me review components and build them from scratch with AI-assisted guidance.",
+        "modal": {
+          "description": "Cursor AI helps you design and review TypeScript-based UI libraries with AI-powered suggestions.",
+          "tips": [
+            { "title": "SOLID Review", "content": "Use this tool to check if your components follow SOLID principles." },
+            { "title": "Bug Fixing", "content": "Paste your buggy code and ask for a step-by-step fix." }
+          ],
+          "prompts": [
+            { "label": "SOLID Check", "content": "Check if this component follows SOLID principles: ..." },
+            { "label": "Bug Fix", "content": "Find and fix the bug in this code: ..." }
+          ]
+        }
+      },
+      "chatgpt": {
+        "name": "ChatGPT",
+        "description": "Custom GPT for patent validation and technical writing",
+        "useCases": [
+          "Validate patent ideas",
+          "Format claims",
+          "Guide technical writing",
+          "Code review assistance"
+        ],
+        "detailedDescription": "I developed a private Custom GPT called \"Import Editor\" for my team, which helps us validate patent ideas, format claims, and guide technical writing. We now apply GPT during retrospective code reviews, improving decision-making and highlighting areas that conflict with SOLID or project-specific rules.",
+        "modal": {
+          "description": "ChatGPT is used for patent validation, technical writing, and code review assistance.",
+          "tips": [
+            { "title": "Patent Validation", "content": "Use ChatGPT to validate your patent ideas and format claims." }
+          ],
+          "prompts": [
+            { "label": "Patent Check", "content": "Validate this patent idea: ..." }
+          ]
+        }
+      },
+      "claude": {
+        "name": "Claude",
+        "description": "Project planning and task breakdown assistant",
+        "useCases": [
+          "Project planning",
+          "Task breakdown",
+          "Edge case documentation",
+          "Component library development"
+        ],
+        "detailedDescription": "I use Claude as a project planner. It helps me break complex goals into trackable sub-tasks and document edge cases, particularly useful in individual work like component libraries and prompt design.",
+        "modal": {
+          "description": "Claude helps with project planning, task breakdown, and documenting edge cases.",
+          "tips": [
+            { "title": "Task Breakdown", "content": "Use Claude to break down complex projects into manageable tasks." }
+          ],
+          "prompts": [
+            { "label": "Breakdown Prompt", "content": "Break down this project into tasks: ..." }
+          ]
+        }
+      },
+      "grok": {
+        "name": "Grok",
+        "description": "Rapid logic validation and implementation comparison",
+        "useCases": [
+          "Logic validation",
+          "Alternative implementations",
+          "Performance optimization",
+          "Code readability analysis"
+        ],
+        "detailedDescription": "I use Grok for rapid logic validation and to generate alternative implementations when I'm considering trade-offs between readability, performance, and abstraction depth.",
+        "modal": {
+          "description": "Grok is used for logic validation and comparing alternative implementations.",
+          "tips": [
+            { "title": "Logic Validation", "content": "Use Grok to validate your logic and compare different implementations." }
+          ],
+          "prompts": [
+            { "label": "Logic Check", "content": "Validate the logic in this code: ..." }
+          ]
+        }
+      },
+      "muse": {
+        "name": "Muse",
+        "description": "Unity game development and pixel art generation",
+        "useCases": [
+          "Generate visual assets",
+          "Pixel art creation",
+          "Game prototyping",
+          "Visual consistency"
+        ],
+        "detailedDescription": "When developing small games or narrative experiences in Unity, I use Muse to generate visual assets in pixel-art style. This streamlines ideation and supports faster prototyping with unique visual consistency.",
+        "modal": {
+          "description": "Muse is used for generating visual assets and pixel art for Unity games.",
+          "tips": [
+            { "title": "Pixel Art", "content": "Use Muse to quickly generate pixel art for your prototypes." }
+          ],
+          "prompts": [
+            { "label": "Pixel Art Prompt", "content": "Generate a pixel art character: ..." }
+          ]
+        }
+      },
+      "fooocus": {
+        "name": "Fooocus Colab",
+        "description": "Stable Diffusion-based image generation tool",
+        "useCases": [
+          "Generate high-quality images with Stable Diffusion",
+          "Create unique images through prompts",
+          "Fast and free usage on Colab",
+          "Add custom visuals to projects"
+        ],
+        "detailedDescription": "I use Fooocus Colab, a Stable Diffusion-based tool, to generate high-quality and unique images for my projects.",
+        "modal": {
+          "description": "Fooocus Colab is used for generating high-quality and unique images using Stable Diffusion.",
+          "tips": [
+            { "title": "Prompt Writing", "content": "Use clear and detailed prompts for better results." }
+          ],
+          "prompts": [
+            { "label": "Image Generation Prompt", "content": "Generate a space-themed illustration: ..." }
+          ]
+        }
+      },
+      "copilot": {
+        "name": "Copilot",
+        "description": "AI-powered code completion and suggestion assistant",
+        "useCases": [
+          "Auto-complete code",
+          "Suggest code snippets",
+          "Accelerate development",
+          "Reduce repetitive tasks"
+        ],
+        "detailedDescription": "Copilot assists in writing code faster by providing intelligent code completions, suggestions, and boilerplate generation. It helps reduce repetitive work and increases productivity for developers.",
+        "modal": {
+          "description": "Copilot is your AI pair programmer, offering real-time code suggestions and completions as you type.",
+          "tips": [
+            { "title": "Context Awareness", "content": "Copilot adapts to your code context and suggests relevant completions." },
+            { "title": "Prompting", "content": "Write clear function names and comments to get better suggestions." }
+          ],
+          "prompts": [
+            { "label": "Function Implementation", "content": "Implement a function that sorts an array of numbers in ascending order." },
+            { "label": "Boilerplate Generation", "content": "Generate a React functional component with TypeScript." }
+          ]
+        }
+      }
+    }
   }
 } 
