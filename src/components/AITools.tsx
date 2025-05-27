@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface AITool {
   name: string;
@@ -14,178 +15,119 @@ interface AITool {
   };
 }
 
-const aiTools: AITool[] = [
+const getAiTools = (
+  t: (
+    key: string,
+    options?: Record<string, unknown>
+  ) => string | string[] | { title: string; content: string }[] | { label: string; content: string }[]
+): AITool[] => [
   {
-    name: 'Cursor AI',
+    name: t('aiTools.tools.cursor.name') as string,
     icon: '💻',
-    description: 'TypeScript-based UI libraries design and code review assistant',
-    useCases: [
-      'Design TypeScript-based UI libraries',
-      'Fix logic bugs',
-      'Enforce architectural conventions',
-      'Validate SOLID principles'
-    ],
+    description: t('aiTools.tools.cursor.description') as string,
+    useCases: t('aiTools.tools.cursor.useCases', { returnObjects: true }) as string[],
     color: 'bg-orange-500',
-    detailedDescription: 'I use Cursor AI to design TypeScript-based UI libraries, fix logic bugs, enforce architectural conventions, and validate SOLID principles — not just automatically, but reflectively. It helps me review components and build them from scratch with AI-assisted guidance.',
+    detailedDescription: t('aiTools.tools.cursor.detailedDescription') as string,
     modal: {
-      description: 'Cursor AI helps you design and review TypeScript-based UI libraries with AI-powered suggestions.',
-      tips: [
-        { title: 'SOLID Review', content: 'Use this tool to check if your components follow SOLID principles.' },
-        { title: 'Bug Fixing', content: 'Paste your buggy code and ask for a step-by-step fix.' }
-      ],
-      prompts: [
-        { label: 'SOLID Check', content: '"""Check if this component follows SOLID principles: ..."""' },
-        { label: 'Bug Fix', content: '"""Find and fix the bug in this code: ..."""' }
-      ]
+      description: t('aiTools.tools.cursor.modal.description') as string,
+      tips: t('aiTools.tools.cursor.modal.tips', { returnObjects: true }) as { title: string; content: string }[],
+      prompts: t('aiTools.tools.cursor.modal.prompts', { returnObjects: true }) as { label: string; content: string }[]
     }
   },
   {
-    name: 'ChatGPT',
+    name: t('aiTools.tools.chatgpt.name') as string,
     icon: '🤖',
-    description: 'Custom GPT for patent validation and technical writing',
-    useCases: [
-      'Validate patent ideas',
-      'Format claims',
-      'Guide technical writing',
-      'Code review assistance'
-    ],
+    description: t('aiTools.tools.chatgpt.description') as string,
+    useCases: t('aiTools.tools.chatgpt.useCases', { returnObjects: true }) as string[],
     color: 'bg-blue-500',
-    detailedDescription: 'I developed a private Custom GPT called "Import Editor" for my team, which helps us validate patent ideas, format claims, and guide technical writing. We now apply GPT during retrospective code reviews, improving decision-making and highlighting areas that conflict with SOLID or project-specific rules.',
+    detailedDescription: t('aiTools.tools.chatgpt.detailedDescription') as string,
     modal: {
-      description: 'ChatGPT is used for patent validation, technical writing, and code review assistance.',
-      tips: [
-        { title: 'Patent Validation', content: 'Use ChatGPT to validate your patent ideas and format claims.' }
-      ],
-      prompts: [
-        { label: 'Patent Check', content: '"""Validate this patent idea: ..."""' }
-      ]
+      description: t('aiTools.tools.chatgpt.modal.description') as string,
+      tips: t('aiTools.tools.chatgpt.modal.tips', { returnObjects: true }) as { title: string; content: string }[],
+      prompts: t('aiTools.tools.chatgpt.modal.prompts', { returnObjects: true }) as { label: string; content: string }[]
     }
   },
   {
-    name: 'Claude',
+    name: t('aiTools.tools.claude.name') as string,
     icon: '🧠',
-    description: 'Project planning and task breakdown assistant',
-    useCases: [
-      'Project planning',
-      'Task breakdown',
-      'Edge case documentation',
-      'Component library development'
-    ],
+    description: t('aiTools.tools.claude.description') as string,
+    useCases: t('aiTools.tools.claude.useCases', { returnObjects: true }) as string[],
     color: 'bg-purple-500',
-    detailedDescription: 'I use Claude as a project planner. It helps me break complex goals into trackable sub-tasks and document edge cases, particularly useful in individual work like component libraries and prompt design.',
+    detailedDescription: t('aiTools.tools.claude.detailedDescription') as string,
     modal: {
-      description: 'Claude helps with project planning, task breakdown, and documenting edge cases.',
-      tips: [
-        { title: 'Task Breakdown', content: 'Use Claude to break down complex projects into manageable tasks.' }
-      ],
-      prompts: [
-        { label: 'Breakdown Prompt', content: '"""Break down this project into tasks: ..."""' }
-      ]
+      description: t('aiTools.tools.claude.modal.description') as string,
+      tips: t('aiTools.tools.claude.modal.tips', { returnObjects: true }) as { title: string; content: string }[],
+      prompts: t('aiTools.tools.claude.modal.prompts', { returnObjects: true }) as { label: string; content: string }[]
     }
   },
   {
-    name: 'Grok',
+    name: t('aiTools.tools.grok.name') as string,
     icon: '⚡',
-    description: 'Rapid logic validation and implementation comparison',
-    useCases: [
-      'Logic validation',
-      'Alternative implementations',
-      'Performance optimization',
-      'Code readability analysis'
-    ],
+    description: t('aiTools.tools.grok.description') as string,
+    useCases: t('aiTools.tools.grok.useCases', { returnObjects: true }) as string[],
     color: 'bg-red-500',
-    detailedDescription: 'I use Grok for rapid logic validation and to generate alternative implementations when I\'m considering trade-offs between readability, performance, and abstraction depth.',
+    detailedDescription: t('aiTools.tools.grok.detailedDescription') as string,
     modal: {
-      description: 'Grok is used for logic validation and comparing alternative implementations.',
-      tips: [
-        { title: 'Logic Validation', content: 'Use Grok to validate your logic and compare different implementations.' }
-      ],
-      prompts: [
-        { label: 'Logic Check', content: '"""Validate the logic in this code: ..."""' }
-      ]
+      description: t('aiTools.tools.grok.modal.description') as string,
+      tips: t('aiTools.tools.grok.modal.tips', { returnObjects: true }) as { title: string; content: string }[],
+      prompts: t('aiTools.tools.grok.modal.prompts', { returnObjects: true }) as { label: string; content: string }[]
     }
   },
   {
-    name: 'Muse',
+    name: t('aiTools.tools.muse.name') as string,
     icon: '🎨',
-    description: 'Unity game development and pixel art generation',
-    useCases: [
-      'Generate visual assets',
-      'Pixel art creation',
-      'Game prototyping',
-      'Visual consistency'
-    ],
+    description: t('aiTools.tools.muse.description') as string,
+    useCases: t('aiTools.tools.muse.useCases', { returnObjects: true }) as string[],
     color: 'bg-green-500',
-    detailedDescription: 'When developing small games or narrative experiences in Unity, I use Muse to generate visual assets in pixel-art style. This streamlines ideation and supports faster prototyping with unique visual consistency.',
+    detailedDescription: t('aiTools.tools.muse.detailedDescription') as string,
     modal: {
-      description: 'Muse is used for generating visual assets and pixel art for Unity games.',
-      tips: [
-        { title: 'Pixel Art', content: 'Use Muse to quickly generate pixel art for your prototypes.' }
-      ],
-      prompts: [
-        { label: 'Pixel Art Prompt', content: '"""Generate a pixel art character: ..."""' }
-      ]
+      description: t('aiTools.tools.muse.modal.description') as string,
+      tips: t('aiTools.tools.muse.modal.tips', { returnObjects: true }) as { title: string; content: string }[],
+      prompts: t('aiTools.tools.muse.modal.prompts', { returnObjects: true }) as { label: string; content: string }[]
     }
   },
   {
-    name: 'Fooocus Colab',
-    icon: '🖼️',
-    description: 'Stable Diffusion ile resim eklemek için kullandığım Colab tabanlı araç.',
-    useCases: [
-      'Stable Diffusion ile yüksek kaliteli görseller üret',
-      'Prompt yazarak özgün resimler oluştur',
-      'Colab üzerinde hızlı ve ücretsiz kullanım',
-      'Projelerime özel görsel ekleme'
-    ],
+    name: t('aiTools.tools.fooocus.name') as string,
+    icon: '��️',
+    description: t('aiTools.tools.fooocus.description') as string,
+    useCases: t('aiTools.tools.fooocus.useCases', { returnObjects: true }) as string[],
     color: 'bg-yellow-500',
-    detailedDescription: 'Stable Diffusion ile resim eklemek için kullandığım Colab tabanlı araç.',
+    detailedDescription: t('aiTools.tools.fooocus.detailedDescription') as string,
     modal: {
-      description: 'Fooocus Colab, Stable Diffusion ile hızlı ve özgün görseller üretmek için kullanılır.',
-      tips: [
-        { title: 'Prompt Yazımı', content: 'Daha iyi sonuçlar için açık ve detaylı promptlar kullanın.' }
-      ],
-      prompts: [
-        { label: 'Görsel Üretim Promptu', content: '"""Bir uzay temalı illüstrasyon üret: ..."""' }
-      ]
+      description: t('aiTools.tools.fooocus.modal.description') as string,
+      tips: t('aiTools.tools.fooocus.modal.tips', { returnObjects: true }) as { title: string; content: string }[],
+      prompts: t('aiTools.tools.fooocus.modal.prompts', { returnObjects: true }) as { label: string; content: string }[]
     }
   },
   {
-    name: 'Copilot',
+    name: t('aiTools.tools.copilot.name') as string,
     icon: '🧑‍💻',
-    description: 'AI-powered code completion and suggestion assistant',
-    useCases: [
-      'Auto-complete code',
-      'Suggest code snippets',
-      'Accelerate development',
-      'Reduce repetitive tasks'
-    ],
+    description: t('aiTools.tools.copilot.description') as string,
+    useCases: t('aiTools.tools.copilot.useCases', { returnObjects: true }) as string[],
     color: 'bg-cyan-500',
-    detailedDescription: 'Copilot assists in writing code faster by providing intelligent code completions, suggestions, and boilerplate generation. It helps reduce repetitive work and increases productivity for developers.',
+    detailedDescription: t('aiTools.tools.copilot.detailedDescription') as string,
     modal: {
-      description: 'Copilot is your AI pair programmer, offering real-time code suggestions and completions as you type.',
-      tips: [
-        { title: 'Context Awareness', content: 'Copilot adapts to your code context and suggests relevant completions.' },
-        { title: 'Prompting', content: 'Write clear function names and comments to get better suggestions.' }
-      ],
-      prompts: [
-        { label: 'Function Implementation', content: '"""Implement a function that sorts an array of numbers in ascending order."""' },
-        { label: 'Boilerplate Generation', content: '"""Generate a React functional component with TypeScript."""' }
-      ]
+      description: t('aiTools.tools.copilot.modal.description') as string,
+      tips: t('aiTools.tools.copilot.modal.tips', { returnObjects: true }) as { title: string; content: string }[],
+      prompts: t('aiTools.tools.copilot.modal.prompts', { returnObjects: true }) as { label: string; content: string }[]
     }
   }
 ];
 
 const AITools: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedTool, setSelectedTool] = useState<AITool | null>(null);
+
+  const aiTools = getAiTools(t);
 
   return (
     <section className="py-16 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">
-          Beyond Tools: How I Engineer With AI
+          {t('aiTools.title')}
         </h2>
         <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
-          I don't use AI just to generate outputs — I integrate it into my systems to enhance thinking, automate structure, and scale innovation.
+          {t('aiTools.subtitle')}
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -236,7 +178,7 @@ const AITools: React.FC = () => {
               {/* Tips Section */}
               {selectedTool.modal.tips && selectedTool.modal.tips.length > 0 && (
                 <div className="mb-4">
-                  <h4 className="font-semibold mb-2">Tips & Tricks</h4>
+                  <h4 className="font-semibold mb-2">{t('aiTools.tips')}</h4>
                   <ul className="list-disc pl-5 space-y-1">
                     {selectedTool.modal.tips.map((tip, idx) => (
                       <li key={idx}>
@@ -249,7 +191,7 @@ const AITools: React.FC = () => {
               {/* Prompts Section */}
               {selectedTool.modal.prompts && selectedTool.modal.prompts.length > 0 && (
                 <div className="mb-4">
-                  <h4 className="font-semibold mb-2">Copyable Prompts</h4>
+                  <h4 className="font-semibold mb-2">{t('aiTools.prompts')}</h4>
                   <ul className="space-y-2">
                     {selectedTool.modal.prompts.map((prompt, idx) => (
                       <li key={idx} className="flex flex-col md:flex-row md:items-center md:space-x-2">
@@ -259,7 +201,7 @@ const AITools: React.FC = () => {
                           className="ml-2 px-2 py-1 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors text-xs"
                           onClick={() => navigator.clipboard.writeText(prompt.content)}
                         >
-                          Copy
+                          {t('aiTools.copy')}
                         </button>
                       </li>
                     ))}
@@ -271,7 +213,7 @@ const AITools: React.FC = () => {
                   onClick={() => setSelectedTool(null)}
                   className="px-6 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
                 >
-                  Close
+                  {t('aiTools.close')}
                 </button>
               </div>
             </div>
