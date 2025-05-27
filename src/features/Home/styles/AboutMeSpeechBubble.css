@@ -17,9 +17,9 @@
 
 .speech-bubble {
 	position: relative;
-	background: #F5F5F5;
+	background: rgba(30, 41, 59, 0.92);
 	border-radius: 1.5rem;
-	color: #213547;
+	color: #e2e8f0;
 	max-width: 820px;
 	margin: 60px auto 0 auto;
 	margin-bottom: 40px;
@@ -29,7 +29,7 @@
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	border: 2px solid #1976d2;
+	border: 2px solid #38bdf8;
 }
 
 .speech-bubble:after {
@@ -41,7 +41,7 @@
 	width: 0;
 	height: 0;
 	border: 16px solid transparent;
-	border-top-color: #1976d2;
+	border-top-color: #38bdf8;
 	border-bottom: 0;
 	animation: bounceArrow 1.2s infinite ease-in-out;
 	z-index: 1;
@@ -56,9 +56,17 @@
 	width: 0;
 	height: 0;
 	border: 14px solid transparent;
-	border-top-color: #F5F5F5;
+	border-top-color: rgba(30, 41, 59, 0.92);
 	border-bottom: 0;
 	z-index: 2;
+}
+
+.speech-bubble h1, .speech-bubble h2, .speech-bubble h3 {
+	color: #e2e8f0;
+}
+
+.speech-bubble p {
+	color: #cbd5e1;
 }
 
 .experience-arrow {
@@ -81,7 +89,7 @@
 		padding: 1.2rem 0.5rem;
 		border-width: 2px;
 		border-style: solid;
-		border-color: #1976d2;
+		border-color: #38bdf8;
 		border-radius: 1.2rem;
 	}
 	.speech-bubble > * {
