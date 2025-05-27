@@ -80,84 +80,84 @@
       {
         "logo": "💻",
         "title": "Cursor AI",
-        "description": "TypeScript-based UI libraries design and code review assistant",
+        "description": "Architectural thinking partner for scalable UI systems",
         "details": [
-          "Design TypeScript-based UI libraries",
-          "Fix logic bugs",
-          "Enforce architectural conventions",
-          "Validate SOLID principles"
+          "Design system architecture",
+          "Component pattern analysis",
+          "Code quality enforcement",
+          "SOLID principle validation"
         ],
         "color": "#fb923c"
       },
       {
         "logo": "🤖",
         "title": "ChatGPT",
-        "description": "Custom GPT for patent validation and technical writing",
+        "description": "Specialized GPTs for intellectual property and technical documentation",
         "details": [
-          "Validate patent ideas",
-          "Format claims",
-          "Guide technical writing",
-          "Code review assistance"
+          "Patent idea validation",
+          "Technical documentation",
+          "Code review automation",
+          "Import structure analysis"
         ],
         "color": "#60a5fa"
       },
       {
         "logo": "🧠",
         "title": "Claude",
-        "description": "Project planning and task breakdown assistant",
+        "description": "Strategic planning and architectural design partner",
         "details": [
-          "Project planning",
-          "Task breakdown",
-          "Edge case documentation",
-          "Component library development"
+          "System architecture planning",
+          "Edge case analysis",
+          "Refactoring strategies",
+          "Component library design"
         ],
         "color": "#a78bfa"
       },
       {
         "logo": "⚡",
         "title": "Grok",
-        "description": "Rapid logic validation and implementation comparison",
+        "description": "Performance and readability optimization expert",
         "details": [
-          "Logic validation",
-          "Alternative implementations",
-          "Performance optimization",
-          "Code readability analysis"
+          "Code optimization",
+          "Performance analysis",
+          "Readability enhancement",
+          "Implementation comparison"
         ],
         "color": "#f87171"
       },
       {
         "logo": "🎨",
         "title": "Muse",
-        "description": "Unity game development and pixel art generation",
+        "description": "Visual design and game asset generation partner",
         "details": [
-          "Generate visual assets",
-          "Pixel art creation",
-          "Game prototyping",
-          "Visual consistency"
+          "Game asset creation",
+          "Visual style consistency",
+          "Scene composition",
+          "Interactive design"
         ],
         "color": "#4ade80"
       },
       {
         "logo": "🖼️",
         "title": "Fooocus Colab",
-        "description": "Colab-based tool I use to add images with Stable Diffusion.",
+        "description": "Rapid visual prototyping and style testing",
         "details": [
-          "Generate high-quality images with Stable Diffusion",
-          "Create unique images through prompts",
-          "Fast and free usage on Colab",
-          "Add custom visuals to projects"
+          "Style experimentation",
+          "Asset prototyping",
+          "Visual consistency",
+          "Quick iteration"
         ],
         "color": "#fbbf24"
       },
       {
         "logo": "🧑‍💻",
         "title": "Copilot",
-        "description": "AI-powered code completion and suggestion assistant",
+        "description": "Intelligent code completion and micro-optimization",
         "details": [
-          "Auto-complete code",
-          "Suggest code snippets",
-          "Accelerate development",
-          "Reduce repetitive tasks"
+          "Context-aware completion",
+          "Micro-optimizations",
+          "Pattern recognition",
+          "Code consistency"
         ],
         "color": "#06b6d4"
       }

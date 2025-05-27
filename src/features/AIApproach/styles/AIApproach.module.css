@@ -238,7 +238,8 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: flex-start;
+  min-height: 420px;
 }
 
 .aiCard:hover {
@@ -372,4 +373,13 @@
   color: #b6c6e3;
   margin-bottom: 2rem;
   animation: mainTitleFadeIn 1.4s cubic-bezier(.4,0,.2,1);
+}
+
+.promptAccess {
+  margin-top: auto;
+  color: inherit;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: right;
+  padding-top: 1rem;
 } 

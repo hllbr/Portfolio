@@ -53,6 +53,8 @@
 - [x] Animations modularized into a separate CSS file
 - [x] Responsive and visually balanced spacing
 - [x] Turkish and English support for all labels and accessibility
+- [x] AI Tools card descriptions and details rewritten for conciseness, professionalism, and to avoid repetition with upper sections
+- [x] CSS updated so that the "Click to access prompts" text is always fixed at the bottom of each card, regardless of the number of details
 
 ## Todo
 - [ ] Integrate real SVG logos for AI Tools (currently using emoji)
@@ -68,6 +70,7 @@
 - [ ] Add more social platforms if needed (e.g. X, Instagram)
 - [ ] Improve accessibility (keyboard navigation, focus states)
 - [ ] Add tests for SocialMedia component
+- [ ] Review and further improve card content alignment with upper section philosophy if needed
 
 ---
 
@@ -122,6 +125,8 @@
 - [x] Animasyonlar ayrı CSS dosyasına taşındı
 - [x] Responsive ve dengeli boşluklar sağlandı
 - [x] Tüm label ve erişilebilirlik için Türkçe ve İngilizce destek
+- [x] AI Tools kart açıklamaları ve detayları, üst bölümle tekrar etmeyecek ve profesyonel olacak şekilde güncellendi
+- [x] Kartlarda "Promptlara erişmek için tıklayın" yazısı, madde sayısı ne olursa olsun en alta sabitlendi (CSS ile düzeltildi)
 
 ## Yapılacaklar
 - [ ] AI Tools için gerçek SVG logoların entegrasyonu (şu an emoji kullanılıyor)
@@ -136,4 +141,5 @@
 - [ ] Animasyon aç/kapat seçeneği eklenmesi (dalga/gökkuşağı)
 - [ ] Gerekirse yeni sosyal platformlar eklenmesi (örn. X, Instagram)
 - [ ] Erişilebilirlik iyileştirmeleri (klavye ile gezinme, odak durumları)
-- [ ] SocialMedia componenti için testler eklenmesi 
+- [ ] SocialMedia componenti için testler eklenmesi
+- [ ] Kart içeriklerinin üst bölüm felsefesiyle uyumu tekrar gözden geçirilecek ve gerekirse iyileştirilecek 

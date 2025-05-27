@@ -93,8 +93,8 @@ const AIApproach = () => {
                   ))}
                 </ul>
               )}
-              <div style={{ marginTop: '1rem', color: card.color, fontWeight: 500, fontSize: '1rem', textAlign: 'right' }}>
-                Promptlara erişmek için tıklayın
+              <div className={styles.promptAccess} style={{ color: card.color }}>
+                {t('Promptlara erişmek için tıklayın')}
               </div>
             </div>
           ))}
