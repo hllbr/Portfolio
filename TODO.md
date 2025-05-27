@@ -55,6 +55,12 @@
 - [✔] Turkish and English support for all labels and accessibility
 - [✔] AI Tools card descriptions and details rewritten for conciseness, professionalism, and to avoid repetition with upper sections
 - [✔] CSS updated so that the "Click to access prompts" text is always fixed at the bottom of each card, regardless of the number of details
+- [✔] Unified dark theme across all pages: All main bubbles (AboutMe, Contact, Experience, SocialMedia, AIApproach) now use a consistent dark blue background, light text, and vibrant blue borders for a modern, professional look
+- [✔] Experience cards now have dynamic, company-specific border colors (orange, purple, yellow) and matching modal borders for visual continuity
+- [✔] Modal windows updated for dark theme: dark backgrounds, light text, and dynamic border colors for improved readability and brand alignment
+- [✔] All form elements (inputs, textareas, buttons) restyled for dark mode, with clear focus states and accessible contrast
+- [✔] Bubble tail (speech-bubble arrow) colors and shadows improved for better contrast and subtle depth
+- [✔] Improved overall readability and accessibility by increasing text contrast and using color only for emphasis, not for main content
 
 ## Todo
 - [ ] Integrate real SVG logos for AI Tools (currently using emoji)
@@ -127,6 +133,12 @@
 - [✔] Tüm label ve erişilebilirlik için Türkçe ve İngilizce destek
 - [✔] AI Tools kart açıklamaları ve detayları, üst bölümle tekrar etmeyecek ve profesyonel olacak şekilde güncellendi
 - [✔] Kartlarda "Promptlara erişmek için tıklayın" yazısı, madde sayısı ne olursa olsun en alta sabitlendi (CSS ile düzeltildi)
+- [✔] Tüm sayfalarda (AboutMe, Contact, Experience, SocialMedia, AIApproach) koyu mavi arka plan, açık metin ve canlı mavi çerçeve ile tutarlı dark tema uygulandı
+- [✔] Experience kartlarında şirket bazlı dinamik çerçeve renkleri (turuncu, mor, sarı) ve modalda da aynı renklerle bütünlük sağlandı
+- [✔] Modal pencereleri dark tema ile uyumlu hale getirildi: koyu arka plan, açık metin ve dinamik çerçeve renkleri ile okunabilirlik ve marka bütünlüğü artırıldı
+- [✔] Tüm form elemanları (input, textarea, buton) dark mode'a uygun şekilde yeniden tasarlandı, net focus durumları ve erişilebilir kontrast sağlandı
+- [✔] Konuşma balonu çentiği (speech-bubble arrow) renkleri ve gölgeleri daha iyi kontrast ve derinlik için iyileştirildi
+- [✔] Genel okunabilirlik ve erişilebilirlik artırıldı: metin kontrastı yükseltildi, vurgu için renk kullanımı optimize edildi
 
 ## Yapılacaklar
 - [ ] AI Tools için gerçek SVG logoların entegrasyonu (şu an emoji kullanılıyor)

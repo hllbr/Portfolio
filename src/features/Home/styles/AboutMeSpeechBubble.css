@@ -41,10 +41,11 @@
 	width: 0;
 	height: 0;
 	border: 16px solid transparent;
-	border-top-color: #38bdf8;
+	border-top-color: #2563eb;
 	border-bottom: 0;
 	animation: bounceArrow 1.2s infinite ease-in-out;
 	z-index: 1;
+	box-shadow: 0 4px 12px 0 rgba(31, 38, 135, 0.10);
 }
 
 .speech-bubble:before {
@@ -56,7 +57,7 @@
 	width: 0;
 	height: 0;
 	border: 14px solid transparent;
-	border-top-color: rgba(30, 41, 59, 0.92);
+	border-top-color: rgba(30, 41, 59, 0.96);
 	border-bottom: 0;
 	z-index: 2;
 }

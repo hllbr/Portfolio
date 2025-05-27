@@ -14,6 +14,7 @@ export interface ExperienceType {
   logo: string;
   positions: Position[];
   techs: string[];
+  color: string;
 }
 
 export const experiences: ExperienceType[] = [
@@ -39,6 +40,7 @@ export const experiences: ExperienceType[] = [
       },
     ],
     techs: ['Java', 'React.js', 'Spring', 'Docker', 'GIT', 'RESTful', 'Maven', 'Gradle', 'npm', 'yarn'],
+    color: '#f59e42',
   },
   {
     company: 'Halkbank',
@@ -51,6 +53,7 @@ export const experiences: ExperienceType[] = [
       },
     ],
     techs: ['SQL', 'Java'],
+    color: '#a78bfa',
   },
   {
     company: 'Eleks Yangın ve Güvenlik Sistemleri',
@@ -63,5 +66,6 @@ export const experiences: ExperienceType[] = [
       },
     ],
     techs: ['Elektronik', 'C', 'Donanım'],
+    color: '#fde047',
   },
 ]; 
