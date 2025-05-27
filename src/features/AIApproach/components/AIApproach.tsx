@@ -2,64 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/AIApproach.module.css';
 import { AICardModal } from '../AIModal';
-
-// Kart başlıklarını union type olarak tanımla
-const CARD_TITLES = ['Cursor AI', 'ChatGPT', 'Claude', 'Grok', 'Muse'] as const;
-type CardTitle = typeof CARD_TITLES[number];
-
-// Örnek prompt verisi (EN/TR)
-const PROMPTS: Record<CardTitle, { en: string[]; tr: string[] }> = {
-  'Cursor AI': {
-    en: [
-      'Generate a reusable React component that follows SOLID principles.',
-      'Scan the codebase for UI logic bugs and suggest fixes.'
-    ],
-    tr: [
-      'SOLID prensiplerine uygun, tekrar kullanılabilir bir React bileşeni oluştur.',
-      'Kod tabanında UI mantık hatalarını tara ve düzeltme önerileri sun.'
-    ]
-  },
-  'ChatGPT': {
-    en: [
-      'Validate this patent idea against international databases.',
-      'Format the following claims for a technical document.'
-    ],
-    tr: [
-      'Bu patent fikrini uluslararası veri tabanlarında doğrula.',
-      'Aşağıdaki iddiaları teknik doküman formatında düzenle.'
-    ]
-  },
-  'Claude': {
-    en: [
-      'Break down this project into actionable tasks and edge cases.',
-      'Plan a scalable component library structure.'
-    ],
-    tr: [
-      'Bu projeyi yapılabilir görevlere ve sınır durumlarına ayır.',
-      'Ölçeklenebilir bir bileşen kütüphanesi yapısı planla.'
-    ]
-  },
-  'Grok': {
-    en: [
-      'Compare the performance and readability of these two implementations.',
-      'Suggest optimizations for this logic chain.'
-    ],
-    tr: [
-      'Bu iki implementasyonun performans ve okunabilirliğini karşılaştır.',
-      'Bu mantık zinciri için optimizasyon önerileri sun.'
-    ]
-  },
-  'Muse': {
-    en: [
-      'Generate a low-poly isometric scene for a Unity game.',
-      'Suggest visual elements to guide player attention.'
-    ],
-    tr: [
-      'Unity oyunu için low-poly izometrik bir sahne oluştur.',
-      'Oyuncu dikkatini yönlendirecek görsel öğeler öner.'
-    ]
-  }
-};
+import { CARD_TITLES, PROMPTS, type CardTitle } from '../constants/aiPrompts';
 
 const AIApproach = () => {
   const { t } = useTranslation();
