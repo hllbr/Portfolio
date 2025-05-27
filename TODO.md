@@ -40,6 +40,10 @@
 - [x] Custom CSS module and animations for AI Tools
 - [x] Emoji and color coding in AI Tools cards
 - [x] Dark mode compatibility for AI Tools section
+- [x] AI Tools data structure moved to separate constants file
+- [x] Type-safe implementation for AI Tools data
+- [x] Bilingual (EN/TR) prompt examples for each AI tool
+- [x] Modular and maintainable code structure for AI Tools
 - [x] Social media bubble component created and styled to match AboutMe section
 - [x] Speech bubble tail removed for footer use
 - [x] Social media/contact icons added: Phone, WhatsApp, LinkedIn, Email, GitHub, YouTube, WakaTime
@@ -105,6 +109,10 @@
 - [x] AI Tools için özel CSS modülü ve animasyonlar
 - [x] AI Tools kartlarında emoji ve renk kodlaması
 - [x] AI Tools bölümünde dark mode uyumluluğu
+- [x] AI Tools veri yapısı ayrı bir constants dosyasına taşındı
+- [x] AI Tools verisi için type-safe implementasyon
+- [x] Her AI aracı için çift dilli (EN/TR) prompt örnekleri
+- [x] AI Tools için modüler ve sürdürülebilir kod yapısı
 - [x] Social media bubble componenti oluşturuldu ve AboutMe ile uyumlu tasarlandı
 - [x] Footer için konuşma balonu çentiği kaldırıldı
 - [x] Sosyal medya/iletişim ikonları eklendi: Telefon, WhatsApp, LinkedIn, Email, GitHub, YouTube, WakaTime
