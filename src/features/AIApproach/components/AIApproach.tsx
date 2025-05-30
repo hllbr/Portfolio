@@ -5,7 +5,7 @@ import { AICardModal } from '../AIModal';
 import { CARD_TITLES, PROMPTS, type CardTitle } from '../constants/aiPrompts';
 
 const AIApproach = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [selectedCard, setSelectedCard] = useState<null | number>(null);
 
   const aiCards = t('aiApproach.cards', { returnObjects: true }) as Array<{
@@ -21,9 +21,13 @@ const AIApproach = () => {
 
   const selected = selectedCard !== null ? aiCards[selectedCard] : null;
   // Typesafe erişim
-  const prompts = selected && CARD_TITLES.includes(selected.title as CardTitle)
+  const promptsRaw = selected && CARD_TITLES.includes(selected.title as CardTitle)
     ? PROMPTS[selected.title as CardTitle]
     : null;
+
+  // prompts dizisini {title, prompt}[] formatına dönüştür
+  const lang = i18n.language.startsWith('tr') ? 'tr' : 'en';
+  const prompts = promptsRaw ? promptsRaw[lang] : [];
 
   return (
     <div className={`${styles.container} font-sans`}>
@@ -108,8 +112,8 @@ const AIApproach = () => {
           onClose={handleCloseModal}
           borderColor={selected.color}
           title={selected.title}
-          promptsEN={prompts.en}
-          promptsTR={prompts.tr}
+          prompts={prompts}
+          lang={lang}
         />
       )}
     </div>

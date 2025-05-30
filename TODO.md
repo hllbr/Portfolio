@@ -58,9 +58,18 @@
 - [✔] Unified dark theme across all pages: All main bubbles (AboutMe, Contact, Experience, SocialMedia, AIApproach) now use a consistent dark blue background, light text, and vibrant blue borders for a modern, professional look
 - [✔] Experience cards now have dynamic, company-specific border colors (orange, purple, yellow) and matching modal borders for visual continuity
 - [✔] Modal windows updated for dark theme: dark backgrounds, light text, and dynamic border colors for improved readability and brand alignment
+- [✔] AI modal header and close (X) icon now visually and structurally match Experience modal (flex row, left-aligned title, right-aligned X, colored border, sticky header)
+- [✔] Modal background, border, padding, and shadow match Experience modal
+- [✔] Prompts area styled like Experience modal content (dark, rounded, colored border, padding)
+- [✔] Close button at the bottom, styled like Experience modal
+- [✔] Modal is vertically and horizontally centered, with maxWidth and maxHeight for compactness
+- [✔] Modal closes when clicking outside or pressing ESC (like Experience modal)
+- [✔] X icon is always right-aligned and visually balanced
+- [✔] Modal overlay uses backdrop-filter: blur for background blur effect
 - [✔] All form elements (inputs, textareas, buttons) restyled for dark mode, with clear focus states and accessible contrast
 - [✔] Bubble tail (speech-bubble arrow) colors and shadows improved for better contrast and subtle depth
 - [✔] Improved overall readability and accessibility by increasing text contrast and using color only for emphasis, not for main content
+- [✔] All AI tool modals (Cursor, Copilot, Fooocus, Claude, Grok, Muse) now contain 50+ professional, meaningful, and diverse prompt examples, fully populated in both English and Turkish.
 
 ## Todo
 - [ ] Integrate real SVG logos for AI Tools (currently using emoji)
@@ -136,9 +145,18 @@
 - [✔] Tüm sayfalarda (AboutMe, Contact, Experience, SocialMedia, AIApproach) koyu mavi arka plan, açık metin ve canlı mavi çerçeve ile tutarlı dark tema uygulandı
 - [✔] Experience kartlarında şirket bazlı dinamik çerçeve renkleri (turuncu, mor, sarı) ve modalda da aynı renklerle bütünlük sağlandı
 - [✔] Modal pencereleri dark tema ile uyumlu hale getirildi: koyu arka plan, açık metin ve dinamik çerçeve renkleri ile okunabilirlik ve marka bütünlüğü artırıldı
-- [✔] Tüm form elemanları (input, textarea, buton) dark mode'a uygun şekilde yeniden tasarlandı, net focus durumları ve erişilebilir kontrast sağlandı
-- [✔] Konuşma balonu çentiği (speech-bubble arrow) renkleri ve gölgeleri daha iyi kontrast ve derinlik için iyileştirildi
-- [✔] Genel okunabilirlik ve erişilebilirlik artırıldı: metin kontrastı yükseltildi, vurgu için renk kullanımı optimize edildi
+- [✔] AI modal başlığı ve kapatma (X) ikonu Experience modal ile birebir aynı yapıda (flex row, sola hizalı başlık, sağda X, renkli border, sticky header)
+- Modal arka planı, çerçevesi, padding ve gölgesi Experience modal ile aynı
+- Prompt alanı Experience modal içeriği gibi koyu, yuvarlatılmış, renkli borderlı ve paddingli
+- Kapat butonu altta, Experience modal ile aynı stilde
+- Modal dikey ve yatayda ortalanmış, maxWidth ve maxHeight ile kompakt
+- Modal dışına tıklayınca veya ESC ile kapanıyor (Experience modal gibi)
+- X ikonu her zaman sağda ve dengeli hizalanıyor
+- Modal overlay arka planı blur efektiyle geliyor (backdrop-filter: blur)
+- [✔] All form elements (inputs, textareas, buttons) restyled for dark mode, with clear focus states and accessible contrast
+- [✔] Bubble tail (speech-bubble arrow) colors and shadows improved for better contrast and subtle depth
+- [✔] Improved overall readability and accessibility by increasing text contrast and using color only for emphasis, not for main content
+- [✔] Tüm yapay zeka aracı modalları (Cursor, Copilot, Fooocus, Claude, Grok, Muse) artık hem Türkçe hem İngilizce 50+ profesyonel, anlamlı ve çeşitli prompt örneğiyle dolu.
 
 ## Yapılacaklar
 - [ ] AI Tools için gerçek SVG logoların entegrasyonu (şu an emoji kullanılıyor)
