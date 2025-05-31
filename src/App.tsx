@@ -15,10 +15,17 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/anasayfa" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/iletisim" element={<Contact />} />
           <Route path="/technologies" element={<Technologies />} />
-          <Route path="/ai-approach" element={<AIApproach />} />
+          <Route path="/teknolojiler" element={<Technologies />} />
+          <Route path="/ai" element={<AIApproach />} />
+          <Route path="/artificial-intelligence" element={<AIApproach />} />
+          <Route path="/yapay-zeka" element={<AIApproach />} />
           <Route path="/patents" element={<Patents />} />
+          <Route path="/patentler" element={<Patents />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Layout>
