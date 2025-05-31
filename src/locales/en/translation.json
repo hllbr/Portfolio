@@ -44,10 +44,6 @@
   },
   "aiApproach": {
     "title": "My AI Approach",
-    "methodology": "My Methodology",
-    "methodologyText": "I leverage AI tools to enhance productivity and creativity while maintaining human oversight and critical thinking.",
-    "tools": "AI Tools I Use",
-    "usage": "Usage",
     "mainTitle": "My AI Approach",
     "mainTitleSubtitle": "My methodology for AI projects",
     "infoSectionTitle1": "How Do I Use AI and Prompts?",
@@ -161,288 +157,6 @@
         ],
         "color": "#06b6d4"
       }
-    ],
-    "cursorPrompts": [
-      { "title": "Code Review Checklist", "prompt": "Generate a checklist for reviewing React code for best practices." },
-      { "title": "Refactor for Readability", "prompt": "Refactor the following code to improve readability and maintainability." },
-      { "title": "TypeScript Migration", "prompt": "Suggest a migration plan to convert this JavaScript codebase to TypeScript." },
-      { "title": "SOLID Principles Review", "prompt": "Does this component comply with SOLID principles? Explain and refactor if needed." },
-      { "title": "Performance Bottleneck", "prompt": "Identify and fix performance bottlenecks in this code." },
-      { "title": "Reusability Assessment", "prompt": "Can this component be reused in other projects? Suggest improvements." },
-      { "title": "State Management Audit", "prompt": "Analyze state management and suggest optimizations." },
-      { "title": "Test Coverage Analysis", "prompt": "Check if the code is sufficiently covered by tests." },
-      { "title": "Security Vulnerability Scan", "prompt": "Find and explain possible security issues in this code." },
-      { "title": "UI Consistency Check", "prompt": "Review UI code for consistency and best practices." },
-      { "title": "Accessibility Audit", "prompt": "Check the code for accessibility issues and suggest fixes." },
-      { "title": "Dead Code Detection", "prompt": "Identify and remove unused code blocks." },
-      { "title": "Error Handling Review", "prompt": "Analyze error handling and suggest improvements." },
-      { "title": "Modularization Suggestion", "prompt": "Suggest how to modularize this codebase." },
-      { "title": "Dependency Analysis", "prompt": "List and explain all external dependencies." },
-      { "title": "Code Commenting", "prompt": "Add meaningful comments to the following code." },
-      { "title": "Naming Convention Review", "prompt": "Check if variable and function names follow conventions." },
-      { "title": "API Integration Review", "prompt": "Review API integration for best practices." },
-      { "title": "Async Logic Audit", "prompt": "Analyze and improve asynchronous logic." },
-      { "title": "Custom Hook Suggestion", "prompt": "Suggest a custom React hook for this logic." },
-      { "title": "Prop Drilling Solution", "prompt": "Propose a solution to avoid prop drilling." },
-      { "title": "Context Usage Review", "prompt": "Review and optimize React context usage." },
-      { "title": "Memoization Opportunities", "prompt": "Identify where to use memoization for performance." },
-      { "title": "Component Splitting", "prompt": "Suggest how to split a large component into smaller ones." },
-      { "title": "Responsive Design Check", "prompt": "Review code for responsive design issues." },
-      { "title": "Theming Strategy", "prompt": "Propose a theming strategy for this UI." },
-      { "title": "Linting Rules Enforcement", "prompt": "Check if code follows linting rules." },
-      { "title": "Code Duplication Detection", "prompt": "Find and refactor duplicate code." },
-      { "title": "Error Boundary Implementation", "prompt": "Suggest how to implement error boundaries." },
-      { "title": "Form Validation Review", "prompt": "Review form validation logic for robustness." },
-      { "title": "State Initialization", "prompt": "Check if state is initialized correctly." },
-      { "title": "Side Effect Management", "prompt": "Analyze and optimize side effect handling." },
-      { "title": "Data Fetching Optimization", "prompt": "Suggest improvements for data fetching logic." },
-      { "title": "Code Splitting", "prompt": "Propose code splitting strategies for performance." },
-      { "title": "Lazy Loading", "prompt": "Suggest where to use lazy loading in the app." },
-      { "title": "Bundle Size Reduction", "prompt": "Recommend ways to reduce bundle size." },
-      { "title": "Tree Shaking", "prompt": "Explain how to enable tree shaking in the build process." },
-      { "title": "Import Order Standardization", "prompt": "Standardize import order in the codebase." },
-      { "title": "Version Control Best Practices", "prompt": "Review code for version control best practices." },
-      { "title": "Release Notes Generation", "prompt": "Generate release notes from recent code changes." },
-      { "title": "Changelog Automation", "prompt": "Suggest a way to automate changelog generation." },
-      { "title": "Hotfix Strategy", "prompt": "Propose a hotfix strategy for production bugs." },
-      { "title": "Rollback Plan", "prompt": "Create a rollback plan for failed deployments." },
-      { "title": "Feature Flag Implementation", "prompt": "Suggest how to implement feature flags." },
-      { "title": "Code Ownership Mapping", "prompt": "Map code ownership for each module." },
-      { "title": "Onboarding Documentation", "prompt": "Write onboarding docs for new developers." },
-      { "title": "Refactoring Roadmap", "prompt": "Create a roadmap for large-scale refactoring." },
-      { "title": "Technical Debt Report", "prompt": "Generate a report on technical debt in the codebase." },
-      { "title": "Migration Plan", "prompt": "Propose a migration plan for a major library update." },
-      { "title": "Release Checklist", "prompt": "Create a checklist for production releases." }
-    ],
-    "copilotPrompts": [
-      { "title": "Auto-complete Function", "prompt": "Auto-complete the following function based on its signature and comments." },
-      { "title": "Suggest Unit Tests", "prompt": "Generate unit tests for the following function." },
-      { "title": "Optimize Algorithm", "prompt": "Optimize this algorithm for better performance." },
-      { "title": "Add JSDoc Comments", "prompt": "Add JSDoc comments to the following code." },
-      { "title": "Refactor for Clarity", "prompt": "Refactor the code to make it more understandable." },
-      { "title": "Find and Fix Bugs", "prompt": "Detect and fix bugs in the code." },
-      { "title": "Generate API Call", "prompt": "Write code to call the given API endpoint." },
-      { "title": "Add Error Handling", "prompt": "Add robust error handling to this function." },
-      { "title": "Convert to Async/Await", "prompt": "Refactor callback code to use async/await." },
-      { "title": "Write Mock Data", "prompt": "Generate mock data for testing." },
-      { "title": "Implement Debounce", "prompt": "Add a debounce function to this input handler." },
-      { "title": "Add Logging", "prompt": "Insert logging statements for debugging." },
-      { "title": "Generate Redux Actions", "prompt": "Write Redux actions for this feature." },
-      { "title": "Create React Hook", "prompt": "Implement a custom React hook for this logic." },
-      { "title": "Add PropTypes", "prompt": "Add PropTypes validation to this React component." },
-      { "title": "Write CSS Module", "prompt": "Generate a CSS module for this component." },
-      { "title": "Add Responsive Styles", "prompt": "Make this component responsive." },
-      { "title": "Generate Test Suite", "prompt": "Write a test suite for this module." },
-      { "title": "Refactor to Hooks", "prompt": "Convert class component to functional with hooks." },
-      { "title": "Add Memoization", "prompt": "Use memoization to optimize performance." },
-      { "title": "Implement Pagination", "prompt": "Add pagination logic to this data table." },
-      { "title": "Add Form Validation", "prompt": "Implement form validation for this form." },
-      { "title": "Generate CRUD Operations", "prompt": "Write CRUD operations for this resource." },
-      { "title": "Add Localization", "prompt": "Make this component support multiple languages." },
-      { "title": "Implement Dark Mode", "prompt": "Add dark mode support to this UI." },
-      { "title": "Add Accessibility Features", "prompt": "Improve accessibility for this component." },
-      { "title": "Generate Sitemap", "prompt": "Write code to generate a sitemap." },
-      { "title": "Add File Upload", "prompt": "Implement file upload functionality." },
-      { "title": "Generate PDF Export", "prompt": "Add PDF export to this report." },
-      { "title": "Add Infinite Scroll", "prompt": "Implement infinite scroll for this list." },
-      { "title": "Add Search Filter", "prompt": "Add a search filter to this data set." },
-      { "title": "Generate Chart", "prompt": "Create a chart visualization for this data." },
-      { "title": "Add WebSocket Support", "prompt": "Implement real-time updates with WebSocket." },
-      { "title": "Add Authentication", "prompt": "Add authentication logic to this app." },
-      { "title": "Generate Email Template", "prompt": "Write an email template for this notification." },
-      { "title": "Add Rate Limiting", "prompt": "Implement rate limiting for this API." },
-      { "title": "Add Caching", "prompt": "Add caching to improve performance." },
-      { "title": "Generate Sitemap", "prompt": "Write a sitemap generator for this website." },
-      { "title": "Add Analytics", "prompt": "Integrate analytics tracking." },
-      { "title": "Add Feature Toggle", "prompt": "Implement feature toggles for this feature." },
-      { "title": "Add Unit Test Coverage", "prompt": "Increase unit test coverage for this code." },
-      { "title": "Add Linting", "prompt": "Add linting rules and fix violations." },
-      { "title": "Add Prettier", "prompt": "Format code with Prettier." },
-      { "title": "Add CI/CD Pipeline", "prompt": "Write a CI/CD pipeline for this project." },
-      { "title": "Add Dockerfile", "prompt": "Create a Dockerfile for this app." },
-      { "title": "Add Environment Variables", "prompt": "Use environment variables for configuration." },
-      { "title": "Add Error Boundary", "prompt": "Implement an error boundary in React." },
-      { "title": "Add Skeleton Loader", "prompt": "Add a skeleton loader for async content." },
-      { "title": "Add Toast Notifications", "prompt": "Implement toast notifications for user feedback." },
-      { "title": "Add Multi-step Form", "prompt": "Create a multi-step form with validation." }
-    ],
-    "fooocusPrompts": [
-      { "title": "Generate Game Character", "prompt": "Create a high-resolution game character concept art." },
-      { "title": "UI Mockup", "prompt": "Generate a modern UI mockup for a mobile banking app." },
-      { "title": "Logo Design", "prompt": "Design a minimalistic logo for a tech startup." },
-      { "title": "Scene Illustration", "prompt": "Illustrate a fantasy game scene with detailed background." },
-      { "title": "Icon Set", "prompt": "Create a consistent icon set for a productivity app." },
-      { "title": "Isometric Room", "prompt": "Generate an isometric room for a simulation game." },
-      { "title": "App Splash Screen", "prompt": "Design a splash screen for a mobile app." },
-      { "title": "Mascot Character", "prompt": "Create a mascot for a children's brand." },
-      { "title": "Board Game Box Art", "prompt": "Design box art for a new board game." },
-      { "title": "Pixel Art Sprite", "prompt": "Generate a pixel art sprite for a retro game." },
-      { "title": "Loading Animation", "prompt": "Create a loading animation for a web app." },
-      { "title": "Achievement Badge", "prompt": "Design an achievement badge for a gamified app." },
-      { "title": "Social Media Banner", "prompt": "Generate a banner for a tech event." },
-      { "title": "NFT Artwork", "prompt": "Create an NFT artwork with a unique style." },
-      { "title": "Weather Icon Set", "prompt": "Design a weather icon set for a mobile app." },
-      { "title": "App Store Screenshots", "prompt": "Generate screenshots for an app store listing." },
-      { "title": "Character Expression Sheet", "prompt": "Create a sheet showing different character emotions." },
-      { "title": "Game Map", "prompt": "Design a map for a fantasy RPG." },
-      { "title": "Card Game Illustration", "prompt": "Illustrate a card for a digital card game." },
-      { "title": "3D Model Reference", "prompt": "Generate a reference image for a 3D modeler." },
-      { "title": "Comic Panel", "prompt": "Create a comic panel for a webtoon." },
-      { "title": "Infographic", "prompt": "Design an infographic for a tech topic." },
-      { "title": "E-book Cover", "prompt": "Generate a cover for a technical e-book." },
-      { "title": "App Icon", "prompt": "Design an app icon for a productivity tool." },
-      { "title": "Animated Sticker", "prompt": "Create an animated sticker for messaging apps." },
-      { "title": "Desktop Wallpaper", "prompt": "Generate a desktop wallpaper with a tech theme." },
-      { "title": "Product Mockup", "prompt": "Create a product mockup for a new gadget." },
-      { "title": "Landing Page Hero", "prompt": "Design a hero image for a landing page." },
-      { "title": "Team Avatar Set", "prompt": "Generate avatars for a project team." },
-      { "title": "Event Poster", "prompt": "Design a poster for a hackathon." },
-      { "title": "Game UI Elements", "prompt": "Create UI elements for a mobile game." },
-      { "title": "Startup Pitch Deck Slide", "prompt": "Design a slide for a startup pitch deck." },
-      { "title": "Blog Illustration", "prompt": "Generate an illustration for a technical blog post." },
-      { "title": "App Walkthrough Screens", "prompt": "Design walkthrough screens for onboarding." },
-      { "title": "Achievement Trophy", "prompt": "Create a trophy icon for a leaderboard." },
-      { "title": "VR Environment", "prompt": "Generate a concept for a VR environment." },
-      { "title": "AR Marker", "prompt": "Design an AR marker for an educational app." },
-      { "title": "Merchandise Design", "prompt": "Create a T-shirt design for a tech conference." },
-      { "title": "Animated Logo", "prompt": "Generate an animated version of a company logo." },
-      { "title": "App Notification Icon", "prompt": "Design a notification icon for a mobile app." },
-      { "title": "Game Power-up Icon", "prompt": "Create a power-up icon for a platformer game." },
-      { "title": "Puzzle Game Tiles", "prompt": "Design tiles for a puzzle game." },
-      { "title": "Streaming Overlay", "prompt": "Generate a streaming overlay for a gaming channel." },
-      { "title": "App Widget", "prompt": "Design a widget for a weather app." },
-      { "title": "Game Achievement Icon", "prompt": "Create an icon for a game achievement." },
-      { "title": "App Loading Screen", "prompt": "Design a creative loading screen for an app." },
-      { "title": "Social Media Profile Pic", "prompt": "Generate a profile picture for a developer." },
-      { "title": "App Rating Stars", "prompt": "Design rating stars for an app review system." },
-      { "title": "Game Inventory Icon", "prompt": "Create an inventory icon for an RPG." },
-      { "title": "App Tutorial Illustration", "prompt": "Generate an illustration for an app tutorial." }
-    ],
-    "claudePrompts": [
-      { "title": "Summarize Legal Document", "prompt": "Summarize the following legal document in plain English." },
-      { "title": "Draft Privacy Policy", "prompt": "Draft a privacy policy for a SaaS web application." },
-      { "title": "Analyze Contract Risks", "prompt": "Identify potential risks in the following contract." },
-      { "title": "Project Planning", "prompt": "Plan and organize a project to achieve specific goals." },
-      { "title": "Task Breakdown", "prompt": "Break down this project into tasks." },
-      { "title": "Edge Case Analysis", "prompt": "Analyze potential edge cases in the project." },
-      { "title": "Refactoring Strategies", "prompt": "Develop refactoring strategies for the project." },
-      { "title": "Component Library Design", "prompt": "Design a component library for the project." },
-      { "title": "System Architecture Planning", "prompt": "Plan the system architecture for the project." },
-      { "title": "Component Design", "prompt": "Design a component for the project." },
-      { "title": "Visual Style Consistency", "prompt": "Ensure visual style consistency across the project." },
-      { "title": "Scene Composition", "prompt": "Compose a scene for the project." },
-      { "title": "Interactive Design", "prompt": "Design interactive elements for the project." },
-      { "title": "Asset Creation", "prompt": "Create assets for the project." },
-      { "title": "Game Prototyping", "prompt": "Prototype a game for the project." },
-      { "title": "Patent Analysis", "prompt": "Analyze potential patents for the project." },
-      { "title": "Technical Documentation", "prompt": "Document the technical aspects of the project." },
-      { "title": "Code Review", "prompt": "Review the code for the project." },
-      { "title": "Import Structure Analysis", "prompt": "Analyze the import structure for the project." },
-      { "title": "Patent Idea Validation", "prompt": "Validate a patent idea for the project." },
-      { "title": "Technical Writing", "prompt": "Write technical documentation for the project." },
-      { "title": "Code Review Automation", "prompt": "Automate the code review process for the project." },
-      { "title": "Code Quality Enforcement", "prompt": "Enforce code quality standards for the project." },
-      { "title": "SOLID Principle Validation", "prompt": "Validate the project's adherence to SOLID principles." },
-      { "title": "Component Pattern Analysis", "prompt": "Analyze component patterns in the project." },
-      { "title": "Code Optimization", "prompt": "Optimize the code for the project." },
-      { "title": "Performance Analysis", "prompt": "Analyze the performance of the project." },
-      { "title": "Readability Enhancement", "prompt": "Enhance the readability of the code for the project." },
-      { "title": "Implementation Comparison", "prompt": "Compare different implementations for the project." },
-      { "title": "Context-Aware Completion", "prompt": "Complete the code with context-aware suggestions." },
-      { "title": "Micro-Optimizations", "prompt": "Suggest micro-optimizations for the code." },
-      { "title": "Pattern Recognition", "prompt": "Recognize patterns in the code for the project." },
-      { "title": "Code Consistency", "prompt": "Ensure consistency in the code for the project." },
-      { "title": "Code Review Checklist", "prompt": "Generate a checklist for reviewing React code for best practices." },
-      { "title": "Refactor for Readability", "prompt": "Refactor the following code to improve readability and maintainability." },
-      { "title": "TypeScript Migration", "prompt": "Suggest a migration plan to convert this JavaScript codebase to TypeScript." },
-      { "title": "Code Quality Analysis", "prompt": "Evaluate the readability and maintainability of the following code. Provide detailed suggestions for improvement." },
-      { "title": "SOLID Principles Review", "prompt": "Does this React component comply with SOLID principles? Provide a detailed analysis and refactor with sample code if needed." },
-      { "title": "Performance Optimization", "prompt": "Identify performance bottlenecks in the code and suggest improvements." },
-      { "title": "Reusability Assessment", "prompt": "Assess the reusability of the following component across different projects." },
-      { "title": "Code Standards Enforcement", "prompt": "Check if the code adheres to company coding standards and highlight any deficiencies." },
-      { "title": "Testability Evaluation", "prompt": "Analyze the testability of the code and suggest missing test scenarios." },
-      { "title": "Refactoring Suggestions", "prompt": "Identify complex or repetitive parts of the code and provide refactoring suggestions." },
-      { "title": "State Management Analysis", "prompt": "Find potential issues with state management in the React code and suggest solutions." },
-      { "title": "UI Behavior Analysis", "prompt": "Analyze UI behaviors and provide suggestions to enhance user experience." },
-      { "title": "Security Vulnerability Detection", "prompt": "Detect possible security vulnerabilities in the code and explain how to prevent them." },
-      { "title": "Meeting Notes Summary", "prompt": "Summarize the key points from this meeting transcript." },
-      { "title": "Roadmap Creation", "prompt": "Create a development roadmap for this product." },
-      { "title": "Stakeholder Communication", "prompt": "Draft an update email for project stakeholders." },
-      { "title": "Feature Prioritization", "prompt": "Prioritize features for the next release." }
-    ],
-    "grokPrompts": [
-      { "title": "Explain AI Concept", "prompt": "Explain the concept of reinforcement learning in simple terms." },
-      { "title": "Data Visualization", "prompt": "Generate a data visualization for the following dataset." },
-      { "title": "Debug Python Code", "prompt": "Find and fix bugs in the following Python script." },
-      { "title": "Logic Validation", "prompt": "Use Grok to validate your logic and compare different implementations." },
-      { "title": "Logic Check", "prompt": "Validate the logic in this code: ..." },
-      { "title": "Alternative Implementations", "prompt": "Compare different implementations for the project." },
-      { "title": "Trade-offs Analysis", "prompt": "Analyze the trade-offs between different implementations." },
-      { "title": "Recommendation", "prompt": "Recommend the best implementation based on the analysis." },
-      { "title": "Code Optimization", "prompt": "Optimize the code for the project." },
-      { "title": "Performance Analysis", "prompt": "Analyze the performance of the project." },
-      { "title": "Readability Enhancement", "prompt": "Enhance the readability of the code for the project." },
-      { "title": "Implementation Comparison", "prompt": "Compare different implementations for the project." },
-      { "title": "Context-Aware Completion", "prompt": "Complete the code with context-aware suggestions." },
-      { "title": "Micro-Optimizations", "prompt": "Suggest micro-optimizations for the code." },
-      { "title": "Pattern Recognition", "prompt": "Recognize patterns in the code for the project." },
-      { "title": "Code Consistency", "prompt": "Ensure consistency in the code for the project." },
-      { "title": "Code Review Checklist", "prompt": "Generate a checklist for reviewing React code for best practices." },
-      { "title": "Refactor for Readability", "prompt": "Refactor the following code to improve readability and maintainability." },
-      { "title": "TypeScript Migration", "prompt": "Suggest a migration plan to convert this JavaScript codebase to TypeScript." },
-      { "title": "Code Quality Analysis", "prompt": "Evaluate the readability and maintainability of the following code. Provide detailed suggestions for improvement." },
-      { "title": "SOLID Principles Review", "prompt": "Does this React component comply with SOLID principles? Provide a detailed analysis and refactor with sample code if needed." },
-      { "title": "Performance Optimization", "prompt": "Identify performance bottlenecks in the code and suggest improvements." },
-      { "title": "Reusability Assessment", "prompt": "Assess the reusability of the following component across different projects." },
-      { "title": "Code Standards Enforcement", "prompt": "Check if the code adheres to company coding standards and highlight any deficiencies." },
-      { "title": "Testability Evaluation", "prompt": "Analyze the testability of the code and suggest missing test scenarios." },
-      { "title": "Refactoring Suggestions", "prompt": "Identify complex or repetitive parts of the code and provide refactoring suggestions." },
-      { "title": "State Management Analysis", "prompt": "Find potential issues with state management in the React code and suggest solutions." },
-      { "title": "UI Behavior Analysis", "prompt": "Analyze UI behaviors and provide suggestions to enhance user experience." },
-      { "title": "Security Vulnerability Detection", "prompt": "Detect possible security vulnerabilities in the code and explain how to prevent them." }
-    ],
-    "musePrompts": [
-      { "title": "Create Album Cover", "prompt": "Design an album cover for an indie rock band." },
-      { "title": "Poster for Tech Event", "prompt": "Create a poster for a technology conference." },
-      { "title": "Children's Book Illustration", "prompt": "Illustrate a scene for a children's book about space exploration." },
-      { "title": "Low-poly Objects", "prompt": "Generate low-poly objects for a Unity game." },
-      { "title": "Isometric Scene Layouts", "prompt": "Create isometric scene layouts for a Unity game." },
-      { "title": "Environmental Details", "prompt": "Add environmental details to a Unity game." },
-      { "title": "Scene Composition", "prompt": "Compose a scene for a Unity game." },
-      { "title": "Interactive Design", "prompt": "Design interactive elements for a Unity game." },
-      { "title": "Asset Creation", "prompt": "Create assets for a Unity game." },
-      { "title": "Game Prototyping", "prompt": "Prototype a game for a Unity game." },
-      { "title": "Patent Analysis", "prompt": "Analyze potential patents for a Unity game." },
-      { "title": "Technical Documentation", "prompt": "Document the technical aspects of a Unity game." },
-      { "title": "Code Review", "prompt": "Review the code for a Unity game." },
-      { "title": "Import Structure Analysis", "prompt": "Analyze the import structure for a Unity game." },
-      { "title": "Patent Idea Validation", "prompt": "Validate a patent idea for a Unity game." },
-      { "title": "Technical Writing", "prompt": "Write technical documentation for a Unity game." },
-      { "title": "Code Review Automation", "prompt": "Automate the code review process for a Unity game." },
-      { "title": "Code Quality Enforcement", "prompt": "Enforce code quality standards for a Unity game." },
-      { "title": "SOLID Principle Validation", "prompt": "Validate the game's adherence to SOLID principles." },
-      { "title": "Component Pattern Analysis", "prompt": "Analyze component patterns in the game." },
-      { "title": "Code Optimization", "prompt": "Optimize the code for the game." },
-      { "title": "Performance Analysis", "prompt": "Analyze the performance of the game." },
-      { "title": "Readability Enhancement", "prompt": "Enhance the readability of the code for the game." },
-      { "title": "Implementation Comparison", "prompt": "Compare different implementations for the game." },
-      { "title": "Context-Aware Completion", "prompt": "Complete the code with context-aware suggestions." },
-      { "title": "Micro-Optimizations", "prompt": "Suggest micro-optimizations for the code." },
-      { "title": "Pattern Recognition", "prompt": "Recognize patterns in the code for the game." },
-      { "title": "Code Consistency", "prompt": "Ensure consistency in the code for the game." },
-      { "title": "Code Review Checklist", "prompt": "Generate a checklist for reviewing React code for best practices." },
-      { "title": "Refactor for Readability", "prompt": "Refactor the following code to improve readability and maintainability." },
-      { "title": "TypeScript Migration", "prompt": "Suggest a migration plan to convert this JavaScript codebase to TypeScript." },
-      { "title": "Code Quality Analysis", "prompt": "Evaluate the readability and maintainability of the following code. Provide detailed suggestions for improvement." },
-      { "title": "SOLID Principles Review", "prompt": "Does this React component comply with SOLID principles? Provide a detailed analysis and refactor with sample code if needed." },
-      { "title": "Performance Optimization", "prompt": "Identify performance bottlenecks in the code and suggest improvements." },
-      { "title": "Reusability Assessment", "prompt": "Assess the reusability of the following component across different projects." },
-      { "title": "Code Standards Enforcement", "prompt": "Check if the code adheres to company coding standards and highlight any deficiencies." },
-      { "title": "Testability Evaluation", "prompt": "Analyze the testability of the code and suggest missing test scenarios." },
-      { "title": "Refactoring Suggestions", "prompt": "Identify complex or repetitive parts of the code and provide refactoring suggestions." },
-      { "title": "State Management Analysis", "prompt": "Find potential issues with state management in the React code and suggest solutions." },
-      { "title": "UI Behavior Analysis", "prompt": "Analyze UI behaviors and provide suggestions to enhance user experience." },
-      { "title": "Security Vulnerability Detection", "prompt": "Detect possible security vulnerabilities in the code and explain how to prevent them." }
     ]
   },
   "patents": {
@@ -489,15 +203,7 @@
         ],
         "detailedDescription": "🧠 Building Systems, Not Just Writing Code\nMy work with Cursor AI is a good example. I'm not just creating components — I'm building component architecture, setting up principles like reusability, performance, and testability with GPT assistance. For instance, when developing a large Form library, I ask Cursor AI to scan UI behavior patterns, then revise code suggestions according to my principles. This way, AI becomes not just a \"coder\" but a \"thinking\" assistant.",
         "modal": {
-          "description": "Cursor AI helps you design and review TypeScript-based UI libraries with AI-powered suggestions.",
-          "tips": [
-            { "title": "SOLID Review", "content": "Use this tool to check if your components follow SOLID principles." },
-            { "title": "Bug Fixing", "content": "Paste your buggy code and ask for a step-by-step fix." }
-          ],
-          "prompts": [
-            { "label": "SOLID Check", "content": "Check if this component follows SOLID principles: ..." },
-            { "label": "Bug Fix", "content": "Find and fix the bug in this code: ..." }
-          ]
+          "description": "Cursor AI helps you design and review TypeScript-based UI libraries with AI-powered suggestions."
         },
         "cursorPrompt": {
           "title": "Code Quality and Architecture Review",
@@ -515,13 +221,7 @@
         ],
         "detailedDescription": "🧬 A GPT that Generates Patent Ideas? Yes.\nI've transformed ChatGPT from a simple chatbot into purpose-specific GPTs.\n\nImport Editor: Monitors import groupings according to our team's established order.\n\nData-Test-ID Validator: Analyzes missing or incorrect test IDs for UI testing processes.\n\nPatent Investigator: We've created a special GPT that scans national and international similarities of patent ideas I present in intellectual property processes. This greatly facilitates my work when converting ideas into technical documents.",
         "modal": {
-          "description": "ChatGPT is used for patent validation, technical writing, and code review assistance.",
-          "tips": [
-            { "title": "Patent Validation", "content": "Use ChatGPT to validate your patent ideas and format claims." }
-          ],
-          "prompts": [
-            { "label": "Patent Check", "content": "Validate this patent idea: ..." }
-          ]
+          "description": "ChatGPT is used for patent validation, technical writing, and code review assistance."
         }
       },
       "claude": {
@@ -535,13 +235,7 @@
         ],
         "detailedDescription": "🪄 Claude: Planner and Strategist\nBreaking down a task into subtasks might seem easy, but making it scalable is a different skill. With Claude, especially when developing component libraries, I work on:\n\nPlanning edge cases,\n\nCreating refactor strategies,\n\nDeveloping variant scenarios for UI states.\n\nThis allows me to create a mental architecture before even starting to write code.",
         "modal": {
-          "description": "Claude helps with project planning, task breakdown, and documenting edge cases.",
-          "tips": [
-            { "title": "Task Breakdown", "content": "Use Claude to break down complex projects into manageable tasks." }
-          ],
-          "prompts": [
-            { "label": "Breakdown Prompt", "content": "Break down this project into tasks: ..." }
-          ]
+          "description": "Claude helps with project planning, task breakdown, and documenting edge cases."
         }
       },
       "grok": {
@@ -555,13 +249,7 @@
         ],
         "detailedDescription": "⚡ Grok: Finding Clarity in Uncertainty\nThere are moments when you have to choose: performance or readability?\nThis is where Grok comes in.\nFor example, when deciding whether to switch from a complex useEffect chain to a custom hook, I explained both versions to Grok — it not only offered alternatives but also analyzed the trade-offs and made recommendations.",
         "modal": {
-          "description": "Grok is used for logic validation and comparing alternative implementations.",
-          "tips": [
-            { "title": "Logic Validation", "content": "Use Grok to validate your logic and compare different implementations." }
-          ],
-          "prompts": [
-            { "label": "Logic Check", "content": "Validate the logic in this code: ..." }
-          ]
+          "description": "Grok is used for logic validation and comparing alternative implementations."
         }
       },
       "muse": {
@@ -575,13 +263,7 @@
         ],
         "detailedDescription": "🎨 Muse: Where Visual Thinking Meets Code\nIn story-focused mini-games I develop with Unity, I use Muse not as an artist but as a \"design partner.\" I generate elements like:\n\nLow-poly objects,\n\nIsometric scene layouts,\n\nEnvironmental details that guide player attention,\n\nThen arrange them within the scene. This process affects not just visual design but also in-scene interaction.",
         "modal": {
-          "description": "Muse is used for generating visual assets and pixel art for Unity games.",
-          "tips": [
-            { "title": "Pixel Art", "content": "Use Muse to quickly generate pixel art for your prototypes." }
-          ],
-          "prompts": [
-            { "label": "Pixel Art Prompt", "content": "Generate a pixel art character: ..." }
-          ]
+          "description": "Muse is used for generating visual assets and pixel art for Unity games."
         }
       },
       "fooocus": {
@@ -595,13 +277,7 @@
         ],
         "detailedDescription": "🧪 Artistic Prototyping with Fooocus Colab\nI can quickly test scene drawings, sprite generation, and shading variants for my 2D game ideas with Fooocus. In art style experiments, I believe the game world and graphic language should be consistent, and I get intensive AI support to speed up this process.",
         "modal": {
-          "description": "Fooocus Colab is used for generating high-quality and unique images using Stable Diffusion.",
-          "tips": [
-            { "title": "Prompt Writing", "content": "Use clear and detailed prompts for better results." }
-          ],
-          "prompts": [
-            { "label": "Image Generation Prompt", "content": "Generate a space-themed illustration: ..." }
-          ]
+          "description": "Fooocus Colab is used for generating high-quality and unique images using Stable Diffusion."
         },
         "fooocusPrompt": {
           "title": "High-Quality Visual Generation for Games and Apps",
@@ -619,15 +295,7 @@
         ],
         "detailedDescription": "🤖 Copilot: Silent Follower, Powerful Completer\nFinding simple errors and auto-completing code are Copilot's known capabilities. But I use it more as an \"assistant\" that stays true to detailed work plans. In file structures with multiple modules, while developing tasks I previously planned with Claude, Copilot makes time-saving micro-interventions.",
         "modal": {
-          "description": "Copilot is your AI pair programmer, offering real-time code suggestions and completions as you type.",
-          "tips": [
-            { "title": "Context Awareness", "content": "Copilot adapts to your code context and suggests relevant completions." },
-            { "title": "Prompting", "content": "Write clear function names and comments to get better suggestions." }
-          ],
-          "prompts": [
-            { "label": "Function Implementation", "content": "Implement a function that sorts an array of numbers in ascending order." },
-            { "label": "Boilerplate Generation", "content": "Generate a React functional component with TypeScript." }
-          ]
+          "description": "Copilot is your AI pair programmer, offering real-time code suggestions and completions as you type."
         },
         "copilotPrompt": {
           "title": "Automated Code Completion and Refactoring Suggestion",
