@@ -70,6 +70,12 @@
 - [✔] Bubble tail (speech-bubble arrow) colors and shadows improved for better contrast and subtle depth
 - [✔] Improved overall readability and accessibility by increasing text contrast and using color only for emphasis, not for main content
 - [✔] All AI tool modals (Cursor, Copilot, Fooocus, Claude, Grok, Muse) now contain 50+ professional, meaningful, and diverse prompt examples, fully populated in both English and Turkish.
+- [✔] AI modal (AICardModal) close (X) button refactored to use MUI IconButton and CloseIcon, now visually and structurally identical to ExperienceModal. All hover, focus, outline, and roundness behaviors are handled by MUI for perfect consistency and accessibility.
+- [✔] Mage-UI style Fluid Tabs navigation bar added, all top menu modernized with animated tabs.
+- [✔] Navigation menüsüne Translate ikonu ile açılır dil menüsü (EN/TR) eklendi, kullanıcı dostu ve erişilebilir hale getirildi.
+- [✔] Fixed z-index, pointer-events, and event propagation (mousedown/click) issues for language switching; now works perfectly with both mouse and keyboard.
+- [✔] Old LanguageSwitcher component removed, all language switching is managed from a single point.
+- [✔] i18n context ve instance tekilleştirildi, context güncellenmesi garanti altına alındı.
 
 ## Todo
 - [ ] Integrate real SVG logos for AI Tools (currently using emoji)
@@ -157,6 +163,12 @@
 - [✔] Bubble tail (speech-bubble arrow) colors and shadows improved for better contrast and subtle depth
 - [✔] Improved overall readability and accessibility by increasing text contrast and using color only for emphasis, not for main content
 - [✔] Tüm yapay zeka aracı modalları (Cursor, Copilot, Fooocus, Claude, Grok, Muse) artık hem Türkçe hem İngilizce 50+ profesyonel, anlamlı ve çeşitli prompt örneğiyle dolu.
+- [✔] AI modal (AICardModal) kapatma (X) butonu, ExperienceModal ile birebir aynı olacak şekilde MUI IconButton ve CloseIcon ile yeniden düzenlendi. Tüm hover, focus, outline ve yuvarlaklık davranışları MUI tarafından sağlanıyor, görsel ve erişilebilirlik tutarlılığı sağlandı.
+- [✔] Mage-UI style Fluid Tabs navigation bar added, all top menu modernized with animated tabs.
+- [✔] Navigation menüsüne Translate ikonu ile açılır dil menüsü (EN/TR) eklendi, kullanıcı dostu ve erişilebilir hale getirildi.
+- [✔] Fixed z-index, pointer-events, and event propagation (mousedown/click) issues for language switching; now works perfectly with both mouse and keyboard.
+- [✔] Old LanguageSwitcher component removed, all language switching is managed from a single point.
+- [✔] i18n context ve instance tekilleştirildi, context güncellenmesi garanti altına alındı.
 
 ## Yapılacaklar
 - [ ] AI Tools için gerçek SVG logoların entegrasyonu (şu an emoji kullanılıyor)
