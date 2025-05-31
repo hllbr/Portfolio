@@ -10,6 +10,28 @@
   }
 }
 
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--card-color, rgba(56, 189, 248, 0.2)),
+                0 0 10px var(--card-color, rgba(56, 189, 248, 0.2)),
+                0 0 15px var(--card-color, rgba(56, 189, 248, 0.2));
+  }
+  50% {
+    box-shadow: 0 0 20px var(--card-color, rgba(56, 189, 248, 0.4)),
+                0 0 30px var(--card-color, rgba(56, 189, 248, 0.4)),
+                0 0 40px var(--card-color, rgba(56, 189, 248, 0.4));
+  }
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 .container {
   min-height: 40vh;
   display: flex;
@@ -22,18 +44,19 @@
 
 .bubble {
   position: relative;
-  background: #F5F5F5;
+  background: rgba(30, 41, 59, 0.92);
+  backdrop-filter: blur(10px);
   border-radius: 1.5rem;
-  color: #213547;
-  max-width: 800px;
+  color: #e2e8f0;
+  max-width: 1200px;
   margin: 40px auto 0 auto;
-  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  padding: 2.5rem 2rem 3rem 2rem;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 2px solid #1976d2;
+  border: 2px solid #38bdf8;
 }
 
 .bubbleTail {
@@ -67,7 +90,7 @@
 
 .techGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   width: 100%;
   margin-top: 2rem;
@@ -75,58 +98,74 @@
 
 @media (max-width: 1200px) {
   .techGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 900px) {
-  .techGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .techGrid {
     grid-template-columns: 1fr;
   }
 }
 
 .techCard {
-  background: white;
+  background: rgba(51, 65, 85, 0.5);
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 0.3s ease;
+  border: 1px solid var(--card-color, rgba(56, 189, 248, 0.1));
+  backdrop-filter: blur(8px);
 }
 
 .techCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: rgba(71, 85, 105, 0.7);
+  animation: glow 2s ease-in-out infinite;
+}
+
+.techHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.techIcon {
+  font-size: 1.5rem;
+  animation: iconFloat 3s ease-in-out infinite;
 }
 
 .techCategory {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #1976d2;
-  margin-bottom: 1rem;
+  margin: 0;
+  text-align: left;
 }
 
 .techList {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .techItem {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: #213547;
+  background: rgba(56, 189, 248, 0.1);
+  color: #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid var(--item-color, rgba(56, 189, 248, 0.2));
 }
 
-.techItem::before {
-  content: '•';
-  color: #1976d2;
-  font-weight: bold;
+.techItem:hover {
+  background: rgba(56, 189, 248, 0.2);
+  transform: translateY(-2px);
+  border-color: var(--item-color, #38bdf8);
+  box-shadow: 0 0 10px var(--item-color, rgba(56, 189, 248, 0.3));
 } 

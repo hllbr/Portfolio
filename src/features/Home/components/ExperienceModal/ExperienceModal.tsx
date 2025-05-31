@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, IconButton, Button, Divider } from '@mui/material';
+import { Dialog, DialogTitle, DialogContent, IconButton, Button, Divider } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import './ExperienceModal.css';
 import type { ExperienceType } from '../../helpers/experienceData';

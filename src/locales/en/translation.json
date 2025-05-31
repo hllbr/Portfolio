@@ -39,7 +39,25 @@
   },
   "technologies": {
     "title": "Technologies",
-    "projects": "Projects"
+    "subtitle": "Technologies I work with",
+    "programming": "Programming Languages",
+    "frontend": "Frontend Frameworks & Libraries",
+    "backend": "Backend Frameworks",
+    "devTools": "Dev Tools & IDEs",
+    "utilities": "Dev Utilities & Tooling",
+    "architecture": "Architecture / API Concepts",
+    "state": "Client-side State & Data Management",
+    "search": "Search & Data Indexing",
+    "vision": "Computer Vision / IoT",
+    "vscode": {
+      "productivity": "VS Code - Productivity & Formatting",
+      "intellisense": "VS Code - IntelliSense & AI",
+      "java": "VS Code - Java & Spring",
+      "frontend": "VS Code - Frontend & React",
+      "ui": "VS Code - UI & Theme",
+      "dotnet": "VS Code - .NET / C#",
+      "api": "VS Code - API & Test"
+    }
   },
   "aiApproach": {
     "title": "My AI Approach",

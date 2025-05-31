@@ -39,7 +39,25 @@
   },
   "technologies": {
     "title": "Teknolojiler",
-    "projects": "Projeler"
+    "subtitle": "Çalıştığım Teknolojiler",
+    "programming": "Programlama Dilleri",
+    "frontend": "Frontend Framework & Kütüphaneler",
+    "backend": "Backend Framework'ler",
+    "devTools": "Geliştirme Araçları & IDE'ler",
+    "utilities": "Geliştirme Yardımcıları & Araçlar",
+    "architecture": "Mimari / API Kavramları",
+    "state": "İstemci Tarafı Durum & Veri Yönetimi",
+    "search": "Arama & Veri İndeksleme",
+    "vision": "Bilgisayarlı Görü / IoT",
+    "vscode": {
+      "productivity": "VS Code - Üretkenlik & Formatlama",
+      "intellisense": "VS Code - IntelliSense & AI",
+      "java": "VS Code - Java & Spring",
+      "frontend": "VS Code - Frontend & React",
+      "ui": "VS Code - UI & Tema",
+      "dotnet": "VS Code - .NET / C#",
+      "api": "VS Code - API & Test"
+    }
   },
   "aiApproach": {
     "title": "AI Yaklaşımım",
