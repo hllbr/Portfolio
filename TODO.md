@@ -158,13 +158,13 @@
 - [✔] Experience kartlarında şirket bazlı dinamik çerçeve renkleri (turuncu, mor, sarı) ve modalda da aynı renklerle bütünlük sağlandı
 - [✔] Modal pencereleri dark tema ile uyumlu hale getirildi: koyu arka plan, açık metin ve dinamik çerçeve renkleri ile okunabilirlik ve marka bütünlüğü artırıldı
 - [✔] AI modal başlığı ve kapatma (X) ikonu Experience modal ile birebir aynı yapıda (flex row, sola hizalı başlık, sağda X, renkli border, sticky header)
-- Modal arka planı, çerçevesi, padding ve gölgesi Experience modal ile aynı
-- Prompt alanı Experience modal içeriği gibi koyu, yuvarlatılmış, renkli borderlı ve paddingli
-- Kapat butonu altta, Experience modal ile aynı stilde
-- Modal dikey ve yatayda ortalanmış, maxWidth ve maxHeight ile kompakt
-- Modal dışına tıklayınca veya ESC ile kapanıyor (Experience modal gibi)
-- X ikonu her zaman sağda ve dengeli hizalanıyor
-- Modal overlay arka planı blur efektiyle geliyor (backdrop-filter: blur)
+- [✔] Modal arka planı, çerçevesi, padding ve gölgesi Experience modal ile aynı
+- [✔] Prompt alanı Experience modal içeriği gibi koyu, yuvarlatılmış, renkli borderlı ve paddingli
+- [✔] Kapat (Close) butonu Experience modalda da AI modalındaki gibi sağ alt köşeye ve aynı padding ile hizalandı, iki modalda da tamamen tutarlı.
+- [✔] Modal dikey ve yatayda ortalanmış, maxWidth ve maxHeight ile kompakt
+- [✔] Modal dışına tıklayınca veya ESC ile kapanıyor (Experience modal gibi)
+- [✔] X ikonu her zaman sağda ve dengeli hizalanıyor
+- [✔] Modal overlay arka planı blur efektiyle geliyor (backdrop-filter: blur)
 - [✔] All form elements (inputs, textareas, buttons) restyled for dark mode, with clear focus states and accessible contrast
 - [✔] Bubble tail (speech-bubble arrow) colors and shadows improved for better contrast and subtle depth
 - [✔] Improved overall readability and accessibility by increasing text contrast and using color only for emphasis, not for main content

@@ -3,6 +3,7 @@ import styles from './AICardModal.module.css';
 import { useEffect, useRef } from 'react';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import Button from '@mui/material/Button';
 
 interface AICardModalProps {
   isOpen: boolean;
@@ -174,32 +175,25 @@ const AICardModal: React.FC<AICardModalProps> = ({
         <div style={{ height: 2, background: borderColor, opacity: 0.18 }} />
         {/* Close Button */}
         <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '1.1rem 2rem 1.1rem 2rem' }}>
-          <button
+          <Button
             onClick={onClose}
-            style={{
-              border: `2px solid ${borderColor}`,
+            variant="outlined"
+            sx={{
+              borderColor: borderColor,
               color: borderColor,
-              background: 'none',
-              borderRadius: 4,
               fontWeight: 600,
               fontSize: 16,
+              borderRadius: 2,
               padding: '0.5rem 2.2rem',
-              cursor: 'pointer',
-              transition: 'background 0.2s, color 0.2s, border 0.2s',
-            }}
-            onMouseOver={e => {
-              e.currentTarget.style.background = borderColor + '22';
-              e.currentTarget.style.color = borderColor;
-              e.currentTarget.style.borderColor = borderColor;
-            }}
-            onMouseOut={e => {
-              e.currentTarget.style.background = 'none';
-              e.currentTarget.style.color = borderColor;
-              e.currentTarget.style.borderColor = borderColor;
+              '&:hover': {
+                background: borderColor + '22',
+                borderColor: borderColor,
+                color: borderColor,
+              },
             }}
           >
             {lang === 'tr' ? 'Kapat' : 'Close'}
-          </button>
+          </Button>
         </div>
       </div>
     </div>

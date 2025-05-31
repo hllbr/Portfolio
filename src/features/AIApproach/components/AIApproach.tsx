@@ -98,7 +98,7 @@ const AIApproach = () => {
                 </ul>
               )}
               <div className={styles.promptAccess} style={{ color: card.color }}>
-                {t('Promptlara erişmek için tıklayın')}
+                {t('aiApproach.clickForPrompts')}
               </div>
             </div>
           ))}
