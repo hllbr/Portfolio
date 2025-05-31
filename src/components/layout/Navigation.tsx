@@ -2,22 +2,26 @@ import React from 'react';
 import { House, EnvelopeSimple, Cpu, Brain, FileText } from 'phosphor-react';
 import FluidTabs from '../ui/FluidTabs';
 import useWindowWidth from '../../hooks/useWindowWidth';
-
-const navItems = [
-  { path: '/', label: 'Home', icon: (size: number) => <House size={size} /> },
-  { path: '/contact', label: 'Contact', icon: (size: number) => <EnvelopeSimple size={size} /> },
-  { path: '/technologies', label: 'Technologies', icon: (size: number) => <Cpu size={size} /> },
-  { path: '/ai-approach', label: 'AI Approach', icon: (size: number) => <Brain size={size} /> },
-  { path: '/patents', label: 'Patents', icon: (size: number) => <FileText size={size} /> },
-];
+import { useTranslation } from 'react-i18next';
 
 const Navigation = () => {
+  const { t } = useTranslation();
   const width = useWindowWidth();
   const showLabels = width > 768;
+
+  const navItems = [
+    { path: '/', label: t('nav.home'), icon: (size: number) => <House size={size} /> },
+    { path: '/contact', label: t('nav.contact'), icon: (size: number) => <EnvelopeSimple size={size} /> },
+    { path: '/technologies', label: t('nav.technologies'), icon: (size: number) => <Cpu size={size} /> },
+    { path: '/ai', label: t('nav.aiApproach'), icon: (size: number) => <Brain size={size} /> },
+    { path: '/patents', label: t('nav.patents'), icon: (size: number) => <FileText size={size} /> },
+  ];
+
   const navItemsWithConditionalLabels = navItems.map(item => ({
     ...item,
     label: showLabels ? item.label : '',
   }));
+
   return (
     <nav style={{
       width: '100%',
