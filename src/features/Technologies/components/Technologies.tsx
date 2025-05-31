@@ -194,8 +194,6 @@ const Technologies = () => {
             </div>
           ))}
         </div>
-        <div className={styles.bubbleTail} />
-        <div className={styles.bubbleTailInner} />
       </div>
     </div>
   );

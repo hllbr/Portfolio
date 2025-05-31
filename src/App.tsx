@@ -16,16 +16,33 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/anasayfa" element={<Home />} />
+          <Route path="/Anasayfa" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/Contact" element={<Contact />} />
           <Route path="/iletisim" element={<Contact />} />
+          <Route path="/Iletisim" element={<Contact />} />
           <Route path="/technologies" element={<Technologies />} />
+          <Route path="/Technologies" element={<Technologies />} />
+          <Route path="/teknoloji" element={<Technologies />} />
+          <Route path="/Teknoloji" element={<Technologies />} />
+          <Route path='/technology' element={<Technologies />} />
+          <Route path='/Technology' element={<Technologies />} />
           <Route path="/teknolojiler" element={<Technologies />} />
+          <Route path="/Teknolojiler" element={<Technologies />} />
           <Route path="/ai" element={<AIApproach />} />
+          <Route path="/AI" element={<AIApproach />} />
           <Route path="/artificial-intelligence" element={<AIApproach />} />
+          <Route path="/artificialintelligence" element={<AIApproach />} />
+          <Route path="/Artificial-Intelligence" element={<AIApproach />} />
           <Route path="/yapay-zeka" element={<AIApproach />} />
+          <Route path="/Yapay-Zeka" element={<AIApproach />} />
+          <Route path="/Patents" element={<Patents />} />
           <Route path="/patents" element={<Patents />} />
+          <Route path="/Patent" element={<Patents />} />
           <Route path="/patentler" element={<Patents />} />
+          <Route path="/Patentler" element={<Patents />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Layout>

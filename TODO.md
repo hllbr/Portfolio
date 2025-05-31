@@ -71,6 +71,7 @@
 - [✔] Improved overall readability and accessibility by increasing text contrast and using color only for emphasis, not for main content
 - [✔] All AI tool modals (Cursor, Copilot, Fooocus, Claude, Grok, Muse) now contain 50+ professional, meaningful, and diverse prompt examples, fully populated in both English and Turkish.
 - [✔] AI modal (AICardModal) close (X) button refactored to use MUI IconButton and CloseIcon, now visually and structurally identical to ExperienceModal. All hover, focus, outline, and roundness behaviors are handled by MUI for perfect consistency and accessibility.
+- [✔] Copy buttons in AI modals now feature an animated tick (✔️) on click, preserve their original color, and have a dynamic, color-matched hover effect for a modern, accessible, and visually consistent experience. Animation CSS is modular and separated from other styles.
 - [✔] Mage-UI style Fluid Tabs navigation bar added, all top menu modernized with animated tabs.
 - [✔] Navigation menüsüne Translate ikonu ile açılır dil menüsü (EN/TR) eklendi, kullanıcı dostu ve erişilebilir hale getirildi.
 - [✔] Fixed z-index, pointer-events, and event propagation (mousedown/click) issues for language switching; now works perfectly with both mouse and keyboard.
@@ -181,6 +182,7 @@
 - [✔] Improved overall readability and accessibility by increasing text contrast and using color only for emphasis, not for main content
 - [✔] Tüm yapay zeka aracı modalları (Cursor, Copilot, Fooocus, Claude, Grok, Muse) artık hem Türkçe hem İngilizce 50+ profesyonel, anlamlı ve çeşitli prompt örneğiyle dolu.
 - [✔] AI modal (AICardModal) kapatma (X) butonu, ExperienceModal ile birebir aynı olacak şekilde MUI IconButton ve CloseIcon ile yeniden düzenlendi. Tüm hover, focus, outline ve yuvarlaklık davranışları MUI tarafından sağlanıyor, görsel ve erişilebilirlik tutarlılığı sağlandı.
+- [✔] AI modalindeki kopyala butonları artık tıklandığında animasyonlu tik (✔️) gösteriyor, kendi rengini koruyor ve hover durumunda ana renge uygun şeffaf bir efektle modern ve zarif bir görünüm sunuyor. Animasyon CSS'i diğer stillerden ayrı ve modüler olarak tutuluyor.
 - [✔] Mage-UI style Fluid Tabs navigation bar added, all top menu modernized with animated tabs.
 - [✔] Navigation menüsüne Translate ikonu ile açılır dil menüsü (EN/TR) eklendi, kullanıcı dostu ve erişilebilir hale getirildi.
 - [✔] Fixed z-index, pointer-events, and event propagation (mousedown/click) issues for language switching; now works perfectly with both mouse and keyboard.
@@ -198,11 +200,11 @@
 - [✔] Eski LanguageSwitcher bileşeni kaldırıldı ve dil yönetimi merkezi hale getirildi
 - [✔] i18n context ve instance tekilleştirildi, context güncellenmesi garanti altına alındı
 - [✔] 768px altında sadece ikon, üstünde ikon+metin gösterimi ile responsive navigation
-- [✔] Navigation ve FluidTabs bileşenlerinde ikon boyutlandırma ve boşluk optimizasyonu
+- [✔] Navigation ve FluidTabs bileşenlerinde dinamik ikon boyutlandırma ve padding/gap optimizasyonu
 - [✔] Mobil navigasyonda padding ve ikon boyutları optimize edildi
 - [✔] Linter hatası olmadan phosphor-react ikonlarının dinamik boyutlandırılması sağlandı
 - [✔] SocialMedia başlığı profesyonel ve sıcak bir iletişim diliyle güncellendi
-- [✔] SocialMedia alanı tüm ekran genişliklerinde tamamen responsive hale getirildi
+- [✔] SocialMedia alanı tüm ekran genişliklerinde tamamen responsive hale getirildi.
 
 ## Yapılacaklar
 - [ ] AI Tools için gerçek SVG logoların entegrasyonu (şu an emoji kullanılıyor)

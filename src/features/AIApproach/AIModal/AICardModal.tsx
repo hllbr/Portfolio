@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './AICardModal.module.css';
-import { useEffect, useRef } from 'react';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Button from '@mui/material/Button';
+import './CopyButtonAnimation.css';
 
 interface AICardModalProps {
   isOpen: boolean;
@@ -143,30 +143,11 @@ const AICardModal: React.FC<AICardModalProps> = ({
                 >
                   {prompt}
                 </span>
-                <button
-                  onClick={() => navigator.clipboard.writeText(prompt)}
-                  style={{
-                    background: borderColor,
-                    color: '#0f172a',
-                    border: 'none',
-                    borderRadius: 6,
-                    padding: '0.3rem 1.1rem',
-                    fontSize: 15,
-                    fontWeight: 600,
-                    cursor: 'pointer',
-                    transition: 'background 0.2s, color 0.2s',
-                  }}
-                  onMouseOver={e => {
-                    e.currentTarget.style.background = '#0ea5e9';
-                    e.currentTarget.style.color = '#e2e8f0';
-                  }}
-                  onMouseOut={e => {
-                    e.currentTarget.style.background = borderColor;
-                    e.currentTarget.style.color = '#0f172a';
-                  }}
-                >
-                  {lang === 'tr' ? 'Kopyala' : 'Copy'}
-                </button>
+                <CopyButton
+                  prompt={prompt}
+                  borderColor={borderColor}
+                  lang={lang}
+                />
               </div>
             </div>
           ))}
@@ -197,6 +178,53 @@ const AICardModal: React.FC<AICardModalProps> = ({
         </div>
       </div>
     </div>
+  );
+};
+
+const CopyButton: React.FC<{ prompt: string; borderColor: string; lang: 'en' | 'tr' }> = ({ prompt, borderColor, lang }) => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(prompt);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1200);
+  };
+
+  return (
+    <button
+      className={`copy-btn-anim${copied ? ' copied' : ''}`}
+      style={{
+        background: borderColor,
+        color: copied ? '#22c55e' : '#0f172a',
+        border: 'none',
+        borderRadius: 6,
+        padding: '0.3rem 1.1rem',
+        fontSize: 15,
+        fontWeight: 600,
+        cursor: 'pointer',
+        minWidth: 70,
+        position: 'relative',
+        transition: 'background 0.2s, color 0.2s',
+        ...({
+          ['--copy-btn-hover-bg']: `${borderColor}22`,
+          ['--copy-btn-hover-color']: '#fff',
+        } as React.CSSProperties)
+      }}
+      onClick={handleCopy}
+      onMouseOver={e => {
+        if (!copied) {
+          e.currentTarget.style.background = '';
+          e.currentTarget.style.color = '';
+        }
+      }}
+      onMouseOut={e => {
+        e.currentTarget.style.background = borderColor;
+        e.currentTarget.style.color = copied ? '#22c55e' : '#0f172a';
+      }}
+    >
+      <span className="copy-icon">{lang === 'tr' ? 'Kopyala' : 'Copy'}</span>
+      <span className="check-icon" role="img" aria-label="copied">✔️</span>
+    </button>
   );
 };
 

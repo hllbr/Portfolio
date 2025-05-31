@@ -11,10 +11,10 @@ const Navigation = () => {
 
   const navItems = [
     { path: '/', label: t('nav.home'), icon: (size: number) => <House size={size} /> },
-    { path: '/contact', label: t('nav.contact'), icon: (size: number) => <EnvelopeSimple size={size} /> },
-    { path: '/technologies', label: t('nav.technologies'), icon: (size: number) => <Cpu size={size} /> },
-    { path: '/ai', label: t('nav.aiApproach'), icon: (size: number) => <Brain size={size} /> },
-    { path: '/patents', label: t('nav.patents'), icon: (size: number) => <FileText size={size} /> },
+    { path: '/Contact', label: t('nav.contact'), icon: (size: number) => <EnvelopeSimple size={size} /> },
+    { path: '/Technology', label: t('nav.technologies'), icon: (size: number) => <Cpu size={size} /> },
+    { path: '/AI', label: t('nav.aiApproach'), icon: (size: number) => <Brain size={size} /> },
+    { path: '/Patent', label: t('nav.patents'), icon: (size: number) => <FileText size={size} /> },
   ];
 
   const navItemsWithConditionalLabels = navItems.map(item => ({
