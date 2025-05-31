@@ -2,10 +2,9 @@
   "nav": {
     "home": "Ana Sayfa",
     "contact": "İletişim",
-    "technologies": "Teknolojiler",
-    "aiApproach": "AI Yaklaşımım",
-    "patents": "Patentlerim",
-    "promptGallery": "Prompt Galerisi",
+    "technologies": "Teknoloji",
+    "aiApproach": "AI",
+    "patents": "Patent",
     "experience": "Deneyimlerim",
     "logo": "Portfolyo"
   },
@@ -40,12 +39,31 @@
   },
   "technologies": {
     "title": "Teknolojiler",
-    "projects": "Projeler"
+    "subtitle": "Çalıştığım Teknolojiler",
+    "programming": "Programlama Dilleri",
+    "frontend": "Frontend Framework & Kütüphaneler",
+    "backend": "Backend Framework'ler",
+    "devTools": "Geliştirme Araçları & IDE'ler",
+    "utilities": "Geliştirme Yardımcıları & Araçlar",
+    "architecture": "Mimari / API Kavramları",
+    "state": "İstemci Tarafı Durum & Veri Yönetimi",
+    "search": "Arama & Veri İndeksleme",
+    "vision": "Bilgisayarlı Görü / IoT",
+    "vscode": {
+      "productivity": "VS Code - Üretkenlik & Formatlama",
+      "intellisense": "VS Code - IntelliSense & AI",
+      "java": "VS Code - Java & Spring",
+      "frontend": "VS Code - Frontend & React",
+      "ui": "VS Code - UI & Tema",
+      "dotnet": "VS Code - .NET / C#",
+      "api": "VS Code - API & Test"
+    }
   },
   "aiApproach": {
     "title": "AI Yaklaşımım",
     "mainTitle": "AI Yaklaşımım",
     "mainTitleSubtitle": "AI projeleri için metodolojim",
+    "clickForPrompts": "Promptlara erişmek için tıklayın",
     "infoSectionTitle1": "AI ve Promptları Nasıl Kullanıyorum?",
     "infoSectionDesc1": [
       "Yapay zekâyı yalnızca çıktı üretmek için değil, üretkenliğimi sistematik olarak artırmak, kod kalitesini yükseltmek ve yaratıcı süreçleri güçlendirmek için kullanıyorum.",
@@ -166,13 +184,6 @@
     "list": "Patent Portföyü",
     "number": "Patent No.",
     "view": "Patenti Görüntüle"
-  },
-  "promptGallery": {
-    "title": "AI Prompt Galerisi",
-    "about": "Promptlarım Hakkında",
-    "aboutText": "Bu promptlar, çeşitli alanlarda belirli sonuçlar elde etmek için özenle hazırlanmıştır. İhtiyaçlarınıza göre kullanmaktan ve uyarlamaktan çekinmeyin.",
-    "copy": "Kopyala",
-    "copied": "Kopyalandı!"
   },
   "language": "Dil",
   "noPage": {
@@ -307,5 +318,8 @@
       "title": "Oyun ve Uygulama için Yüksek Kaliteli Görsel Üretimi",
       "prompt": "Unity tabanlı bir oyun için, aşağıda verdiğim konsept açıklamasına uygun, yüksek kaliteli ve özgün bir görsel oluştur. Renk paleti, stil ve kompozisyon önerilerini de ekle. Görselin oyun içi kullanılabilirliğini artıracak şekilde detaylandır."
     }
+  },
+  "social": {
+    "connect": "İş Birliği ve Fikir Paylaşımı İçin Ulaşın"
   }
 } 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, IconButton, Button, Divider } from '@mui/material';
+import { Dialog, DialogTitle, DialogContent, IconButton, Button, Divider } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import './ExperienceModal.css';
 import type { ExperienceType } from '../../helpers/experienceData';
@@ -54,45 +54,97 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClo
             }} 
           />
         )}
-        {selected?.company}
+        <span style={{ fontWeight: 700, fontSize: 22, color: color || '#f59e42', flex: 1 }}>{selected?.company}</span>
         <IconButton onClick={onClose} sx={{ marginLeft: 'auto', color: '#e2e8f0' }}>
           <CloseIcon />
         </IconButton>
       </DialogTitle>
       <Divider sx={{ my: 0.5, borderColor: color || '#f59e42' }} />
       <DialogContent>
-        {selected && (
-          <div className="experience-modal-content">
-            {selected.positions.map((pos: Position, i: number) => (
-              <div key={i} className="experience-modal-position" style={{ marginBottom: 18 }}>
-                <div style={{ fontWeight: 600, fontSize: 18, color: color || '#f59e42' }}>{pos.title}</div>
-                <div style={{ color: '#cbd5e1', fontSize: 15, marginBottom: 2 }}>
-                  {pos.date.replace('Present', t('experience.currentlyEmployed'))}
+        <div style={{
+          flex: 1,
+          overflowY: 'auto',
+          maxHeight: '60vh',
+          padding: '1rem',
+          background: 'rgba(30,41,59,0.92)',
+        }}>
+          {selected && (
+            <div className="experience-modal-content">
+              {selected.positions.map((pos: Position, i: number) => (
+                <div 
+                  key={i} 
+                  style={{ 
+                    background: 'rgba(51,65,85,0.5)',
+                    borderRadius: 12,
+                    border: `1.5px solid ${color || '#f59e42'}`,
+                    marginBottom: 18,
+                    padding: '1rem 1.2rem 0.7rem 1.2rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 8,
+                    boxShadow: '0 2px 8px 0 rgba(56,189,248,0.08)',
+                  }}
+                >
+                  <div style={{ fontWeight: 600, fontSize: 17, color: color || '#f59e42', marginBottom: 2 }}>{pos.title}</div>
+                  <div style={{ color: '#cbd5e1', fontSize: 15, marginBottom: 2 }}>
+                    {pos.date.replace('Present', t('experience.currentlyEmployed'))}
+                  </div>
+                  <div style={{ color: '#e2e8f0', fontSize: 16, margin: '6px 0 0 0' }}>{pos.desc}</div>
                 </div>
-                <div style={{ color: '#e2e8f0', fontSize: 16, margin: '6px 0 0 0' }}>{pos.desc}</div>
-              </div>
-            ))}
-            <div className="experience-modal-tech-stack" style={{ marginTop: 12, display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-              {selected.techs.map((tech: string) => (
-                <span key={tech} style={{ background: '#334155', color: color || '#f59e42', borderRadius: '0.5rem', padding: '0.25rem 0.75rem', fontSize: '0.95rem', fontWeight: 500, marginTop: '0.25rem' }}>
-                  {tech}
-                </span>
               ))}
+              <div style={{ 
+                marginTop: 12, 
+                display: 'flex', 
+                flexWrap: 'wrap', 
+                gap: '0.5rem',
+                background: 'rgba(51,65,85,0.5)',
+                borderRadius: 12,
+                border: `1.5px solid ${color || '#f59e42'}`,
+                padding: '1rem 1.2rem',
+                boxShadow: '0 2px 8px 0 rgba(56,189,248,0.08)',
+              }}>
+                {selected.techs.map((tech: string) => (
+                  <span 
+                    key={tech} 
+                    style={{ 
+                      background: '#334155', 
+                      color: color || '#f59e42', 
+                      borderRadius: '0.5rem', 
+                      padding: '0.25rem 0.75rem', 
+                      fontSize: '0.95rem', 
+                      fontWeight: 500 
+                    }}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </DialogContent>
       <Divider sx={{ my: 0.5, borderColor: color || '#f59e42' }} />
-      <DialogActions sx={{ pl: 3 }}>
-        <Button 
-          onClick={onClose} 
-          variant="outlined" 
-          className="experience-modal-close-button"
-          sx={{ borderColor: color || '#f59e42', color: color || '#f59e42', fontWeight: 600, '&:hover': { background: (color || '#f59e42') + '22', borderColor: color || '#f59e42', color: color || '#f59e42' } }}
+      <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '1.1rem 2rem 1.1rem 2rem' }}>
+        <Button
+          onClick={onClose}
+          variant="outlined"
+          sx={{
+            borderColor: color || '#f59e42',
+            color: color || '#f59e42',
+            fontWeight: 600,
+            fontSize: 16,
+            borderRadius: 2,
+            padding: '0.5rem 2.2rem',
+            '&:hover': {
+              background: (color || '#f59e42') + '22',
+              borderColor: color || '#f59e42',
+              color: color || '#f59e42',
+            },
+          }}
         >
           {t('experience.close')}
         </Button>
-      </DialogActions>
+      </div>
     </Dialog>
   );
 };

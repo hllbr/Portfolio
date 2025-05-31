@@ -2,10 +2,9 @@
   "nav": {
     "home": "Home",
     "contact": "Contact",
-    "technologies": "Technologies",
-    "aiApproach": "AI Approach",
-    "patents": "Patents",
-    "promptGallery": "Prompt Gallery",
+    "technologies": "Technology",
+    "aiApproach": "AI",
+    "patents": "Patent",
     "experience": "Experience",
     "logo": "Portfolio"
   },
@@ -40,12 +39,31 @@
   },
   "technologies": {
     "title": "Technologies",
-    "projects": "Projects"
+    "subtitle": "Technologies I work with",
+    "programming": "Programming Languages",
+    "frontend": "Frontend Frameworks & Libraries",
+    "backend": "Backend Frameworks",
+    "devTools": "Dev Tools & IDEs",
+    "utilities": "Dev Utilities & Tooling",
+    "architecture": "Architecture / API Concepts",
+    "state": "Client-side State & Data Management",
+    "search": "Search & Data Indexing",
+    "vision": "Computer Vision / IoT",
+    "vscode": {
+      "productivity": "VS Code - Productivity & Formatting",
+      "intellisense": "VS Code - IntelliSense & AI",
+      "java": "VS Code - Java & Spring",
+      "frontend": "VS Code - Frontend & React",
+      "ui": "VS Code - UI & Theme",
+      "dotnet": "VS Code - .NET / C#",
+      "api": "VS Code - API & Test"
+    }
   },
   "aiApproach": {
     "title": "My AI Approach",
     "mainTitle": "My AI Approach",
     "mainTitleSubtitle": "My methodology for AI projects",
+    "clickForPrompts": "Click to access prompts",
     "infoSectionTitle1": "How Do I Use AI and Prompts?",
     "infoSectionDesc1": [
       "I use artificial intelligence not just to generate outputs, but to systematically boost my productivity, improve code quality, and empower creative processes.",
@@ -166,13 +184,6 @@
     "list": "Patent Portfolio",
     "number": "Patent No.",
     "view": "View Patent"
-  },
-  "promptGallery": {
-    "title": "AI Prompt Gallery",
-    "about": "About My Prompts",
-    "aboutText": "These prompts are carefully crafted to achieve specific outcomes in various domains. Feel free to use and adapt them for your needs.",
-    "copy": "Copy",
-    "copied": "Copied!"
   },
   "language": "Language",
   "noPage": {
@@ -307,5 +318,8 @@
       "title": "Analysis and Comparison of Two Different Patent Documents",
       "prompt": "Please analyze the IX.pdf file as a patent expert and focus on the differences with the Y.pdf file. Do these differences pose any obstacles to a healthy patent application? If not, explain why there would be no issues. If there are, summarize which sections might cause problems and why."
     }
+  },
+  "social": {
+    "connect": "Reach Out for Collaboration and Ideas"
   }
 } 

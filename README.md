@@ -8,29 +8,58 @@ This project is a personal portfolio web application built with modern software 
 - TypeScript
 - React Router
 - Material UI (MUI)
+- Tailwind CSS
+- Framer Motion
+- TSParticles
+- Flowbite
 - Phosphor Icons
 - i18next (Internationalization)
 - Custom CSS Modules
 - SOLID Principles
+- SendGrid (Email Integration)
 
 ## Folder Structure & Explanations
 ```
 src/
   features/
-    Home/
-      components/      # Home page subcomponents (AboutMe, Experience, etc.)
-      styles/          # Home page specific styles
-      Routes/          # Home main export (index.ts)
-    Contact/
-      components/      # Contact page components
-      styles/          # Contact page styles
-      Routes/          # Contact main export
-    ... (other pages follow the same structure)
-  BrandImage/         # All logo and brand images
-  components/         # Shared components used across pages
-  styles/             # Global styles
-  locales/            # i18n translation files
-  assets/             # Icons and other media
+    Home/              # Ana sayfa bileşenleri
+      components/      # Home sayfası alt bileşenleri
+      styles/          # Home sayfası özel stilleri
+      Routes/          # Home ana export
+    Contact/           # İletişim sayfası
+      components/      # Contact sayfası bileşenleri
+      styles/          # Contact sayfası stilleri
+      Routes/          # Contact ana export
+    AIApproach/        # AI Yaklaşımı sayfası
+      components/      # AI yaklaşımı bileşenleri
+      styles/          # AI yaklaşımı stilleri
+      Routes/          # AI yaklaşımı ana export
+    Technologies/      # Teknolojiler sayfası
+      components/      # Teknoloji bileşenleri
+      styles/          # Teknoloji stilleri
+      Routes/          # Teknoloji ana export
+    PromptGallery/     # Prompt Galerisi sayfası
+      components/      # Galeri bileşenleri
+      styles/          # Galeri stilleri
+      Routes/          # Galeri ana export
+    Patents/          # Patentler sayfası
+      components/      # Patent bileşenleri
+      styles/          # Patent stilleri
+      Routes/          # Patent ana export
+    NoPage/           # 404 sayfası
+      components/      # 404 sayfası bileşenleri
+      styles/          # 404 sayfası stilleri
+      Routes/          # 404 sayfası ana export
+  components/         # Paylaşılan bileşenler
+    layout/           # Sayfa düzeni bileşenleri
+    ui/               # UI bileşenleri
+  hooks/              # Özel React hooks
+  styles/             # Global stiller
+  locales/            # i18n çeviri dosyaları
+  assets/             # İkonlar ve medya
+  BrandImage/         # Logo ve marka görselleri
+  types/              # TypeScript tip tanımlamaları
+  app/                # Uygulama yapılandırması
 ```
 - Each page has its own components, styles, and Routes folders.
 - All main components are exported via their respective Routes/index.ts files.
@@ -63,29 +92,58 @@ Bu proje, modern yazılım geliştirme standartlarına uygun, modüler ve sürd�
 - TypeScript
 - React Router
 - Material UI (MUI)
+- Tailwind CSS
+- Framer Motion
+- TSParticles
+- Flowbite
 - Phosphor Icons
 - i18next (Çoklu dil desteği)
 - Özel CSS Modülleri
 - SOLID Prensipleri
+- SendGrid (E-posta Entegrasyonu)
 
 ## Klasör Yapısı ve Açıklamaları
 ```
 src/
   features/
-    Home/
-      components/      # Home sayfası alt bileşenleri (AboutMe, Experience, vb.)
+    Home/              # Ana sayfa bileşenleri
+      components/      # Home sayfası alt bileşenleri
       styles/          # Home sayfası özel stilleri
-      Routes/          # Home ana bileşenini dışa açan index.ts
-    Contact/
+      Routes/          # Home ana export
+    Contact/           # İletişim sayfası
       components/      # Contact sayfası bileşenleri
       styles/          # Contact sayfası stilleri
       Routes/          # Contact ana export
-    ... (diğer sayfalar aynı yapı)
-  BrandImage/         # Tüm logo ve marka görselleri
-  components/         # Ortak, sayfalar arası kullanılabilen bileşenler
+    AIApproach/        # AI Yaklaşımı sayfası
+      components/      # AI yaklaşımı bileşenleri
+      styles/          # AI yaklaşımı stilleri
+      Routes/          # AI yaklaşımı ana export
+    Technologies/      # Teknolojiler sayfası
+      components/      # Teknoloji bileşenleri
+      styles/          # Teknoloji stilleri
+      Routes/          # Teknoloji ana export
+    PromptGallery/     # Prompt Galerisi sayfası
+      components/      # Galeri bileşenleri
+      styles/          # Galeri stilleri
+      Routes/          # Galeri ana export
+    Patents/          # Patentler sayfası
+      components/      # Patent bileşenleri
+      styles/          # Patent stilleri
+      Routes/          # Patent ana export
+    NoPage/           # 404 sayfası
+      components/      # 404 sayfası bileşenleri
+      styles/          # 404 sayfası stilleri
+      Routes/          # 404 sayfası ana export
+  components/         # Paylaşılan bileşenler
+    layout/           # Sayfa düzeni bileşenleri
+    ui/               # UI bileşenleri
+  hooks/              # Özel React hooks
   styles/             # Global stiller
-  locales/            # Çoklu dil dosyaları (i18n)
-  assets/             # İkonlar ve diğer medya
+  locales/            # i18n çeviri dosyaları
+  assets/             # İkonlar ve medya
+  BrandImage/         # Logo ve marka görselleri
+  types/              # TypeScript tip tanımlamaları
+  app/                # Uygulama yapılandırması
 ```
 - Her sayfanın kendi altında components, styles ve Routes klasörleri bulunur.
 - Tüm ana bileşenler, ilgili Routes/index.ts dosyası üzerinden dışa açılır.
@@ -107,4 +165,24 @@ src/
 MIT
 
 ---
-For more information or contributions, feel free to contact. / Daha fazla bilgi veya katkı için iletişime geçebilirsiniz. 
+For more information or contributions, feel free to contact. / Daha fazla bilgi veya katkı için iletişime geçebilirsiniz.
+
+## Features
+- Responsive Design
+- Multi-language Support
+- Interactive UI with Framer Motion
+- Particle Effects with TSParticles
+- Contact Form with Email Integration
+- Modern UI Components with Flowbite
+- Dark/Light Theme Support
+- SEO Optimized
+
+## Özellikler
+- Duyarlı Tasarım
+- Çoklu Dil Desteği
+- Framer Motion ile Etkileşimli Arayüz
+- TSParticles ile Parçacık Efektleri
+- E-posta Entegrasyonlu İletişim Formu
+- Flowbite ile Modern UI Bileşenleri
+- Karanlık/Aydınlık Tema Desteği
+- SEO Optimizasyonu 

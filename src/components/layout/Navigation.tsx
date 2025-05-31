@@ -1,20 +1,26 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { House, EnvelopeSimple, Cpu, Robot, IdentificationBadge, ImageSquare } from 'phosphor-react';
+import { House, EnvelopeSimple, Cpu, Brain, FileText } from 'phosphor-react';
 import FluidTabs from '../ui/FluidTabs';
-
-const navItems = [
-  { path: '/', label: 'Home', icon: <House size={18} /> },
-  { path: '/contact', label: 'Contact', icon: <EnvelopeSimple size={18} /> },
-  { path: '/technologies', label: 'Technologies', icon: <Cpu size={18} /> },
-  { path: '/ai-approach', label: 'AI Approach', icon: <Robot size={18} /> },
-  { path: '/patents', label: 'Patents', icon: <IdentificationBadge size={18} /> },
-  { path: '/prompt-gallery', label: 'Prompt Gallery', icon: <ImageSquare size={18} /> },
-];
+import useWindowWidth from '../../hooks/useWindowWidth';
+import { useTranslation } from 'react-i18next';
 
 const Navigation = () => {
-  const { i18n } = useTranslation();
-  const isEnglish = i18n.language === 'en';
+  const { t } = useTranslation();
+  const width = useWindowWidth();
+  const showLabels = width > 768;
+
+  const navItems = [
+    { path: '/', label: t('nav.home'), icon: (size: number) => <House size={size} /> },
+    { path: '/Contact', label: t('nav.contact'), icon: (size: number) => <EnvelopeSimple size={size} /> },
+    { path: '/Technology', label: t('nav.technologies'), icon: (size: number) => <Cpu size={size} /> },
+    { path: '/AI', label: t('nav.aiApproach'), icon: (size: number) => <Brain size={size} /> },
+    { path: '/Patent', label: t('nav.patents'), icon: (size: number) => <FileText size={size} /> },
+  ];
+
+  const navItemsWithConditionalLabels = navItems.map(item => ({
+    ...item,
+    label: showLabels ? item.label : '',
+  }));
 
   return (
     <nav style={{
@@ -31,7 +37,7 @@ const Navigation = () => {
       boxShadow: '0 2px 12px 0 rgba(31,38,135,0.08)',
       minHeight: 64,
     }}>
-      <FluidTabs items={navItems} />
+      <FluidTabs items={navItemsWithConditionalLabels} />
     </nav>
   );
 };
