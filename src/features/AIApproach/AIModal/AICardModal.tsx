@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './AICardModal.module.css';
 import { useEffect, useRef } from 'react';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 interface AICardModalProps {
   isOpen: boolean;
@@ -84,22 +86,18 @@ const AICardModal: React.FC<AICardModalProps> = ({
           {/* Icon (optional, if you want to show) */}
           {/* <span style={{ fontSize: 32, marginRight: 8 }}>{icon}</span> */}
           <span style={{ fontWeight: 700, fontSize: 22, color: borderColor, flex: 1 }}>{title}</span>
-          <button
+          <IconButton
             onClick={onClose}
-            style={{
+            aria-label="Kapat"
+            sx={{
               color: '#e2e8f0',
-              background: 'none',
-              border: 'none',
-              fontSize: 28,
-              cursor: 'pointer',
-              transition: 'color 0.2s',
+              ml: 1.2,
+              '&:hover': { color: borderColor, background: borderColor + '22' },
+              '&:focus': { color: borderColor, background: borderColor + '22' },
             }}
-            aria-label="Close"
-            onMouseOver={e => (e.currentTarget.style.color = borderColor)}
-            onMouseOut={e => (e.currentTarget.style.color = '#e2e8f0')}
           >
-            ×
-          </button>
+            <CloseIcon />
+          </IconButton>
         </div>
         {/* Divider */}
         <div style={{ height: 2, background: borderColor, opacity: 0.18 }} />
