@@ -5,54 +5,77 @@
 # English
 
 ## Done
-- [x] Project file and folder structure refactored to a modern, modular, and maintainable architecture
-- [x] Each page (Home, Contact, Technologies, AIApproach, NoPage, PromptGallery, Patents) now has its own components and styles folders
-- [x] Each page exports its main component via its own Routes/index.ts
-- [x] All import/export paths updated to new structure
-- [x] Removed unused old routes/pages and unnecessary files
-- [x] Logo and asset import paths fixed
-- [x] All commits checked for SOLID principles and code quality
-- [x] Project structure now follows academic and professional standards
-- [x] All import/export structures tested and verified
-- [x] Modern, blue-bordered bubble/card structure for 404 and Contact pages
-- [x] Bubble tail animation and border
-- [x] Phosphor Icons for all headings and alignment
-- [x] Phone number hidden, only revealed dynamically on "Call" button
-- [x] WhatsApp link for direct messaging
-- [x] All headings and descriptions translatable with i18n
-- [x] Contact page styles separated with custom CSS module
-- [x] Responsive and modern appearance
-- [x] All social media and contact links updated
-- [x] Experience page added with logo and card structure
-- [x] Modal for detailed experience info
-- [x] Cancel button, divider, and rounded corners in modal
-- [x] Card hover animation, shadow, and blue border effect
-- [x] Vertical sorting with most recent job at the top
-- [x] MUI Tooltip with theme and i18n support
-- [x] Tooltip arrow color and appearance fixed
-- [x] Background blur effect when modal opens
-- [x] .gitignore prepared professionally and securely
-- [x] AI Tools section added (Cursor AI, ChatGPT, Claude, Grok, Muse)
-- [x] MageUI-style animated cards for AI Tools
-- [x] Hover effects and color coding for AI Tools cards
-- [x] Modal detail view for AI Tools
-- [x] Responsive grid for AI Tools section
-- [x] Custom CSS module and animations for AI Tools
-- [x] Emoji and color coding in AI Tools cards
-- [x] Dark mode compatibility for AI Tools section
-- [x] AI Tools data structure moved to separate constants file
-- [x] Type-safe implementation for AI Tools data
-- [x] Bilingual (EN/TR) prompt examples for each AI tool
-- [x] Modular and maintainable code structure for AI Tools
-- [x] Social media bubble component created and styled to match AboutMe section
-- [x] Speech bubble tail removed for footer use
-- [x] Social media/contact icons added: Phone, WhatsApp, LinkedIn, Email, GitHub, YouTube, WakaTime
-- [x] Icons reordered by communication priority (Phone, WhatsApp, LinkedIn, ...)
-- [x] Timer icon used for WakaTime (as Pulse/Speedometer not available in current version)
-- [x] Modern, animated, and accessible icon design (wave + rainbow effect)
-- [x] Animations modularized into a separate CSS file
-- [x] Responsive and visually balanced spacing
-- [x] Turkish and English support for all labels and accessibility
+- [✔] Project file and folder structure refactored to a modern, modular, and maintainable architecture
+- [✔] Each page (Home, Contact, Technologies, AIApproach, NoPage, PromptGallery, Patents) now has its own components and styles folders
+- [✔] Each page exports its main component via its own Routes/index.ts
+- [✔] All import/export paths updated to new structure
+- [✔] Removed unused old routes/pages and unnecessary files
+- [✔] Logo and asset import paths fixed
+- [✔] All commits checked for SOLID principles and code quality
+- [✔] Project structure now follows academic and professional standards
+- [✔] All import/export structures tested and verified
+- [✔] Modern, blue-bordered bubble/card structure for 404 and Contact pages
+- [✔] Bubble tail animation and border
+- [✔] Phosphor Icons for all headings and alignment
+- [✔] Phone number hidden, only revealed dynamically on "Call" button
+- [✔] WhatsApp link for direct messaging
+- [✔] All headings and descriptions translatable with i18n
+- [✔] Contact page styles separated with custom CSS module
+- [✔] Responsive and modern appearance
+- [✔] All social media and contact links updated
+- [✔] Experience page added with logo and card structure
+- [✔] Modal for detailed experience info
+- [✔] Cancel button, divider, and rounded corners in modal
+- [✔] Card hover animation, shadow, and blue border effect
+- [✔] Vertical sorting with most recent job at the top
+- [✔] MUI Tooltip with theme and i18n support
+- [✔] Tooltip arrow color and appearance fixed
+- [✔] Background blur effect when modal opens
+- [✔] .gitignore prepared professionally and securely
+- [✔] AI Tools section added (Cursor AI, ChatGPT, Claude, Grok, Muse)
+- [✔] MageUI-style animated cards for AI Tools
+- [✔] Hover effects and color coding for AI Tools cards
+- [✔] Modal detail view for AI Tools
+- [✔] Responsive grid for AI Tools section
+- [✔] Custom CSS module and animations for AI Tools
+- [✔] Emoji and color coding in AI Tools cards
+- [✔] Dark mode compatibility for AI Tools section
+- [✔] AI Tools data structure moved to separate constants file
+- [✔] Type-safe implementation for AI Tools data
+- [✔] Bilingual (EN/TR) prompt examples for each AI tool
+- [✔] Modular and maintainable code structure for AI Tools
+- [✔] Social media bubble component created and styled to match AboutMe section
+- [✔] Speech bubble tail removed for footer use
+- [✔] Social media/contact icons added: Phone, WhatsApp, LinkedIn, Email, GitHub, YouTube, WakaTime
+- [✔] Icons reordered by communication priority (Phone, WhatsApp, LinkedIn, ...)
+- [✔] Timer icon used for WakaTime (as Pulse/Speedometer not available in current version)
+- [✔] Modern, animated, and accessible icon design (wave + rainbow effect)
+- [✔] Animations modularized into a separate CSS file
+- [✔] Responsive and visually balanced spacing
+- [✔] Turkish and English support for all labels and accessibility
+- [✔] AI Tools card descriptions and details rewritten for conciseness, professionalism, and to avoid repetition with upper sections
+- [✔] CSS updated so that the "Click to access prompts" text is always fixed at the bottom of each card, regardless of the number of details
+- [✔] Unified dark theme across all pages: All main bubbles (AboutMe, Contact, Experience, SocialMedia, AIApproach) now use a consistent dark blue background, light text, and vibrant blue borders for a modern, professional look
+- [✔] Experience cards now have dynamic, company-specific border colors (orange, purple, yellow) and matching modal borders for visual continuity
+- [✔] Modal windows updated for dark theme: dark backgrounds, light text, and dynamic border colors for improved readability and brand alignment
+- [✔] AI modal header and close (X) icon now visually and structurally match Experience modal (flex row, left-aligned title, right-aligned X, colored border, sticky header)
+- [✔] Modal background, border, padding, and shadow match Experience modal
+- [✔] Prompts area styled like Experience modal content (dark, rounded, colored border, padding)
+- [✔] Close button at the bottom, styled like Experience modal
+- [✔] Modal is vertically and horizontally centered, with maxWidth and maxHeight for compactness
+- [✔] Modal closes when clicking outside or pressing ESC (like Experience modal)
+- [✔] X icon is always right-aligned and visually balanced
+- [✔] Modal overlay uses backdrop-filter: blur for background blur effect
+- [✔] All form elements (inputs, textareas, buttons) restyled for dark mode, with clear focus states and accessible contrast
+- [✔] Bubble tail (speech-bubble arrow) colors and shadows improved for better contrast and subtle depth
+- [✔] Improved overall readability and accessibility by increasing text contrast and using color only for emphasis, not for main content
+- [✔] All AI tool modals (Cursor, Copilot, Fooocus, Claude, Grok, Muse) now contain 50+ professional, meaningful, and diverse prompt examples, fully populated in both English and Turkish.
+- [✔] AI modal (AICardModal) close (X) button refactored to use MUI IconButton and CloseIcon, now visually and structurally identical to ExperienceModal. All hover, focus, outline, and roundness behaviors are handled by MUI for perfect consistency and accessibility.
+- [✔] Mage-UI style Fluid Tabs navigation bar added, all top menu modernized with animated tabs.
+- [✔] Navigation menüsüne Translate ikonu ile açılır dil menüsü (EN/TR) eklendi, kullanıcı dostu ve erişilebilir hale getirildi.
+- [✔] Fixed z-index, pointer-events, and event propagation (mousedown/click) issues for language switching; now works perfectly with both mouse and keyboard.
+- [✔] Old LanguageSwitcher component removed, all language switching is managed from a single point.
+- [✔] i18n context ve instance tekilleştirildi, context güncellenmesi garanti altına alındı.
 
 ## Todo
 - [ ] Integrate real SVG logos for AI Tools (currently using emoji)
@@ -68,60 +91,84 @@
 - [ ] Add more social platforms if needed (e.g. X, Instagram)
 - [ ] Improve accessibility (keyboard navigation, focus states)
 - [ ] Add tests for SocialMedia component
+- [ ] Review and further improve card content alignment with upper section philosophy if needed
 
 ---
 
 # Türkçe
 
 ## Yapıldı
-- [x] Proje dosya ve klasör yapısı modern, modüler ve sürdürülebilir şekilde yeniden düzenlendi
-- [x] Her sayfa için (Home, Contact, Technologies, AIApproach, NoPage, PromptGallery, Patents) kendi altında components ve styles klasörleri oluşturuldu
-- [x] Her sayfa için kendi altında Routes/index.ts dosyası ile dışa açma yapısı kuruldu
-- [x] Tüm import ve export yolları yeni yapıya göre güncellendi
-- [x] Kullanılmayan eski routes, pages ve gereksiz dosya/klasörler temizlendi
-- [x] Logo ve asset import yolları düzeltildi
-- [x] Tüm commitlerde SOLID prensiplerine uygunluk ve kod kalitesi kontrol edildi
-- [x] Proje yapısı akademik ve profesyonel standartlara uygun hale getirildi
-- [x] Tüm import ve export yapılarının çalıştığı test edildi
-- [x] 404 ve Contact sayfası için modern, mavi çerçeveli bubble/card yapısı
-- [x] Bubble altı ok (tail) animasyonu ve çerçevesi
-- [x] Tüm başlıklar için Phosphor Icons ile ikonlar ve hizalama
-- [x] Telefon numarasının gizlenmesi ve sadece "Call" butonunda dinamik olarak arama başlatılması
-- [x] WhatsApp linki ile doğrudan mesaj başlatma
-- [x] Tüm başlıkların ve açıklamaların i18n ile çevirilebilir olması
-- [x] Contact sayfası için özel CSS modülü ile stillerin ayrılması
-- [x] Responsive ve modern görünüm
-- [x] Tüm sosyal medya ve iletişim linklerinin güncellenmesi
-- [x] Experience (Deneyimlerim) sayfası eklendi, logolu ve kartlı yapı
-- [x] Deneyim kartları için modal ile detaylı bilgi gösterimi
-- [x] Modalda cancel butonu, divider ve yuvarlatılmış köşe
-- [x] Kartlarda hover animasyonu, gölge ve mavi border efekti
-- [x] En güncel iş en üstte olacak şekilde dikey sıralama
-- [x] MUI Tooltip ile temaya uygun, i18n destekli tooltip
-- [x] Tooltip arrow rengi ve görünümü düzeltildi
-- [x] Modal açıldığında arka plan blur efekti eklendi
-- [x] .gitignore dosyası profesyonel ve güvenli şekilde hazırlandı
-- [x] AI Tools bölümü eklendi (Cursor AI, ChatGPT, Claude, Grok, Muse)
-- [x] AI Tools için MageUI tarzı animasyonlu kartlar
-- [x] AI Tools kartlarında hover efektleri ve renk kodlaması
-- [x] AI Tools için modal detay görünümü
-- [x] AI Tools bölümünde responsive grid yapısı
-- [x] AI Tools için özel CSS modülü ve animasyonlar
-- [x] AI Tools kartlarında emoji ve renk kodlaması
-- [x] AI Tools bölümünde dark mode uyumluluğu
-- [x] AI Tools veri yapısı ayrı bir constants dosyasına taşındı
-- [x] AI Tools verisi için type-safe implementasyon
-- [x] Her AI aracı için çift dilli (EN/TR) prompt örnekleri
-- [x] AI Tools için modüler ve sürdürülebilir kod yapısı
-- [x] Social media bubble componenti oluşturuldu ve AboutMe ile uyumlu tasarlandı
-- [x] Footer için konuşma balonu çentiği kaldırıldı
-- [x] Sosyal medya/iletişim ikonları eklendi: Telefon, WhatsApp, LinkedIn, Email, GitHub, YouTube, WakaTime
-- [x] İletişim önceliğine göre ikonlar sıralandı (Telefon, WhatsApp, LinkedIn, ...)
-- [x] WakaTime için Timer ikonu kullanıldı (Pulse/Speedometer mevcut sürümde yok)
-- [x] Modern, animasyonlu ve erişilebilir ikon tasarımı (dalga + gökkuşağı efekti)
-- [x] Animasyonlar ayrı CSS dosyasına taşındı
-- [x] Responsive ve dengeli boşluklar sağlandı
-- [x] Tüm label ve erişilebilirlik için Türkçe ve İngilizce destek
+- [✔] Proje dosya ve klasör yapısı modern, modüler ve sürdürülebilir şekilde yeniden düzenlendi
+- [✔] Her sayfa için (Home, Contact, Technologies, AIApproach, NoPage, PromptGallery, Patents) kendi altında components ve styles klasörleri oluşturuldu
+- [✔] Her sayfa için kendi altında Routes/index.ts dosyası ile dışa açma yapısı kuruldu
+- [✔] Tüm import ve export yolları yeni yapıya göre güncellendi
+- [✔] Kullanılmayan eski routes, pages ve gereksiz dosya/klasörler temizlendi
+- [✔] Logo ve asset import yolları düzeltildi
+- [✔] Tüm commitlerde SOLID prensiplerine uygunluk ve kod kalitesi kontrol edildi
+- [✔] Proje yapısı akademik ve profesyonel standartlara uygun hale getirildi
+- [✔] Tüm import ve export yapılarının çalıştığı test edildi
+- [✔] 404 ve Contact sayfası için modern, mavi çerçeveli bubble/card yapısı
+- [✔] Bubble altı ok (tail) animasyonu ve çerçevesi
+- [✔] Tüm başlıklar için Phosphor Icons ile ikonlar ve hizalama
+- [✔] Telefon numarasının gizlenmesi ve sadece "Call" butonunda dinamik olarak arama başlatılması
+- [✔] WhatsApp linki ile doğrudan mesaj başlatma
+- [✔] Tüm başlıkların ve açıklamaların i18n ile çevirilebilir olması
+- [✔] Contact sayfası için özel CSS modülü ile stillerin ayrılması
+- [✔] Responsive ve modern görünüm
+- [✔] Tüm sosyal medya ve iletişim linklerinin güncellenmesi
+- [✔] Experience (Deneyimlerim) sayfası eklendi, logolu ve kartlı yapı
+- [✔] Deneyim kartları için modal ile detaylı bilgi gösterimi
+- [✔] Modalda cancel butonu, divider ve yuvarlatılmış köşe
+- [✔] Kartlarda hover animasyonu, gölge ve mavi border efekti
+- [✔] En güncel iş en üstte olacak şekilde dikey sıralama
+- [✔] MUI Tooltip ile temaya uygun, i18n destekli tooltip
+- [✔] Tooltip arrow rengi ve görünümü düzeltildi
+- [✔] Modal açıldığında arka plan blur efekti eklendi
+- [✔] .gitignore dosyası profesyonel ve güvenli şekilde hazırlandı
+- [✔] AI Tools bölümü eklendi (Cursor AI, ChatGPT, Claude, Grok, Muse)
+- [✔] AI Tools için MageUI tarzı animasyonlu kartlar
+- [✔] AI Tools kartlarında hover efektleri ve renk kodlaması
+- [✔] AI Tools için modal detay görünümü
+- [✔] AI Tools bölümünde responsive grid yapısı
+- [✔] AI Tools için özel CSS modülü ve animasyonlar
+- [✔] AI Tools kartlarında emoji ve renk kodlaması
+- [✔] AI Tools bölümünde dark mode uyumluluğu
+- [✔] AI Tools veri yapısı ayrı bir constants dosyasına taşındı
+- [✔] AI Tools verisi için type-safe implementasyon
+- [✔] Her AI aracı için çift dilli (EN/TR) prompt örnekleri
+- [✔] AI Tools için modüler ve sürdürülebilir kod yapısı
+- [✔] Social media bubble componenti oluşturuldu ve AboutMe ile uyumlu tasarlandı
+- [✔] Footer için konuşma balonu çentiği kaldırıldı
+- [✔] Sosyal medya/iletişim ikonları eklendi: Telefon, WhatsApp, LinkedIn, Email, GitHub, YouTube, WakaTime
+- [✔] İletişim önceliğine göre ikonlar sıralandı (Telefon, WhatsApp, LinkedIn, ...)
+- [✔] WakaTime için Timer ikonu kullanıldı (Pulse/Speedometer mevcut sürümde yok)
+- [✔] Modern, animasyonlu ve erişilebilir ikon tasarımı (dalga + gökkuşağı efekti)
+- [✔] Animasyonlar ayrı CSS dosyasına taşındı
+- [✔] Responsive ve dengeli boşluklar sağlandı
+- [✔] Tüm label ve erişilebilirlik için Türkçe ve İngilizce destek
+- [✔] AI Tools kart açıklamaları ve detayları, üst bölümle tekrar etmeyecek ve profesyonel olacak şekilde güncellendi
+- [✔] Kartlarda "Promptlara erişmek için tıklayın" yazısı, madde sayısı ne olursa olsun en alta sabitlendi (CSS ile düzeltildi)
+- [✔] Tüm sayfalarda (AboutMe, Contact, Experience, SocialMedia, AIApproach) koyu mavi arka plan, açık metin ve canlı mavi çerçeve ile tutarlı dark tema uygulandı
+- [✔] Experience kartlarında şirket bazlı dinamik çerçeve renkleri (turuncu, mor, sarı) ve modalda da aynı renklerle bütünlük sağlandı
+- [✔] Modal pencereleri dark tema ile uyumlu hale getirildi: koyu arka plan, açık metin ve dinamik çerçeve renkleri ile okunabilirlik ve marka bütünlüğü artırıldı
+- [✔] AI modal başlığı ve kapatma (X) ikonu Experience modal ile birebir aynı yapıda (flex row, sola hizalı başlık, sağda X, renkli border, sticky header)
+- Modal arka planı, çerçevesi, padding ve gölgesi Experience modal ile aynı
+- Prompt alanı Experience modal içeriği gibi koyu, yuvarlatılmış, renkli borderlı ve paddingli
+- Kapat butonu altta, Experience modal ile aynı stilde
+- Modal dikey ve yatayda ortalanmış, maxWidth ve maxHeight ile kompakt
+- Modal dışına tıklayınca veya ESC ile kapanıyor (Experience modal gibi)
+- X ikonu her zaman sağda ve dengeli hizalanıyor
+- Modal overlay arka planı blur efektiyle geliyor (backdrop-filter: blur)
+- [✔] All form elements (inputs, textareas, buttons) restyled for dark mode, with clear focus states and accessible contrast
+- [✔] Bubble tail (speech-bubble arrow) colors and shadows improved for better contrast and subtle depth
+- [✔] Improved overall readability and accessibility by increasing text contrast and using color only for emphasis, not for main content
+- [✔] Tüm yapay zeka aracı modalları (Cursor, Copilot, Fooocus, Claude, Grok, Muse) artık hem Türkçe hem İngilizce 50+ profesyonel, anlamlı ve çeşitli prompt örneğiyle dolu.
+- [✔] AI modal (AICardModal) kapatma (X) butonu, ExperienceModal ile birebir aynı olacak şekilde MUI IconButton ve CloseIcon ile yeniden düzenlendi. Tüm hover, focus, outline ve yuvarlaklık davranışları MUI tarafından sağlanıyor, görsel ve erişilebilirlik tutarlılığı sağlandı.
+- [✔] Mage-UI style Fluid Tabs navigation bar added, all top menu modernized with animated tabs.
+- [✔] Navigation menüsüne Translate ikonu ile açılır dil menüsü (EN/TR) eklendi, kullanıcı dostu ve erişilebilir hale getirildi.
+- [✔] Fixed z-index, pointer-events, and event propagation (mousedown/click) issues for language switching; now works perfectly with both mouse and keyboard.
+- [✔] Old LanguageSwitcher component removed, all language switching is managed from a single point.
+- [✔] i18n context ve instance tekilleştirildi, context güncellenmesi garanti altına alındı.
 
 ## Yapılacaklar
 - [ ] AI Tools için gerçek SVG logoların entegrasyonu (şu an emoji kullanılıyor)
@@ -136,4 +183,5 @@
 - [ ] Animasyon aç/kapat seçeneği eklenmesi (dalga/gökkuşağı)
 - [ ] Gerekirse yeni sosyal platformlar eklenmesi (örn. X, Instagram)
 - [ ] Erişilebilirlik iyileştirmeleri (klavye ile gezinme, odak durumları)
-- [ ] SocialMedia componenti için testler eklenmesi 
+- [ ] SocialMedia componenti için testler eklenmesi
+- [ ] Kart içeriklerinin üst bölüm felsefesiyle uyumu tekrar gözden geçirilecek ve gerekirse iyileştirilecek 

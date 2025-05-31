@@ -174,38 +174,113 @@ const AITools: React.FC = () => {
                   ✕
                 </button>
               </div>
-              <p className="text-gray-700 text-lg mb-6">{selectedTool.modal.description}</p>
-              {/* Tips Section */}
-              {selectedTool.modal.tips && selectedTool.modal.tips.length > 0 && (
-                <div className="mb-4">
-                  <h4 className="font-semibold mb-2">{t('aiTools.tips')}</h4>
-                  <ul className="list-disc pl-5 space-y-1">
-                    {selectedTool.modal.tips.map((tip, idx) => (
-                      <li key={idx}>
-                        <span className="font-medium">{tip.title}:</span> {tip.content}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              {/* Prompts Section */}
-              {selectedTool.modal.prompts && selectedTool.modal.prompts.length > 0 && (
-                <div className="mb-4">
-                  <h4 className="font-semibold mb-2">{t('aiTools.prompts')}</h4>
-                  <ul className="space-y-2">
-                    {selectedTool.modal.prompts.map((prompt, idx) => (
-                      <li key={idx} className="flex flex-col md:flex-row md:items-center md:space-x-2">
-                        <span className="font-medium">{prompt.label}:</span>
-                        <span className="bg-gray-100 rounded px-2 py-1 text-sm font-mono break-all select-all mt-1 md:mt-0">{prompt.content}</span>
+              {/* Çoklu başlık+prompt listesi */}
+              {selectedTool.name === t('aiTools.tools.cursor.name') && (
+                <div className="space-y-4 mb-4">
+                  {(t('aiTools.cursorPrompts', { returnObjects: true }) as { title: string; prompt: string }[]).map((item, idx) => (
+                    <div key={idx} className="mb-2">
+                      <div className="font-semibold text-base mb-1">{item.title}</div>
+                      <div className="flex flex-col md:flex-row md:items-center md:space-x-2">
+                        <span className="bg-gray-100 rounded px-2 py-1 text-sm font-mono break-all select-all flex-1">{item.prompt}</span>
                         <button
                           className="ml-2 px-2 py-1 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors text-xs"
-                          onClick={() => navigator.clipboard.writeText(prompt.content)}
+                          onClick={() => navigator.clipboard.writeText(item.prompt)}
                         >
-                          {t('aiTools.copy')}
+                          {t('aiTools.copy', 'Kopyala')}
                         </button>
-                      </li>
-                    ))}
-                  </ul>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {selectedTool.name === t('aiTools.tools.copilot.name') && (
+                <div className="space-y-4 mb-4">
+                  {(t('aiTools.copilotPrompts', { returnObjects: true }) as { title: string; prompt: string }[]).map((item, idx) => (
+                    <div key={idx} className="mb-2">
+                      <div className="font-semibold text-base mb-1">{item.title}</div>
+                      <div className="flex flex-col md:flex-row md:items-center md:space-x-2">
+                        <span className="bg-gray-100 rounded px-2 py-1 text-sm font-mono break-all select-all flex-1">{item.prompt}</span>
+                        <button
+                          className="ml-2 px-2 py-1 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors text-xs"
+                          onClick={() => navigator.clipboard.writeText(item.prompt)}
+                        >
+                          {t('aiTools.copy', 'Kopyala')}
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {selectedTool.name === t('aiTools.tools.fooocus.name') && (
+                <div className="space-y-4 mb-4">
+                  {(t('aiTools.fooocusPrompts', { returnObjects: true }) as { title: string; prompt: string }[]).map((item, idx) => (
+                    <div key={idx} className="mb-2">
+                      <div className="font-semibold text-base mb-1">{item.title}</div>
+                      <div className="flex flex-col md:flex-row md:items-center md:space-x-2">
+                        <span className="bg-gray-100 rounded px-2 py-1 text-sm font-mono break-all select-all flex-1">{item.prompt}</span>
+                        <button
+                          className="ml-2 px-2 py-1 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors text-xs"
+                          onClick={() => navigator.clipboard.writeText(item.prompt)}
+                        >
+                          {t('aiTools.copy', 'Kopyala')}
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {selectedTool.name === t('aiTools.tools.claude.name') && (
+                <div className="space-y-4 mb-4">
+                  {(t('aiTools.claudePrompts', { returnObjects: true }) as { title: string; prompt: string }[]).map((item, idx) => (
+                    <div key={idx} className="mb-2">
+                      <div className="font-semibold text-base mb-1">{item.title}</div>
+                      <div className="flex flex-col md:flex-row md:items-center md:space-x-2">
+                        <span className="bg-gray-100 rounded px-2 py-1 text-sm font-mono break-all select-all flex-1">{item.prompt}</span>
+                        <button
+                          className="ml-2 px-2 py-1 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors text-xs"
+                          onClick={() => navigator.clipboard.writeText(item.prompt)}
+                        >
+                          {t('aiTools.copy', 'Kopyala')}
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {selectedTool.name === t('aiTools.tools.grok.name') && (
+                <div className="space-y-4 mb-4">
+                  {(t('aiTools.grokPrompts', { returnObjects: true }) as { title: string; prompt: string }[]).map((item, idx) => (
+                    <div key={idx} className="mb-2">
+                      <div className="font-semibold text-base mb-1">{item.title}</div>
+                      <div className="flex flex-col md:flex-row md:items-center md:space-x-2">
+                        <span className="bg-gray-100 rounded px-2 py-1 text-sm font-mono break-all select-all flex-1">{item.prompt}</span>
+                        <button
+                          className="ml-2 px-2 py-1 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors text-xs"
+                          onClick={() => navigator.clipboard.writeText(item.prompt)}
+                        >
+                          {t('aiTools.copy', 'Kopyala')}
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {selectedTool.name === t('aiTools.tools.muse.name') && (
+                <div className="space-y-4 mb-4">
+                  {(t('aiTools.musePrompts', { returnObjects: true }) as { title: string; prompt: string }[]).map((item, idx) => (
+                    <div key={idx} className="mb-2">
+                      <div className="font-semibold text-base mb-1">{item.title}</div>
+                      <div className="flex flex-col md:flex-row md:items-center md:space-x-2">
+                        <span className="bg-gray-100 rounded px-2 py-1 text-sm font-mono break-all select-all flex-1">{item.prompt}</span>
+                        <button
+                          className="ml-2 px-2 py-1 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors text-xs"
+                          onClick={() => navigator.clipboard.writeText(item.prompt)}
+                        >
+                          {t('aiTools.copy', 'Kopyala')}
+                        </button>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               )}
               <div className="flex justify-end">

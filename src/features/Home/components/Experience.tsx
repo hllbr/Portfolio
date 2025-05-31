@@ -35,7 +35,7 @@ const Experience = () => {
               <div
                 key={exp.company}
                 style={{
-                  background: 'white',
+                  background: 'rgba(30,41,59,0.92)',
                   borderRadius: '1rem',
                   padding: '1.5rem',
                   boxShadow: isHovered
@@ -47,10 +47,11 @@ const Experience = () => {
                   width: '100%',
                   maxWidth: 520,
                   transition: 'border 0.2s, transform 0.2s, box-shadow 0.2s',
-                  border: isHovered ? '2px solid #1976d2' : '2px solid #e5e7eb',
+                  border: `2px solid ${exp.color}`,
                   transform: isHovered ? 'translate(8px, -8px)' : 'none',
                   cursor: 'pointer',
                   position: 'relative',
+                  color: '#e2e8f0',
                 }}
                 onMouseEnter={() => setHovered(exp.company)}
                 onMouseLeave={() => setHovered(null)}
@@ -61,7 +62,7 @@ const Experience = () => {
               >
                 <img src={exp.logo} alt={exp.company} style={{ width: 48, height: 48, objectFit: 'contain', borderRadius: 8, background: '#fff', border: '1px solid #e5e7eb', padding: 4 }} />
                 <div>
-                  <div style={{ fontSize: '1.2rem', fontWeight: 600, color: '#1976d2' }}>
+                  <div style={{ fontSize: '1.2rem', fontWeight: 600, color: '#e2e8f0' }}>
                     {isNetas ? <>{exp.company}<span style={{ marginLeft: 8, fontSize: 13, color: '#16a34a', fontWeight: 500, fontFamily: 'inherit', letterSpacing: 0.1 }}> - {t('experience.currentlyEmployed')}</span></> : exp.company}
                   </div>
                 </div>
@@ -81,6 +82,7 @@ const Experience = () => {
           open={open} 
           selected={selected} 
           onClose={handleClose} 
+          color={selected?.color}
         />
         <div className="speech-bubble-tail" />
       </div>
