@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 interface NavItem {
   path: string;
   label: string;
-  icon?: React.ReactNode;
+  icon?: (size: number) => React.ReactNode;
 }
 
 interface FluidTabsProps {
@@ -21,6 +21,14 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
   const { t, i18n } = useTranslation();
   const [langMenuOpen, setLangMenuOpen] = React.useState(false);
   const langMenuRef = React.useRef<HTMLButtonElement>(null);
+
+  // Responsive ölçümler
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 480;
+  const buttonPadding = isMobile ? '0.4rem 0.7rem' : '0.65rem 1.5rem';
+  const buttonFontSize = isMobile ? 15 : 18;
+  const iconSize = isMobile ? 20 : 18;
+  const containerGap = isMobile ? 2 : 4;
+  const containerMinHeight = isMobile ? 36 : 48;
 
   // Menü dışında tıklanınca kapansın
   React.useEffect(() => {
@@ -41,11 +49,11 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
         borderRadius: 999,
         padding: 4,
         boxShadow: '0 2px 12px 0 rgba(31,38,135,0.08)',
-        gap: 4,
+        gap: containerGap,
         justifyContent: 'center',
         alignItems: 'center',
         margin: '0 auto',
-        minHeight: 48,
+        minHeight: containerMinHeight,
         width: 'fit-content',
         position: 'relative',
       }}>
@@ -61,9 +69,9 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
                 background: 'none',
                 color: selected ? '#0ea5e9' : '#e2e8f0',
                 fontWeight: selected ? 700 : 500,
-                fontSize: 18,
+                fontSize: buttonFontSize,
                 borderRadius: 999,
-                padding: '0.65rem 1.5rem',
+                padding: buttonPadding,
                 cursor: 'pointer',
                 outline: 'none',
                 zIndex: 1,
@@ -88,7 +96,7 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
                   transition={{ type: 'spring', bounce: 0.32, duration: 0.5 }}
                 />
               )}
-              {item.icon && <span style={{ marginRight: 8 }}>{item.icon}</span>}
+              {item.icon && <span style={{ marginRight: 8 }}>{item.icon(iconSize)}</span>}
               {item.label}
             </button>
           );
@@ -105,7 +113,7 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
             background: 'none',
             color: '#e2e8f0',
             borderRadius: 999,
-            padding: '0.65rem 1.5rem',
+            padding: buttonPadding,
             cursor: 'pointer',
             outline: 'none',
             display: 'flex',
@@ -116,7 +124,7 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
           }}
           aria-label="Change language"
         >
-          <Translate size={32} />
+          <Translate size={isMobile ? 24 : 32} />
         </button>
         {/* Dropdown Menü */}
         {langMenuOpen && (

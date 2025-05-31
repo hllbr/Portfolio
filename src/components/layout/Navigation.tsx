@@ -1,21 +1,23 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { House, EnvelopeSimple, Cpu, Robot, IdentificationBadge, ImageSquare } from 'phosphor-react';
+import { House, EnvelopeSimple, Cpu, Brain, FileText } from 'phosphor-react';
 import FluidTabs from '../ui/FluidTabs';
+import useWindowWidth from '../../hooks/useWindowWidth';
 
 const navItems = [
-  { path: '/', label: 'Home', icon: <House size={18} /> },
-  { path: '/contact', label: 'Contact', icon: <EnvelopeSimple size={18} /> },
-  { path: '/technologies', label: 'Technologies', icon: <Cpu size={18} /> },
-  { path: '/ai-approach', label: 'AI Approach', icon: <Robot size={18} /> },
-  { path: '/patents', label: 'Patents', icon: <IdentificationBadge size={18} /> },
-  { path: '/prompt-gallery', label: 'Prompt Gallery', icon: <ImageSquare size={18} /> },
+  { path: '/', label: 'Home', icon: (size: number) => <House size={size} /> },
+  { path: '/contact', label: 'Contact', icon: (size: number) => <EnvelopeSimple size={size} /> },
+  { path: '/technologies', label: 'Technologies', icon: (size: number) => <Cpu size={size} /> },
+  { path: '/ai-approach', label: 'AI Approach', icon: (size: number) => <Brain size={size} /> },
+  { path: '/patents', label: 'Patents', icon: (size: number) => <FileText size={size} /> },
 ];
 
 const Navigation = () => {
-  const { i18n } = useTranslation();
-  const isEnglish = i18n.language === 'en';
-
+  const width = useWindowWidth();
+  const showLabels = width > 768;
+  const navItemsWithConditionalLabels = navItems.map(item => ({
+    ...item,
+    label: showLabels ? item.label : '',
+  }));
   return (
     <nav style={{
       width: '100%',
@@ -31,7 +33,7 @@ const Navigation = () => {
       boxShadow: '0 2px 12px 0 rgba(31,38,135,0.08)',
       minHeight: 64,
     }}>
-      <FluidTabs items={navItems} />
+      <FluidTabs items={navItemsWithConditionalLabels} />
     </nav>
   );
 };

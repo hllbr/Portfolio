@@ -5,7 +5,6 @@
     "technologies": "Technologies",
     "aiApproach": "AI Approach",
     "patents": "Patents",
-    "promptGallery": "Prompt Gallery",
     "experience": "Experience",
     "logo": "Portfolio"
   },
@@ -167,13 +166,6 @@
     "number": "Patent No.",
     "view": "View Patent"
   },
-  "promptGallery": {
-    "title": "AI Prompt Gallery",
-    "about": "About My Prompts",
-    "aboutText": "These prompts are carefully crafted to achieve specific outcomes in various domains. Feel free to use and adapt them for your needs.",
-    "copy": "Copy",
-    "copied": "Copied!"
-  },
   "language": "Language",
   "noPage": {
     "title": "Page Not Found",
@@ -307,5 +299,8 @@
       "title": "Analysis and Comparison of Two Different Patent Documents",
       "prompt": "Please analyze the IX.pdf file as a patent expert and focus on the differences with the Y.pdf file. Do these differences pose any obstacles to a healthy patent application? If not, explain why there would be no issues. If there are, summarize which sections might cause problems and why."
     }
+  },
+  "social": {
+    "connect": "Reach Out for Collaboration and Ideas"
   }
 } 

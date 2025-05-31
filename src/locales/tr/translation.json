@@ -5,7 +5,6 @@
     "technologies": "Teknolojiler",
     "aiApproach": "AI Yaklaşımım",
     "patents": "Patentlerim",
-    "promptGallery": "Prompt Galerisi",
     "experience": "Deneyimlerim",
     "logo": "Portfolyo"
   },
@@ -167,13 +166,6 @@
     "number": "Patent No.",
     "view": "Patenti Görüntüle"
   },
-  "promptGallery": {
-    "title": "AI Prompt Galerisi",
-    "about": "Promptlarım Hakkında",
-    "aboutText": "Bu promptlar, çeşitli alanlarda belirli sonuçlar elde etmek için özenle hazırlanmıştır. İhtiyaçlarınıza göre kullanmaktan ve uyarlamaktan çekinmeyin.",
-    "copy": "Kopyala",
-    "copied": "Kopyalandı!"
-  },
   "language": "Dil",
   "noPage": {
     "title": "Sayfa Bulunamadı",
@@ -307,5 +299,8 @@
       "title": "Oyun ve Uygulama için Yüksek Kaliteli Görsel Üretimi",
       "prompt": "Unity tabanlı bir oyun için, aşağıda verdiğim konsept açıklamasına uygun, yüksek kaliteli ve özgün bir görsel oluştur. Renk paleti, stil ve kompozisyon önerilerini de ekle. Görselin oyun içi kullanılabilirliğini artıracak şekilde detaylandır."
     }
+  },
+  "social": {
+    "connect": "İş Birliği ve Fikir Paylaşımı İçin Ulaşın"
   }
 } 

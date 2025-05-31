@@ -5,7 +5,6 @@ import { Contact } from './features/Contact/Routes';
 import { Technologies } from './features/Technologies/Routes';
 import { AIApproach } from './features/AIApproach/Routes';
 import { Patents } from './features/Patents/Routes';
-import { PromptGallery } from './features/PromptGallery/Routes';
 import { NoPage } from './features/NoPage/Routes';
 import './styles/globals.css';
 import './locales/i18n';
@@ -20,7 +19,6 @@ function App() {
           <Route path="/technologies" element={<Technologies />} />
           <Route path="/ai-approach" element={<AIApproach />} />
           <Route path="/patents" element={<Patents />} />
-          <Route path="/prompt-gallery" element={<PromptGallery />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Layout>
