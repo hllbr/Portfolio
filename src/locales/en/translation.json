@@ -175,15 +175,65 @@
         ],
         "color": "#06b6d4"
       }
-    ]
+    ],
+    "heroTitle": "New Horizons in Engineering with AI",
+    "heroSubtitle": "An engineering approach that brings together technology and human focus."
   },
   "patents": {
-    "title": "My Patents",
-    "importance": "Why Patents Matter",
-    "importanceText": "Patents are crucial for protecting intellectual property and fostering innovation. They represent the intersection of creativity and technical expertise.",
-    "list": "Patent Portfolio",
-    "number": "Patent No.",
-    "view": "View Patent"
+    "title": "Patents",
+    "subtitle": "My innovative solutions and patents",
+    "whatIsPatent": {
+      "title": "🧾 What is a Patent?",
+      "description": "A patent is a legal right granted to an inventor, giving them exclusive authority to make, use, or sell an invention for a limited period. It's not just a certificate — it's a declaration that your solution is original, useful, and innovative.",
+      "descriptionTR": "Patent, bir buluş sahibine belirli bir süre boyunca, o buluşu üretme, kullanma veya satma hakkı tanıyan yasal bir korumadır. Sadece bir belge değil; çözümünüzün özgün, faydalı ve yenilikçi olduğunun resmi ilanıdır."
+    },
+    "whyMatter": {
+      "title": "🌍 Why Do Patents Matter?",
+      "description": "Patents are vital for protecting original ideas, enabling R&D investments, increasing national innovation indexes, elevating corporate valuation, and creating licensing & collaboration opportunities.",
+      "descriptionTR": "Patentler, özgün fikirleri korumak, AR-GE yatırımlarını mümkün kılmak, ulusal inovasyon endekslerini yükseltmek, kurumsal değeri artırmak ve lisanslama & iş birliği fırsatları yaratmak için hayati öneme sahiptir.",
+      "international": "International institutions like WIPO, World Bank, and IMF use patent data to assess innovation performance across countries."
+    },
+    "whyWork": {
+      "title": "🧠 Why I Work in This Field",
+      "description": "I believe the future belongs to multi-disciplinary thinkers — those who can see patterns across sectors, and create solutions that don't just solve problems, but redesign the way we live.",
+      "description2": "For me, invention is not an accident. It's a habit of observing, questioning, connecting and building.",
+      "descriptionTR": "Geleceğin; farklı alanlarda düşünebilen, bağlantılar kurabilen ve yalnızca sorunları çözmekle kalmayıp yaşam şekillerini yeniden tasarlayabilen insanlara ait olduğuna inanıyorum. Buluş yapmak bir tesadüf değil; gözlem yapma, sorgulama ve yapı inşa etme alışkanlığıdır."
+    },
+    "areas": {
+      "title": "🧭 Areas Where I Innovate",
+      "description": "Although the technical content of my current projects is confidential until official registrations are complete, the fields I focus on include:",
+      "items": [
+        "🐝 Smart Agriculture & Beekeeping",
+        "🏚️ Disaster & Earthquake Safety",
+        "📦 Food Safety & Packaging",
+        "🧴 Personal Care Technologies",
+        "💻 Consumer Electronics & Embedded Systems",
+        "🛞 Mobility & Movement-Sensitive Devices",
+        "🎶 Smart Musical Instruments",
+        "🌿 Environmental Sensing Technologies",
+        "🏟️ Sports & Decision Support Systems",
+        "🔋 Energy-Independent Emergency Systems"
+      ],
+      "disclaimer": "🛡️ Due to ongoing registration processes, these projects cannot yet be publicly disclosed."
+    },
+    "turkey": {
+      "title": "📊 Where Does Turkey Stand?",
+      "description": "While countries like China, the USA, and Japan lead global patent output, Turkey's share is still emerging — with great potential ahead.",
+      "descriptionTR": "Çin, ABD ve Japonya dünya genelinde patent başvurularının büyük bölümünü gerçekleştirirken; Türkiye bu yarışta yükselme potansiyeli taşıyan ülkeler arasındadır."
+    },
+    "workflow": {
+      "title": "🧪 My Patent Development Workflow",
+      "descriptionTR": "Sorunun tespiti, Teknik yapı ve şema oluşturma, Yapay zekâ destekli test ve geliştirme, Dokümantasyon ve modelleme, Hukuki hazırlık ve başvuru"
+    },
+    "collaboration": {
+      "title": "🤝 Open to Collaboration",
+      "description": "If you are working on an innovative idea and want to explore protection or co-development opportunities, I'm always open to collaborating.",
+      "descriptionTR": "Yenilikçi fikirler üzerine çalışan biriyseniz ve bu fikirlerin korunması veya ortak geliştirilmesi üzerine konuşmak isterseniz, her zaman iletişime geçebilirsiniz."
+    },
+    "closing": "✨ Patent is not just a protection, it's a perspective.",
+    "closing2": "I don't just protect what I build — I build with protection in mind.",
+    "heroTitle": "Patents Shaping the Future",
+    "heroSubtitle": "Each patent is where vision meets engineering."
   },
   "language": "Language",
   "noPage": {

@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/layout/Layout';
-import { Home } from './features/Home/Routes';
-import { Contact } from './features/Contact/Routes';
-import { Technologies } from './features/Technologies/Routes';
-import { AIApproach } from './features/AIApproach/Routes';
-import { Patents } from './features/Patents/Routes';
-import { NoPage } from './features/NoPage/Routes';
 import './styles/globals.css';
 import './locales/i18n';
+import { Contact } from './Features/Contact/Routes';
+import { Technologies } from './Features/Technologies/Routes';
+import { AIApproach } from './Features/AIApproach/Routes';
+import { Patents } from './Features/Patents/Routes';
+import { NoPage } from './Features/NoPage/Routes';
+import Layout from './Components/Layout/Layout';
+import { Home } from './Features/Home/Routes';
 
 function App() {
   return (
