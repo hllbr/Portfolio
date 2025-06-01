@@ -103,6 +103,7 @@
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   z-index: 0;
+  pointer-events: none;
 }
 
 .patent-card:hover {
@@ -351,4 +352,25 @@
   .patents-hero-subtitle {
     font-size: 1.05rem;
   }
+}
+
+.collaboration-text {
+  pointer-events: auto;
+  display: block;
+  white-space: normal;
+}
+
+.contact-link, .social-link {
+  color: #fb923c;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+  pointer-events: auto;
+  display: inline;
+  margin: 0 0.2em 0 0.2em;
+}
+.contact-link:hover, .social-link:hover {
+  color: #f59e42;
+  text-shadow: 0 2px 8px rgba(251, 146, 60, 0.15);
 } 

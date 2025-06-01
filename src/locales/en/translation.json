@@ -200,21 +200,19 @@
       "descriptionTR": "Geleceğin; farklı alanlarda düşünebilen, bağlantılar kurabilen ve yalnızca sorunları çözmekle kalmayıp yaşam şekillerini yeniden tasarlayabilen insanlara ait olduğuna inanıyorum. Buluş yapmak bir tesadüf değil; gözlem yapma, sorgulama ve yapı inşa etme alışkanlığıdır."
     },
     "areas": {
-      "title": "🧭 Areas Where I Innovate",
-      "description": "Although the technical content of my current projects is confidential until official registrations are complete, the fields I focus on include:",
+      "title": "Key Focus Areas in Innovation",
+      "description": "In my intellectual property work, I prioritize societal benefit and sustainable innovation. Below are the main impact areas I focus on during my patent development processes.",
       "items": [
-        "🐝 Smart Agriculture & Beekeeping",
-        "🏚️ Disaster & Earthquake Safety",
-        "📦 Food Safety & Packaging",
-        "🧴 Personal Care Technologies",
-        "💻 Consumer Electronics & Embedded Systems",
-        "🛞 Mobility & Movement-Sensitive Devices",
-        "🎶 Smart Musical Instruments",
-        "🌿 Environmental Sensing Technologies",
-        "🏟️ Sports & Decision Support Systems",
-        "🔋 Energy-Independent Emergency Systems"
+        "🌱 Smart Agriculture & Food Safety",
+        "🛡️ Disaster & Emergency Technologies",
+        "🩺 Personal & Environmental Health Solutions",
+        "💻 Embedded Systems & Electronics",
+        "🚗 Mobility & Movement Technologies",
+        "🎶 Intelligent Systems for Music & Arts",
+        "🔋 Sustainable Energy & Independent Systems",
+        "🏟️ Sports & Decision Support Applications"
       ],
-      "disclaimer": "🛡️ Due to ongoing registration processes, these projects cannot yet be publicly disclosed."
+      "disclaimer": "Due to ongoing applications, technical details of these projects remain confidential until official registration is complete."
     },
     "turkey": {
       "title": "📊 Where Does Turkey Stand?",
@@ -226,8 +224,8 @@
       "descriptionTR": "Sorunun tespiti, Teknik yapı ve şema oluşturma, Yapay zekâ destekli test ve geliştirme, Dokümantasyon ve modelleme, Hukuki hazırlık ve başvuru"
     },
     "collaboration": {
-      "title": "🤝 Open to Collaboration",
-      "description": "If you are working on an innovative idea and want to explore protection or co-development opportunities, I'm always open to collaborating.",
+      "title": "Idea Exchange & Contact",
+      "description": "If you'd like to share your patent vision or discuss new ideas, you can easily reach me via <contact>Contact</contact> or <social>Social Media</social>.",
       "descriptionTR": "Yenilikçi fikirler üzerine çalışan biriyseniz ve bu fikirlerin korunması veya ortak geliştirilmesi üzerine konuşmak isterseniz, her zaman iletişime geçebilirsiniz."
     },
     "closing": "✨ Patent is not just a protection, it's a perspective.",

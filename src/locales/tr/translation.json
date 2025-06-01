@@ -200,21 +200,19 @@
       "descriptionTR": "Geleceğin; farklı alanlarda düşünebilen, bağlantılar kurabilen ve yalnızca sorunları çözmekle kalmayıp yaşam şekillerini yeniden tasarlayabilen insanlara ait olduğuna inanıyorum. Buluş yapmak bir tesadüf değil; gözlem yapma, sorgulama ve yapı inşa etme alışkanlığıdır."
     },
     "areas": {
-      "title": "🧭 Patent Üretimi Yaptığım Alanlar",
-      "description": "Mevcut projelerimin teknik içeriği resmi tescil tamamlanana kadar gizli tutulmaktadır; odaklandığım alanlar şunlardır:",
+      "title": "Yenilikte Odaklandığım Alanlar",
+      "description": "Fikri mülkiyet üretiminde, toplumsal fayda ve sürdürülebilir inovasyon odağında çalışıyorum. Aşağıda, patent geliştirme süreçlerimde öncelik verdiğim başlıca etki alanlarını bulabilirsiniz.",
       "items": [
-        "🐝 Akıllı Tarım & Arıcılık",
-        "🏚️ Afet & Deprem Güvenliği",
-        "📦 Gıda Güvenliği & Ambalaj",
-        "🧴 Kişisel Bakım Teknolojileri",
-        "💻 Tüketici Elektroniği & Gömülü Sistemler",
-        "🛞 Hareket Duyarlı Cihazlar",
-        "🎶 Akıllı Müzik Enstrümanları",
-        "🌿 Çevresel Algılama Teknolojileri",
-        "🏟️ Spor & Karar Destek Sistemleri",
-        "🔋 Enerji Bağımsız Acil Durum Sistemleri"
+        "🌱 Akıllı Tarım ve Gıda Güvenliği",
+        "🛡️ Afet ve Acil Durum Teknolojileri",
+        "🩺 Kişisel ve Çevresel Sağlık Çözümleri",
+        "💻 Gömülü Sistemler ve Elektronik",
+        "🚗 Hareket ve Mobilite Teknolojileri",
+        "🎶 Müzik ve Sanat için Akıllı Sistemler",
+        "🔋 Sürdürülebilir Enerji ve Bağımsız Sistemler",
+        "🏟️ Spor ve Karar Destek Uygulamaları"
       ],
-      "disclaimer": "🛡️ Başvurular devam ettiği için bu projelerin detayları henüz kamuoyuyla paylaşılmamaktadır."
+      "disclaimer": "Devam eden başvurular nedeniyle, projelerin teknik detayları tescil süreci tamamlanana kadar gizli tutulmaktadır."
     },
     "turkey": {
       "title": "📊 Türkiye Patent Pastasında Nerede?",
@@ -226,9 +224,9 @@
       "descriptionTR": "Sorunun tespiti, Teknik yapı ve şema oluşturma, Yapay zekâ destekli test ve geliştirme, Dokümantasyon ve modelleme, Hukuki hazırlık ve başvuru"
     },
     "collaboration": {
-      "title": "🤝 İş Birliğine Açığım",
+      "title": "Fikir Paylaşımı ve İletişim",
       "description": "If you are working on an innovative idea and want to explore protection or co-development opportunities, I'm always open to collaborating.",
-      "descriptionTR": "Yenilikçi fikirler üzerine çalışan biriyseniz ve bu fikirlerin korunması veya ortak geliştirilmesi üzerine konuşmak isterseniz, her zaman iletişime geçebilirsiniz."
+      "descriptionTR": "Patent vizyonunuzu paylaşmak veya yeni fikirler üzerine sohbet etmek isterseniz, <contact>İletişim</contact> ya da <social>Sosyal Medya</social> üzerinden bana kolayca ulaşabilirsiniz."
     },
     "closing": "✨ Patent Bir Koruma Değil, Bir Bakış Açısıdır.",
     "closing2": "Yalnızca yaptıklarımı korumuyorum; korumayı baştan düşünerek yapıyorum.",

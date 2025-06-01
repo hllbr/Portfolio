@@ -1,10 +1,25 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import './style/Patents.css';
 import './style/PatentsHero.css';
+import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
 const Patents = () => {
   const { t, i18n } = useTranslation();
   const isEnglish = i18n.language === 'en';
+  const navigate = useNavigate();
+
+  // Handler to make the contact-link span clickable
+  React.useEffect(() => {
+    const handler = (e: Event) => {
+      if ((e.target as HTMLElement).classList.contains('contact-link')) {
+        e.preventDefault();
+        navigate('/contact');
+      }
+    };
+    document.addEventListener('click', handler);
+    return () => document.removeEventListener('click', handler);
+  }, [navigate]);
 
   return (
     <div className="patents-container">
@@ -53,6 +68,7 @@ const Patents = () => {
         </div>
 
         {/* Workflow Section */}
+        {/**
         <div className="patent-card">
           <h2>{t('patents.workflow.title')}</h2>
           <ul>
@@ -64,11 +80,26 @@ const Patents = () => {
           </ul>
           {!isEnglish && <p>{t('patents.workflow.descriptionTR')}</p>}
         </div>
+        */}
 
         {/* Collaboration Section */}
         <div className="patent-card">
           <h2>{t('patents.collaboration.title')}</h2>
-          <p>{isEnglish ? t('patents.collaboration.description') : t('patents.collaboration.descriptionTR')}</p>
+          <p className="collaboration-text">
+            <Trans
+              i18nKey={isEnglish ? 'patents.collaboration.description' : 'patents.collaboration.descriptionTR'}
+              components={{
+                contact: <span className="contact-link" onClick={() => navigate('/contact')}>{isEnglish ? 'Contact' : 'İletişim'}</span>,
+                social: <span className="social-link" onClick={() => {
+                  navigate('/');
+                  setTimeout(() => {
+                    const el = document.getElementById('social-media');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }, 300);
+                }}>{isEnglish ? 'Social Media' : 'Sosyal Medya'}</span>
+              }}
+            />
+          </p>
         </div>
 
         {/* Closing Section */}
