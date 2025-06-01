@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Animated Gradient and Sheen for Patents Title */
+.patents-hero {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  margin-top: 1.5rem;
+}
+.patents-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #38bdf8, #818cf8, #38bdf8);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: gradientSweep 8s ease-in-out infinite;
+  position: relative;
+  letter-spacing: -1px;
+  line-height: 1.18;
+  padding-bottom: 0.15em;
+}
+
+@keyframes gradientSweep {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.patents-hero-title::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+  transform: skewX(-20deg);
+  animation: sheen 3.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes sheen {
+  0% { left: -75%; }
+  80% { left: 120%; }
+  100% { left: 120%; }
+}
+
+.patents-hero-subtitle {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeInSubtitle 1.6s 0.3s ease-in-out forwards;
+}
+@keyframes fadeInSubtitle {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+@media (max-width: 768px) {
+  .patents-hero-title { font-size: 2.1rem; }
+  .patents-hero-subtitle { font-size: 1.05rem; }
+} 
