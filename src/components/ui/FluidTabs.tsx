@@ -143,6 +143,7 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
             flexDirection: 'column',
             alignItems: 'center',
             gap: 8,
+            border: '2px solid #0ea5e9',
           }}>
             <button
               onClick={e => { e.stopPropagation(); i18n.changeLanguage('en'); setLangMenuOpen(false); }}
