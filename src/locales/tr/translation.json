@@ -34,16 +34,21 @@
       "message": "Mesaj",
       "mustBeFilled": "doldurulmalıdır.",
       "send": "Mesajı Gönder",
-      "sending": "Gönderiliyor..."
+      "sending": "Gönderiliyor...",
+      "success": "Mesajınız başarıyla gönderildi!",
+      "error": "Bir hata oluştu, lütfen tekrar deneyin."
     }
   },
   "technologies": {
     "title": "Teknolojiler",
-    "subtitle": "Çalıştığım Teknolojiler",
-    "programming": "Programlama Dilleri",
-    "frontend": "Frontend Framework & Kütüphaneler",
-    "backend": "Backend Framework'ler",
-    "devTools": "Geliştirme Araçları & IDE'ler",
+    "subtitle": "Çalıştığım teknolojiler",
+    "crossPlatform": "Çoklu Platform Teknolojileri",
+    "javascript": "JavaScript/TypeScript",
+    "java": "Java",
+    "csharp": "C#",
+    "cpp": "C++",
+    "python": "Python",
+    "devTools": "Geliştirme Araçları",
     "utilities": "Geliştirme Yardımcıları & Araçlar",
     "architecture": "Mimari / API Kavramları",
     "state": "İstemci Tarafı Durum & Veri Yönetimi",
@@ -215,9 +220,45 @@
       "disclaimer": "Devam eden başvurular nedeniyle, projelerin teknik detayları tescil süreci tamamlanana kadar gizli tutulmaktadır."
     },
     "turkey": {
-      "title": "📊 Türkiye Patent Pastasında Nerede?",
-      "description": "While countries like China, the USA, and Japan lead global patent output, Turkey's share is still emerging — with great potential ahead.",
-      "descriptionTR": "Çin, ABD ve Japonya dünya genelinde patent başvurularının büyük bölümünü gerçekleştirirken; Türkiye bu yarışta yükselme potansiyeli taşıyan ülkeler arasındadır."
+      "title": "📊 Türkiye Patent Ekosisteminde Nerede Duruyor?",
+      "description": "Çin, ABD ve Japonya dünya genelinde en çok patent başvurusu yapan ülkeler arasında lider konumda. Türkiye ise %0.8 civarındaki payıyla küçük görünse de her yıl düzenli bir artış göstermektedir.",
+      "globalLandscape": {
+        "title": "🌍 Küresel Manzara (WIPO 2023 Verileri)",
+        "points": [
+          "Çin, dünya genelindeki tüm patent başvurularının %43'ünden fazlasını oluşturuyor.",
+          "ABD %19 ile ikinci sırada, Japonya ise %11 ile üçüncü sırada yer alıyor.",
+          "Buna karşılık, Türkiye'nin payı yaklaşık %0.8 — ancak yıllık düzenli bir artış gösteriyor."
+        ]
+      },
+      "growthTrends": {
+        "title": "🚀 Türkiye'deki Büyüme Trendleri",
+        "intro": "TÜRKPATENT (Türk Patent ve Marka Kurumu) verilerine göre:",
+        "points": [
+          "2023 yılında Türkiye'de 9.500'den fazla ulusal patent başvurusu yapıldı — 2010 yılına göre %400'lük bir artış.",
+          "Üniversite kaynaklı patentler ve girişim destekli başvurular artış gösteriyor."
+        ]
+      },
+      "challenges": {
+        "title": "🔍 Önümüzdeki Zorluklar",
+        "points": [
+          "Düşük uluslararası patent başvuru oranı (PCT tabanlı)",
+          "Sınırlı patent ticarileştirme",
+          "Yenilikçilikte yetersiz sektörler arası iş birliği"
+        ]
+      },
+      "potential": {
+        "title": "🌟 Ancak Gerçek Bir Potansiyel Var",
+        "description": "Dünya Bankası ve OECD dahil olmak üzere birçok uluslararası rapor, Türkiye'yi \"gelişmekte olan bir yenilik merkezi\" olarak tanıyor, özellikle şu nedenlerle:",
+        "points": [
+          "Genç ve teknolojiye açık nüfusu",
+          "Hızla büyüyen girişim ekosistemi",
+          "Derin teknoloji, savunma ve yeşil teknolojiler için artan devlet desteği"
+        ]
+      },
+      "conclusion": {
+        "title": "📍 Sonuç",
+        "description": "Türkiye henüz lider konumda değil, ama artık bu yarışın dışında da değil. Her patent başvurusu, bu kültürün inşasında atılmış somut bir adımdır."
+      }
     },
     "workflow": {
       "title": "🧪 Patent Üretim Sürecim Nasıl İşliyor?",
@@ -228,8 +269,97 @@
       "description": "If you are working on an innovative idea and want to explore protection or co-development opportunities, I'm always open to collaborating.",
       "descriptionTR": "Patent vizyonunuzu paylaşmak veya yeni fikirler üzerine sohbet etmek isterseniz, <contact>İletişim</contact> ya da <social>Sosyal Medya</social> üzerinden bana kolayca ulaşabilirsiniz."
     },
-    "closing": "✨ Patent Bir Koruma Değil, Bir Bakış Açısıdır.",
-    "closing2": "Yalnızca yaptıklarımı korumuyorum; korumayı baştan düşünerek yapıyorum.",
+    "closing": {
+      "title": "✨ Patent Bir Koruma Değil, Bir Bakış Açısıdır.",
+      "subtitle": "Yalnızca yaptıklarımı korumuyorum; korumayı baştan düşünerek yapıyorum.",
+      "quotes": [
+        {
+          "quote": "Patent sistemi, dehanın ateşine ilgi yakıtı ekledi.",
+          "author": "Abraham Lincoln",
+          "emoji": "🧠"
+        },
+        {
+          "quote": "Güneşi patentleyebilir misiniz?",
+          "author": "Jonas Salk",
+          "emoji": "🌞"
+        },
+        {
+          "quote": "Buluş, insanın yaratıcı beyninin en önemli ürünüdür.",
+          "author": "Nikola Tesla",
+          "emoji": "🧲"
+        },
+        {
+          "quote": "Belki de evreni patentlemeli ve herkesin varlığı için telif ücreti almalıyız.",
+          "author": "Stephen Hawking",
+          "emoji": "🧪"
+        },
+        {
+          "quote": "İşletmeyi nasıl büyüteceğini, ürünleri nasıl geliştireceğini, patentlere ve büyük olabilecek gelişmemiş bir pazara sahip olmayı bil.",
+          "author": "Mark Cuban",
+          "emoji": "💡"
+        },
+        {
+          "quote": "Eğer patentler olmasaydı, kimse araştırma ve geliştirmeye para harcamazdı.",
+          "author": "James Dyson",
+          "emoji": "🛠️"
+        },
+        {
+          "quote": "Patent koruması, yatırım çekmek ve inovasyonu teşvik etmek için anahtardır.",
+          "author": "Michelle Lee",
+          "emoji": "🧬"
+        },
+        {
+          "quote": "Geleceği tahmin etmenin en iyi yolu, onu icat etmektir.",
+          "author": "Alan Kay",
+          "emoji": "🧭"
+        },
+        {
+          "quote": "İnovasyon, bir lider ile bir takipçi arasındaki farkı belirler.",
+          "author": "Steve Jobs",
+          "emoji": "🧱"
+        },
+        {
+          "quote": "Patent, sadece dava edilme lisansıdır.",
+          "author": "Arthur C. Clarke",
+          "emoji": "⚖️"
+        },
+        {
+          "quote": "İnovasyon, girişimciliğin özel aracıdır.",
+          "author": "Peter Drucker",
+          "emoji": "🧠"
+        },
+        {
+          "quote": "Bir fikrin değeri, onun kullanılmasında yatar.",
+          "author": "Thomas Edison",
+          "emoji": "🔬"
+        },
+        {
+          "quote": "Patent sistemi, inovasyonun bel kemiğidir.",
+          "author": "Kalyan C. Kankanala",
+          "emoji": "🧩"
+        },
+        {
+          "quote": "İcat ediyorum çünkü kendimi alamıyorum – yeni şeyler kendiliğinden bana geliyor.",
+          "author": "Beulah Louise Henry",
+          "emoji": "🧠"
+        },
+        {
+          "quote": "Fikri mülkiyetin raf ömrü bir muz kadardır.",
+          "author": "Bill Gates",
+          "emoji": "🧠"
+        },
+        {
+          "quote": "Fikri mülkiyet, 21. yüzyılın petrolüdür.",
+          "author": "Mark Getty",
+          "emoji": "🧠"
+        },
+        {
+          "quote": "Gelecek zaten burada — sadece eşit dağılmamış.",
+          "author": "William Gibson",
+          "emoji": "🧠"
+        }
+      ]
+    },
     "heroTitle": "Geleceği Tasarlayan Patentler",
     "heroSubtitle": "Her patent, vizyonun ve mühendisliğin buluşma noktasıdır."
   },

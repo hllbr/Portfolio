@@ -23,7 +23,7 @@ const Experience = () => {
     <>
       <div className="speech-bubble">
         <section className="text-center space-y-4">
-          <h1 className="text-4xl font-bold">{t('experience.title')}</h1>
+          <h1 className="text-4xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>{t('experience.title')}</h1>
           <p className="text-xl text-muted-foreground">{t('experience.subtitle')}</p>
         </section>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem', width: '100%', marginTop: '2rem' }}>

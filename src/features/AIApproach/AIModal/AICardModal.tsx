@@ -4,6 +4,8 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Button from '@mui/material/Button';
 import './CopyButtonAnimation.css';
+import { MagnifyingGlass } from 'phosphor-react';
+import Divider from '@mui/material/Divider';
 
 interface AICardModalProps {
   isOpen: boolean;
@@ -23,6 +25,7 @@ const AICardModal: React.FC<AICardModalProps> = ({
   lang,
 }) => {
   const modalRef = useRef<HTMLDivElement>(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Close on ESC
   useEffect(() => {
@@ -66,30 +69,22 @@ const AICardModal: React.FC<AICardModalProps> = ({
         onClick={e => e.stopPropagation()}
       >
         {/* Header */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 12,
-            color: borderColor,
-            fontWeight: 700,
-            fontSize: 22,
-            borderBottom: `3px solid ${borderColor}`,
-            background: '#1e293b',
-            borderTopLeftRadius: 16,
-            borderTopRightRadius: 16,
-            padding: '1.2rem 2rem 1.2rem 2rem',
-            position: 'sticky',
-            top: 0,
-            zIndex: 10,
-          }}
-        >
-          {/* Icon (optional, if you want to show) */}
-          {/* <span style={{ fontSize: 32, marginRight: 8 }}>{icon}</span> */}
-          <span style={{ fontWeight: 700, fontSize: 22, color: borderColor, flex: 1 }}>{title}</span>
+        <div className={styles["ai-modal-header"]}>
+          <span className={styles["ai-modal-title"]}>{title}</span>
+          <div className={styles["ai-modal-search-container"]}>
+            <MagnifyingGlass size={22} color="#94a3b8" className={styles["ai-modal-search-icon"]} />
+            <input
+              type="text"
+              className={styles["ai-modal-search"]}
+              placeholder={lang === 'tr' ? 'Komut ara...' : 'Search prompt...'}
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+            />
+          </div>
           <IconButton
             onClick={onClose}
             aria-label="Kapat"
+            className={styles["ai-modal-close"]}
             sx={{
               color: '#e2e8f0',
               ml: 1.2,
@@ -101,7 +96,7 @@ const AICardModal: React.FC<AICardModalProps> = ({
           </IconButton>
         </div>
         {/* Divider */}
-        <div style={{ height: 2, background: borderColor, opacity: 0.18 }} />
+        <Divider sx={{ my: 0.5, borderColor: borderColor }} />
         {/* Prompts Content */}
         <div
           style={{
@@ -112,7 +107,10 @@ const AICardModal: React.FC<AICardModalProps> = ({
             background: 'rgba(30,41,59,0.92)',
           }}
         >
-          {prompts.map(({ title, prompt }, idx) => (
+          {(searchTerm ? prompts.filter(({title, prompt}) =>
+            title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            prompt.toLowerCase().includes(searchTerm.toLowerCase())
+          ) : prompts).map(({ title, prompt }, idx) => (
             <div
               key={idx}
               style={{
@@ -153,7 +151,7 @@ const AICardModal: React.FC<AICardModalProps> = ({
           ))}
         </div>
         {/* Bottom Divider */}
-        <div style={{ height: 2, background: borderColor, opacity: 0.18 }} />
+        <Divider sx={{ my: 0.5, borderColor: borderColor }} />
         {/* Close Button */}
         <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '1.1rem 2rem 1.1rem 2rem' }}>
           <Button

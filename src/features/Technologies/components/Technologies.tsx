@@ -1,151 +1,95 @@
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/TechnologiesBubble.module.css';
+import Typewriter from 'typewriter-effect';
 
 const Technologies = () => {
   const { t } = useTranslation();
 
   const technologies = [
     {
-      category: t('technologies.programming'),
-      items: ['JavaScript', 'TypeScript', 'Java', 'C#', 'C++', 'Python'],
-      color: '#fb923c',
-      icon: '💻'
-    },
-    {
-      category: t('technologies.frontend'),
-      items: ['React', 'Material UI', 'Tailwind CSS', 'MageUI', 'Framer Motion', 'Phosphor Icons', 'HTML', 'CSS', 'Tippy.js/react'],
-      color: '#60a5fa',
-      icon: '🎨'
-    },
-    {
-      category: t('technologies.backend'),
-      items: ['Spring Boot'],
-      color: '#a78bfa',
-      icon: '⚙️'
-    },
-    {
-      category: t('technologies.devTools'),
-      items: ['Visual Studio Code', 'Visual Studio 2022 Community', 'Android Studio', 'Arduino IDE', 'Dev-C++'],
-      color: '#f87171',
-      icon: '🛠️'
-    },
-    {
-      category: t('technologies.utilities'),
-      items: ['Git', 'Husky', 'ESLint', 'Vite', 'PostCSS', 'Storybook', 'i18next', 'Swagger UI'],
-      color: '#4ade80',
-      icon: '🔧'
-    },
-    {
-      category: t('technologies.architecture'),
-      items: ['RESTful Services', 'GraphQL'],
-      color: '#fbbf24',
-      icon: '🏗️'
-    },
-    {
-      category: t('technologies.state'),
-      items: ['Apollo Client'],
+      category: t('technologies.crossPlatform'),
+      items: [
+        'React',
+        'OpenCV',
+        'Arduino',
+        'RESTful Services',
+        'GraphQL',
+        'Elasticsearch',
+        'Git',
+        'Swagger UI'
+      ],
       color: '#06b6d4',
       icon: '🔄'
     },
     {
-      category: t('technologies.search'),
-      items: ['Elasticsearch'],
-      color: '#ec4899',
-      icon: '🔍'
-    },
-    {
-      category: t('technologies.vision'),
-      items: ['OpenCV', 'Arduino'],
-      color: '#8b5cf6',
-      icon: '👁️'
-    },
-    {
-      category: t('technologies.vscode.productivity'),
+      category: t('technologies.javascript'),
       items: [
-        'Prettier',
+        'JavaScript',
+        'TypeScript',
+        'Material UI',
+        'Tailwind CSS',
+        'MageUI',
+        'Framer Motion',
+        'Phosphor Icons',
+        'HTML',
+        'CSS',
+        'Tippy.js/react',
+        'Apollo Client',
+        'Vite',
+        'PostCSS',
+        'Storybook',
+        'i18next',
         'ESLint',
-        'TODO Highlight',
-        'Todo Tree',
-        'WakaTime',
-        'indent-rainbow',
-        'Better Comments',
-        'Error Lens',
-        'Color Picker',
-        'Commander V',
-        'Live Server',
-        'HTML Preview',
-        'Red Hat Dependency Analytics',
-        'Quokka.js'
+        'Husky'
       ],
-      color: '#14b8a6',
-      icon: '⚡'
+      color: '#60a5fa',
+      icon: '🌐'
     },
     {
-      category: t('technologies.vscode.intellisense'),
+      category: t('technologies.java'),
       items: [
-        'IntelliCode',
-        'IntelliCode API Usage Examples',
-        'GitHub Copilot',
-        'GitHub Copilot Chat'
+        'Java',
+        'Spring Boot'
       ],
-      color: '#f43f5e',
-      icon: '🤖'
-    },
-    {
-      category: t('technologies.vscode.java'),
-      items: [
-        'Spring Boot Dashboard',
-        'Spring Boot Tools',
-        'Spring Boot Extension Pack',
-        'Spring Initializr Java Support',
-        'Maven for Java',
-        'Gradle for Java',
-        'Project Manager for Java',
-        'Test Runner for Java',
-        'Debugger for Java',
-        'Language Support for Java (Red Hat)',
-        'Extension Pack for Java'
-      ],
-      color: '#eab308',
+      color: '#fb923c',
       icon: '☕'
     },
     {
-      category: t('technologies.vscode.frontend'),
+      category: t('technologies.csharp'),
       items: [
-        'Tailwind CSS IntelliSense',
-        'Reactjs code snippets',
-        'ES7+ React/Redux/React-Native snippets'
-      ],
-      color: '#3b82f6',
-      icon: '⚛️'
-    },
-    {
-      category: t('technologies.vscode.ui'),
-      items: [
-        'Material Icon Theme',
-        'Copilot Theme',
-        'Rainbow Brackets'
-      ],
-      color: '#d946ef',
-      icon: '🎭'
-    },
-    {
-      category: t('technologies.vscode.dotnet'),
-      items: [
-        '.NET Install Tool',
         'C#',
-        'C# Dev Kit'
+        '.NET'
       ],
-      color: '#6366f1',
-      icon: '📘'
+      color: '#a78bfa',
+      icon: '🎯'
     },
     {
-      category: t('technologies.vscode.api'),
+      category: t('technologies.cpp'),
       items: [
-        'Thunder Client'
+        'C++',
+        'Dev-C++'
       ],
-      color: '#22c55e',
-      icon: '🔌'
+      color: '#f87171',
+      icon: '⚡'
+    },
+    {
+      category: t('technologies.python'),
+      items: [
+        'Python'
+      ],
+      color: '#4ade80',
+      icon: '🐍'
+    },
+    {
+      category: t('technologies.devTools'),
+      items: [
+        'Visual Studio Code',
+        'Visual Studio 2022 Community',
+        'Android Studio',
+        'Arduino IDE'
+      ],
+      color: '#fbbf24',
+      icon: '🛠️'
     }
   ];
 
@@ -153,8 +97,17 @@ const Technologies = () => {
     <div className={styles.container}>
       <div className={styles.bubble}>
         <section className="text-center space-y-4">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-[#38bdf8] to-[#818cf8] bg-clip-text text-transparent">
-            {t('technologies.title')}
+          <h1 className="text-4xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <Typewriter
+              options={{
+                strings: [t('technologies.title', 'Technologies')],
+                autoStart: true,
+                loop: true,
+                delay: 60,
+                deleteSpeed: 50,
+                cursor: '_',
+              }}
+            />
           </h1>
           <p className="text-xl text-muted-foreground">
             {t('technologies.subtitle')}

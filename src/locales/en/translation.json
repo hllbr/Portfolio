@@ -34,16 +34,24 @@
       "message": "Message",
       "mustBeFilled": "must be filled out.",
       "send": "Send Message",
-      "sending": "Sending..."
+      "sending": "Sending...",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred, please try again."
     }
   },
   "technologies": {
     "title": "Technologies",
     "subtitle": "Technologies I work with",
+    "crossPlatform": "Cross-Platform Technologies",
+    "javascript": "JavaScript/TypeScript",
+    "java": "Java",
+    "csharp": "C#",
+    "cpp": "C++",
+    "python": "Python",
+    "devTools": "Development Tools",
     "programming": "Programming Languages",
     "frontend": "Frontend Frameworks & Libraries",
     "backend": "Backend Frameworks",
-    "devTools": "Dev Tools & IDEs",
     "utilities": "Dev Utilities & Tooling",
     "architecture": "Architecture / API Concepts",
     "state": "Client-side State & Data Management",
@@ -216,8 +224,44 @@
     },
     "turkey": {
       "title": "📊 Where Does Turkey Stand?",
-      "description": "While countries like China, the USA, and Japan lead global patent output, Turkey's share is still emerging — with great potential ahead.",
-      "descriptionTR": "Çin, ABD ve Japonya dünya genelinde patent başvurularının büyük bölümünü gerçekleştirirken; Türkiye bu yarışta yükselme potansiyeli taşıyan ülkeler arasındadır."
+      "description": "While global leaders such as China, the United States, and Japan dominate the patent landscape, Turkey is steadily building its own innovation ecosystem — with significant growth in both academic and industry-led applications in recent years.",
+      "globalLandscape": {
+        "title": "🌍 Global Landscape (WIPO 2023 Data)",
+        "points": [
+          "China alone accounted for over 43% of all patent filings globally.",
+          "The USA followed with around 19%, and Japan at 11%.",
+          "In contrast, Turkey's share is around 0.8% — yet showing a steady year-on-year increase."
+        ]
+      },
+      "growthTrends": {
+        "title": "🚀 Growth Trends in Turkey",
+        "intro": "According to TÜRKPATENT (Turkish Patent and Trademark Office):",
+        "points": [
+          "In 2023, over 9,500 national patent applications were filed in Turkey — a 400% increase compared to 2010.",
+          "University-originated patents and startup-backed filings are on the rise."
+        ]
+      },
+      "challenges": {
+        "title": "🔍 Challenges Ahead",
+        "points": [
+          "Low international patent filing rate (PCT-based)",
+          "Limited commercialization of patents",
+          "Insufficient cross-sectoral collaboration in innovation"
+        ]
+      },
+      "potential": {
+        "title": "🌟 But There Is Real Potential",
+        "description": "Several international reports — including those by the World Bank and OECD — recognize Turkey as an \"emerging innovation hub\", especially due to:",
+        "points": [
+          "Its young and tech-savvy population",
+          "Rapidly growing start-up ecosystem",
+          "Increasing government support for deep tech, defense, and green technologies"
+        ]
+      },
+      "conclusion": {
+        "title": "📍 Conclusion",
+        "description": "Turkey may not be a global leader yet, but it's no longer an outsider. Every new patent filed by individuals, universities, and R&D teams is a step toward building a culture of innovation."
+      }
     },
     "workflow": {
       "title": "🧪 My Patent Development Workflow",
@@ -228,8 +272,97 @@
       "description": "If you'd like to share your patent vision or discuss new ideas, you can easily reach me via <contact>Contact</contact> or <social>Social Media</social>.",
       "descriptionTR": "Yenilikçi fikirler üzerine çalışan biriyseniz ve bu fikirlerin korunması veya ortak geliştirilmesi üzerine konuşmak isterseniz, her zaman iletişime geçebilirsiniz."
     },
-    "closing": "✨ Patent is not just a protection, it's a perspective.",
-    "closing2": "I don't just protect what I build — I build with protection in mind.",
+    "closing": {
+      "title": "✨ Patent Bir Koruma Değil, Bir Bakış Açısıdır.",
+      "subtitle": "Yalnızca yaptıklarımı korumuyorum; korumayı baştan düşünerek yapıyorum.",
+      "quotes": [
+        {
+          "quote": "The patent system added the fuel of interest to the fire of genius.",
+          "author": "Abraham Lincoln",
+          "emoji": "🧠"
+        },
+        {
+          "quote": "Could you patent the sun?",
+          "author": "Jonas Salk",
+          "emoji": "🌞"
+        },
+        {
+          "quote": "Invention is the most important product of man's creative brain.",
+          "author": "Nikola Tesla",
+          "emoji": "🧲"
+        },
+        {
+          "quote": "Maybe we should patent the universe and charge everyone royalties for their existence.",
+          "author": "Stephen Hawking",
+          "emoji": "🧪"
+        },
+        {
+          "quote": "Know how to grow business, how to develop products, have patents and an undeveloped market that could be huge.",
+          "author": "Mark Cuban",
+          "emoji": "💡"
+        },
+        {
+          "quote": "If you didn't have patents, no one would bother to spend money on research and development.",
+          "author": "James Dyson",
+          "emoji": "🛠️"
+        },
+        {
+          "quote": "Patent protection is key to attracting investment and fostering innovation.",
+          "author": "Michelle Lee",
+          "emoji": "🧬"
+        },
+        {
+          "quote": "The best way to predict the future is to invent it.",
+          "author": "Alan Kay",
+          "emoji": "🧭"
+        },
+        {
+          "quote": "Innovation distinguishes between a leader and a follower.",
+          "author": "Steve Jobs",
+          "emoji": "🧱"
+        },
+        {
+          "quote": "The patent is merely a license to be sued.",
+          "author": "Arthur C. Clarke",
+          "emoji": "⚖️"
+        },
+        {
+          "quote": "Innovation is the specific instrument of entrepreneurship.",
+          "author": "Peter Drucker",
+          "emoji": "🧠"
+        },
+        {
+          "quote": "The value of an idea lies in the using of it.",
+          "author": "Thomas Edison",
+          "emoji": "🔬"
+        },
+        {
+          "quote": "The patent system is the backbone of innovation.",
+          "author": "Kalyan C. Kankanala",
+          "emoji": "🧩"
+        },
+        {
+          "quote": "I invent because I cannot help it – new things just thrust themselves on me.",
+          "author": "Beulah Louise Henry",
+          "emoji": "🧠"
+        },
+        {
+          "quote": "Intellectual property has the shelf life of a banana.",
+          "author": "Bill Gates",
+          "emoji": "🧠"
+        },
+        {
+          "quote": "Intellectual property is the oil of the 21st century.",
+          "author": "Mark Getty",
+          "emoji": "🧠"
+        },
+        {
+          "quote": "The future is already here — it's just not evenly distributed.",
+          "author": "William Gibson",
+          "emoji": "🧠"
+        }
+      ]
+    },
     "heroTitle": "Patents Shaping the Future",
     "heroSubtitle": "Each patent is where vision meets engineering."
   },
