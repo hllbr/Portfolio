@@ -355,22 +355,37 @@
 }
 
 .collaboration-text {
-  pointer-events: auto;
-  display: block;
-  white-space: normal;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  word-break: break-word;
+  line-height: 1.7;
+  gap: 0.2em;
 }
 
 .contact-link, .social-link {
-  color: #fb923c;
+  font-size: 1.1rem !important;
+  font-family: inherit !important;
   font-weight: bold;
+  line-height: 1.7;
+  vertical-align: baseline;
+  color: #fb923c;
   text-decoration: underline;
   cursor: pointer;
   transition: color 0.2s;
   pointer-events: auto;
   display: inline;
   margin: 0 0.2em 0 0.2em;
+  white-space: nowrap;
 }
+
 .contact-link:hover, .social-link:hover {
   color: #f59e42;
   text-shadow: 0 2px 8px rgba(251, 146, 60, 0.15);
+}
+
+.social-link {
+  color: #a78bfa !important;
+  text-decoration: underline 3px !important;
+  text-underline-offset: 4px !important;
 } 

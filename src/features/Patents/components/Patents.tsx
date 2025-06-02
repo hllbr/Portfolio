@@ -84,7 +84,7 @@ const Patents = () => {
 
         {/* Collaboration Section */}
         <div className="patent-card">
-          <h2 style={{ fontFamily: "'Playfair Display', serif" }}>{t('patents.collaboration.title')}</h2>
+          <h2 >{t('patents.collaboration.title')}</h2>
           <p className="collaboration-text">
             <Trans
               i18nKey={isEnglish ? 'patents.collaboration.description' : 'patents.collaboration.descriptionTR'}
