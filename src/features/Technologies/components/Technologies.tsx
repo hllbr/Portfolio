@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/TechnologiesBubble.module.css';
+import Typewriter from 'typewriter-effect';
 
 const Technologies = () => {
   const { t } = useTranslation();
@@ -153,8 +154,17 @@ const Technologies = () => {
     <div className={styles.container}>
       <div className={styles.bubble}>
         <section className="text-center space-y-4">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-[#38bdf8] to-[#818cf8] bg-clip-text text-transparent">
-            {t('technologies.title')}
+          <h1 className="text-4xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <Typewriter
+              options={{
+                strings: [t('technologies.title', 'Technologies')],
+                autoStart: true,
+                loop: true,
+                delay: 60,
+                deleteSpeed: 50,
+                cursor: '_',
+              }}
+            />
           </h1>
           <p className="text-xl text-muted-foreground">
             {t('technologies.subtitle')}

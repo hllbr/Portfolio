@@ -62,7 +62,7 @@ const SocialMedia = () => {
     <div className="min-h-[200px] bg-[#222] flex flex-col">
       <div className="social-media-bubble">
         <section>
-          <h2 className="font-bold text-2xl">{t('social.connect', 'Let\'s Connect')}</h2>
+          <h2 className="font-bold text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>{t('social.connect', 'Let\'s Connect')}</h2>
           <div className="social-media-icons-row">
             {socialLinks.map((link, index) => (
               <a

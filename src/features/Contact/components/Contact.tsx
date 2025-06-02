@@ -1,198 +1,103 @@
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/ContactBubble.module.css';
 import formStyles from '../styles/FormElements.module.css';
-import { useState, useEffect } from 'react';
 import '../styles/Animation/ContactIconAnimation.css';
-import Tooltip from './Tooltip';
+import { ToastContainer, toast } from 'react-toastify';
+import toastifyStyles from '../Styles/CustomToastify.module.css';
+import { useState } from 'react';
+import Typewriter from 'typewriter-effect';
 
 const Contact = () => {
-  const { t, i18n } = useTranslation();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [errors, setErrors] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const { t } = useTranslation();
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setErrors(prev => {
-      const updated = { ...prev };
-      if (prev.name) updated.name = t('contact.form.mustBeFilled', 'must be filled out.');
-      if (prev.email) updated.email = t('contact.form.mustBeFilled', 'must be filled out.');
-      if (prev.subject) updated.subject = t('contact.form.mustBeFilled', 'must be filled out.');
-      if (prev.message) updated.message = t('contact.form.mustBeFilled', 'must be filled out.');
-      return updated;
-    });
-  }, [i18n.language, t]);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus('loading');
+    setLoading(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
 
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch('https://formspree.io/f/mkgbnrjn', {
         method: 'POST',
+        body: data,
         headers: {
-          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        body: JSON.stringify(formData),
       });
-
       if (response.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        toast.success(
+          t('contact.form.success', 'Mesajınız başarıyla gönderildi!'),
+          { className: toastifyStyles.toastSuccess }
+        );
+        form.reset();
       } else {
-        setStatus('error');
+        toast.error(
+          t('contact.form.error', 'Bir hata oluştu, lütfen tekrar deneyin.'),
+          { className: toastifyStyles.toastError }
+        );
       }
-    } catch (error) {
-      setStatus('error');
+    } catch {
+      toast.error(
+        t('contact.form.error', 'Bir hata oluştu, lütfen tekrar deneyin.'),
+        { className: toastifyStyles.toastError }
+      );
+    } finally {
+      setLoading(false);
     }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleInvalid = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name } = e.currentTarget;
-    let label = '';
-    switch (name) {
-      case 'name':
-        label = t('contact.form.name', 'Name');
-        break;
-      case 'email':
-        label = t('contact.form.email', 'Email');
-        break;
-      case 'subject':
-        label = t('contact.form.subject', 'Subject');
-        break;
-      case 'message':
-        label = t('contact.form.message', 'Message');
-        break;
-      default:
-        label = '';
-    }
-    setErrors(prev => ({
-      ...prev,
-      [name]: t('contact.form.requiredField', { field: label, defaultValue: '{{field}} must be filled out.' })
-    }));
-    e.preventDefault();
-  };
-
-  const handleInput = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name } = e.currentTarget;
-    setErrors(prev => ({ ...prev, [name]: '' }));
   };
 
   return (
     <div className={styles.container}>
+      <ToastContainer position="top-center" autoClose={3000} hideProgressBar closeOnClick pauseOnHover={false} />
       <div className={styles['speech-bubble']}>
         <section className="text-center space-y-4">
-          <h1 className="text-4xl font-bold">{t('contact.title', 'Contact Me')}</h1>
+          <h1 className="text-4xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <Typewriter
+              options={{
+                strings: [t('contact.title', 'Contact Me')],
+                autoStart: true,
+                loop: true,
+                delay: 60,
+                deleteSpeed: 50,
+                cursor: '_',
+              }}
+            />
+          </h1>
           <p className="text-xl text-muted-foreground">
             {t('contact.subtitle', 'Get in touch for collaborations and opportunities')}
           </p>
         </section>
 
         <section className="space-y-6 mt-8">
-        
-          {/* <ContactSocialButtons /> */}
-
           <form onSubmit={handleSubmit} className={styles.form}>
             <div style={{ position: 'relative' }}>
               <label htmlFor="name" className="block text-sm font-medium mb-1">
-          {t('contact.form.name', 'Name')}
+                {t('contact.form.name', 'Name')}
               </label>
-              <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          onInvalid={handleInvalid}
-          onInput={handleInput}
-          required
-          className={formStyles.input}
-              />
-              {errors.name && <Tooltip label={t('contact.form.name', 'Name')} t={t} />}
+              <input type="text" id="name" name="name" required className={formStyles.input} />
             </div>
-
             <div style={{ position: 'relative' }}>
               <label htmlFor="email" className="block text-sm font-medium mb-1">
-          {t('contact.form.email', 'Email')}
+                {t('contact.form.email', 'Email')}
               </label>
-              <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          onInvalid={handleInvalid}
-          onInput={handleInput}
-          required
-          className={formStyles.input}
-              />
-              {errors.email && <Tooltip label={t('contact.form.email', 'Email')} t={t} />}
+              <input type="email" id="email" name="email" required className={formStyles.input} />
             </div>
-
             <div style={{ position: 'relative' }}>
               <label htmlFor="subject" className="block text-sm font-medium mb-1">
-          {t('contact.form.subject', 'Subject')}
+                {t('contact.form.subject', 'Subject')}
               </label>
-              <input
-          type="text"
-          id="subject"
-          name="subject"
-          value={formData.subject}
-          onChange={handleChange}
-          onInvalid={handleInvalid}
-          onInput={handleInput}
-          required
-          className={formStyles.input}
-              />
-              {errors.subject && <Tooltip label={t('contact.form.subject', 'Subject')} t={t} />}
+              <input type="text" id="subject" name="subject" required className={formStyles.input} />
             </div>
-
             <div style={{ position: 'relative' }}>
               <label htmlFor="message" className="block text-sm font-medium mb-1">
-          {t('contact.form.message', 'Message')}
+                {t('contact.form.message', 'Message')}
               </label>
-              <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          onInvalid={handleInvalid}
-          onInput={handleInput}
-          required
-          rows={4}
-          className={formStyles.textarea}
-              />
-              {errors.message && <Tooltip label={t('contact.form.message', 'Message')} t={t} />}
+              <textarea id="message" name="message" required rows={4} className={formStyles.textarea} />
             </div>
-
-            <button
-              type="submit"
-              disabled={status === 'loading' || !formData.name || !formData.email || !formData.subject || !formData.message}
-              className={formStyles.button}
-            >
-              {status === 'loading' ? t('contact.form.sending', 'Sending...') : t('contact.form.send', 'Send Message')}
+            <button type="submit" className={formStyles.button} disabled={loading}>
+              {loading ? t('contact.form.sending', 'Gönderiliyor...') : t('contact.form.send', 'Send Message')}
             </button>
-
-            {status === 'success' && (
-              <p className={formStyles.success}>{t('contact.form.success', 'Message sent successfully!')}</p>
-            )}
-            {status === 'error' && (
-              <p className={formStyles.error}>{t('contact.form.error', 'Failed to send message. Please try again.')}</p>
-            )}
           </form>
         </section>
       </div>

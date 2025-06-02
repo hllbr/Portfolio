@@ -1,0 +1,34 @@
+.toastSuccess {
+  background: #22c55e; /* Uygulamanın success yeşili */
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.15);
+}
+
+.toastError {
+  background: #ef4444; /* Uygulamanın error kırmızısı */
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.15);
+}
+
+.Toastify__toast--success .Toastify__toast-icon,
+.Toastify__toast--error .Toastify__toast-icon {
+  font-size: 2rem !important;
+  width: 2.2rem !important;
+  height: 2.2rem !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+  margin-right: 0.75rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.10);
+  border-radius: 50%;
+  padding: 0.25rem;
+} 

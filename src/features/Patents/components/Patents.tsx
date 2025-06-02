@@ -24,7 +24,7 @@ const Patents = () => {
   return (
     <div className="patents-container">
       <section className="patents-hero">
-        <h1 className="patents-hero-title gradient-text">{t('patents.heroTitle')}</h1>
+        <h1 className="patents-hero-title gradient-text" style={{ fontFamily: "'Playfair Display', serif" }}>{t('patents.heroTitle')}</h1>
         <p className="patents-hero-subtitle fade-in">{t('patents.heroSubtitle')}</p>
       </section>
 
@@ -84,7 +84,7 @@ const Patents = () => {
 
         {/* Collaboration Section */}
         <div className="patent-card">
-          <h2>{t('patents.collaboration.title')}</h2>
+          <h2 style={{ fontFamily: "'Playfair Display', serif" }}>{t('patents.collaboration.title')}</h2>
           <p className="collaboration-text">
             <Trans
               i18nKey={isEnglish ? 'patents.collaboration.description' : 'patents.collaboration.descriptionTR'}

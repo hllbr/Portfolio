@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import Typewriter from 'typewriter-effect';
 import { useEffect, useState } from 'react';
 import '../styles/AboutMeSpeechBubble.css';
 
@@ -16,21 +15,10 @@ const AboutMe = () => {
       <div className="speech-bubble">
         <section className="space-y-6">
           <div className="space-y-4">
-            <h1 className="font-bold text-3xl">
-              <Typewriter
-                key={currentLanguage}
-                options={{
-                  strings: [
-                    currentLanguage === 'tr'
-                      ? 'Merhaba, ben Halil İbrahim Koçak.'
-                      : t('home.name', "Hi, I'm Halil İbrahim Koçak.")
-                  ],
-                  autoStart: true,
-                  loop: true,
-                  deleteSpeed: 50,
-                  delay: 50,
-                }}
-              />
+            <h1 className="font-bold text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+              {currentLanguage === 'tr'
+                ? 'Merhaba, ben Halil İbrahim Koçak.'
+                : t('home.name', "Hi, I'm Halil İbrahim Koçak.")}
             </h1>
             <p className="text-lg leading-relaxed">{t('home.intro', 'To me, software development is more than just writing code — it\'s about building systems, solving real problems, and shaping what\'s next.')}</p>
             <p className="text-lg leading-relaxed">{t('home.techApproach', 'I combine modern technologies, original ideas, and user-centered design across every project I work on.')}</p>
