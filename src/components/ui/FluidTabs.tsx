@@ -41,6 +41,19 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
     return () => document.removeEventListener('click', handleClick);
   }, [langMenuOpen]);
 
+  // Scroll to top on route change, except for SocialMedia text click
+  React.useEffect(() => {
+    const handleRouteChange = () => {
+      // Check if the click was on the SocialMedia text in the patent page
+      const isSocialMediaClick = document.querySelector('.patents-container .social-media-bubble')?.contains(document.activeElement);
+      if (!isSocialMediaClick) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    };
+
+    handleRouteChange();
+  }, [location.pathname]);
+
   return (
     <LayoutGroup>
       <div style={{
