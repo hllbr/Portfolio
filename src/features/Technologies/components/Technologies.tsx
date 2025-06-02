@@ -7,58 +7,89 @@ const Technologies = () => {
 
   const technologies = [
     {
-      category: t('technologies.programming'),
-      items: ['JavaScript', 'TypeScript', 'Java', 'C#', 'C++', 'Python'],
-      color: '#fb923c',
-      icon: '💻'
-    },
-    {
-      category: t('technologies.frontend'),
-      items: ['React', 'Material UI', 'Tailwind CSS', 'MageUI', 'Framer Motion', 'Phosphor Icons', 'HTML', 'CSS', 'Tippy.js/react'],
-      color: '#60a5fa',
-      icon: '🎨'
-    },
-    {
-      category: t('technologies.backend'),
-      items: ['Spring Boot'],
-      color: '#a78bfa',
-      icon: '⚙️'
-    },
-    {
-      category: t('technologies.devTools'),
-      items: ['Visual Studio Code', 'Visual Studio 2022 Community', 'Android Studio', 'Arduino IDE', 'Dev-C++'],
-      color: '#f87171',
-      icon: '🛠️'
-    },
-    {
-      category: t('technologies.utilities'),
-      items: ['Git', 'Husky', 'ESLint', 'Vite', 'PostCSS', 'Storybook', 'i18next', 'Swagger UI'],
-      color: '#4ade80',
-      icon: '🔧'
-    },
-    {
-      category: t('technologies.architecture'),
-      items: ['RESTful Services', 'GraphQL'],
-      color: '#fbbf24',
-      icon: '🏗️'
-    },
-    {
-      category: t('technologies.state'),
-      items: ['Apollo Client'],
+      category: t('technologies.crossPlatform'),
+      items: [
+        'React',
+        'OpenCV',
+        'Arduino',
+        'RESTful Services',
+        'GraphQL',
+        'Elasticsearch',
+        'Git',
+        'Swagger UI'
+      ],
       color: '#06b6d4',
       icon: '🔄'
     },
     {
-      category: t('technologies.search'),
-      items: ['Elasticsearch'],
-      color: '#ec4899',
-      icon: '🔍'
+      category: t('technologies.javascript'),
+      items: [
+        'JavaScript',
+        'TypeScript',
+        'Material UI',
+        'Tailwind CSS',
+        'MageUI',
+        'Framer Motion',
+        'Phosphor Icons',
+        'HTML',
+        'CSS',
+        'Tippy.js/react',
+        'Apollo Client',
+        'Vite',
+        'PostCSS',
+        'Storybook',
+        'i18next',
+        'ESLint',
+        'Husky'
+      ],
+      color: '#60a5fa',
+      icon: '🌐'
     },
     {
-      category: t('technologies.vision'),
-      items: ['OpenCV', 'Arduino'],
-      color: '#8b5cf6',
-      icon: '👁️'
+      category: t('technologies.java'),
+      items: [
+        'Java',
+        'Spring Boot'
+      ],
+      color: '#fb923c',
+      icon: '☕'
+    },
+    {
+      category: t('technologies.csharp'),
+      items: [
+        'C#',
+        '.NET'
+      ],
+      color: '#a78bfa',
+      icon: '🎯'
+    },
+    {
+      category: t('technologies.cpp'),
+      items: [
+        'C++',
+        'Dev-C++'
+      ],
+      color: '#f87171',
+      icon: '⚡'
+    },
+    {
+      category: t('technologies.python'),
+      items: [
+        'Python'
+      ],
+      color: '#4ade80',
+      icon: '🐍'
+    },
+    {
+      category: t('technologies.devTools'),
+      items: [
+        'Visual Studio Code',
+        'Visual Studio 2022 Community',
+        'Android Studio',
+        'Arduino IDE'
+      ],
+      color: '#fbbf24',
+      icon: '🛠️'
     }
   ];
 

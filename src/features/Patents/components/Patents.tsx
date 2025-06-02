@@ -14,7 +14,7 @@ const Patents = () => {
     const handler = (e: Event) => {
       if ((e.target as HTMLElement).classList.contains('contact-link')) {
         e.preventDefault();
-        navigate('/contact');
+        navigate('/Contact');
       }
     };
     document.addEventListener('click', handler);
