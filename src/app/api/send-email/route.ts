@@ -1,4 +1,3 @@
-import { NextResponse } from 'next/server';
 import sgMail from '@sendgrid/mail';
 
 // Initialize SendGrid with your API key
@@ -28,12 +27,14 @@ export async function POST(request: Request) {
     };
 
     await sgMail.send(msg);
-    return NextResponse.json({ success: true });
+    return new Response(JSON.stringify({ success: true }), {
+      headers: { 'Content-Type': 'application/json' },
+    });
   } catch (error) {
     console.error('Error sending email:', error);
-    return NextResponse.json(
-      { error: 'Failed to send email' },
-      { status: 500 }
-    );
+    return new Response(JSON.stringify({ error: 'Failed to send email' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 } 

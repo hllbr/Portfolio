@@ -1,6 +1,6 @@
 import { Experience } from "./Routes";
 import { AboutMe } from "./Routes";
-import SocialMedia from "./components/SocialMedia";
+import SocialMedia from "./Components/SocialMedia";
 
 const Home = () => {
   return (

@@ -1,7 +1,6 @@
-import React from 'react';
 import { House, EnvelopeSimple, Cpu, Brain, FileText } from 'phosphor-react';
 import FluidTabs from '../ui/FluidTabs';
-import useWindowWidth from '../../hooks/useWindowWidth';
+import useWindowWidth from '../../Hooks/useWindowWidth';
 import { useTranslation } from 'react-i18next';
 
 const Navigation = () => {

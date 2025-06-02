@@ -1,1 +1,1 @@
-export { default as Technologies } from '../components/Technologies';
+export { default as Technologies } from '../Components/Technologies';

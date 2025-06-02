@@ -1,7 +1,7 @@
 import '../styles/AboutMeSpeechBubble.css';
 import '../styles/ExperienceLiveIcon.css';
-import React, { useState } from 'react';
-import ExperienceModal from './ExperienceModal/ExperienceModal';
+import { useState } from 'react';
+import ExperienceModal from '../Components/ExperienceModal/ExperienceModal';
 import { experiences } from '../helpers/experienceData';
 import type { ExperienceType } from '../helpers/experienceData';
 import { useTranslation } from 'react-i18next';
