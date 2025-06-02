@@ -4,12 +4,32 @@ import formStyles from '../styles/FormElements.module.css';
 import '../styles/Animation/ContactIconAnimation.css';
 import { ToastContainer, toast } from 'react-toastify';
 import toastifyStyles from '../Styles/CustomToastify.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 
 const Contact = () => {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  useEffect(() => {
+    const isValid = Object.values(formData).every(value => value.trim() !== '');
+    setIsFormValid(isValid);
+  }, [formData]);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,6 +51,12 @@ const Contact = () => {
           { className: toastifyStyles.toastSuccess }
         );
         form.reset();
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
       } else {
         toast.error(
           t('contact.form.error', 'Bir hata oluştu, lütfen tekrar deneyin.'),
@@ -75,27 +101,63 @@ const Contact = () => {
               <label htmlFor="name" className="block text-sm font-medium mb-1">
                 {t('contact.form.name', 'Name')}
               </label>
-              <input type="text" id="name" name="name" required className={formStyles.input} />
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                className={formStyles.input}
+                value={formData.name}
+                onChange={handleInputChange}
+              />
             </div>
             <div style={{ position: 'relative' }}>
               <label htmlFor="email" className="block text-sm font-medium mb-1">
                 {t('contact.form.email', 'Email')}
               </label>
-              <input type="email" id="email" name="email" required className={formStyles.input} />
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                className={formStyles.input}
+                value={formData.email}
+                onChange={handleInputChange}
+              />
             </div>
             <div style={{ position: 'relative' }}>
               <label htmlFor="subject" className="block text-sm font-medium mb-1">
                 {t('contact.form.subject', 'Subject')}
               </label>
-              <input type="text" id="subject" name="subject" required className={formStyles.input} />
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                required 
+                className={formStyles.input}
+                value={formData.subject}
+                onChange={handleInputChange}
+              />
             </div>
             <div style={{ position: 'relative' }}>
               <label htmlFor="message" className="block text-sm font-medium mb-1">
                 {t('contact.form.message', 'Message')}
               </label>
-              <textarea id="message" name="message" required rows={4} className={formStyles.textarea} />
+              <textarea 
+                id="message" 
+                name="message" 
+                required 
+                rows={4} 
+                className={formStyles.textarea}
+                value={formData.message}
+                onChange={handleInputChange}
+              />
             </div>
-            <button type="submit" className={formStyles.button} disabled={loading}>
+            <button 
+              type="submit" 
+              className={formStyles.button} 
+              disabled={loading || !isFormValid}
+            >
               {loading ? t('contact.form.sending', 'Gönderiliyor...') : t('contact.form.send', 'Send Message')}
             </button>
           </form>
