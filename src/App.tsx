@@ -5,6 +5,7 @@ import { Contact } from './Features/Contact/Routes';
 import { Technologies } from './Features/Technologies/Routes';
 import { AIApproach } from './Features/AIApproach/Routes';
 import { Patents } from './Features/Patents/Routes';
+import { Game } from './Features/Game/Routes';
 import { NoPage } from './Features/NoPage/Routes';
 import Layout from './Components/Layout/Layout';
 import { Home } from './Features/Home/Routes';
@@ -43,6 +44,8 @@ function App() {
           <Route path="/Patent" element={<Patents />} />
           <Route path="/patentler" element={<Patents />} />
           <Route path="/Patentler" element={<Patents />} />
+          <Route path="/Game" element={<Game />} />
+          <Route path="/game" element={<Game />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Layout>
