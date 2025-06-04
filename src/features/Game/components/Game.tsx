@@ -31,7 +31,7 @@ const Game = () => {
   const [gameOverIcon, setGameOverIcon] = useState<FallingIcon | null>(null);
   const idRef = useRef(0);
   const animations = ['fall', 'fallRotate', 'fallSpin', 'fallColor'];
-  const cutAnimations = ['cut', 'cutBlood', 'cutWind'];
+  const cutAnimations = ['cut', 'cutBlood', 'cutWind', 'cutFade', 'cutFlip'];
 
   useEffect(() => {
     if (!gameStarted || gameOverIcon) return;

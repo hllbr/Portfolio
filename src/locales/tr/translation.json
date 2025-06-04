@@ -502,7 +502,7 @@
     "connect": "İş Birliği ve Fikir Paylaşımı İçin Ulaşın"
   },
   "gameScreen": {
-    "tapToTrap": "Tap to Trap",
+    "tapToTrap": "Yakalamak için dokun",
     "score": "Puan",
     "gameOver": "Oyun Bitti",
     "missed": "{{platform}} ikonunu kesemediniz. Ziyaret etmek ister misiniz?",
