@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import './style/Patents.css';
-import './style/PatentsHero.css';
+import '../styles/Patents.css';
+import '../styles/PatentsPage.css';
+import '../styles/PatentsHero.css';
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 

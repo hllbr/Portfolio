@@ -1,1 +1,1 @@
-export { default as Patents } from '../Components/Patents';
+export { default as Patents } from '../components/Patents';
