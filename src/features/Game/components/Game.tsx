@@ -1,56 +1,95 @@
 import { useEffect, useRef, useState } from 'react';
 import { GithubLogo, LinkedinLogo, TwitterLogo, YoutubeLogo } from 'phosphor-react';
+import { useTranslation } from 'react-i18next';
 import styles from '../styles/Game.module.css';
 
 interface FallingIcon {
   id: number;
   left: number;
   url: string;
+  name: string;
   Element: JSX.Element;
   cut: boolean;
 }
 
 const icons = [
-  { Element: <LinkedinLogo size={32} />, url: 'https://www.linkedin.com/in/hllbr/' },
-  { Element: <GithubLogo size={32} />, url: 'https://github.com/hllbr' },
-  { Element: <YoutubeLogo size={32} />, url: 'https://www.youtube.com/@platonfarkndapaylasmlar637' },
-  { Element: <TwitterLogo size={32} />, url: 'https://twitter.com' },
+  { name: 'LinkedIn', Element: <LinkedinLogo size={64} />, url: 'https://www.linkedin.com/in/hllbr/' },
+  { name: 'GitHub', Element: <GithubLogo size={64} />, url: 'https://github.com/hllbr' },
+  { name: 'YouTube', Element: <YoutubeLogo size={64} />, url: 'https://www.youtube.com/@platonfarkndapaylasmlar637' },
+  { name: 'Twitter', Element: <TwitterLogo size={64} />, url: 'https://twitter.com' },
 ];
 
 const Game = () => {
+  const { t } = useTranslation();
   const [falling, setFalling] = useState<FallingIcon[]>([]);
+  const [gameStarted, setGameStarted] = useState(false);
+  const [score, setScore] = useState(0);
+  const [gameOverIcon, setGameOverIcon] = useState<FallingIcon | null>(null);
   const idRef = useRef(0);
 
   useEffect(() => {
+    if (!gameStarted || gameOverIcon) return;
     const interval = setInterval(() => {
-      setFalling((prev) => [
+      setFalling(prev => [
         ...prev,
         {
           id: idRef.current++,
           left: Math.random() * 90,
           url: icons[idRef.current % icons.length].url,
+          name: icons[idRef.current % icons.length].name,
           Element: icons[idRef.current % icons.length].Element,
           cut: false,
         },
       ]);
     }, 1200);
     return () => clearInterval(interval);
-  }, []);
+  }, [gameStarted, gameOverIcon]);
 
   const handleCut = (id: number) => {
-    setFalling((prev) => prev.map((f) => (f.id === id ? { ...f, cut: true } : f)));
+    setFalling(prev => prev.map(f => (f.id === id ? { ...f, cut: true } : f)));
+    setScore(prev => prev + 1);
   };
 
   const handleAnimationEnd = (icon: FallingIcon) => {
-    setFalling((prev) => prev.filter((f) => f.id !== icon.id));
+    setFalling(prev => prev.filter(f => f.id !== icon.id));
     if (!icon.cut) {
-      window.open(icon.url, '_blank', 'noopener,noreferrer');
+      setGameOverIcon(icon);
+      setGameStarted(false);
     }
+  };
+
+  const startGame = () => {
+    setScore(0);
+    setFalling([]);
+    setGameOverIcon(null);
+    idRef.current = 0;
+    setGameStarted(true);
+  };
+
+  const closeModal = () => {
+    setGameOverIcon(null);
+  };
+
+  const visitIcon = () => {
+    if (gameOverIcon) {
+      window.open(gameOverIcon.url, '_blank', 'noopener,noreferrer');
+    }
+    closeModal();
   };
 
   return (
     <div className={styles.container}>
-      {falling.map((icon) => (
+      {!gameStarted && !gameOverIcon && (
+        <div className={styles.startOverlay} onClick={startGame}>
+          {t('gameScreen.tapToTrap')}
+        </div>
+      )}
+      {gameStarted && (
+        <div className={styles.scoreboard}>
+          {t('gameScreen.score')}: {score}
+        </div>
+      )}
+      {falling.map(icon => (
         <div
           key={icon.id}
           className={`${styles.icon} ${icon.cut ? styles.cut : ''}`}
@@ -61,6 +100,19 @@ const Game = () => {
           {icon.Element}
         </div>
       ))}
+      {gameOverIcon && (
+        <div className={styles.overlay} onClick={closeModal}>
+          <div className={styles.modal} onClick={e => e.stopPropagation()}>
+            <p>{t('gameScreen.gameOver')}</p>
+            <p>{t('gameScreen.score')}: {score}</p>
+            <p>{t('gameScreen.missed', { platform: gameOverIcon.name })}</p>
+            <div className={styles.modalButtons}>
+              <button onClick={visitIcon}>{t('gameScreen.ok')}</button>
+              <button onClick={closeModal}>{t('gameScreen.cancel')}</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
