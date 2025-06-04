@@ -2,6 +2,9 @@ import { useTranslation } from 'react-i18next';
 import styles from '../styles/TechnologiesBubble.module.css';
 import Typewriter from 'typewriter-effect';
 
+/**
+ * Technologies page listing tools and frameworks used.
+ */
 const Technologies = () => {
   const { t } = useTranslation();
 

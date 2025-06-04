@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import styles from '../styles/AIApproach.module.css';
+
+import AIHero from '../components/AIHero';
 import { AICardModal } from '../AIModal';
 import { CARD_TITLES, PROMPTS, type CardTitle } from '../constants/aiPrompts';
-import AIHero from '../components/AIHero';
+import styles from '../styles/AIApproach.module.css';
 
+/**
+ * Page presenting AI tools with detailed prompts.
+ */
 const AIApproach = () => {
   const { t, i18n } = useTranslation();
   const [selectedCard, setSelectedCard] = useState<null | number>(null);
@@ -21,21 +25,17 @@ const AIApproach = () => {
   const handleCloseModal = () => setSelectedCard(null);
 
   const selected = selectedCard !== null ? aiCards[selectedCard] : null;
-  // Typesafe erişim
   const promptsRaw = selected && CARD_TITLES.includes(selected.title as CardTitle)
     ? PROMPTS[selected.title as CardTitle]
     : null;
 
-  // prompts dizisini {title, prompt}[] formatına dönüştür
   const lang = i18n.language.startsWith('tr') ? 'tr' : 'en';
   const prompts = promptsRaw ? promptsRaw[lang] : [];
 
   return (
     <div className={`${styles.container} font-sans`}>
-      {/* Ana Başlık */}
       <AIHero />
 
-      {/* Genel Bilgilendirme Alanı */}
       <section className={styles.infoSection}>
         <h2 className="text-2xl font-bold mb-2">{t('aiApproach.infoSectionTitle1')}</h2>
         {(t('aiApproach.infoSectionDesc1', { returnObjects: true }) as string[]).map((p, i) => (
@@ -43,7 +43,6 @@ const AIApproach = () => {
         ))}
       </section>
 
-      {/* Düşünce Sistemi Açıklaması */}
       <section className={styles.infoSection}>
         <h2 className="text-2xl font-bold mb-2">{t('aiApproach.infoSectionTitle2')}</h2>
         {(t('aiApproach.infoSectionDesc2', { returnObjects: true }) as string[]).map((p, i) => (
@@ -51,12 +50,10 @@ const AIApproach = () => {
         ))}
       </section>
 
-      {/* Sparkle Efekti */}
       {Array.from({ length: 30 }).map((_, i) => (
         <div key={i} className={styles.sparkle}></div>
       ))}
 
-      {/* AI Araç Kartları */}
       <section style={{ marginTop: '2rem', marginBottom: '2rem' }}>
         <div className={styles.cardGrid}>
           {aiCards.map((card, idx) => (
@@ -103,7 +100,6 @@ const AIApproach = () => {
         </div>
       </section>
 
-      {/* Modal */}
       {selected && prompts && (
         <AICardModal
           isOpen={!!selected}

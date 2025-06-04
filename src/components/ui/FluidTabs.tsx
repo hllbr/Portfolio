@@ -14,6 +14,9 @@ interface FluidTabsProps {
   items: NavItem[];
 }
 
+/**
+ * Navigation tab component with fluid animations.
+ */
 const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -22,7 +25,6 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
   const [langMenuOpen, setLangMenuOpen] = React.useState(false);
   const langMenuRef = React.useRef<HTMLButtonElement>(null);
 
-  // Responsive ölçümler
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 480;
   const buttonPadding = isMobile ? '0.4rem 0.7rem' : '0.65rem 1.5rem';
   const buttonFontSize = isMobile ? 15 : 18;
@@ -30,7 +32,6 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
   const containerGap = isMobile ? 2 : 4;
   const containerMinHeight = isMobile ? 36 : 48;
 
-  // Menü dışında tıklanınca kapansın
   React.useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (langMenuRef.current && !langMenuRef.current.contains(e.target as Node)) {
@@ -41,10 +42,8 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
     return () => document.removeEventListener('click', handleClick);
   }, [langMenuOpen]);
 
-  // Scroll to top on route change, except for SocialMedia text click
   React.useEffect(() => {
     const handleRouteChange = () => {
-      // Check if the click was on the SocialMedia text in the patent page
       const isSocialMediaClick = document.querySelector('.patents-container .social-media-bubble')?.contains(document.activeElement);
       if (!isSocialMediaClick) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -114,7 +113,6 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
             </button>
           );
         })}
-        {/* Translate Icon Tab */}
         <button
           ref={langMenuRef}
           onClick={() => setLangMenuOpen(v => !v)}
@@ -139,7 +137,6 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
         >
           <Translate size={isMobile ? 24 : 32} />
         </button>
-        {/* Dropdown Menü */}
         {langMenuOpen && (
           <div style={{
             position: 'absolute',
@@ -190,7 +187,6 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
             >TR</button>
           </div>
         )}
-        {/* Hidden span to force rerender on language change */}
         <span style={{display:'none'}}>{t('language')}</span>
       </div>
     </LayoutGroup>

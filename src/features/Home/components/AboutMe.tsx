@@ -2,6 +2,9 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import '../styles/AboutMeSpeechBubble.css';
 
+/**
+ * Personal introduction section of the homepage.
+ */
 const AboutMe = () => {
   const { t, i18n } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);

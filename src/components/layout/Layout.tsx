@@ -5,6 +5,9 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
+/**
+ * Layout wrapper that includes the navigation and page container.
+ */
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">

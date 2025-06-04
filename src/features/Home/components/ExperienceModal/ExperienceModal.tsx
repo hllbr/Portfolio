@@ -19,6 +19,9 @@ interface ExperienceModalProps {
   color?: string;
 }
 
+/**
+ * Modal dialog presenting details of a selected experience item.
+ */
 const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClose, color }) => {
   const { t } = useTranslation();
 

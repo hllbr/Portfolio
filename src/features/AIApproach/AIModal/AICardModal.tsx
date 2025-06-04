@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import styles from './AICardModal.module.css';
 import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
 import Button from '@mui/material/Button';
-import './CopyButtonAnimation.css';
-import { MagnifyingGlass } from 'phosphor-react';
 import Divider from '@mui/material/Divider';
+import CloseIcon from '@mui/icons-material/Close';
+import { MagnifyingGlass } from 'phosphor-react';
+
+import styles from './styles/AICardModal.module.css';
+import './styles/Animation/CopyButtonAnimation.css';
 
 interface AICardModalProps {
   isOpen: boolean;
@@ -16,6 +17,9 @@ interface AICardModalProps {
   lang: 'en' | 'tr';
 }
 
+/**
+ * Modal displaying AI prompt cards with copy functionality.
+ */
 const AICardModal: React.FC<AICardModalProps> = ({
   isOpen,
   onClose,
@@ -27,7 +31,6 @@ const AICardModal: React.FC<AICardModalProps> = ({
   const modalRef = useRef<HTMLDivElement>(null);
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Close on ESC
   useEffect(() => {
     if (!isOpen) return;
     const handleKeyDown = (e: KeyboardEvent) => {

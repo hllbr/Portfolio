@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { House } from 'phosphor-react';
 import styles from '../styles/NoPage.module.css';
 
+/**
+ * Fallback 404 page shown for unknown routes.
+ */
 const NoPage = () => {
   const { t } = useTranslation();
 

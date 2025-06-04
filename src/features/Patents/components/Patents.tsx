@@ -5,6 +5,9 @@ import '../styles/PatentsHero.css';
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
+/**
+ * Information page about patents and related quotes.
+ */
 const Patents = () => {
   const { t, i18n } = useTranslation();
   const isEnglish = i18n.language === 'en';
@@ -53,7 +56,6 @@ const Patents = () => {
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, isWaiting, currentQuoteIndex, quotes]);
 
-  // Handler to make the contact-link span clickable
   React.useEffect(() => {
     const handler = (e: Event) => {
       if ((e.target as HTMLElement).classList.contains('contact-link')) {

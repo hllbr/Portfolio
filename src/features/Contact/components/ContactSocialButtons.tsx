@@ -2,6 +2,9 @@ import { Phone, WhatsappLogo } from 'phosphor-react';
 
 const encodedPhone = 'OTA1NTIyOTcyMTg1';
 
+/**
+ * Quick access buttons for calling or messaging.
+ */
 const ContactSocialButtons = () => {
   const handleCall = (e: React.MouseEvent) => {
     e.preventDefault();

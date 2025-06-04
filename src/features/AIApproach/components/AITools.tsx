@@ -114,6 +114,9 @@ const getAiTools = (
   }
 ];
 
+/**
+ * Lists various AI tools with details and prompts.
+ */
 const AITools: React.FC = () => {
   const { t } = useTranslation();
   const [selectedTool, setSelectedTool] = useState<AITool | null>(null);

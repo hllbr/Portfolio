@@ -10,6 +10,9 @@ import { NoPage } from './Features/NoPage/Routes';
 import Layout from './Components/Layout/Layout';
 import { Home } from './Features/Home/Routes';
 
+/**
+ * Root component configuring the application routes.
+ */
 function App() {
   return (
     <Router>
