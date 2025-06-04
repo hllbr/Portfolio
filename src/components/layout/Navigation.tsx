@@ -1,4 +1,4 @@
-import { House, EnvelopeSimple, Cpu, Brain, FileText } from 'phosphor-react';
+import { House, EnvelopeSimple, Cpu, Brain, FileText, GameController } from 'phosphor-react';
 import FluidTabs from '../ui/FluidTabs';
 import useWindowWidth from '../../Hooks/useWindowWidth';
 import { useTranslation } from 'react-i18next';
@@ -14,6 +14,7 @@ const Navigation = () => {
     { path: '/Technology', label: t('nav.technologies'), icon: (size: number) => <Cpu size={size} /> },
     { path: '/AI', label: t('nav.aiApproach'), icon: (size: number) => <Brain size={size} /> },
     { path: '/Patent', label: t('nav.patents'), icon: (size: number) => <FileText size={size} /> },
+    { path: '/Game', label: t('nav.game'), icon: (size: number) => <GameController size={size} /> },
   ];
 
   const navItemsWithConditionalLabels = navItems.map(item => ({
