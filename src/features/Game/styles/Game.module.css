@@ -34,7 +34,7 @@
 }
 
 .icon svg {
-  color: #38bdf8;
+  color: inherit;
   width: 64px;
   height: 64px;
 }
@@ -57,6 +57,48 @@
   transform: rotate(45deg) scaleX(0);
   transform-origin: center;
   animation: sliceLine 0.3s forwards;
+}
+
+.icon.cutBlood {
+  animation: cutBloodAnim 0.4s forwards;
+  position: relative;
+  overflow: visible;
+}
+
+.icon.cutBlood::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: #f43f5e;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  box-shadow:
+    0 0 0 2px #f43f5e,
+    10px -5px 0 3px #f43f5e,
+    -12px 4px 0 4px #f43f5e,
+    6px 9px 0 3px #f43f5e,
+    -8px -7px 0 2px #f43f5e;
+  animation: bloodSplash 0.4s forwards;
+}
+
+.icon.cutWind {
+  animation: cutWindAnim 0.5s forwards;
+  position: relative;
+}
+
+.icon.cutWind::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  width: 60px;
+  height: 2px;
+  background: #f8fafc;
+  transform: translateY(-50%) scaleX(0);
+  animation: windTrail 0.5s forwards;
 }
 
 @keyframes fall {
@@ -86,6 +128,54 @@
   }
   to {
     transform: rotate(45deg) scaleX(1);
+    opacity: 0;
+  }
+}
+
+@keyframes cutBloodAnim {
+  from {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(120deg) scale(0.3);
+    opacity: 0;
+  }
+}
+
+@keyframes bloodSplash {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.8;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.8);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes cutWindAnim {
+  from {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100px) rotate(90deg) scale(0.4);
+    opacity: 0;
+  }
+}
+
+@keyframes windTrail {
+  from {
+    transform: translateY(-50%) scaleX(0);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(-50%) scaleX(1);
     opacity: 0;
   }
 }
