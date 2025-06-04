@@ -13,6 +13,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  --ty: 0px;
+  --rot: 0deg;
   animation-timing-function: linear;
   animation-duration: 4s;
 }
@@ -112,11 +114,11 @@
 
 @keyframes cutAnim {
   from {
-    transform: rotate(0deg) scale(1);
+    transform: translateY(var(--ty)) rotate(var(--rot)) scale(1);
     opacity: 1;
   }
   to {
-    transform: rotate(60deg) scale(0.5);
+    transform: translateY(var(--ty)) rotate(calc(var(--rot) + 60deg)) scale(0.5);
     opacity: 0.3;
   }
 }
@@ -134,11 +136,11 @@
 
 @keyframes cutBloodAnim {
   from {
-    transform: rotate(0deg) scale(1);
+    transform: translateY(var(--ty)) rotate(var(--rot)) scale(1);
     opacity: 1;
   }
   to {
-    transform: rotate(120deg) scale(0.3);
+    transform: translateY(var(--ty)) rotate(calc(var(--rot) + 120deg)) scale(0.3);
     opacity: 0;
   }
 }
@@ -160,11 +162,11 @@
 
 @keyframes cutWindAnim {
   from {
-    transform: rotate(0deg) scale(1);
+    transform: translateY(var(--ty)) rotate(var(--rot)) scale(1);
     opacity: 1;
   }
   to {
-    transform: translateX(100px) rotate(90deg) scale(0.4);
+    transform: translateY(var(--ty)) translateX(100px) rotate(calc(var(--rot) + 90deg)) scale(0.4);
     opacity: 0;
   }
 }

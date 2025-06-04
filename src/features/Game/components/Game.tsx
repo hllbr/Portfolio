@@ -12,6 +12,8 @@ interface FallingIcon {
   cut: boolean;
   animation: string;
   cutAnimation: string;
+  posY?: number;
+  rot?: number;
 }
 
 const icons = [
@@ -51,10 +53,16 @@ const Game = () => {
     return () => clearInterval(interval);
   }, [gameStarted, gameOverIcon]);
 
-  const handleCut = (id: number) => {
+  const handleCut = (id: number, el: HTMLDivElement) => {
     const anim = cutAnimations[Math.floor(Math.random() * cutAnimations.length)];
+    const style = window.getComputedStyle(el);
+    const matrix = new DOMMatrix(style.transform);
+    const posY = matrix.m42;
+    const rot = (Math.atan2(matrix.m21, matrix.m11) * 180) / Math.PI;
     setFalling(prev =>
-      prev.map(f => (f.id === id ? { ...f, cut: true, cutAnimation: anim } : f))
+      prev.map(f =>
+        f.id === id ? { ...f, cut: true, cutAnimation: anim, posY, rot } : f
+      )
     );
     setScore(prev => prev + 1);
   };
@@ -102,9 +110,17 @@ const Game = () => {
       {falling.map(icon => (
         <div
           key={icon.id}
-          className={`${styles.icon} ${styles[icon.animation]} ${icon.cut ? styles[icon.cutAnimation] : ''}`}
-          style={{ left: `${icon.left}%` }}
-          onClick={() => handleCut(icon.id)}
+          className={`${styles.icon} ${icon.cut ? styles[icon.cutAnimation] : styles[icon.animation]}`}
+          style={{
+            left: `${icon.left}%`,
+            ...(icon.cut
+              ? {
+                  '--ty': `${icon.posY ?? 0}px`,
+                  '--rot': `${icon.rot ?? 0}deg`,
+                }
+              : {}),
+          } as React.CSSProperties}
+          onClick={e => handleCut(icon.id, e.currentTarget)}
           onAnimationEnd={() => handleAnimationEnd(icon)}
         >
           {icon.Element}
