@@ -114,6 +114,16 @@
   transform-style: preserve-3d;
 }
 
+.icon.cutExplode {
+  animation: cutExplodeAnim 0.5s forwards;
+  position: relative;
+}
+
+.icon.cutSlice {
+  animation: cutSliceAnim 0.5s forwards;
+  position: relative;
+}
+
 @keyframes fall {
   from {
     transform: translateY(-40px);
@@ -215,6 +225,28 @@
   }
 }
 
+@keyframes cutExplodeAnim {
+  from {
+    transform: translateY(var(--ty)) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(var(--ty)) scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes cutSliceAnim {
+  from {
+    transform: translateY(var(--ty)) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(var(--ty)) rotate(360deg) scale(0.3);
+    opacity: 0;
+  }
+}
+
 @keyframes fallRotate {
   from {
     transform: translateY(-40px) rotate(0deg);
@@ -247,13 +279,45 @@
 .scoreboard {
   position: absolute;
   top: 8px;
-  right: 8px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 0.3rem 0.7rem;
   background: rgba(15, 23, 42, 0.7);
   color: #38bdf8;
   border-radius: 6px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   z-index: 2;
+}
+
+.pauseBtn {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.congrats {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(56, 189, 248, 0.9);
+  color: #0f172a;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  z-index: 2;
+  animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 .startOverlay {
