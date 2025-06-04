@@ -11,6 +11,7 @@ interface FallingIcon {
   Element: JSX.Element;
   cut: boolean;
   animation: string;
+  cutAnimation: string;
 }
 
 const icons = [
@@ -28,6 +29,7 @@ const Game = () => {
   const [gameOverIcon, setGameOverIcon] = useState<FallingIcon | null>(null);
   const idRef = useRef(0);
   const animations = ['fall', 'fallRotate', 'fallSpin', 'fallColor'];
+  const cutAnimations = ['cut', 'cutBlood', 'cutWind'];
 
   useEffect(() => {
     if (!gameStarted || gameOverIcon) return;
@@ -42,6 +44,7 @@ const Game = () => {
           Element: icons[idRef.current % icons.length].Element,
           cut: false,
           animation: animations[Math.floor(Math.random() * animations.length)],
+          cutAnimation: 'cut',
         },
       ]);
     }, 1200);
@@ -49,7 +52,10 @@ const Game = () => {
   }, [gameStarted, gameOverIcon]);
 
   const handleCut = (id: number) => {
-    setFalling(prev => prev.map(f => (f.id === id ? { ...f, cut: true } : f)));
+    const anim = cutAnimations[Math.floor(Math.random() * cutAnimations.length)];
+    setFalling(prev =>
+      prev.map(f => (f.id === id ? { ...f, cut: true, cutAnimation: anim } : f))
+    );
     setScore(prev => prev + 1);
   };
 
@@ -96,7 +102,7 @@ const Game = () => {
       {falling.map(icon => (
         <div
           key={icon.id}
-          className={`${styles.icon} ${styles[icon.animation]} ${icon.cut ? styles.cut : ''}`}
+          className={`${styles.icon} ${styles[icon.animation]} ${icon.cut ? styles[icon.cutAnimation] : ''}`}
           style={{ left: `${icon.left}%` }}
           onClick={() => handleCut(icon.id)}
           onAnimationEnd={() => handleAnimationEnd(icon)}
