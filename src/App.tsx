@@ -46,6 +46,8 @@ function App() {
           <Route path="/Patentler" element={<Patents />} />
           <Route path="/Game" element={<Game />} />
           <Route path="/game" element={<Game />} />
+          <Route path="/oyun" element={<Game />} />
+          <Route path="/Oyun" element={<Game />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Layout>
