@@ -1,1 +1,1 @@
-export { default as NoPage } from '../Components/NoPage';
+export { default as NoPage } from '../components/NoPage';

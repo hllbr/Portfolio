@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import styles from '../styles/AIApproach.module.css';
 import { AICardModal } from '../AIModal';
 import { CARD_TITLES, PROMPTS, type CardTitle } from '../constants/aiPrompts';
-import AIHero from '../Components/AIHero';
+import AIHero from '../components/AIHero';
 
 const AIApproach = () => {
   const { t, i18n } = useTranslation();

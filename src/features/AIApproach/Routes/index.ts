@@ -1,1 +1,1 @@
-export { default as AIApproach } from '../Components/AIApproach';
+export { default as AIApproach } from '../components/AIApproach';
