@@ -99,9 +99,10 @@ const Game = () => {
 
   const handleCut = (id: number, el: HTMLDivElement) => {
     const anim = cutAnimations[Math.floor(Math.random() * cutAnimations.length)];
-    const style = window.getComputedStyle(el);
-    const matrix = new DOMMatrix(style.transform);
-    const posY = matrix.m42;
+    const matrix = new DOMMatrix(window.getComputedStyle(el).transform);
+    const containerRect = el.parentElement?.getBoundingClientRect();
+    const rect = el.getBoundingClientRect();
+    const posY = rect.top - (containerRect?.top ?? 0);
     const rot = (Math.atan2(matrix.m21, matrix.m11) * 180) / Math.PI;
     setFalling(prev =>
       prev.map(f =>

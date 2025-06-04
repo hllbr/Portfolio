@@ -3,6 +3,7 @@
   width: 100%;
   height: 70vh;
   overflow: hidden;
+  border-bottom: 4px dashed #f87171;
 }
 
 .icon {
@@ -390,6 +391,7 @@
 @media (max-width: 640px) {
   .container {
     height: 60vh;
+    border-bottom: 4px dashed #f87171;
   }
   .startOverlay {
     font-size: 1.5rem;
