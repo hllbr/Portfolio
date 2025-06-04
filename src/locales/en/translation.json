@@ -503,5 +503,13 @@
   },
   "social": {
     "connect": "Reach Out for Collaboration and Ideas"
+  },
+  "gameScreen": {
+    "tapToTrap": "Tap to Trap",
+    "score": "Score",
+    "gameOver": "Game Over",
+    "missed": "You missed the {{platform}} icon. Visit?",
+    "ok": "OK",
+    "cancel": "Cancel"
   }
 } 
