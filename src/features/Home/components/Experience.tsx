@@ -8,6 +8,9 @@ import { useTranslation } from 'react-i18next';
 
 const getCurrentPosition = (positions: ExperienceType['positions']) => positions.find((p) => p.isCurrent);
 
+/**
+ * Work experience timeline with modal details.
+ */
 const Experience = () => {
   const [hovered, setHovered] = useState<string | null>(null);
   const [open, setOpen] = useState(false);

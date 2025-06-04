@@ -1,12 +1,16 @@
+import { useState, useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import Typewriter from 'typewriter-effect';
 import { useTranslation } from 'react-i18next';
+
 import styles from '../styles/ContactBubble.module.css';
 import formStyles from '../styles/FormElements.module.css';
 import '../styles/Animation/ContactIconAnimation.css';
-import { ToastContainer, toast } from 'react-toastify';
-import toastifyStyles from '../Styles/CustomToastify.module.css';
-import { useState, useEffect } from 'react';
-import Typewriter from 'typewriter-effect';
+import toastifyStyles from '../styles/CustomToastify.module.css';
 
+/**
+ * Contact form page allowing visitors to send a message.
+ */
 const Contact = () => {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(false);

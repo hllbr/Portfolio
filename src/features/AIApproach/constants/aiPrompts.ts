@@ -1,4 +1,6 @@
-// Kart başlıklarını union type olarak tanımla
+/**
+ * Prompt data for the AI tools modal.
+ */
 export const CARD_TITLES = [
   'Cursor AI',
   'ChatGPT',
@@ -11,7 +13,6 @@ export const CARD_TITLES = [
 
 export type CardTitle = typeof CARD_TITLES[number];
 
-// Örnek prompt verisi (EN/TR)
 export const PROMPTS: Record<CardTitle, { en: { title: string; prompt: string }[]; tr: { title: string; prompt: string }[] }> = {
   'Cursor AI': {
     en: [

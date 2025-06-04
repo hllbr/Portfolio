@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import '../Styles/AIHero.css';
+import '../styles/AIHero.css';
 
+/**
+ * Hero section for the AI approach page.
+ */
 export default function AIHero() {
   const { t } = useTranslation();
   return (

@@ -1,15 +1,16 @@
 import sgMail from '@sendgrid/mail';
 
-// Initialize SendGrid with your API key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY || '');
 
+/**
+ * API route for sending contact form emails through SendGrid.
+ */
 export async function POST(request: Request) {
   try {
     const { name, email, subject, message } = await request.json();
 
     const msg = {
-      to: 'halibrahim.kocak@gmail.com', // Your email address
-      from: 'halibrahim.kocak@gmail.com', // Verified sender email
+      from: 'halibrahim.kocak@gmail.com', 
       subject: `Portfolio Contact: ${subject}`,
       text: `
         Name: ${name}

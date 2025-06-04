@@ -23,6 +23,9 @@ const icons = [
   { name: 'Twitter', Element: <TwitterLogo size={64} />, url: 'https://twitter.com' },
 ];
 
+/**
+ * Simple falling icons game built for fun.
+ */
 const Game = () => {
   const { t } = useTranslation();
   const [falling, setFalling] = useState<FallingIcon[]>([]);

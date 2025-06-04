@@ -7,6 +7,9 @@ interface TooltipProps {
   t: TFunction;
 }
 
+/**
+ * Tooltip component used to display validation hints.
+ */
 const Tooltip = ({ label, t }: TooltipProps) => (
   <div className={styles.tooltipBox}>
     <div className={styles.tooltipArrow} />

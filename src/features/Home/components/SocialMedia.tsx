@@ -4,6 +4,9 @@ import '../styles/Animation/SocialMediaIconAnimation.css';
 import { GithubLogo, LinkedinLogo, YoutubeLogo, EnvelopeSimple, WhatsappLogo, Timer, PhoneCall } from 'phosphor-react';
 
 
+/**
+ * Social media links with animated icons.
+ */
 const SocialMedia = () => {
   const { t } = useTranslation();
 
