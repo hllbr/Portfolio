@@ -101,7 +101,7 @@ const Contact = () => {
 
         <section className="space-y-6 mt-8">
           <form onSubmit={handleSubmit} className={styles.form}>
-            <div style={{ position: 'relative' }}>
+            <div className="relative">
               <label htmlFor="name" className="block text-sm font-medium mb-1">
                 {t('contact.form.name', 'Name')}
               </label>
@@ -115,7 +115,7 @@ const Contact = () => {
                 onChange={handleInputChange}
               />
             </div>
-            <div style={{ position: 'relative' }}>
+            <div className="relative">
               <label htmlFor="email" className="block text-sm font-medium mb-1">
                 {t('contact.form.email', 'Email')}
               </label>
@@ -129,7 +129,7 @@ const Contact = () => {
                 onChange={handleInputChange}
               />
             </div>
-            <div style={{ position: 'relative' }}>
+            <div className="relative">
               <label htmlFor="subject" className="block text-sm font-medium mb-1">
                 {t('contact.form.subject', 'Subject')}
               </label>
@@ -143,7 +143,7 @@ const Contact = () => {
                 onChange={handleInputChange}
               />
             </div>
-            <div style={{ position: 'relative' }}>
+            <div className="relative">
               <label htmlFor="message" className="block text-sm font-medium mb-1">
                 {t('contact.form.message', 'Message')}
               </label>
