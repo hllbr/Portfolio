@@ -13,12 +13,11 @@ const ContactSocialButtons = () => {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', gap: '32px', marginBottom: '1.5rem' }}>
+    <div className="flex justify-center gap-8 mb-6">
       <button
         onClick={handleCall}
-        className="social-link"
+        className="social-link bg-transparent border-none p-0 cursor-pointer"
         title="Call"
-        style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
       >
         <Phone size={32} />
       </button>

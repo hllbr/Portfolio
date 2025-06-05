@@ -13,7 +13,7 @@ interface TooltipProps {
 const Tooltip = ({ label, t }: TooltipProps) => (
   <div className={styles.tooltipBox}>
     <div className={styles.tooltipArrow} />
-    <WarningCircle size={20} color="#faad14" weight="fill" style={{ flexShrink: 0, zIndex: 12 }} />
+    <WarningCircle size={20} color="#faad14" weight="fill" className="flex-shrink-0 z-[12]" />
     <span className={styles.tooltipText}>
       <b>{label}</b> {label && ' '}{t('contact.form.mustBeFilled')}
     </span>
