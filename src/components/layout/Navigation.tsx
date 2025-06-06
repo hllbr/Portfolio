@@ -1,7 +1,7 @@
 import { House, EnvelopeSimple, Cpu, Brain, FileText, GameController } from 'phosphor-react';
 import { useTranslation } from 'react-i18next';
 
-import useWindowWidth from '../../Hooks/useWindowWidth';
+import useWindowWidth from '../../hooks/useWindowWidth';
 import FluidTabs from '../ui/FluidTabs';
 /**
  * Top navigation bar that shows the main site links.

@@ -19,13 +19,12 @@ interface ExperienceModalProps {
   selected: ExperienceType | null;
   onClose: () => void;
   color?: string;
-  onShowDetail?: () => void;
 }
 
 /**
  * Modal dialog presenting details of a selected experience item.
  */
-const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClose, color, onShowDetail }) => {
+const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClose, color }) => {
   const { t } = useTranslation();
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 

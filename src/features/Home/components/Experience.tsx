@@ -2,7 +2,6 @@ import '../styles/AboutMeSpeechBubble.css';
 import '../styles/ExperienceLiveIcon.css';
 import { useState } from 'react';
 import ExperienceModal from '../components/ExperienceModal/ExperienceModal';
-import NetasDetailModal from './NetasDetailModal';
 import { experiences } from '../helpers/experienceData';
 import type { ExperienceType } from '../helpers/experienceData';
 import { useTranslation } from 'react-i18next';
@@ -16,7 +15,6 @@ const Experience = () => {
   const [hovered, setHovered] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<ExperienceType | null>(null);
-  const [detailOpen, setDetailOpen] = useState(false);
   const { t } = useTranslation();
 
   const handleClose = () => {
@@ -24,13 +22,7 @@ const Experience = () => {
     setSelected(null);
   };
 
-  const handleShowDetail = () => {
-    setDetailOpen(true);
-  };
 
-  const handleCloseDetail = () => {
-    setDetailOpen(false);
-  };
 
   return (
     <>
@@ -97,9 +89,7 @@ const Experience = () => {
           selected={selected}
           onClose={handleClose}
           color={selected?.color}
-          onShowDetail={handleShowDetail}
         />
-        <NetasDetailModal open={detailOpen} onClose={handleCloseDetail} color={selected?.color} />
         <div className="speech-bubble-tail" />
       </div>
     </>
