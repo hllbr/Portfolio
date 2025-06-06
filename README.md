@@ -176,6 +176,11 @@ For more information or contributions, feel free to contact. / Daha fazla bilgi 
 - Modern UI Components with Flowbite
 - Dark/Light Theme Support
 - SEO Optimized
+- Animated Fluid Tabs navigation with language switcher (EN/TR)
+- AI Tools section with animated cards, modals, and 50+ bilingual prompts
+- Social media bubble with dynamic contact icons
+- Experience page with themed modals
+- Unified dark theme across all pages
 
 ## Özellikler
 - Duyarlı Tasarım
@@ -185,4 +190,9 @@ For more information or contributions, feel free to contact. / Daha fazla bilgi 
 - E-posta Entegrasyonlu İletişim Formu
 - Flowbite ile Modern UI Bileşenleri
 - Karanlık/Aydınlık Tema Desteği
-- SEO Optimizasyonu 
+- SEO Optimizasyonu
+- Animasyonlu Fluid Tabs navigasyonu ve dil değiştirme (EN/TR)
+- Animasyonlu kartlar ve modal yapısıyla AI Tools bölümü, 50+ çift dilli prompt
+- Dinamik iletişim ikonlarıyla sosyal medya balonu
+- Temaya uyumlu modallar içeren Deneyim sayfası
+- Tüm sayfalarda tutarlı koyu tema
