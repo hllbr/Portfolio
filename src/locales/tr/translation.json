@@ -18,7 +18,8 @@
     "techStack": "Full-stack uygulamalarda özellikle TypeScript, React, Tailwind, Spring Boot gibi teknolojilerle sürdürülebilir mimariler geliştiriyorum.",
     "hobbies": "Ayrıca boş zamanlarımda Unity ile oyunlar geliştiriyor, hikâye odaklı sistemler tasarlıyor ve interaktif deneyimler üzerine çalışıyorum.",
     "philosophy": "Her yeni satır kod, daha büyük bir sistemin parçası olmalı.",
-    "passion": "Ben bu sistemleri kurmayı ve insanlara değer katan çözümler üretmeyi seviyorum."
+    "passion": "Ben bu sistemleri kurmayı ve insanlara değer katan çözümler üretmeyi seviyorum.",
+    "softwareTestEngineerShortDesc": "Sigorta projelerinde test otomasyonu ve dilsel doğruluk odaklı senaryolar geliştirdim."
   },
   "contact": {
     "title": "İletişim",
@@ -383,7 +384,9 @@
       "detailText": "NETAŞ bünyesinde Aralık 2021 tarihinde Full Stack Developer olarak göreve başladım.\nİlk olarak Visium Manage (test case management tool) projesinde görev aldım. Bu projede, ürünün işlevselliğini artırmaya yönelik birçok modülün geliştirilmesine katkı sağladım.\n\n🚀 Öne Çıkan Sorumluluklarım:\n• Toplu işlemlere (bulk operations) yönelik özel backend çözümleri\n• Gelişmiş yetki yönetimi sistemi (privilege yapısı) tasarımı ve uygulanması\n• Müşteri taleplerine göre özel iş kurallarının geliştirilmesi\n• Standart CRUD operasyonlarının yeniden yapılandırılması\n• UI/logic düzeyinde test doğruluğu ve sistem kararlılığı için iyileştirmeler\n• Yeni özelliklerin teknik analiz ve raporlaması\n• Frontend ve backend bug fix & stabilizasyon\n\n📈 Kasım 2023 itibaryla performans ve katkılarım doğrultusunda Senior Full Stack Developer unvanıyla görevime devam ettim.\n\n🎯 Visium Farm (Ocak 2024 – Halen)\nBu projede hedef, mevcut kullanıcı arayüzünü modern teknolojilerle baştan inşa ederek daha ölçeklenebilir, performanslı ve kullanıcı odaklı hale getirmekti.\n\n🧪 Katkılarım:\n• Modern frontend mimarisiyle yeniden kullanılabilir bileşenlerin tasarımı\n• Eski yapılardan yeni sisteme veri akışının optimize edilmesi\n• UI/UX iyileştirmeleriyle kullanıcı deneyiminin güçlendirilmesi\n• Kod kalitesi, test edilebilirlik ve sürdürülebilirlik odaklı refactor süreçleri\n\n💡 Bu süreçlerde yalnızca yazılım geliştirme değil, aynı zamanda teknik analiz, kullanıcı ihtiyaçlarını yorumlama ve sistemsel yapı önerileri geliştirme görevlerinde de aktif sorumluluk aldım."
     },
     "seeMore": "Detayları Gör",
-    "seeLess": "Daha Azını Göster"
+    "seeLess": "Daha Azını Göster",
+    "seeMoreLessHint": "Daha az detayı göster",
+    "seeMoreLessBack": "Özete dön"
   },
   "aiTools": {
     "title": "AI ile Kodun Ötesine Geçmek: Bir Mühendisin Yeni Nesil Düşünce Sistemi",
