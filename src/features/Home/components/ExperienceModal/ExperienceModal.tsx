@@ -17,12 +17,13 @@ interface ExperienceModalProps {
   selected: ExperienceType | null;
   onClose: () => void;
   color?: string;
+  onShowDetail?: () => void;
 }
 
 /**
  * Modal dialog presenting details of a selected experience item.
  */
-const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClose, color }) => {
+const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClose, color, onShowDetail }) => {
   const { t } = useTranslation();
 
   return (
@@ -93,6 +94,26 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClo
                     {pos.date.replace('Present', t('experience.currentlyEmployed'))}
                   </div>
                   <div style={{ color: '#e2e8f0', fontSize: 16, margin: '6px 0 0 0' }}>{pos.desc}</div>
+                  {selected.company === 'NETAŞ' && onShowDetail && (
+                    <Button
+                      onClick={onShowDetail}
+                      variant="outlined"
+                      size="small"
+                      sx={{
+                        alignSelf: 'flex-start',
+                        borderColor: color || '#f59e42',
+                        color: color || '#f59e42',
+                        fontWeight: 500,
+                        '&:hover': {
+                          background: (color || '#f59e42') + '22',
+                          borderColor: color || '#f59e42',
+                          color: color || '#f59e42',
+                        },
+                      }}
+                    >
+                      {t('experience.seeDetails')}
+                    </Button>
+                  )}
                 </div>
               ))}
               <div style={{ 
