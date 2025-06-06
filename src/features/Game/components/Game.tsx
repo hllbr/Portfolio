@@ -2,144 +2,140 @@ import { useEffect, useRef, useState } from 'react';
 import {
   GithubLogo,
   LinkedinLogo,
-  YoutubeLogo,
   WhatsappLogo,
-  PhoneCall,
+  YoutubeLogo,
   EnvelopeSimple,
   Timer,
-  Pause,
-  Play
+  Rocket
 } from 'phosphor-react';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/Game.module.css';
 
-const animations = ['fall', 'fallRotate', 'fallSpin', 'fallColor'];
-
-interface FallingIcon {
-  id: number;
-  left: number;
-  url: string;
+interface IconData {
   name: string;
-  Element: JSX.Element;
-  cut: boolean;
-  animation: string;
-  cutAnimation: string;
-  posY?: number;
-  rot?: number;
+  url: string;
+  icon: JSX.Element;
 }
 
-const encodedPhone = 'OTA1NTIyOTcyMTg1';
-const decodedPhone = () => atob(encodedPhone);
+interface FallingIcon extends IconData {
+  id: number;
+  x: number;
+  y: number;
+  speed: number;
+}
 
-const icons = [
-  { name: 'Call', Element: <PhoneCall size={80} />, url: `tel:${decodedPhone()}` },
-  { name: 'WhatsApp', Element: <WhatsappLogo size={80} />, url: `https://wa.me/${decodedPhone()}` },
-  { name: 'LinkedIn', Element: <LinkedinLogo size={80} />, url: 'https://www.linkedin.com/in/hllbr/' },
-  { name: 'Email', Element: <EnvelopeSimple size={80} />, url: 'mailto:halibrahim.kocak@gmail.com' },
-  { name: 'GitHub', Element: <GithubLogo size={80} />, url: 'https://github.com/hllbr' },
-  { name: 'YouTube', Element: <YoutubeLogo size={80} />, url: 'https://www.youtube.com/@platonfarkndapaylasmlar637' },
-  { name: 'WakaTime', Element: <Timer size={80} />, url: 'https://wakatime.com/@HLLBR' },
+const icons: IconData[] = [
+  { name: 'GitHub', url: 'https://github.com/hllbr', icon: <GithubLogo size={32} /> },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/hllbr/', icon: <LinkedinLogo size={32} /> },
+  { name: 'WhatsApp', url: 'https://wa.me/905522972185', icon: <WhatsappLogo size={32} /> },
+  { name: 'YouTube', url: 'https://www.youtube.com/@platonfarkndapaylasmlar637', icon: <YoutubeLogo size={32} /> },
+  { name: 'Email', url: 'mailto:halibrahim.kocak@gmail.com', icon: <EnvelopeSimple size={32} /> },
+  { name: 'WakaTime', url: 'https://wakatime.com/@HLLBR', icon: <Timer size={32} /> },
 ];
 
-/**
- * Simple falling icons game built for fun.
- */
+const PLAYER_SIZE = 48;
+const ICON_SIZE = 40;
+
 const Game = () => {
   const { t } = useTranslation();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [playerX, setPlayerX] = useState(50); // percentage
   const [falling, setFalling] = useState<FallingIcon[]>([]);
   const [gameStarted, setGameStarted] = useState(false);
   const [score, setScore] = useState(0);
   const [gameOverIcon, setGameOverIcon] = useState<FallingIcon | null>(null);
-  const [paused, setPaused] = useState(false);
-  const [duration, setDuration] = useState(4);
-  const [delay, setDelay] = useState(1200);
-  const [congrats, setCongrats] = useState(false);
-  const idRef = useRef(0);
-  const cutAnimations = [
-    'cut',
-    'cutBlood',
-    'cutWind',
-    'cutFade',
-    'cutFlip',
-    'cutExplode',
-    'cutSlice'
-  ];
+  const nextId = useRef(0);
+  const iconsRef = useRef<FallingIcon[]>([]);
+  const animationRef = useRef<number>();
+  const spawnRef = useRef<NodeJS.Timer>();
+  const dragging = useRef(false);
 
-  useEffect(() => {
-    if (!gameStarted || gameOverIcon || paused) return;
-    const interval = setInterval(() => {
-      setFalling(prev => [
-        ...prev,
-        {
-          id: idRef.current++,
-          left: Math.random() * 90,
-          url: icons[idRef.current % icons.length].url,
-          name: icons[idRef.current % icons.length].name,
-          Element: icons[idRef.current % icons.length].Element,
-          cut: false,
-          animation: animations[Math.floor(Math.random() * animations.length)],
-          cutAnimation: 'cut',
-        },
-      ]);
-    }, delay);
-    return () => clearInterval(interval);
-  }, [gameStarted, gameOverIcon, paused, delay]);
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    dragging.current = true;
+    movePlayer(e);
+  };
 
-  useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key.toLowerCase() === 'p') {
-        setPaused(p => !p);
-      }
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (dragging.current) movePlayer(e);
+  };
+
+  const handlePointerUp = () => {
+    dragging.current = false;
+  };
+
+  const movePlayer = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    setPlayerX(Math.min(100, Math.max(0, x)));
+  };
+
+  const spawnIcon = () => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = Math.random() * (rect.width - ICON_SIZE);
+    const speed = 2 + score / 20;
+    const data = icons[Math.floor(Math.random() * icons.length)];
+    const icon: FallingIcon = {
+      ...data,
+      id: nextId.current++,
+      x,
+      y: -ICON_SIZE,
+      speed,
     };
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
-  }, []);
-
-  const handleCut = (id: number, el: HTMLDivElement) => {
-    const anim = cutAnimations[Math.floor(Math.random() * cutAnimations.length)];
-    const matrix = new DOMMatrix(window.getComputedStyle(el).transform);
-    const posY = matrix.m42;
-    const rot = (Math.atan2(matrix.m21, matrix.m11) * 180) / Math.PI;
-    setFalling(prev =>
-      prev.map(f =>
-        f.id === id ? { ...f, cut: true, cutAnimation: anim, posY, rot } : f
-      )
-    );
-    setScore(prev => prev + 1);
+    iconsRef.current.push(icon);
+    setFalling([...iconsRef.current]);
   };
 
-  const handleAnimationEnd = (icon: FallingIcon) => {
-    setFalling(prev => prev.filter(f => f.id !== icon.id));
-    if (!icon.cut && !gameOverIcon) {
-      setGameOverIcon(icon);
-      setGameStarted(false);
-      setFalling([]);
+  const gameLoop = () => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    iconsRef.current = iconsRef.current.flatMap(icon => {
+      const newY = icon.y + icon.speed;
+      const playerXpx = (playerX / 100) * rect.width;
+      const playerYpx = rect.height - PLAYER_SIZE;
+      const collideX = Math.abs(playerXpx - icon.x) < (PLAYER_SIZE + ICON_SIZE) / 2;
+      const collideY = Math.abs(playerYpx - newY) < (PLAYER_SIZE + ICON_SIZE) / 2;
+
+      if (collideX && collideY && !gameOverIcon) {
+        setGameOverIcon(icon);
+        setGameStarted(false);
+        return [];
+      }
+
+      if (newY > rect.height) {
+        setScore(s => s + 1);
+        return [];
+      }
+
+      return [{ ...icon, y: newY }];
+    });
+    setFalling([...iconsRef.current]);
+    animationRef.current = requestAnimationFrame(gameLoop);
+  };
+
+  useEffect(() => {
+    if (gameStarted) {
+      animationRef.current = requestAnimationFrame(gameLoop);
+      spawnRef.current = setInterval(spawnIcon, 1000);
     }
-  };
+    return () => {
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+      if (spawnRef.current) clearInterval(spawnRef.current);
+    };
+  }, [gameStarted, playerX]);
 
   const startGame = () => {
     setScore(0);
+    setPlayerX(50);
+    iconsRef.current = [];
     setFalling([]);
     setGameOverIcon(null);
-    idRef.current = 0;
-    setPaused(false);
+    nextId.current = 0;
     setGameStarted(true);
   };
 
-  useEffect(() => {
-    const level = Math.floor(score / 10);
-    setDuration(Math.max(1.5, 4 - level * 0.4));
-    setDelay(Math.max(400, 1200 - level * 100));
-    if ([10, 25, 50, 75, 100].includes(score)) {
-      setCongrats(true);
-      const t = setTimeout(() => setCongrats(false), 1500);
-      return () => clearTimeout(t);
-    }
-  }, [score]);
-
-  const closeModal = () => {
-    setGameOverIcon(null);
-  };
+  const closeModal = () => setGameOverIcon(null);
 
   const visitIcon = () => {
     if (gameOverIcon) {
@@ -149,48 +145,41 @@ const Game = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      ref={containerRef}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerLeave={handlePointerUp}
+    >
       {!gameStarted && !gameOverIcon && (
         <div className={styles.startOverlay} onClick={startGame}>
-          {t('gameScreen.tapToTrap')}
+          {t('gameScreen.tapToStart')}
         </div>
       )}
-      {gameStarted && (
-        <div className={styles.scoreboard}>
-          <span>{t('gameScreen.score')}: {score}</span>
-          <button className={styles.pauseBtn} onClick={() => setPaused(p => !p)}>
-            {paused ? <Play size={20} /> : <Pause size={20} />}
-          </button>
-        </div>
-      )}
-      {congrats && <div className={styles.congrats}>🎉</div>}
+      <div className={styles.score}>{t('gameScreen.score')}: {score}</div>
       {falling.map(icon => (
         <div
           key={icon.id}
-          className={`${styles.icon} ${icon.cut ? styles[icon.cutAnimation] : styles[icon.animation]}`}
-          style={{
-            left: `${icon.left}%`,
-            animationDuration: `${duration}s`,
-            animationPlayState: paused ? 'paused' : 'running',
-            ...(icon.cut
-              ? {
-                  '--ty': `${icon.posY ?? 0}px`,
-                  '--rot': `${icon.rot ?? 0}deg`,
-                }
-              : {}),
-          } as React.CSSProperties}
-          onClick={e => !paused && handleCut(icon.id, e.currentTarget)}
-          onAnimationEnd={() => handleAnimationEnd(icon)}
+          className={styles.falling}
+          style={{ left: icon.x, top: icon.y, width: ICON_SIZE, height: ICON_SIZE }}
         >
-          {icon.Element}
+          {icon.icon}
         </div>
       ))}
+      <div
+        className={styles.player}
+        style={{ left: `${playerX}%`, width: PLAYER_SIZE, height: PLAYER_SIZE }}
+      >
+        <Rocket size={PLAYER_SIZE - 8} />
+      </div>
       {gameOverIcon && (
         <div className={styles.overlay} onClick={closeModal}>
           <div className={styles.modal} onClick={e => e.stopPropagation()}>
             <p>{t('gameScreen.gameOver')}</p>
             <p>{t('gameScreen.score')}: {score}</p>
-            <p>{t('gameScreen.missed', { platform: gameOverIcon.name })}</p>
+            <p>{t('gameScreen.crashed', { platform: gameOverIcon.name })}</p>
             <div className={styles.modalButtons}>
               <button onClick={visitIcon}>{t('gameScreen.ok')}</button>
               <button onClick={closeModal}>{t('gameScreen.cancel')}</button>
