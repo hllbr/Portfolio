@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import {
   GithubLogo,
   LinkedinLogo,
-  TwitterLogo,
   YoutubeLogo,
   WhatsappLogo,
   PhoneCall,
@@ -33,14 +32,13 @@ const encodedPhone = 'OTA1NTIyOTcyMTg1';
 const decodedPhone = () => atob(encodedPhone);
 
 const icons = [
-  { name: 'Call', Element: <PhoneCall size={64} />, url: `tel:${decodedPhone()}` },
-  { name: 'WhatsApp', Element: <WhatsappLogo size={64} />, url: `https://wa.me/${decodedPhone()}` },
-  { name: 'LinkedIn', Element: <LinkedinLogo size={64} />, url: 'https://www.linkedin.com/in/hllbr/' },
-  { name: 'Email', Element: <EnvelopeSimple size={64} />, url: 'mailto:halibrahim.kocak@gmail.com' },
-  { name: 'GitHub', Element: <GithubLogo size={64} />, url: 'https://github.com/hllbr' },
-  { name: 'YouTube', Element: <YoutubeLogo size={64} />, url: 'https://www.youtube.com/@platonfarkndapaylasmlar637' },
-  { name: 'WakaTime', Element: <Timer size={64} />, url: 'https://wakatime.com/@HLLBR' },
-  { name: 'Twitter', Element: <TwitterLogo size={64} />, url: 'https://twitter.com' },
+  { name: 'Call', Element: <PhoneCall size={80} />, url: `tel:${decodedPhone()}` },
+  { name: 'WhatsApp', Element: <WhatsappLogo size={80} />, url: `https://wa.me/${decodedPhone()}` },
+  { name: 'LinkedIn', Element: <LinkedinLogo size={80} />, url: 'https://www.linkedin.com/in/hllbr/' },
+  { name: 'Email', Element: <EnvelopeSimple size={80} />, url: 'mailto:halibrahim.kocak@gmail.com' },
+  { name: 'GitHub', Element: <GithubLogo size={80} />, url: 'https://github.com/hllbr' },
+  { name: 'YouTube', Element: <YoutubeLogo size={80} />, url: 'https://www.youtube.com/@platonfarkndapaylasmlar637' },
+  { name: 'WakaTime', Element: <Timer size={80} />, url: 'https://wakatime.com/@HLLBR' },
 ];
 
 /**
