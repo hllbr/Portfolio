@@ -379,7 +379,12 @@
     "currentlyEmployed": "Currently Employed",
     "close": "Close",
     "clickableCard": "Clickable card",
-    "seeDetails": "See Details"
+    "seeDetails": "See Details",
+    "netas": {
+      "detailTitle": "NETAŞ Experience Detail – Halil İbrahim KOÇAK",
+      "detailPrefix": "\ud83d\udccd Remote \u2022 Full time \u2022 March 2021 \u2013 Present",
+      "detailText": "I started at NETA\u015e as a Full Stack Developer in December 2021.\nI initially worked on the Visium Manage (test case management tool) project where I contributed to developing many modules to enhance the product's functionality.\n\n\ud83d\ude80 Key Responsibilities:\n\u2022 Custom backend solutions for bulk operations\n\u2022 Design and implementation of an advanced privilege management system\n\u2022 Development of custom business rules based on client needs\n\u2022 Re-structuring standard CRUD operations\n\u2022 Improvements at the UI/logic level for test accuracy and system stability\n\u2022 Technical analysis and reporting of new features\n\u2022 Frontend and backend bug fixing and stabilization\n\n\ud83d\udcc8 As of November 2023, I have continued my role as a Senior Full Stack Developer thanks to my performance and contributions.\n\n\ud83c\udfaf Visium Farm (January 2024 \u2013 Present)\nThe goal of this project is to rebuild the existing user interface with modern technologies, making it more scalable, performant and user focused.\n\n\ud83e\uddea My Contributions:\n\u2022 Designing reusable components with a modern frontend architecture\n\u2022 Optimizing data flow from the old system into the new one\n\u2022 Strengthening the user experience through UI/UX enhancements\n\u2022 Refactoring processes focused on code quality, testability and sustainability\n\n\ud83d\udca1 Throughout these processes I took active responsibility not only in software development, but also in technical analysis, interpreting user needs, and proposing system-wide improvements."
+    }
   },
   "aiTools": {
     "title": "Beyond Code: A New Generation Engineering Thought System with AI",
