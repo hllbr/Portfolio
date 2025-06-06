@@ -512,10 +512,10 @@
     "connect": "İş Birliği ve Fikir Paylaşımı İçin Ulaşın"
   },
   "gameScreen": {
-    "tapToTrap": "Yakalamak için dokun",
-    "score": "Puan",
-    "gameOver": "Oyun Bitti",
-    "missed": "{{platform}} ikonunu kesemediniz. Ziyaret etmek ister misiniz?",
+    "tapToStart": "Başlamak için dokunun",
+    "score": "Skor",
+    "gameOver": "Oyun Bitti!",
+    "crashed": "{{platform}} ikonuna çarptınız. Linke gitmek ister misiniz?",
     "ok": "Tamam",
     "cancel": "İptal"
   }

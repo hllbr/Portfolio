@@ -517,10 +517,10 @@
     "connect": "Reach Out for Collaboration and Ideas"
   },
   "gameScreen": {
-    "tapToTrap": "Tap to Trap",
+    "tapToStart": "Tap to Start",
     "score": "Score",
-    "gameOver": "Game Over",
-    "missed": "You missed the {{platform}} icon. Visit?",
+    "gameOver": "Game Over!",
+    "crashed": "You crashed into the {{platform}} icon. Visit link?",
     "ok": "OK",
     "cancel": "Cancel"
   }
