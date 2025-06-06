@@ -34,7 +34,8 @@
   background: rgba(0,0,0,0.5);
   padding: 0.3rem 0.6rem;
   border-radius: 6px;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.5rem;
   z-index: 2;
 }
 
@@ -101,7 +102,24 @@
     height: 60vh;
   }
   .startOverlay {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+  }
+  .score {
+    font-size: 1.1rem;
+    padding: 0.2rem 0.4rem;
+  }
+  .player {
+    min-height: 48px;
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .falling {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .fallingAnim {
+    width: 40px !important;
+    height: 40px !important;
   }
 }
 
