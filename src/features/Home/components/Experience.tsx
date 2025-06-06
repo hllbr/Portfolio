@@ -44,6 +44,7 @@ const Experience = () => {
             const current = getCurrentPosition(exp.positions);
             const isNetas = exp.company === 'NETAŞ' && current;
             const isHovered = hovered === exp.company;
+            const liveColor = isNetas ? '#16a34a' : '#ff2222';
             return (
               <div
                 key={exp.company}
@@ -80,11 +81,11 @@ const Experience = () => {
                   </div>
                 </div>
                 <span className="experience-live-icon" aria-label={t('experience.clickableCard')}>
-                  <span className="experience-live-pulse"></span>
+                  <span className="experience-live-pulse" style={{ background: liveColor }}></span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ zIndex: 2, position: 'relative' }}>
-                    <circle cx="12" cy="12" r="4" fill="#ff2222" />
-                    <circle cx="12" cy="12" r="8" stroke="#ff2222" strokeWidth="2" fill="none" opacity="0.5" />
-                    <circle cx="12" cy="12" r="11" stroke="#ff2222" strokeWidth="1.2" fill="none" opacity="0.25" />
+                    <circle cx="12" cy="12" r="4" fill={liveColor} />
+                    <circle cx="12" cy="12" r="8" stroke={liveColor} strokeWidth="2" fill="none" opacity="0.5" />
+                    <circle cx="12" cy="12" r="11" stroke={liveColor} strokeWidth="1.2" fill="none" opacity="0.25" />
                   </svg>
                 </span>
               </div>

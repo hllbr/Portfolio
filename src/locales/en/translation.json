@@ -18,7 +18,8 @@
     "techStack": "As a full-stack developer, I build robust, scalable applications using TypeScript, React, Tailwind, and Spring Boot.",
     "hobbies": "In my free time, I enjoy building games with Unity, designing interactive experiences, and exploring narrative mechanics.",
     "philosophy": "Every line of code should serve a greater system.",
-    "passion": "I love building those systems — and making them meaningful."
+    "passion": "I love building those systems — and making them meaningful.",
+    "softwareTestEngineerShortDesc": "Developed test automation and linguistic accuracy scenarios for insurance projects."
   },
   "contact": {
     "title": "Contact Me",
@@ -380,6 +381,10 @@
     "close": "Close",
     "clickableCard": "Clickable card",
     "seeDetails": "See Details",
+    "seeMore": "See More",
+    "seeLess": "Show Less",
+    "seeMoreLessHint": "Show less details",
+    "seeMoreLessBack": "Back to summary view",
     "netas": {
       "detailTitle": "NETAŞ Experience Detail – Halil İbrahim KOÇAK",
       "detailPrefix": "📍 Remote • Full time • March 2021 – Present",

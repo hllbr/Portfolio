@@ -3,7 +3,6 @@ import { Dialog, DialogTitle, DialogContent, IconButton, Button, Divider } from 
 import CloseIcon from '@mui/icons-material/Close';
 import './ExperienceModal.css';
 import type { ExperienceType } from '../../helpers/experienceData';
-import TestDetailOverlay from '../TestDetailOverlay';
 import { useTranslation } from 'react-i18next';
 
 interface Position {
@@ -12,6 +11,7 @@ interface Position {
   desc: string;
   detail?: string;
   isCurrent?: boolean;
+  shortDesc?: string;
 }
 
 interface ExperienceModalProps {
@@ -27,7 +27,7 @@ interface ExperienceModalProps {
  */
 const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClose, color, onShowDetail }) => {
   const { t } = useTranslation();
-  const [testOpen, setTestOpen] = useState(false);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   return (
     <Dialog 
@@ -77,83 +77,91 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClo
         }}>
           {selected && (
             <div className="experience-modal-content">
-              {selected.positions.map((pos: Position, i: number) => (
-                <div
-                  key={i}
-                  style={{ 
-                    background: 'rgba(51,65,85,0.5)',
-                    borderRadius: 12,
-                    border: `1.5px solid ${color || '#f59e42'}`,
-                    marginBottom: 18,
-                    padding: '1rem 1.2rem 0.7rem 1.2rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: 8,
-                    boxShadow: '0 2px 8px 0 rgba(56,189,248,0.08)',
-                  }}
-                >
-                  <div style={{ fontWeight: 600, fontSize: 17, color: color || '#f59e42', marginBottom: 2 }}>{pos.title}</div>
-                  <div style={{ color: '#cbd5e1', fontSize: 15, marginBottom: 2 }}>
-                    {pos.date.replace('Present', t('experience.currentlyEmployed'))}
+              {selected.positions.map((pos: Position, i: number) => {
+                const expanded = expandedIndex === i;
+                return (
+                  <div
+                    key={i}
+                    style={{
+                      background: 'rgba(51,65,85,0.5)',
+                      borderRadius: 12,
+                      border: `1.5px solid ${color || '#f59e42'}`,
+                      marginBottom: 18,
+                      padding: '1rem 1.2rem 0.7rem 1.2rem',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: 8,
+                      boxShadow: '0 2px 8px 0 rgba(56,189,248,0.08)',
+                      position: 'relative',
+                    }}
+                  >
+                    <div style={{ fontWeight: 600, fontSize: 17, color: color || '#f59e42', marginBottom: 2 }}>{pos.title}</div>
+                    <div style={{ color: '#cbd5e1', fontSize: 15, marginBottom: 2 }}>
+                      {pos.date.replace('Present', t('experience.currentlyEmployed'))}
+                    </div>
+                    {!expanded && (
+                      <>
+                        <div style={{ color: '#e2e8f0', fontSize: 16, margin: '6px 0 0 0' }}>{pos.shortDesc || pos.desc}</div>
+                        {pos.detail && (
+                          <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '1.2rem', marginBottom: '0.5rem' }}>
+                            <button
+                              className="experience-see-more-btn-pink"
+                              style={{
+                                background: 'none',
+                                color: '#ec4899',
+                                border: '2px solid #ec4899',
+                                borderRadius: 18,
+                                padding: '0.35rem 1.1rem',
+                                fontWeight: 700,
+                                fontSize: 15,
+                                fontFamily: 'inherit',
+                                cursor: 'pointer',
+                                outline: 'none',
+                                transition: 'color 0.18s, border-color 0.18s',
+                              }}
+                              onClick={() => setExpandedIndex(i)}
+                              aria-expanded={expanded}
+                            >
+                              {t('experience.seeMore')}
+                            </button>
+                          </div>
+                        )}
+                      </>
+                    )}
+                    {expanded && pos.detail && (
+                      <>
+                        <div style={{ fontSize: 16, margin: '6px 0 0 0', whiteSpace: 'pre-line', color: '#e2e8f0' }}>{pos.detail}</div>
+                        <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '1.2rem', marginBottom: '0.5rem' }}>
+                          <button
+                            className="experience-see-more-btn-pink"
+                            style={{
+                              background: 'none',
+                              color: '#ec4899',
+                              border: '2px solid #ec4899',
+                              borderRadius: 18,
+                              padding: '0.35rem 1.1rem',
+                              fontWeight: 700,
+                              fontSize: 15,
+                              fontFamily: 'inherit',
+                              cursor: 'pointer',
+                              outline: 'none',
+                              transition: 'color 0.18s, border-color 0.18s',
+                            }}
+                            onClick={() => setExpandedIndex(null)}
+                            aria-expanded={expanded}
+                          >
+                            {t('experience.seeLess')}
+                          </button>
+                        </div>
+                      </>
+                    )}
                   </div>
-                  <div style={{ color: '#e2e8f0', fontSize: 16, margin: '6px 0 0 0' }}>{pos.desc}</div>
-                  {pos.detail && (
-                    <Button
-                      onClick={() => setTestOpen(!testOpen)}
-                      variant="outlined"
-                      size="small"
-                      sx={{
-                        alignSelf: 'flex-start',
-                        borderColor: color || '#f59e42',
-                        color: color || '#f59e42',
-                        fontWeight: 500,
-                        '&:hover': {
-                          background: (color || '#f59e42') + '22',
-                          borderColor: color || '#f59e42',
-                          color: color || '#f59e42',
-                        },
-                      }}
-                    >
-                      {t(testOpen ? 'experience.seeLess' : 'experience.seeMore')}
-                    </Button>
-                  )}
-                  {selected.company === 'NETAŞ' && onShowDetail && (
-                    <Button
-                      onClick={onShowDetail}
-                      variant="outlined"
-                      size="small"
-                      sx={{
-                        alignSelf: 'flex-start',
-                        borderColor: color || '#f59e42',
-                        color: color || '#f59e42',
-                        fontWeight: 500,
-                        '&:hover': {
-                          background: (color || '#f59e42') + '22',
-                          borderColor: color || '#f59e42',
-                          color: color || '#f59e42',
-                        },
-                      }}
-                    >
-                      {t('experience.seeDetails')}
-                    </Button>
-                  )}
-                </div>
-              ))}
-              {selected.positions.map((pos: Position) =>
-                pos.detail ? (
-                  <TestDetailOverlay
-                    key={pos.title}
-                    open={testOpen}
-                    detail={pos.detail}
-                    color={color}
-                    onClose={() => setTestOpen(false)}
-                  />
-                ) : null
-              )}
+                );
+              })}
               <div style={{
                 marginTop: 12,
-                display: 'flex', 
-                flexWrap: 'wrap', 
+                display: 'flex',
+                flexWrap: 'wrap',
                 gap: '0.5rem',
                 background: 'rgba(51,65,85,0.5)',
                 borderRadius: 12,
@@ -162,15 +170,15 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClo
                 boxShadow: '0 2px 8px 0 rgba(56,189,248,0.08)',
               }}>
                 {selected.techs.map((tech: string) => (
-                  <span 
-                    key={tech} 
-                    style={{ 
-                      background: '#334155', 
-                      color: color || '#f59e42', 
-                      borderRadius: '0.5rem', 
-                      padding: '0.25rem 0.75rem', 
-                      fontSize: '0.95rem', 
-                      fontWeight: 500 
+                  <span
+                    key={tech}
+                    style={{
+                      background: '#334155',
+                      color: color || '#f59e42',
+                      borderRadius: '0.5rem',
+                      padding: '0.25rem 0.75rem',
+                      fontSize: '0.95rem',
+                      fontWeight: 500
                     }}
                   >
                     {tech}
