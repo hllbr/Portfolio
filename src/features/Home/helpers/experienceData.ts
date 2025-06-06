@@ -6,6 +6,8 @@ export interface Position {
   title: string;
   date: string;
   desc: string;
+  /** Optional detailed description shown in overlay */
+  detail?: string;
   isCurrent?: boolean;
 }
 
@@ -36,7 +38,9 @@ export const experiences: ExperienceType[] = [
       {
         title: 'Software Test Engineer',
         date: 'Mar 2021 - Ara 2021',
-        desc: 'Test senaryolarının yazılması ve manuel koşulması (ALM, OCTANE).',
+        desc: 'MAPFRE Sigorta projelerinde H4ll, 3-D Secure, Translation (İspanyolca–Türkçe arayüz çeviri kontrolü), Newtron ve WTW uygulamaları için test senaryoları yazıldı. ALM ve OCTANE ile manuel ve otomasyon koşumları gerçekleştirildi.',
+        detail:
+          'MAPFRE Sigorta projelerinde H4ll, 3-D Secure, Translation (İspanyolca–Türkçe arayüz çeviri kontrolü), Newtron ve WTW uygulamaları için test senaryoları yazıldı. ALM ve OCTANE ile manuel ve otomasyon koşumları gerçekleştirildi.\n\nBu süreçte kullanıcı arayüzlerindeki dilsel doğruluk, regresyon senaryoları ve hata raporlama iş akışları da yürütüldü. Test doğruluğu, kalite standartları ve takım koordinasyonu sağlandı.',
       },
     ],
     techs: ['Java', 'React.js', 'Spring', 'Docker', 'GIT', 'RESTful', 'Maven', 'Gradle', 'npm', 'yarn'],
