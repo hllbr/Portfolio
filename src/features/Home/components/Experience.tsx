@@ -2,6 +2,7 @@ import '../styles/AboutMeSpeechBubble.css';
 import '../styles/ExperienceLiveIcon.css';
 import { useState } from 'react';
 import ExperienceModal from '../components/ExperienceModal/ExperienceModal';
+import NetasDetailModal from './NetasDetailModal';
 import { experiences } from '../helpers/experienceData';
 import type { ExperienceType } from '../helpers/experienceData';
 import { useTranslation } from 'react-i18next';
@@ -15,6 +16,7 @@ const Experience = () => {
   const [hovered, setHovered] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<ExperienceType | null>(null);
+  const [detailOpen, setDetailOpen] = useState(false);
   const { t } = useTranslation();
 
   const handleClose = () => {
@@ -22,7 +24,13 @@ const Experience = () => {
     setSelected(null);
   };
 
+  const handleShowDetail = () => {
+    setDetailOpen(true);
+  };
 
+  const handleCloseDetail = () => {
+    setDetailOpen(false);
+  };
 
   return (
     <>
@@ -36,7 +44,6 @@ const Experience = () => {
             const current = getCurrentPosition(exp.positions);
             const isNetas = exp.company === 'NETAŞ' && current;
             const isHovered = hovered === exp.company;
-            const liveColor = isNetas ? '#16a34a' : '#ff2222';
             return (
               <div
                 key={exp.company}
@@ -73,11 +80,11 @@ const Experience = () => {
                   </div>
                 </div>
                 <span className="experience-live-icon" aria-label={t('experience.clickableCard')}>
-                  <span className="experience-live-pulse" style={{ background: liveColor }}></span>
+                  <span className="experience-live-pulse"></span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ zIndex: 2, position: 'relative' }}>
-                    <circle cx="12" cy="12" r="4" fill={liveColor} />
-                    <circle cx="12" cy="12" r="8" stroke={liveColor} strokeWidth="2" fill="none" opacity="0.5" />
-                    <circle cx="12" cy="12" r="11" stroke={liveColor} strokeWidth="1.2" fill="none" opacity="0.25" />
+                    <circle cx="12" cy="12" r="4" fill="#ff2222" />
+                    <circle cx="12" cy="12" r="8" stroke="#ff2222" strokeWidth="2" fill="none" opacity="0.5" />
+                    <circle cx="12" cy="12" r="11" stroke="#ff2222" strokeWidth="1.2" fill="none" opacity="0.25" />
                   </svg>
                 </span>
               </div>
@@ -89,7 +96,9 @@ const Experience = () => {
           selected={selected}
           onClose={handleClose}
           color={selected?.color}
+          onShowDetail={handleShowDetail}
         />
+        <NetasDetailModal open={detailOpen} onClose={handleCloseDetail} color={selected?.color} />
         <div className="speech-bubble-tail" />
       </div>
     </>
