@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Dialog, DialogTitle, DialogContent, IconButton, Button, Divider } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import './ExperienceModal.css';
 import type { ExperienceType } from '../../helpers/experienceData';
+import TestDetailOverlay from '../TestDetailOverlay';
 import { useTranslation } from 'react-i18next';
 
 interface Position {
   title: string;
   date: string;
   desc: string;
+  detail?: string;
   isCurrent?: boolean;
 }
 
@@ -25,6 +27,7 @@ interface ExperienceModalProps {
  */
 const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClose, color, onShowDetail }) => {
   const { t } = useTranslation();
+  const [testOpen, setTestOpen] = useState(false);
 
   return (
     <Dialog 
@@ -75,8 +78,8 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClo
           {selected && (
             <div className="experience-modal-content">
               {selected.positions.map((pos: Position, i: number) => (
-                <div 
-                  key={i} 
+                <div
+                  key={i}
                   style={{ 
                     background: 'rgba(51,65,85,0.5)',
                     borderRadius: 12,
@@ -94,6 +97,26 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClo
                     {pos.date.replace('Present', t('experience.currentlyEmployed'))}
                   </div>
                   <div style={{ color: '#e2e8f0', fontSize: 16, margin: '6px 0 0 0' }}>{pos.desc}</div>
+                  {pos.detail && (
+                    <Button
+                      onClick={() => setTestOpen(!testOpen)}
+                      variant="outlined"
+                      size="small"
+                      sx={{
+                        alignSelf: 'flex-start',
+                        borderColor: color || '#f59e42',
+                        color: color || '#f59e42',
+                        fontWeight: 500,
+                        '&:hover': {
+                          background: (color || '#f59e42') + '22',
+                          borderColor: color || '#f59e42',
+                          color: color || '#f59e42',
+                        },
+                      }}
+                    >
+                      {t(testOpen ? 'experience.seeLess' : 'experience.seeMore')}
+                    </Button>
+                  )}
                   {selected.company === 'NETAŞ' && onShowDetail && (
                     <Button
                       onClick={onShowDetail}
@@ -116,8 +139,19 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClo
                   )}
                 </div>
               ))}
-              <div style={{ 
-                marginTop: 12, 
+              {selected.positions.map((pos: Position) =>
+                pos.detail ? (
+                  <TestDetailOverlay
+                    key={pos.title}
+                    open={testOpen}
+                    detail={pos.detail}
+                    color={color}
+                    onClose={() => setTestOpen(false)}
+                  />
+                ) : null
+              )}
+              <div style={{
+                marginTop: 12,
                 display: 'flex', 
                 flexWrap: 'wrap', 
                 gap: '0.5rem',
