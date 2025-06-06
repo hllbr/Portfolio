@@ -5,39 +5,18 @@
   overflow: hidden;
   background: #000;
   color: #fff;
-}
-
-.container::before,
-.container::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(#fff 1px, transparent 1px),
-    radial-gradient(#fff 1px, transparent 1px);
-  background-size: 3px 3px;
-  animation: stars 60s linear infinite;
-}
-
-.container::after {
-  background-size: 2px 2px;
-  opacity: 0.5;
-  animation-duration: 120s;
-}
-
-@keyframes stars {
-  from { transform: translateY(0); }
-  to { transform: translateY(-1000px); }
+  touch-action: none;
 }
 
 .player {
   position: absolute;
-  bottom: 10px;
+  bottom: 100px;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   pointer-events: none;
+  min-height: 80px;
 }
 
 .falling {
@@ -124,4 +103,40 @@
   .startOverlay {
     font-size: 1.5rem;
   }
+}
+
+.fallingAnim {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: iconSpin 2s linear infinite, iconColor 2s linear infinite;
+  filter: hue-rotate(0deg);
+}
+
+@keyframes iconSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes iconColor {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.rocketFire {
+  position: absolute;
+  left: 50%;
+  bottom: -92px;
+  transform: translateX(-50%) scaleY(1);
+  width: 22px;
+  height: 80px;
+  z-index: 0;
+  background: radial-gradient(ellipse at center, #fff200 0%, #ff9800 60%, #ff3c00 100%);
+  opacity: 0.85;
+  border-radius: 50% 50% 60% 60%/60% 60% 100% 100%;
+  animation: fireFlame 0.25s infinite alternate;
+  pointer-events: none;
+}
+@keyframes fireFlame {
+  0% { height: 80px; opacity: 0.85; filter: blur(0.5px); }
+  100% { height: 100px; opacity: 0.65; filter: blur(2px); }
 }

@@ -12,6 +12,10 @@ interface Position {
   detail?: string;
   isCurrent?: boolean;
   shortDesc?: string;
+  shortDescTr?: string;
+  shortDescEn?: string;
+  detailTr?: string;
+  detailEn?: string;
 }
 
 interface ExperienceModalProps {
@@ -19,14 +23,13 @@ interface ExperienceModalProps {
   selected: ExperienceType | null;
   onClose: () => void;
   color?: string;
-  onShowDetail?: () => void;
 }
 
 /**
  * Modal dialog presenting details of a selected experience item.
  */
-const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClose, color, onShowDetail }) => {
-  const { t } = useTranslation();
+const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClose, color }) => {
+  const { t, i18n } = useTranslation();
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   return (
@@ -79,6 +82,10 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClo
             <div className="experience-modal-content">
               {selected.positions.map((pos: Position, i: number) => {
                 const expanded = expandedIndex === i;
+                const lang = i18n.language;
+                const shortDesc = lang === 'tr' ? (pos.shortDescTr || pos.shortDesc) : (pos.shortDescEn || pos.shortDesc);
+                const detail = lang === 'tr' ? (pos.detailTr || pos.detail) : (pos.detailEn || pos.detail);
+                const date = lang === 'tr' ? (pos.dateTr || pos.date) : (pos.dateEn || pos.date);
                 return (
                   <div
                     key={i}
@@ -97,13 +104,13 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClo
                   >
                     <div style={{ fontWeight: 600, fontSize: 17, color: color || '#f59e42', marginBottom: 2 }}>{pos.title}</div>
                     <div style={{ color: '#cbd5e1', fontSize: 15, marginBottom: 2 }}>
-                      {pos.date.replace('Present', t('experience.currentlyEmployed'))}
+                      {date.replace('Present', t('experience.currentlyEmployed'))}
                     </div>
                     {!expanded && (
                       <>
-                        <div style={{ color: '#e2e8f0', fontSize: 16, margin: '6px 0 0 0' }}>{pos.shortDesc || pos.desc}</div>
-                        {pos.detail && (
-                          <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '1.2rem', marginBottom: '0.5rem' }}>
+                        <div style={{ color: '#e2e8f0', fontSize: 16, margin: '6px 0 0 0' }}>{shortDesc}</div>
+                        {detail && (
+                          <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '2rem', marginBottom: '1rem' }}>
                             <button
                               className="experience-see-more-btn-pink"
                               style={{
@@ -128,10 +135,12 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClo
                         )}
                       </>
                     )}
-                    {expanded && pos.detail && (
+                    {expanded && detail && (
                       <>
-                        <div style={{ fontSize: 16, margin: '6px 0 0 0', whiteSpace: 'pre-line', color: '#e2e8f0' }}>{pos.detail}</div>
-                        <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '1.2rem', marginBottom: '0.5rem' }}>
+                        <div style={{ fontSize: 16, margin: '6px 0 0 0', whiteSpace: 'pre-line', color: '#e2e8f0' }}
+                          dangerouslySetInnerHTML={{ __html: detail.replace(/\n/g, '<br/>') }}
+                        />
+                        <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '2rem', marginBottom: '1rem' }}>
                           <button
                             className="experience-see-more-btn-pink"
                             style={{
