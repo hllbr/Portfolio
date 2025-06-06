@@ -25,16 +25,19 @@ interface FallingIcon extends IconData {
 }
 
 const icons: IconData[] = [
-  { name: 'GitHub', url: 'https://github.com/hllbr', icon: <GithubLogo size={32} /> },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/hllbr/', icon: <LinkedinLogo size={32} /> },
-  { name: 'WhatsApp', url: 'https://wa.me/905522972185', icon: <WhatsappLogo size={32} /> },
-  { name: 'YouTube', url: 'https://www.youtube.com/@platonfarkndapaylasmlar637', icon: <YoutubeLogo size={32} /> },
-  { name: 'Email', url: 'mailto:halibrahim.kocak@gmail.com', icon: <EnvelopeSimple size={32} /> },
-  { name: 'WakaTime', url: 'https://wakatime.com/@HLLBR', icon: <Timer size={32} /> },
+  { name: 'GitHub', url: 'https://github.com/hllbr', icon: <GithubLogo size={60} /> },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/hllbr/', icon: <LinkedinLogo size={60} /> },
+  { name: 'WhatsApp', url: 'https://wa.me/905522972185', icon: <WhatsappLogo size={60} /> },
+  { name: 'YouTube', url: 'https://www.youtube.com/@platonfarkndapaylasmlar637', icon: <YoutubeLogo size={60} /> },
+  { name: 'Email', url: 'mailto:halibrahim.kocak@gmail.com', icon: <EnvelopeSimple size={60} /> },
+  { name: 'WakaTime', url: 'https://wakatime.com/@HLLBR', icon: <Timer size={60} /> },
 ];
 
-const PLAYER_SIZE = 48;
-const ICON_SIZE = 40;
+const PLAYER_SIZE = 64;
+const ICON_SIZE = 60;
+const ICONS_ON_SCREEN = 4; // 3-5 arası, ortalama 4
+const SPAWN_INTERVAL = 500; // ms, daha sık
+const BASE_SPEED = 4; // daha hızlı başlasın
 
 const Game = () => {
   const { t } = useTranslation();
@@ -72,9 +75,10 @@ const Game = () => {
 
   const spawnIcon = () => {
     if (!containerRef.current) return;
+    if (iconsRef.current.length >= ICONS_ON_SCREEN) return; // Ekranda max ikon
     const rect = containerRef.current.getBoundingClientRect();
     const x = Math.random() * (rect.width - ICON_SIZE);
-    const speed = 2 + score / 20;
+    const speed = BASE_SPEED + score / 15; // daha hızlı
     const data = icons[Math.floor(Math.random() * icons.length)];
     const icon: FallingIcon = {
       ...data,
@@ -117,13 +121,39 @@ const Game = () => {
   useEffect(() => {
     if (gameStarted) {
       animationRef.current = requestAnimationFrame(gameLoop);
-      spawnRef.current = setInterval(spawnIcon, 1000);
+      spawnRef.current = setInterval(spawnIcon, SPAWN_INTERVAL);
     }
     return () => {
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
       if (spawnRef.current) clearInterval(spawnRef.current);
     };
   }, [gameStarted, playerX]);
+
+  // --- YENİ: Klavye ile hareket ---
+  useEffect(() => {
+    if (!gameStarted) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      setPlayerX(prev => {
+        if (e.key === 'a' || e.key === 'A' || e.key === 'ArrowLeft') {
+          return Math.max(0, prev - 5);
+        }
+        if (e.key === 'd' || e.key === 'D' || e.key === 'ArrowRight') {
+          return Math.min(100, prev + 5);
+        }
+        return prev;
+      });
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [gameStarted]);
+
+  // --- YENİ: Mouse hover ile hareket ---
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    setPlayerX(Math.min(100, Math.max(0, x)));
+  };
 
   const startGame = () => {
     setScore(0);
@@ -152,6 +182,7 @@ const Game = () => {
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
       onPointerLeave={handlePointerUp}
+      onMouseMove={handleMouseMove} // Mouse hover ile hareket
     >
       {!gameStarted && !gameOverIcon && (
         <div className={styles.startOverlay} onClick={startGame}>
@@ -165,14 +196,19 @@ const Game = () => {
           className={styles.falling}
           style={{ left: icon.x, top: icon.y, width: ICON_SIZE, height: ICON_SIZE }}
         >
-          {icon.icon}
+          <div className={styles.fallingAnim}>
+            {icon.icon}
+          </div>
         </div>
       ))}
       <div
         className={styles.player}
         style={{ left: `${playerX}%`, width: PLAYER_SIZE, height: PLAYER_SIZE }}
       >
-        <Rocket size={PLAYER_SIZE - 8} />
+        {!gameOverIcon && (
+          <span className={styles.rocketFire}></span>
+        )}
+        <Rocket size={PLAYER_SIZE - 8} color="#38bdf8" weight="fill" />
       </div>
       {gameOverIcon && (
         <div className={styles.overlay} onClick={closeModal}>

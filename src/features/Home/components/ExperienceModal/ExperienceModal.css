@@ -147,4 +147,10 @@
 @keyframes borderSnake {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.experience-modal-content b {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: inherit;
 } 

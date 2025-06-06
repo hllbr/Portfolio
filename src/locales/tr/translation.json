@@ -386,7 +386,12 @@
     "seeMore": "Detayları Gör",
     "seeLess": "Daha Azını Göster",
     "seeMoreLessHint": "Daha az detayı göster",
-    "seeMoreLessBack": "Özete dön"
+    "seeMoreLessBack": "Özete dön",
+    "fullStack": {
+      "bulkOps": "Bulk operasyonların frontend ve backend geliştirmeleri, yüksek hacimli veri işleme ve özel CRUD işlemlerinin tasarımı ve uygulanması.",
+      "crud": "Karmaşık iş gereksinimleri için özel CRUD işlemlerinin tasarımı ve uygulanması.",
+      "dataProcessing": "Yüksek hacimli veri işleme ve raporlama için ölçeklenebilir modüller geliştirilmesi."
+    }
   },
   "aiTools": {
     "title": "AI ile Kodun Ötesine Geçmek: Bir Mühendisin Yeni Nesil Düşünce Sistemi",

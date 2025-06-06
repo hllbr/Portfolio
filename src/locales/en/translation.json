@@ -391,7 +391,12 @@
       "detailText": "I started at NETAŞ as a Full Stack Developer in December 2021.\nI initially worked on the Visium Manage (test case management tool) project where I contributed to developing many modules to enhance the product's functionality.\n\n🚀 Key Responsibilities:\n• Custom backend solutions for bulk operations\n• Design and implementation of an advanced privilege management system\n• Development of custom business rules based on client needs\n• Re-structuring standard CRUD operations\n• Improvements at the UI/logic level for test accuracy and system stability\n• Technical analysis and reporting of new features\n• Frontend and backend bug fixing and stabilization\n\n📈 As of November 2023, I have continued my role as a Senior Full Stack Developer thanks to my performance and contributions.\n\n🎯 Visium Farm (January 2024 – Present)\nThe goal of this project is to rebuild the existing user interface with modern technologies, making it more scalable, performant and user focused.\n\n🧪 My Contributions:\n• Designing reusable components with a modern frontend architecture\n• Optimizing data flow from the old system into the new one\n• Strengthening the user experience through UI/UX enhancements\n• Refactoring processes focused on code quality, testability and sustainability\n\n💡 Throughout these processes I took active responsibility not only in software development, but also in technical analysis, interpreting user needs, and proposing system-wide improvements."
     },
     "seeMore": "See More",
-    "seeLess": "Show Less"
+    "seeLess": "Show Less",
+    "fullStack": {
+      "bulkOps": "Developed and optimized bulk operations for both frontend and backend, including high-volume data processing and custom CRUD implementations.",
+      "crud": "Designed and implemented custom CRUD operations for complex business requirements.",
+      "dataProcessing": "Built scalable modules for high-volume data processing and reporting."
+    }
   },
   "aiTools": {
     "title": "Beyond Code: A New Generation Engineering Thought System with AI",
