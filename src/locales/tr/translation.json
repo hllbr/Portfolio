@@ -23,7 +23,7 @@
   },
   "contact": {
     "title": "İletişim",
-    "subtitle": "İş birlikleri ve fırsatlar için iletişime geçin",
+    "subtitle": "",
     "phone": "Telefon",
     "call": "Ara",
     "email": "E-posta",
@@ -372,9 +372,9 @@
     "backToHome": "Ana Sayfaya Dön"
   },
   "experience": {
-    "title": "Deneyim",
-    "subtitle": "Profesyonel iş tecrübelerim ve kullandığım teknolojiler",
-    "currentlyEmployed": "Şu an çalışıyorum",
+    "title": "Kariyer Yolculuğum",
+    "subtitle": "Profesyonel yolculuğumda yer aldığım kurumlar, projeler ve uzmanlık alanlarım",
+    "currentlyEmployed": "Devam ediyor",
     "close": "Kapat",
     "clickableCard": "Tıklanabilir kart",
     "seeDetails": "Detayları Gör",
@@ -514,7 +514,7 @@
     }
   },
   "social": {
-    "connect": "İş Birliği ve Fikir Paylaşımı İçin Ulaşın"
+    "connect": "İletişim Adreslerim"
   },
   "gameScreen": {
     "tapToStart": "Başlamak için dokunun",
@@ -540,7 +540,6 @@
     "java": "Java",
     "react": "React.js",
     "spring": "Spring",
-    "docker": "Docker",
     "git": "GIT",
     "restful": "RESTful",
     "maven": "Maven",

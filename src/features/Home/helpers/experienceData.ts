@@ -34,7 +34,7 @@ export const experiences: ExperienceType[] = [
       {
         title: 'Senior Full Stack Developer',
         date: 'Eki 2023 - Present',
-        dateTr: 'Eki 2023 - Halen',
+        dateTr: 'Eki 2023 - Devam ediyor',
         dateEn: 'Oct 2023 - Present',
         desc: 'Ürüne yeni özelliklerin kazandırılması, hem Front-end hem de Back-end geliştirme ve hata düzeltmeleri.',
         shortDesc: 'Visium Farm projesinde modern test altyapısı ve gelişmiş test otomasyonu çözümleri geliştirilmesinde aktif olarak rol alıyorum.',
@@ -123,7 +123,7 @@ During this period:
 • Led team coordination efforts`,
       },
     ],
-    techs: ['tech.java', 'tech.react', 'tech.spring', 'tech.docker', 'tech.git', 'tech.restful', 'tech.maven', 'tech.gradle', 'tech.npm', 'tech.yarn'],
+    techs: ['tech.java', 'tech.react', 'tech.spring',  'tech.git', 'tech.restful', 'tech.maven', 'tech.gradle', 'tech.npm', 'tech.yarn'],
     color: '#f59e42',
   },
   {

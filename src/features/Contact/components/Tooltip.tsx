@@ -1,6 +1,7 @@
 import { WarningCircle } from 'phosphor-react';
 import type { TFunction } from 'i18next';
-import styles from '../styles/Tooltip.module.css';
+import { useTranslation } from 'react-i18next'
+import styles from '@/features/Contact/styles/Tooltip.module.css';
 
 interface TooltipProps {
   label: string;

@@ -23,7 +23,7 @@
   },
   "contact": {
     "title": "Contact Me",
-    "subtitle": "Get in touch for collaborations and opportunities",
+    "subtitle": "",
     "phone": "Phone",
     "call": "Call",
     "email": "Email",
@@ -375,9 +375,9 @@
     "backToHome": "Back to Home"
   },
   "experience": {
-    "title": "Experience",
-    "subtitle": "Professional work experience and technologies I use",
-    "currentlyEmployed": "Currently Employed",
+    "title": "My Career Journey",
+    "subtitle": "The organizations, projects, and areas of expertise that have shaped my professional path",
+    "currentlyEmployed": "Present",
     "close": "Close",
     "clickableCard": "Clickable card",
     "seeDetails": "See Details",
@@ -519,7 +519,7 @@
     }
   },
   "social": {
-    "connect": "Reach Out for Collaboration and Ideas"
+    "connect": "Contact Information"
   },
   "gameScreen": {
     "tapToStart": "Tap to Start",
@@ -545,7 +545,6 @@
     "java": "Java",
     "react": "React.js",
     "spring": "Spring",
-    "docker": "Docker",
     "git": "GIT",
     "restful": "RESTful",
     "maven": "Maven",

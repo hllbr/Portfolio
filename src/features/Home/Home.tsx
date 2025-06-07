@@ -1,6 +1,6 @@
-import { Experience } from "./Routes";
-import { AboutMe } from "./Routes";
-import SocialMedia from "./components/SocialMedia";
+import { Experience } from "@/features/Home/Routes";
+import { AboutMe } from "@/features/Home/Routes";
+import SocialMedia from "@/features/Home/components/SocialMedia";
 
 /**
  * Main landing page composed of personal sections.
