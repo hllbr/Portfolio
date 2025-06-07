@@ -1,9 +1,9 @@
 import '../styles/AboutMeSpeechBubble.css';
 import '../styles/ExperienceLiveIcon.css';
 import { useState } from 'react';
-import ExperienceModal from '../Components/ExperienceModal/ExperienceModal';
-import { experiences } from '../helpers/experienceData';
-import type { ExperienceType } from '../helpers/experienceData';
+import ExperienceModal from '@/features/Home/components/ExperienceModal/ExperienceModal';
+import { experiences } from '@/features/Home/helpers/experienceData';
+import type { ExperienceType } from '@/features/Home/helpers/experienceData';
 import { useTranslation } from 'react-i18next';
 
 const getCurrentPosition = (positions: ExperienceType['positions']) => positions.find((p) => p.isCurrent);

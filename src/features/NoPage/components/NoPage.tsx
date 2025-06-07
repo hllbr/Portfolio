@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { House } from 'phosphor-react';
-import styles from '../styles/NoPage.module.css';
+import styles from '@/features/NoPage/styles/NoPage.module.css';
 
 /**
  * Fallback 404 page shown for unknown routes.

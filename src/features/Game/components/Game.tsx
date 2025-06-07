@@ -9,7 +9,7 @@ import {
   Rocket
 } from 'phosphor-react';
 import { useTranslation } from 'react-i18next';
-import styles from '../styles/Game.module.css';
+import styles from '@/features/Game/styles/Game.module.css';
 
 interface IconData {
   name: string;
@@ -163,6 +163,7 @@ const Game = () => {
     setGameOverIcon(null);
     nextId.current = 0;
     setGameStarted(true);
+    spawnIcon(); // Oyun başlar başlamaz ilk ikon hemen düşsün
   };
 
   const closeModal = () => setGameOverIcon(null);
@@ -281,6 +282,8 @@ const Game = () => {
           </div>
         </div>
       )}
+      {/* Alt çizgi/şerit */}
+      <div className={styles.groundLine}></div>
     </div>
   );
 };

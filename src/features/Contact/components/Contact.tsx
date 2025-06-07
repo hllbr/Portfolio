@@ -3,10 +3,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import Typewriter from 'typewriter-effect';
 import { useTranslation } from 'react-i18next';
 
-import styles from '../styles/ContactBubble.module.css';
-import formStyles from '../styles/FormElements.module.css';
+import styles from '@/features/Contact/styles/ContactBubble.module.css';
+import formStyles from '@/features/Contact/styles/FormElements.module.css';
 import '../styles/Animation/ContactIconAnimation.css';
-import toastifyStyles from '../styles/CustomToastify.module.css';
+import toastifyStyles from '@/features/Contact/styles/CustomToastify.module.css';
 
 /**
  * Contact form page allowing visitors to send a message.
@@ -94,9 +94,6 @@ const Contact = () => {
               }}
             />
           </h1>
-          <p className="text-xl text-muted-foreground">
-            {t('contact.subtitle', 'Get in touch for collaborations and opportunities')}
-          </p>
         </section>
 
         <section className="space-y-6 mt-8">

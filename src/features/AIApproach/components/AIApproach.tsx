@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import AIHero from '../components/AIHero';
-import { AICardModal } from '../AIModal';
-import { CARD_TITLES, PROMPTS, type CardTitle } from '../constants/aiPrompts';
-import styles from '../styles/AIApproach.module.css';
+import AIHero from '@/features/AIApproach/components/AIHero';
+import { AICardModal } from '@/features/AIApproach/AIModal';
+import { CARD_TITLES, PROMPTS, type CardTitle } from '@/features/AIApproach/constants/aiPrompts';
+import styles from '@/features/AIApproach/styles/AIApproach.module.css';
 
 /**
  * Page presenting AI tools with detailed prompts.

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Dialog, DialogTitle, DialogContent, IconButton, Button, Divider } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import './ExperienceModal.css';
-import type { ExperienceType } from '../../helpers/experienceData';
+import type { ExperienceType } from '@/features/Home/helpers/experienceData';
 import { useTranslation } from 'react-i18next';
+import { X } from 'phosphor-react';
 
 interface Position {
   title: string;
@@ -104,7 +105,18 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClo
                   >
                     <div style={{ fontWeight: 600, fontSize: 17, color: color || '#f59e42', marginBottom: 2 }}>{pos.title}</div>
                     <div style={{ color: '#cbd5e1', fontSize: 15, marginBottom: 2 }}>
-                      {date.replace('Present', t('experience.currentlyEmployed'))}
+                      {(() => {
+                        const current = t('experience.currentlyEmployed');
+                        if (date.includes(current)) {
+                          const [start] = date.split(current);
+                          return <>{start}<span style={{ color: '#16a34a', fontWeight: 600 }}>{current}</span></>;
+                        }
+                        if (date.includes('Present')) {
+                          const [start] = date.split('Present');
+                          return <>{start}<span style={{ color: '#16a34a', fontWeight: 600 }}>Present</span></>;
+                        }
+                        return date;
+                      })()}
                     </div>
                     {!expanded && (
                       <>
@@ -167,33 +179,34 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClo
                   </div>
                 );
               })}
-              <div style={{
-                marginTop: 12,
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '0.5rem',
-                background: 'rgba(51,65,85,0.5)',
-                borderRadius: 12,
-                border: `1.5px solid ${color || '#f59e42'}`,
-                padding: '1rem 1.2rem',
-                boxShadow: '0 2px 8px 0 rgba(56,189,248,0.08)',
-              }}>
-                {selected.techs.map((tech: string) => (
-                  <span
-                    key={tech}
-                    style={{
-                      background: '#334155',
-                      color: color || '#f59e42',
-                      borderRadius: '0.5rem',
-                      padding: '0.25rem 0.75rem',
-                      fontSize: '0.95rem',
-                      fontWeight: 500
-                    }}
-                  >
-                    {t(tech)}
-                  </span>
-                ))}
-              </div>
+              {selected.company !== 'NETAŞ' && (
+                <div style={{
+                  marginTop: 12,
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: '0.5rem',
+                  background: 'rgba(51,65,85,0.5)',
+                  borderRadius: 12,
+                  border: `1.5px solid ${color || '#f59e42'}`,
+                  padding: '1rem 1.2rem',
+                  boxShadow: '0 2px 8px 0 rgba(56,189,248,0.08)',
+                }}>
+                  {selected.techs.map((tech: string) => (
+                    <span
+                      key={tech}
+                      style={{
+                        background: '#334155',
+                        color: color || '#f59e42',
+                        borderRadius: '0.5rem',
+                        padding: '0.25rem 0.75rem',
+                        fontSize: '0.95rem',
+                      }}
+                    >
+                      {t(tech)}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>
