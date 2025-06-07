@@ -190,7 +190,7 @@ const ExperienceModal: React.FC<ExperienceModalProps> = ({ open, selected, onClo
                       fontWeight: 500
                     }}
                   >
-                    {tech}
+                    {t(tech)}
                   </span>
                 ))}
               </div>

@@ -37,35 +37,31 @@ export const experiences: ExperienceType[] = [
         dateTr: 'Eki 2023 - Halen',
         dateEn: 'Oct 2023 - Present',
         desc: 'Ürüne yeni özelliklerin kazandırılması, hem Front-end hem de Back-end geliştirme ve hata düzeltmeleri.',
-        shortDesc: 'Visium Farm projesinde modern cihaz çiftliği mimarisi ve gelişmiş test otomasyonu çözümleri geliştirdim. Gerçek cihazlarda paralel test altyapısı kurulumunda liderlik yaptım.',
-        shortDescTr: 'Visium Farm projesinde modern cihaz çiftliği mimarisi ve gelişmiş test otomasyonu çözümleri geliştirdim. Gerçek cihazlarda paralel test altyapısı kurulumunda liderlik yaptım.',
-        shortDescEn: 'Developed scalable device farm architecture and advanced test automation solutions in the Visium Farm project. Led the setup of parallel testing infrastructure on real devices.',
-        detailTr: `📍 Uzaktan • Tam zamanlı • Mart 2021 – Halen
+        shortDesc: 'Visium Farm projesinde modern test altyapısı ve gelişmiş test otomasyonu çözümleri geliştirilmesinde aktif olarak rol alıyorum.',
+        shortDescTr: 'Visium Farm projesinde modern test altyapısı ve gelişmiş test otomasyonu çözümleri geliştirilmesinde aktif olarak rol alıyorum.',
+        shortDescEn: 'I actively contribute to the development of modern test infrastructure and advanced test automation solutions in the Visium Farm project.',
+        detailTr: `NETAŞ'ta Senior Full Stack Developer olarak Visium Farm projesinde çalışmaya başladım (<a href="https://www.visiumlabs.com/en/visium-farm" target="_blank" rel="noopener noreferrer">detaylı bilgi</a>). Bu projede hedef, mevcut test altyapısını modern teknolojilerle baştan inşa ederek daha ölçeklenebilir, performanslı ve kullanıcı odaklı bir yapıya dönüştürmekti.
 
-NETAŞ'ta Senior Full Stack Developer olarak Visium Farm projesinde liderlik yaptım (<a href="https://www.visiumlabs.com/en/visium-farm" target="_blank" rel="noopener noreferrer">detaylı bilgi</a>). Gerçek cihazlar üzerinde paralel ve otomatik testler için ölçeklenebilir bir cihaz çiftliği platformu geliştirdim.
+🚀 Projedeki Katkılarım:
+• Modern frontend mimarisine uygun yeniden kullanılabilir bileşenlerin tasarımı
+• Eski yapılardan yeni sisteme veri akışının optimize edilmesi
+• UI/UX iyileştirmeleriyle kullanıcı deneyiminin güçlendirilmesi
+• Kod kalitesi, test edilebilirlik ve sürdürülebilirlik odaklı refactor süreçleri
+• Gerçek cihazlarda paralel test altyapısının kurulması ve yönetimi
+• REST API ve LDAP entegrasyonları ile kurumsal kullanıcı yönetiminin sağlanması
 
-🚀 Sorumluluklarım:
-• 500+ gerçek cihazda paralel ve otomatik testler için modern cihaz çiftliği mimarisi
-• Emülatör tabanlı testten gerçek cihaz testine geçişte öncülük
-• Cihaz yönetimi, kaynak optimizasyonu ve raporlama için gelişmiş backend modülleri
-• Canlı cihaz kontrolü ve test sonuçlarının görselleştirilmesi için yeniden kullanılabilir frontend bileşenleri
-• Kurumsal kullanıcı ve cihaz yönetimi için REST API ve LDAP entegrasyonu
-• QA ve DevOps ekipleriyle büyük ölçekli test otomasyonu için CI/CD süreçlerinin optimizasyonu
+💡 Tüm bu süreçlerde yazılımcı kimliğimle aktif geliştirme yaparken; aynı zamanda gereksinim analizine katkı sunarak teknik çözüm önerileri geliştirme, kullanıcı ihtiyaçlarını yorumlama ve sistemsel yapı önerileri sunma gibi görevler üstlendim. Daha fazla bilgi için <a href="https://www.visiumlabs.com/en/visium-farm" target="_blank" rel="noopener noreferrer">Visium Farm</a>.`,
+        detailEn: `As a Senior Full Stack Developer at NETAŞ, I started working on the Visium Farm project (<a href="https://www.visiumlabs.com/en/visium-farm" target="_blank" rel="noopener noreferrer">learn more</a>). The goal of this project was to rebuild the existing test infrastructure with modern technologies to create a more scalable, performant, and user-focused architecture.
 
-💡 Bu çalışmalar, büyük müşterilerin mobil/web testlerini merkezileştirmesini, hızlandırmasını ve kaliteyi artırmasını sağladı. Daha fazla bilgi için <a href="https://www.visiumlabs.com/en/visium-farm" target="_blank" rel="noopener noreferrer">Visium Farm</a>.`,
-        detailEn: `📍 Remote • Full time • March 2021 – Present
+🚀 My Contributions to the Project:
+• Design of reusable components following modern frontend architecture
+• Optimization of data flow from legacy systems to the new platform
+• Enhancement of user experience through UI/UX improvements
+• Code quality, testability, and maintainability focused refactoring processes
+• Establishment and management of parallel testing infrastructure on real devices
+• Implementation of enterprise user management through REST API and LDAP integrations
 
-As a Senior Full Stack Developer at NETAŞ, I took a leading role in the Visium Farm project (<a href="https://www.visiumlabs.com/en/visium-farm" target="_blank" rel="noopener noreferrer">learn more</a>), building a scalable on-prem/cloud device farm for real device testing and automation.
-
-🚀 Key Responsibilities:
-• Architected and implemented a modern device farm platform for parallel and automated testing on 500+ real devices
-• Led the migration from emulator-based to real device testing, boosting test accuracy and reliability
-• Developed advanced backend modules for device management, resource optimization, and reporting
-• Designed reusable frontend components for live device control and test result visualization
-• Integrated REST API and LDAP support for enterprise-level user and device management
-• Collaborated with QA and DevOps teams to optimize CI/CD pipelines for large-scale test automation
-
-💡 My work enabled major clients to centralize and accelerate their mobile/web testing, reduce costs, and achieve higher product quality. For more details, see <a href="https://www.visiumlabs.com/en/visium-farm" target="_blank" rel="noopener noreferrer">Visium Farm</a>.`,
+💡 Throughout these processes, while actively developing as a software engineer, I also contributed to requirement analysis, developed technical solution proposals, interpreted user needs, and provided system architecture recommendations. For more details, see <a href="https://www.visiumlabs.com/en/visium-farm" target="_blank" rel="noopener noreferrer">Visium Farm</a>.`,
         isCurrent: true,
       },
       {
@@ -77,26 +73,26 @@ As a Senior Full Stack Developer at NETAŞ, I took a leading role in the Visium 
         shortDesc: 'Visium Manage projesinde test süreçlerinin dijitalleşmesi ve merkezi yönetimi için modüller geliştirdim.',
         shortDescTr: 'Visium Manage projesinde test süreçlerinin dijitalleşmesi ve merkezi yönetimi için modüller geliştirdim.',
         shortDescEn: 'Developed modules for digitalizing and centralizing test processes in the Visium Manage project.',
-        detailTr: `NETAŞ'ta Full Stack Developer olarak Visium Manage projesine katkı sağladım (<a href="https://www.visiumlabs.com/en/visium-manage" target="_blank" rel="noopener noreferrer">detaylı bilgi</a>). Kurumsal QA ekipleri için kapsamlı bir test senaryosu yönetim platformu geliştirdik.
+        detailTr: `NETAŞ'ta Full Stack Developer olarak Visium Manage projesinde çalıştım (<a href="https://www.visiumlabs.com/en/visium-manage" target="_blank" rel="noopener noreferrer">detaylı bilgi</a>). Kurumsal QA ekipleri için kapsamlı bir test senaryosu yönetim platformu geliştirdik.
 
-🌟 Katkılarım:
-• Test senaryosu oluşturma, risk bazlı kategorilendirme ve senaryo tekrar kullanımı için modüller
-• Jira ve CI/CD araçlarıyla entegrasyonlar sayesinde kusur takibi ve çevik iş akışları
-• Gerçek zamanlı test takibi ve kalite metrikleri için raporlama ve analiz panelleri
-• Kullanıcı deneyimini artıran arayüz bileşenleri ve akıllı bildirimler
-• Büyük ölçekli QA ekipleri için geçiş ve adaptasyon desteği
-• <b>Bulk operasyonların frontend ve backend geliştirmeleri, yüksek hacimli veri işleme ve özel CRUD işlemlerinin tasarımı ve uygulanması</b>
+🌟 Projedeki Katkılarım:
+• Test senaryosu oluşturma, risk bazlı kategorilendirme ve senaryo tekrar kullanımı için modüller geliştirdim
+• Jira ve CI/CD araçlarıyla entegrasyonlar sayesinde kusur takibi ve çevik iş akışları oluşturdum
+• Gerçek zamanlı test takibi ve kalite metrikleri için raporlama ve analiz panelleri tasarladım
+• Kullanıcı deneyimini artıran arayüz bileşenleri ve akıllı bildirimler geliştirdim
+• Büyük ölçekli QA ekipleri için geçiş ve adaptasyon süreçlerini yönettim
+• Yüksek hacimli veri işleme ve özel CRUD işlemleri için bulk operasyonların frontend ve backend geliştirmelerini gerçekleştirdim
 
 🔗 Platform hakkında daha fazla bilgi için <a href="https://www.visiumlabs.com/en/visium-manage" target="_blank" rel="noopener noreferrer">Visium Manage</a>.`,
-        detailEn: `As a Full Stack Developer at NETAŞ, I contributed to the Visium Manage project (<a href="https://www.visiumlabs.com/en/visium-manage" target="_blank" rel="noopener noreferrer">learn more</a>), a robust test case management platform for enterprise QA teams.
+        detailEn: `As a Full Stack Developer at NETAŞ, I worked on the Visium Manage project (<a href="https://www.visiumlabs.com/en/visium-manage" target="_blank" rel="noopener noreferrer">learn more</a>), developing a robust test case management platform for enterprise QA teams.
 
-🌟 Main Contributions:
-• Developed and maintained modules for test case creation, risk-based categorization, and scenario reuse
+🌟 My Contributions:
+• Developed modules for test case creation, risk-based categorization, and scenario reuse
 • Implemented integrations with Jira and CI/CD tools for seamless defect tracking and agile workflows
-• Enhanced reporting and analytics dashboards for real-time test tracking and quality metrics
-• Improved user experience with intuitive UI components and smart notifications
-• Supported migration and onboarding for large-scale QA teams
-• <b>Developed and optimized bulk operations for both frontend and backend, including high-volume data processing and custom CRUD implementations</b>
+• Designed reporting and analytics dashboards for real-time test tracking and quality metrics
+• Created intuitive UI components and smart notifications to enhance user experience
+• Led migration and onboarding processes for large-scale QA teams
+• Developed and optimized bulk operations for both frontend and backend, including high-volume data processing and custom CRUD implementations
 
 🔗 For more about the platform, see <a href="https://www.visiumlabs.com/en/visium-manage" target="_blank" rel="noopener noreferrer">Visium Manage</a>.`,
       },
@@ -109,15 +105,25 @@ As a Senior Full Stack Developer at NETAŞ, I took a leading role in the Visium 
         shortDesc: 'Sigorta projelerinde test otomasyonu ve dilsel doğruluk odaklı senaryolar geliştirdim.',
         shortDescTr: 'Sigorta projelerinde test otomasyonu ve dilsel doğruluk odaklı senaryolar geliştirdim.',
         shortDescEn: 'Developed test automation and linguistic accuracy scenarios for insurance projects.',
-        detailTr: `MAPFRE Sigorta projelerinde H4ll, 3-D Secure, Translation (İspanyolca–Türkçe arayüz çeviri kontrolü), Newtron ve WTW uygulamaları için test senaryoları yazıldı. ALM ve OCTANE ile manuel ve otomasyon koşumları gerçekleştirildi.
+        detailTr: `MAPFRE Sigorta projelerinde Software Test Engineer olarak çalıştım. H4ll, 3-D Secure, Translation (İspanyolca–Türkçe arayüz çeviri kontrolü), Newtron ve WTW uygulamaları için test senaryoları geliştirdim. ALM ve OCTANE araçlarını kullanarak manuel ve otomatik test süreçlerini yönettim.
 
-Bu süreçte kullanıcı arayüzlerindeki dilsel doğruluk, regresyon senaryoları ve hata raporlama iş akışları da yürütüldü. Test doğruluğu, kalite standartları ve takım koordinasyonu sağlandı.`,
-        detailEn: `Wrote test scenarios for MAPFRE Insurance projects including H4ll, 3-D Secure, Translation (Spanish–Turkish UI translation control), and Newton & WTW applications. Manual and automated test executions were performed using ALM and OCTANE.
+Bu süreçte:
+• Kullanıcı arayüzlerindeki dilsel doğruluk kontrollerini gerçekleştirdim
+• Regresyon test senaryolarını tasarladım ve uyguladım
+• Hata raporlama iş akışlarını optimize ettim
+• Test doğruluğu ve kalite standartlarını sağladım
+• Takım koordinasyonunu yönettim`,
+        detailEn: `As a Software Test Engineer, I worked on MAPFRE Insurance projects. I developed test scenarios for H4ll, 3-D Secure, Translation (Spanish–Turkish UI translation control), and Newton & WTW applications. I managed manual and automated test processes using ALM and OCTANE tools.
 
-During this process, I focused on linguistic accuracy in user interfaces, regression scenarios, and bug reporting workflows. Ensured test accuracy, quality standards, and team coordination.`,
+During this period:
+• Conducted linguistic accuracy checks in user interfaces
+• Designed and implemented regression test scenarios
+• Optimized bug reporting workflows
+• Ensured test accuracy and quality standards
+• Led team coordination efforts`,
       },
     ],
-    techs: ['Java', 'React.js', 'Spring', 'Docker', 'GIT', 'RESTful', 'Maven', 'Gradle', 'npm', 'yarn'],
+    techs: ['tech.java', 'tech.react', 'tech.spring', 'tech.docker', 'tech.git', 'tech.restful', 'tech.maven', 'tech.gradle', 'tech.npm', 'tech.yarn'],
     color: '#f59e42',
   },
   {
@@ -127,11 +133,13 @@ During this process, I focused on linguistic accuracy in user interfaces, regres
       {
         title: 'Intern',
         date: 'Haz 2018 - Tem 2018',
+        dateEn: 'Jun 2018 - Jul 2018',
         desc: 'Prod özelinde gelen değişiklik taleplerinin alınması ve değerlendirilmesi.',
         shortDesc: 'Prod değişiklik taleplerinin değerlendirilmesi.',
+        shortDescEn: 'Evaluation of production change requests.',
       },
     ],
-    techs: ['SQL', 'Java'],
+    techs: ['tech.sql', 'tech.java'],
     color: '#a78bfa',
   },
   {
@@ -141,11 +149,13 @@ During this process, I focused on linguistic accuracy in user interfaces, regres
       {
         title: 'Intern',
         date: 'Haz 2017 - Tem 2017',
+        dateEn: 'Jun 2017 - Jul 2017',
         desc: 'Akıllı Adresli Yangın Algılama ve Kontrol Panellerinin geliştirilmesi.',
         shortDesc: 'Yangın algılama paneli geliştirme.',
+        shortDescEn: 'Fire detection panel development.',
       },
     ],
-    techs: ['Elektronik', 'C', 'Donanım'],
+    techs: ['tech.electronics', 'tech.c', 'tech.hardware'],
     color: '#fde047',
   },
 ]; 

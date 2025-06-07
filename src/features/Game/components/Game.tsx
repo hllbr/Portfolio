@@ -167,9 +167,68 @@ const Game = () => {
 
   const closeModal = () => setGameOverIcon(null);
 
+  const getCrashMessage = (icon: FallingIcon) => {
+    switch (icon.name) {
+      case 'LinkedIn':
+        return t('gameScreen.crashedLinkedIn');
+      case 'WhatsApp':
+        return t('gameScreen.crashedWhatsApp');
+      case 'YouTube':
+        return t('gameScreen.crashedYouTube');
+      case 'Email':
+        return t('gameScreen.crashedEmail');
+      case 'WakaTime':
+        return t('gameScreen.crashedWakaTime');
+      case 'GitHub':
+        return t('gameScreen.crashedGitHub');
+      default:
+        return t('gameScreen.crashed', { platform: icon.name });
+    }
+  };
+
+  const getOkButtonText = (icon: FallingIcon) => {
+    switch (icon.name) {
+      case 'LinkedIn':
+        return t('gameScreen.okLinkedIn');
+      case 'WhatsApp':
+        return t('gameScreen.okWhatsApp');
+      case 'YouTube':
+        return t('gameScreen.okYouTube');
+      case 'Email':
+        return t('gameScreen.okEmail');
+      case 'WakaTime':
+        return t('gameScreen.okWakaTime');
+      case 'GitHub':
+        return t('gameScreen.okGitHub');
+      default:
+        return t('gameScreen.ok');
+    }
+  };
+
   const visitIcon = () => {
     if (gameOverIcon) {
-      window.open(gameOverIcon.url, '_blank', 'noopener,noreferrer');
+      switch (gameOverIcon.name) {
+        case 'WhatsApp':
+          window.open('https://wa.me/905522972185', '_blank', 'noopener,noreferrer');
+          break;
+        case 'LinkedIn':
+          window.open('https://www.linkedin.com/in/hllbr/', '_blank', 'noopener,noreferrer');
+          break;
+        case 'YouTube':
+          window.open('https://www.youtube.com/@platonfarkndapaylasmlar637', '_blank', 'noopener,noreferrer');
+          break;
+        case 'Email':
+          window.open('mailto:halibrahim.kocak@gmail.com', '_blank', 'noopener,noreferrer');
+          break;
+        case 'WakaTime':
+          window.open('https://wakatime.com/@HLLBR', '_blank', 'noopener,noreferrer');
+          break;
+        case 'GitHub':
+          window.open('https://github.com/hllbr', '_blank', 'noopener,noreferrer');
+          break;
+        default:
+          window.open(gameOverIcon.url, '_blank', 'noopener,noreferrer');
+      }
     }
     closeModal();
   };
@@ -213,11 +272,10 @@ const Game = () => {
       {gameOverIcon && (
         <div className={styles.overlay} onClick={closeModal}>
           <div className={styles.modal} onClick={e => e.stopPropagation()}>
-            <p>{t('gameScreen.gameOver')}</p>
+            <p>{getCrashMessage(gameOverIcon)}</p>
             <p>{t('gameScreen.score')}: {score}</p>
-            <p>{t('gameScreen.crashed', { platform: gameOverIcon.name })}</p>
             <div className={styles.modalButtons}>
-              <button onClick={visitIcon}>{t('gameScreen.ok')}</button>
+              <button onClick={visitIcon}>{getOkButtonText(gameOverIcon)}</button>
               <button onClick={closeModal}>{t('gameScreen.cancel')}</button>
             </div>
           </div>
