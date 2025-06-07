@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { motion, LayoutGroup } from 'framer-motion';
+import { LayoutGroup } from 'framer-motion';
 import { Translate } from 'phosphor-react';
 import { useTranslation } from 'react-i18next';
 
@@ -25,7 +25,6 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
   const [langMenuOpen, setLangMenuOpen] = React.useState(false);
   const langMenuRef = React.useRef<HTMLButtonElement>(null);
   const containerRef = React.useRef<HTMLDivElement>(null);
-  const [highlightStyle, setHighlightStyle] = React.useState<React.CSSProperties>({});
 
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 480;
   const isTablet = typeof window !== 'undefined' && window.innerWidth > 480 && window.innerWidth <= 1280;
@@ -56,42 +55,6 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
     handleRouteChange();
   }, [location.pathname]);
 
-  React.useEffect(() => {
-    if (!containerRef.current) return;
-    const buttons = Array.from(containerRef.current.querySelectorAll('button'));
-    if (current >= 0 && buttons[current]) {
-      const btn = buttons[current] as HTMLButtonElement;
-      const onlyIcon = isMobile && (!items[current].label || items[current].label === '');
-      if (onlyIcon) {
-        setHighlightStyle({
-          position: 'absolute',
-          left: btn.offsetLeft + btn.offsetWidth / 2 - 30,
-          top: btn.offsetTop + btn.offsetHeight / 2 - 20,
-          width: 40,
-          height: 40,
-          borderRadius: 999,
-          background: 'rgba(255,255,255,0.08)',
-          boxShadow: '0 2px 8px 0 rgba(56,189,248,0.08)',
-          zIndex: 0,
-          transition: 'left 0.3s, width 0.3s, top 0.3s, height 0.3s',
-        });
-        return;
-      }
-      setHighlightStyle({
-        position: 'absolute',
-        left: btn.offsetLeft,
-        top: btn.offsetTop,
-        width: btn.offsetWidth,
-        height: btn.offsetHeight,
-        borderRadius: 999,
-        background: 'rgba(255,255,255,0.08)',
-        boxShadow: '0 2px 8px 0 rgba(56,189,248,0.08)',
-        zIndex: 0,
-        transition: 'left 0.3s, width 0.3s, top 0.3s, height 0.3s',
-      });
-    }
-  }, [current, isMobile, items.length]);
-
   return (
     <LayoutGroup>
       <div ref={containerRef} style={{
@@ -109,11 +72,9 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
         maxWidth: isMobile ? '100vw' : undefined,
         position: 'relative',
       }}>
-        {current >= 0 && <motion.div layoutId="fluid-tab-bg"
-         style={highlightStyle}
-          transition={{ type: 'spring', bounce: 0.32, duration: 0.5 }} />}
         {items.map((item, i) => {
           const selected = i === current;
+          const showLabel = !!item.label;
           return (
             <button
               key={item.path}
@@ -122,7 +83,7 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
                 position: 'relative',
                 border: 'none',
                 background: 'none',
-                color: selected ? '#0ea5e9' : '#e2e8f0',
+                color: showLabel && selected ? '#0ea5e9' : '#e2e8f0',
                 fontWeight: selected ? 700 : 500,
                 fontSize: buttonFontSize,
                 borderRadius: 999,
@@ -133,14 +94,30 @@ const FluidTabs: React.FC<FluidTabsProps> = ({ items }) => {
                 display: 'flex',
                 alignItems: 'center',
                 gap: 8,
-                transition: 'color 0.18s',
+                transition: 'color 0.18s, border 0.18s',
                 justifyContent: 'center',
                 minWidth: isMobile ? 44 : isTablet ? 80 : undefined,
               }}
               aria-current={selected ? 'page' : undefined}
             >
-              {item.icon && <span style={{ marginRight: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{item.icon(iconSize)}</span>}
-              <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{item.label}</span>
+              {item.icon && (
+                <span
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    border: selected ? '2px solid #0ea5e9' : '2px solid transparent',
+                    borderRadius: '50%',
+                    padding: 4,
+                    transition: 'border 0.18s',
+                  }}
+                >
+                  {item.icon(iconSize)}
+                </span>
+              )}
+              {showLabel && (
+                <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: selected ? '#0ea5e9' : '#e2e8f0' }}>{item.label}</span>
+              )}
             </button>
           );
         })}
