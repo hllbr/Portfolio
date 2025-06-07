@@ -94,6 +94,8 @@
 - [✔] Implemented dynamic phosphor-react icon sizing without linter errors
 - [✔] Updated SocialMedia section headline with professional and warm communication style
 - [✔] Made SocialMedia area fully responsive across all screen widths
+- [✔] Alias import with @ (e.g. import x from '@/features/...') is now supported and configured via Vite and TypeScript
+- [✔] Enable and configure Husky for git hooks (pre-commit, pre-push, etc.) to automate code quality and workflow checks (planned)
 
 ## Todo
 - [ ] Integrate real SVG logos for AI Tools (currently using emoji)
@@ -101,7 +103,6 @@
 - [ ] Custom animated background design for AI Tools section
 - [ ] Update i18n support and translation files for AI Tools
 - [ ] Neon Cursor (MageUI-style neon cursor and canvas trail): To be reconsidered for specific pages or as a special effect, ensuring user comfort. Will be integrated if a suitable use case is found.
-- [ ] Add new features and improvements here.
 - [ ] Update phosphor-react to v2.1+ and use Speedometer icon for WakaTime if desired
 - [ ] Add tooltips for each icon (with i18n support)
 - [ ] Allow user to customize icon order from settings
@@ -110,6 +111,9 @@
 - [ ] Improve accessibility (keyboard navigation, focus states)
 - [ ] Add tests for SocialMedia component
 - [ ] Review and further improve card content alignment with upper section philosophy if needed
+- [ ] Add new features and improvements here.
+- [ ] Certificates page: Add a new Certificates page to showcase professional certificates and achievements. (Planned)
+- [ ] Dark/Light theme support (feature planned)
 
 ---
 
@@ -205,6 +209,8 @@
 - [✔] Linter hatası olmadan phosphor-react ikonlarının dinamik boyutlandırılması sağlandı
 - [✔] SocialMedia başlığı profesyonel ve sıcak bir iletişim diliyle güncellendi
 - [✔] SocialMedia alanı tüm ekran genişliklerinde tamamen responsive hale getirildi.
+- [✔] @ ile alias import (örn. import x from '@/features/...') artık Vite ve TypeScript ile yapılandırıldı ve destekleniyor
+- [✔] Husky ile git hook'larının (pre-commit, pre-push vb.) aktif edilip yapılandırılması, kod kalitesi ve iş akışı otomasyonu için planlandı
 
 ## Yapılacaklar
 - [ ] AI Tools için gerçek SVG logoların entegrasyonu (şu an emoji kullanılıyor)
@@ -212,7 +218,6 @@
 - [ ] AI Tools bölümü için özel animasyonlu arka plan tasarımı
 - [ ] AI Tools için i18n desteği ve çeviri dosyalarının güncellenmesi
 - [ ] Neon Cursor (MageUI tarzı neon imleç ve canvas trail): Göz yormayacak şekilde, belirli sayfalarda veya özel bir efekt olarak ileride tekrar değerlendirilecek. Kullanım alanı ve kullanıcı deneyimi açısından uygun bir yer bulunursa entegre edilecek.
-- [ ] Yeni özellikler ve iyileştirmeler için buraya ekleme yapabilirsiniz.
 - [ ] phosphor-react v2.1+ sürümüne güncellenip Speedometer ikonu kullanılabilir
 - [ ] Her ikon için tooltip eklenmesi (i18n destekli)
 - [ ] Kullanıcının ikon sırasını ayarlayabilmesi için ayar eklenmesi
@@ -220,4 +225,8 @@
 - [ ] Gerekirse yeni sosyal platformlar eklenmesi (örn. X, Instagram)
 - [ ] Erişilebilirlik iyileştirmeleri (klavye ile gezinme, odak durumları)
 - [ ] SocialMedia componenti için testler eklenmesi
-- [ ] Kart içeriklerinin üst bölüm felsefesiyle uyumu tekrar gözden geçirilecek ve gerekirse iyileştirilecek 
+- [ ] Kart içeriklerinin üst bölüm felsefesiyle uyumu tekrar gözden geçirilecek ve gerekirse iyileştirilecek
+- [ ] Yeni özellikler ve iyileştirmeler için buraya ekleme yapabilirsiniz.
+- [ ] Sertifikalar sayfası: Profesyonel sertifika ve başarıların sergileneceği yeni bir Sertifikalar sayfası eklenecek. (Planlandı)
+- [ ] Karanlık/Aydınlık tema desteği (özellik olarak planlandı)
+- [ ] Husky ile git hook'larının (pre-commit, pre-push vb.) aktif edilip yapılandırılması, kod kalitesi ve iş akışı otomasyonu için planlandı 
