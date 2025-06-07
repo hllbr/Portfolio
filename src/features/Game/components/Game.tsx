@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import type { ReactElement } from 'react';
 import {
   GithubLogo,
   LinkedinLogo,
@@ -14,23 +15,27 @@ import styles from '@/features/Game/styles/Game.module.css';
 interface IconData {
   name: string;
   url: string;
-  icon: JSX.Element;
-}
-
-interface FallingIcon extends IconData {
-  id: number;
-  x: number;
-  y: number;
+  icon: ReactElement;
   speed: number;
 }
 
+interface FallingIcon {
+  id: number;
+  icon: ReactElement;
+  x: number;
+  y: number;
+  speed: number;
+  name: string;
+  url: string;
+}
+
 const icons: IconData[] = [
-  { name: 'GitHub', url: 'https://github.com/hllbr', icon: <GithubLogo size={60} /> },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/hllbr/', icon: <LinkedinLogo size={60} /> },
-  { name: 'WhatsApp', url: 'https://wa.me/905522972185', icon: <WhatsappLogo size={60} /> },
-  { name: 'YouTube', url: 'https://www.youtube.com/@platonfarkndapaylasmlar637', icon: <YoutubeLogo size={60} /> },
-  { name: 'Email', url: 'mailto:halibrahim.kocak@gmail.com', icon: <EnvelopeSimple size={60} /> },
-  { name: 'WakaTime', url: 'https://wakatime.com/@HLLBR', icon: <Timer size={60} /> },
+  { name: 'GitHub', url: 'https://github.com/hllbr', icon: <GithubLogo size={60} />, speed: 4 },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/hllbr/', icon: <LinkedinLogo size={60} />, speed: 4 },
+  { name: 'WhatsApp', url: 'https://wa.me/905522972185', icon: <WhatsappLogo size={60} />, speed: 4 },
+  { name: 'YouTube', url: 'https://www.youtube.com/@platonfarkndapaylasmlar637', icon: <YoutubeLogo size={60} />, speed: 4 },
+  { name: 'Email', url: 'mailto:halibrahim.kocak@gmail.com', icon: <EnvelopeSimple size={60} />, speed: 4 },
+  { name: 'WakaTime', url: 'https://wakatime.com/@HLLBR', icon: <Timer size={60} />, speed: 4 },
 ];
 
 const PLAYER_SIZE = 64;
@@ -49,8 +54,8 @@ const Game = () => {
   const [gameOverIcon, setGameOverIcon] = useState<FallingIcon | null>(null);
   const nextId = useRef(0);
   const iconsRef = useRef<FallingIcon[]>([]);
-  const animationRef = useRef<number>();
-  const spawnRef = useRef<NodeJS.Timer>();
+  const animationRef = useRef<number | undefined>(undefined);
+  const spawnRef = useRef<NodeJS.Timeout | undefined>(undefined);
   const dragging = useRef(false);
 
   const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {

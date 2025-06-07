@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import CloseIcon from '@mui/icons-material/Close';
 import { MagnifyingGlass } from 'phosphor-react';
-import { useTranslation } from 'react-i18next';
 
 import styles from '@/features/AIApproach/AIModal/styles/AICardModal.module.css';
 import './styles/Animation/CopyButtonAnimation.css';

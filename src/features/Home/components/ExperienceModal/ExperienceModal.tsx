@@ -4,11 +4,12 @@ import CloseIcon from '@mui/icons-material/Close';
 import './ExperienceModal.css';
 import type { ExperienceType } from '@/features/Home/helpers/experienceData';
 import { useTranslation } from 'react-i18next';
-import { X } from 'phosphor-react';
 
 interface Position {
   title: string;
   date: string;
+  dateTr?: string;
+  dateEn?: string;
   desc: string;
   detail?: string;
   isCurrent?: boolean;

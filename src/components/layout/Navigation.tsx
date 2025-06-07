@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { House, EnvelopeSimple, Cpu, Brain, FileText, GameController } from 'phosphor-react';
 import { useTranslation } from 'react-i18next';
 
