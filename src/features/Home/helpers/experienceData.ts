@@ -66,9 +66,9 @@ export const experiences: ExperienceType[] = [
       },
       {
         title: 'Full Stack Developer',
-        date: 'Ara 2021 - Kas 2023',
-        dateTr: 'Ara 2021 - Kas 2023',
-        dateEn: 'Dec 2021 - Nov 2023',
+        date: 'Mar 2021 - Kas 2023',
+        dateTr: 'Mar 2021 - Kas 2023',
+        dateEn: 'Mar 2021 - Nov 2023',
         desc: 'Yeni özelliklerin araştırılması, raporlanması ve uygulamaya alınması. Stabil sürüm için hata düzeltmeleri.',
         shortDesc: 'Visium Manage projesinde test süreçlerinin dijitalleşmesi ve merkezi yönetimi için modüller geliştirdim.',
         shortDescTr: 'Visium Manage projesinde test süreçlerinin dijitalleşmesi ve merkezi yönetimi için modüller geliştirdim.',
@@ -84,7 +84,7 @@ export const experiences: ExperienceType[] = [
 • Yüksek hacimli veri işleme ve özel CRUD işlemleri için bulk operasyonların frontend ve backend geliştirmelerini gerçekleştirdim
 
 🔗 Platform hakkında daha fazla bilgi için <a href="https://www.visiumlabs.com/en/visium-manage" target="_blank" rel="noopener noreferrer">Visium Manage</a>.`,
-        detailEn: `As a Full Stack Developer at NETAŞ, I worked on the Visium Manage project (<a href="https://www.visiumlabs.com/en/visium-manage" target="_blank" rel="noopener noreferrer">learn more</a>), developing a robust test case management platform for enterprise QA teams.
+                detailEn: `As a Full Stack Developer at NETAŞ, I worked on the Visium Manage project (<a href="https://www.visiumlabs.com/en/visium-manage" target="_blank" rel="noopener noreferrer">learn more</a>), developing a robust test case management platform for enterprise QA teams.
 
 🌟 My Contributions:
 • Developed modules for test case creation, risk-based categorization, and scenario reuse
@@ -94,33 +94,7 @@ export const experiences: ExperienceType[] = [
 • Led migration and onboarding processes for large-scale QA teams
 • Developed and optimized bulk operations for both frontend and backend, including high-volume data processing and custom CRUD implementations
 
-🔗 For more about the platform, see <a href="https://www.visiumlabs.com/en/visium-manage" target="_blank" rel="noopener noreferrer">Visium Manage</a>.`,
-      },
-      {
-        title: 'Software Test Engineer',
-        date: 'Mar 2021 - Ara 2021',
-        dateTr: 'Mar 2021 - Ara 2021',
-        dateEn: 'Mar 2021 - Dec 2021',
-        desc: 'MAPFRE Sigorta projelerinde H4ll, 3-D Secure, Translation (İspanyolca–Türkçe arayüz çeviri kontrolü), Newtron ve WTW uygulamaları için test senaryoları yazıldı. ALM ve OCTANE ile manuel ve otomasyon koşumları gerçekleştirildi.',
-        shortDesc: 'Sigorta projelerinde test otomasyonu ve dilsel doğruluk odaklı senaryolar geliştirdim.',
-        shortDescTr: 'Sigorta projelerinde test otomasyonu ve dilsel doğruluk odaklı senaryolar geliştirdim.',
-        shortDescEn: 'Developed test automation and linguistic accuracy scenarios for insurance projects.',
-        detailTr: `MAPFRE Sigorta projelerinde Software Test Engineer olarak çalıştım. H4ll, 3-D Secure, Translation (İspanyolca–Türkçe arayüz çeviri kontrolü), Newtron ve WTW uygulamaları için test senaryoları geliştirdim. ALM ve OCTANE araçlarını kullanarak manuel ve otomatik test süreçlerini yönettim.
-
-Bu süreçte:
-• Kullanıcı arayüzlerindeki dilsel doğruluk kontrollerini gerçekleştirdim
-• Regresyon test senaryolarını tasarladım ve uyguladım
-• Hata raporlama iş akışlarını optimize ettim
-• Test doğruluğu ve kalite standartlarını sağladım
-• Takım koordinasyonunu yönettim`,
-        detailEn: `As a Software Test Engineer, I worked on MAPFRE Insurance projects. I developed test scenarios for H4ll, 3-D Secure, Translation (Spanish–Turkish UI translation control), and Newton & WTW applications. I managed manual and automated test processes using ALM and OCTANE tools.
-
-During this period:
-• Conducted linguistic accuracy checks in user interfaces
-• Designed and implemented regression test scenarios
-• Optimized bug reporting workflows
-• Ensured test accuracy and quality standards
-• Led team coordination efforts`,
+🔗 For more about the platform, see <a href="https://www.visiumlabs.com/en/visium-manage" target="_blank" rel="noopener noreferrer">Visium Manage</a>.`
       },
     ],
     techs: ['tech.java', 'tech.react', 'tech.spring',  'tech.git', 'tech.restful', 'tech.maven', 'tech.gradle', 'tech.npm', 'tech.yarn'],
