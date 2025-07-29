@@ -12,6 +12,7 @@ import { Home } from '@/features/Home/Routes';
 
 /**
  * Root component configuring the application routes.
+ * Uses BrowserRouter for better URL handling with .htaccess support.
  */
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
           <Route path="/game" element={<Game />} />
           <Route path="/oyun" element={<Game />} />
           <Route path="/Oyun" element={<Game />} />
+          {/* Catch all route for 404 - this will handle all unknown routes */}
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Layout>
